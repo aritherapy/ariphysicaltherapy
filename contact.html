@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | ARI Physical Therapy – Bakersfield, CA</title>
+    <meta name="description" content="Contact ARI Physical Therapy in Bakersfield, CA. Call (661) 282-8584, email us, or visit us at 8200 Stockdale Hwy Suite B2.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --orange:        #E8630A;
+            --orange-dark:   #C4520A;
+            --orange-light:  #FF8C42;
+            --charcoal:      #2B2B2B;
+            --charcoal-mid:  #3D3D3D;
+            --cream:         #FAF8F4;
+            --white:         #FFFFFF;
+            --text-dark:     #1A1A1A;
+            --text-mid:      #555555;
+            --text-light:    #888888;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-dark);
+            background: var(--white);
+            line-height: 1.6;
+        }
+
+        /* ===== TOP BAR ===== */
+        .top-bar {
+            background: var(--charcoal);
+            color: var(--white);
+            padding: 10px 48px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 13px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .top-bar-left { display: flex; align-items: center; gap: 28px; }
+
+        .top-bar a {
+            color: rgba(255,255,255,0.85);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: color 0.2s;
+        }
+
+        .top-bar a:hover { color: var(--orange-light); }
+
+        .btn-book-topbar {
+            background: var(--orange);
+            color: var(--white) !important;
+            padding: 7px 18px;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 13px;
+            transition: background 0.2s !important;
+        }
+
+        .btn-book-topbar:hover { background: var(--orange-dark) !important; }
+
+        /* ===== NAVBAR ===== */
+        .navbar {
+            background: var(--white);
+            padding: 14px 48px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+            position: sticky;
+            top: 39px;
+            z-index: 999;
+        }
+
+        .nav-logo { display: flex; align-items: center; text-decoration: none; }
+        .nav-logo img { height: 56px; width: auto; }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 36px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--charcoal);
+            font-weight: 500;
+            font-size: 15px;
+            transition: color 0.2s;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px; left: 0;
+            width: 0; height: 2px;
+            background: var(--orange);
+            transition: width 0.25s;
+        }
+
+        .nav-links a:hover { color: var(--orange); }
+        .nav-links a:hover::after { width: 100%; }
+        .nav-links a.active { color: var(--orange); }
+        .nav-links a.active::after { width: 100%; }
+        .nav-careers { color: var(--orange) !important; font-weight: 700 !important; }
+        .navbar.scrolled { box-shadow: 0 4px 24px rgba(0,0,0,0.13); }
+
+        .nav-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 6px;
+        }
+
+        .nav-toggle span {
+            display: block; width: 24px; height: 2px;
+            background: var(--charcoal); border-radius: 2px; transition: all 0.25s;
+        }
+
+        @media (max-width: 768px) {
+            .navbar { padding: 14px 20px; top: 0; }
+            .top-bar { display: none; }
+            .nav-toggle { display: flex; }
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%; left: 0; right: 0;
+                background: var(--white);
+                flex-direction: column;
+                gap: 0;
+                padding: 12px 0 20px;
+                box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+            }
+            .nav-links.open { display: flex; }
+            .nav-links li { width: 100%; }
+            .nav-links a { display: block; padding: 12px 24px; font-size: 16px; }
+        }
+
+        /* ===== PAGE HERO ===== */
+        .page-hero {
+            background: var(--charcoal);
+            padding: 80px 48px 72px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .page-hero::after {
+            content: '';
+            position: absolute;
+            top: 0; right: 0;
+            width: 6px; height: 100%;
+            background: var(--orange);
+        }
+
+        .page-hero-inner { max-width: 1200px; margin: 0 auto; }
+
+        .page-eyebrow {
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--orange);
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .page-eyebrow::before {
+            content: '';
+            display: inline-block;
+            width: 32px; height: 2px;
+            background: var(--orange);
+        }
+
+        .page-hero h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: clamp(36px, 5vw, 56px);
+            font-weight: 900;
+            color: var(--white);
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+
+        .page-hero h1 .hl { color: var(--orange); }
+
+        .page-hero p {
+            font-size: 18px;
+            color: rgba(255,255,255,0.72);
+            max-width: 560px;
+            line-height: 1.7;
+        }
+
+        @media (max-width: 768px) { .page-hero { padding: 56px 24px; } }
+
+        /* ===== CONTACT CARDS STRIP ===== */
+        .contact-cards {
+            background: var(--cream);
+            padding: 64px 48px;
+        }
+
+        .cards-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+
+        .contact-card {
+            background: var(--white);
+            border-radius: 10px;
+            padding: 32px 28px;
+            box-shadow: 0 3px 16px rgba(0,0,0,0.06);
+            text-align: center;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 28px rgba(0,0,0,0.10);
+        }
+
+        .contact-card .icon {
+            width: 52px;
+            height: 52px;
+            background: rgba(232,99,10,0.10);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            margin: 0 auto 16px;
+        }
+
+        .contact-card h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--orange);
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .contact-card p,
+        .contact-card a {
+            font-size: 15px;
+            color: var(--charcoal);
+            text-decoration: none;
+            line-height: 1.6;
+            font-weight: 500;
+        }
+
+        .contact-card a:hover { color: var(--orange); }
+
+        @media (max-width: 900px) {
+            .cards-inner { grid-template-columns: 1fr 1fr; }
+            .contact-cards { padding: 48px 24px; }
+        }
+
+        @media (max-width: 540px) {
+            .cards-inner { grid-template-columns: 1fr; }
+        }
+
+        /* ===== MAIN CONTACT SECTION ===== */
+        .contact-main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 88px 48px;
+            display: grid;
+            grid-template-columns: 1fr 1.1fr;
+            gap: 72px;
+            align-items: start;
+        }
+
+        @media (max-width: 900px) {
+            .contact-main { grid-template-columns: 1fr; gap: 48px; padding: 56px 24px; }
+        }
+
+        /* Message Form */
+        .message-form-wrap h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 30px;
+            font-weight: 800;
+            color: var(--charcoal);
+            margin-bottom: 8px;
+        }
+
+        .message-form-wrap h2 .hl { color: var(--orange); }
+
+        .message-form-wrap > p {
+            font-size: 15px;
+            color: var(--text-mid);
+            margin-bottom: 36px;
+            line-height: 1.7;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 7px;
+            margin-bottom: 20px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        .form-group label {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--charcoal);
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            padding: 12px 16px;
+            border: 1.5px solid #E0E0E0;
+            border-radius: 7px;
+            font-family: 'Inter', sans-serif;
+            font-size: 15px;
+            color: var(--text-dark);
+            background: var(--white);
+            transition: border-color 0.2s, box-shadow 0.2s;
+            outline: none;
+            width: 100%;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: var(--orange);
+            box-shadow: 0 0 0 3px rgba(232,99,10,0.10);
+        }
+
+        .form-group textarea { resize: vertical; min-height: 130px; }
+
+        .btn-submit {
+            background: var(--orange);
+            color: var(--white);
+            border: none;
+            padding: 14px 36px;
+            border-radius: 6px;
+            font-family: 'Inter', sans-serif;
+            font-size: 15px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.15s;
+        }
+
+        .btn-submit:hover { background: var(--orange-dark); transform: translateY(-1px); }
+
+        .form-success-msg {
+            display: none;
+            padding: 32px;
+            background: rgba(232,99,10,0.05);
+            border-radius: 10px;
+            border: 1px solid rgba(232,99,10,0.15);
+            text-align: center;
+        }
+
+        .form-success-msg .icon { font-size: 40px; margin-bottom: 12px; }
+
+        .form-success-msg h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 20px;
+            font-weight: 800;
+            color: var(--charcoal);
+            margin-bottom: 8px;
+        }
+
+        .form-success-msg p { font-size: 14px; color: var(--text-mid); }
+
+        @media (max-width: 640px) { .form-row { grid-template-columns: 1fr; } }
+
+        /* Map & Hours side */
+        .map-side {}
+
+        .map-wrap {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 6px 28px rgba(0,0,0,0.10);
+            margin-bottom: 32px;
+        }
+
+        .map-wrap iframe {
+            width: 100%;
+            height: 340px;
+            border: none;
+            display: block;
+        }
+
+        .hours-card {
+            background: var(--cream);
+            border-radius: 10px;
+            padding: 28px 30px;
+        }
+
+        .hours-card h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 16px;
+            font-weight: 800;
+            color: var(--charcoal);
+            margin-bottom: 18px;
+        }
+
+        .hours-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(0,0,0,0.06);
+            font-size: 14px;
+        }
+
+        .hours-row:last-child { border-bottom: none; }
+
+        .hours-row .day { color: var(--text-mid); font-weight: 500; }
+
+        .hours-row .time {
+            color: var(--charcoal);
+            font-weight: 600;
+        }
+
+        .hours-row .closed { color: var(--text-light); font-weight: 400; }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: var(--charcoal);
+            color: rgba(255,255,255,0.65);
+            padding: 56px 48px 24px;
+        }
+
+        .footer-inner { max-width: 1200px; margin: 0 auto; }
+
+        .footer-top {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 48px;
+            margin-bottom: 44px;
+        }
+
+        .footer-about p { font-size: 14px; line-height: 1.75; max-width: 320px; margin-bottom: 16px; }
+
+        .footer-tagline {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            color: var(--orange);
+            font-size: 12px;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+        }
+
+        .footer-col h4 {
+            color: var(--white);
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 18px;
+        }
+
+        .footer-col ul { list-style: none; }
+        .footer-col ul li { margin-bottom: 10px; }
+
+        .footer-col ul li a {
+            color: rgba(255,255,255,0.6);
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.2s;
+        }
+
+        .footer-col ul li a:hover { color: var(--orange); }
+
+        .footer-social { display: flex; gap: 10px; margin-top: 20px; }
+
+        .social-btn {
+            width: 36px; height: 36px;
+            border-radius: 6px;
+            border: 1px solid rgba(255,255,255,0.18);
+            display: flex; align-items: center; justify-content: center;
+            color: rgba(255,255,255,0.65);
+            text-decoration: none;
+            font-size: 14px; font-weight: 700;
+            transition: background 0.2s, border-color 0.2s, color 0.2s;
+        }
+
+        .social-btn:hover { background: var(--orange); border-color: var(--orange); color: var(--white); }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.08);
+            padding-top: 22px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 13px;
+        }
+
+        @media (max-width: 768px) {
+            .footer-top { grid-template-columns: 1fr; gap: 32px; }
+            footer { padding: 48px 24px 20px; }
+            .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
+        }
+
+        /* ===== ANIMATIONS ===== */
+        .reveal {
+            opacity: 0;
+            transform: translateY(32px);
+            transition: opacity 0.65s ease, transform 0.65s ease;
+        }
+        .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    </style>
+</head>
+<body>
+
+    <!-- ===== TOP BAR ===== -->
+    <div class="top-bar">
+        <div class="top-bar-left">
+            <a href="tel:6612828584"><span>📞</span>(661) 282-8584</a>
+            <a href="mailto:contactus@ariptcare.com"><span>✉</span>contactus@ariptcare.com</a>
+        </div>
+        <a href="appointment.html" class="btn-book-topbar">Book an Appointment</a>
+    </div>
+
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar">
+        <a href="index.html" class="nav-logo">
+            <img src="assets/logo-dark.png" alt="ARI Physical Therapy">
+        </a>
+        <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="appointment.html">Book an Appointment</a></li>
+            <li><a href="careers.html" class="nav-careers">Careers</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- ===== PAGE HERO ===== -->
+    <section class="page-hero">
+        <div class="page-hero-inner">
+            <p class="page-eyebrow">Get in Touch</p>
+            <h1>Contact <span class="hl">ARI PT</span></h1>
+            <p>We'd love to hear from you. Reach out with any questions — our team is here to help.</p>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT CARDS ===== -->
+    <div class="contact-cards">
+        <div class="cards-inner reveal">
+
+            <div class="contact-card">
+                <div class="icon">📞</div>
+                <h3>Call Us</h3>
+                <a href="tel:6612828584">(661) 282-8584</a>
+            </div>
+
+            <div class="contact-card">
+                <div class="icon">✉️</div>
+                <h3>Email Us</h3>
+                <a href="mailto:contactus@ariptcare.com">contactus@ariptcare.com</a>
+            </div>
+
+            <div class="contact-card">
+                <div class="icon">📍</div>
+                <h3>Our Location</h3>
+                <p>8200 Stockdale Hwy, Suite B2<br>Bakersfield, CA 93311</p>
+            </div>
+
+            <div class="contact-card">
+                <div class="icon">🕐</div>
+                <h3>Hours</h3>
+                <p>Mon – Fri<br>Open until 6:00 PM</p>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ===== MAIN CONTACT SECTION ===== -->
+    <div class="contact-main">
+
+        <!-- Message Form -->
+        <div class="message-form-wrap reveal">
+            <h2>Send Us a <span class="hl">Message</span></h2>
+            <p>Have a question about our services, insurance, or what to expect? Fill out the form and we'll get back to you within one business day.</p>
+
+            <form id="contact-form" action="https://formspree.io/f/contactus@ariptcare.com" method="POST">
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Your Name *</label>
+                        <input type="text" id="name" name="name" placeholder="Jane Smith" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="(661) 555-0100">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" placeholder="jane@example.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <select id="subject" name="subject">
+                        <option value="" disabled selected>What's this about?</option>
+                        <option>General Question</option>
+                        <option>Services & Specialties</option>
+                        <option>Appointment Request</option>
+                        <option>Insurance Question</option>
+                        <option>Physician Referral</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message *</label>
+                    <textarea id="message" name="message" placeholder="How can we help you?" required></textarea>
+                </div>
+
+                <button type="submit" class="btn-submit">Send Message →</button>
+
+            </form>
+
+            <div class="form-success-msg" id="form-success">
+                <div class="icon">✅</div>
+                <h3>Message Sent!</h3>
+                <p>Thank you for reaching out. We'll be in touch within one business day.</p>
+            </div>
+        </div>
+
+        <!-- Map & Hours -->
+        <div class="map-side reveal">
+            <div class="map-wrap">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3285.12!2d-119.09561!3d35.35721!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80ea43fd0a3a3a2d%3A0xd59ec9a5bcf611f7!2sARI%20Physical%20Therapy!5e0!3m2!1sen!2sus!4v1681234567890"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="ARI Physical Therapy location map">
+                </iframe>
+            </div>
+
+            <div class="hours-card">
+                <h3>📅 Office Hours</h3>
+                <div class="hours-row">
+                    <span class="day">Monday</span>
+                    <span class="time">Open until 6:00 PM</span>
+                </div>
+                <div class="hours-row">
+                    <span class="day">Tuesday</span>
+                    <span class="time">Open until 6:00 PM</span>
+                </div>
+                <div class="hours-row">
+                    <span class="day">Wednesday</span>
+                    <span class="time">Open until 6:00 PM</span>
+                </div>
+                <div class="hours-row">
+                    <span class="day">Thursday</span>
+                    <span class="time">Open until 6:00 PM</span>
+                </div>
+                <div class="hours-row">
+                    <span class="day">Friday</span>
+                    <span class="time">Open until 6:00 PM</span>
+                </div>
+                <div class="hours-row">
+                    <span class="day">Saturday</span>
+                    <span class="closed">Closed</span>
+                </div>
+                <div class="hours-row">
+                    <span class="day">Sunday</span>
+                    <span class="closed">Closed</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-top">
+                <div class="footer-about">
+                    <img src="assets/logo-white.png" alt="ARI Physical Therapy" style="height:48px; margin-bottom:18px; display:block;">
+                    <p>Compassionate, personalized physical therapy in Bakersfield, CA. We're here to help you move better, feel better, and live better.</p>
+                    <div class="footer-tagline">Empowering Every Move</div>
+                    <div class="footer-social">
+                        <a href="https://www.instagram.com/ariptcare" target="_blank" rel="noopener" class="social-btn" aria-label="Instagram">IG</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="appointment.html">Book an Appointment</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="tel:6612828584">(661) 282-8584</a></li>
+                        <li><a href="mailto:contactus@ariptcare.com">contactus@ariptcare.com</a></li>
+                        <li><a href="contact.html">8200 Stockdale Hwy, Suite B2<br>Bakersfield, CA 93311</a></li>
+                        <li style="color:rgba(255,255,255,0.5); font-size:14px;">Mon–Fri · Open until 6 PM</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>© 2025 ARI Physical Therapy. All rights reserved.</span>
+                <span>8200 Stockdale Hwy Suite B2, Bakersfield, CA 93311</span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const navbar = document.querySelector('.navbar');
+        window.addEventListener('scroll', () => {
+            navbar.classList.toggle('scrolled', window.scrollY > 10);
+        });
+
+        const toggle = document.querySelector('.nav-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        toggle.addEventListener('click', () => {
+            const open = navLinks.classList.toggle('open');
+            toggle.setAttribute('aria-expanded', open);
+        });
+
+        const reveals = document.querySelectorAll('.reveal');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.08 });
+        reveals.forEach(el => observer.observe(el));
+    </script>
+
+</body>
+</html>

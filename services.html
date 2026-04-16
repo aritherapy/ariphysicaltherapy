@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services | ARI Physical Therapy – Bakersfield, CA</title>
+    <meta name="description" content="ARI Physical Therapy offers 8 specialized services including orthopedic rehab, sports injury recovery, pelvic pain, pediatric therapy, and more in Bakersfield, CA.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+
+        /* =============================================
+           RESET & BASE
+        ============================================= */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --orange:        #E8630A;
+            --orange-dark:   #C4520A;
+            --orange-light:  #FF8C42;
+            --charcoal:      #2B2B2B;
+            --charcoal-mid:  #3D3D3D;
+            --cream:         #FAF8F4;
+            --white:         #FFFFFF;
+            --text-dark:     #1A1A1A;
+            --text-mid:      #555555;
+            --text-light:    #888888;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-dark);
+            background: var(--white);
+            line-height: 1.6;
+        }
+
+        /* =============================================
+           TOP BAR
+        ============================================= */
+        .top-bar {
+            background: var(--charcoal);
+            color: var(--white);
+            padding: 10px 48px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 13px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .top-bar-left {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+        }
+
+        .top-bar a {
+            color: rgba(255,255,255,0.85);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: color 0.2s;
+        }
+
+        .top-bar a:hover { color: var(--orange-light); }
+        .top-bar-icon { font-size: 14px; }
+
+        .btn-book-topbar {
+            background: var(--orange);
+            color: var(--white) !important;
+            padding: 7px 18px;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 13px;
+            letter-spacing: 0.3px;
+            transition: background 0.2s !important;
+        }
+
+        .btn-book-topbar:hover { background: var(--orange-dark) !important; }
+
+        /* =============================================
+           NAVIGATION
+        ============================================= */
+        .navbar {
+            background: var(--white);
+            padding: 14px 48px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+            position: sticky;
+            top: 39px;
+            z-index: 999;
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .nav-logo img { height: 56px; width: auto; }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 36px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--charcoal);
+            font-weight: 500;
+            font-size: 15px;
+            transition: color 0.2s;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--orange);
+            transition: width 0.25s;
+        }
+
+        .nav-links a:hover { color: var(--orange); }
+        .nav-links a:hover::after { width: 100%; }
+        .nav-links a.active { color: var(--orange); }
+        .nav-links a.active::after { width: 100%; }
+
+        .nav-careers {
+            color: var(--orange) !important;
+            font-weight: 700 !important;
+        }
+
+        .navbar.scrolled { box-shadow: 0 4px 24px rgba(0,0,0,0.13); }
+
+        .nav-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 6px;
+        }
+
+        .nav-toggle span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: var(--charcoal);
+            border-radius: 2px;
+            transition: all 0.25s;
+        }
+
+        @media (max-width: 768px) {
+            .navbar { padding: 14px 20px; top: 0; }
+            .top-bar { display: none; }
+            .nav-toggle { display: flex; }
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--white);
+                flex-direction: column;
+                gap: 0;
+                padding: 12px 0 20px;
+                box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+            }
+            .nav-links.open { display: flex; }
+            .nav-links li { width: 100%; }
+            .nav-links a { display: block; padding: 12px 24px; font-size: 16px; }
+        }
+
+        /* =============================================
+           PAGE HERO (shorter than homepage)
+        ============================================= */
+        .page-hero {
+            background: var(--charcoal);
+            padding: 80px 48px 72px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .page-hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 6px;
+            height: 100%;
+            background: var(--orange);
+        }
+
+        .page-hero-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .page-eyebrow {
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--orange);
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .page-eyebrow::before {
+            content: '';
+            display: inline-block;
+            width: 32px;
+            height: 2px;
+            background: var(--orange);
+        }
+
+        .page-hero h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: clamp(36px, 5vw, 56px);
+            font-weight: 900;
+            color: var(--white);
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+
+        .page-hero h1 .hl { color: var(--orange); }
+
+        .page-hero p {
+            font-size: 18px;
+            color: rgba(255,255,255,0.72);
+            max-width: 560px;
+            line-height: 1.7;
+        }
+
+        /* =============================================
+           INTRO STRIP
+        ============================================= */
+        .intro-strip {
+            background: var(--cream);
+            padding: 56px 48px;
+            text-align: center;
+        }
+
+        .intro-strip p {
+            max-width: 780px;
+            margin: 0 auto;
+            font-size: 17px;
+            color: var(--text-mid);
+            line-height: 1.8;
+        }
+
+        .intro-strip strong { color: var(--charcoal); }
+
+        /* =============================================
+           SERVICES SECTION
+        ============================================= */
+        .services-section {
+            padding: 88px 48px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .service-block {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 72px;
+            align-items: center;
+            margin-bottom: 100px;
+            padding-bottom: 100px;
+            border-bottom: 1px solid rgba(0,0,0,0.07);
+        }
+
+        .service-block:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        /* Alternate image left/right */
+        .service-block.reverse { direction: rtl; }
+        .service-block.reverse > * { direction: ltr; }
+
+        .service-img-wrap {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 12px 40px rgba(0,0,0,0.12);
+            aspect-ratio: 4/3;
+        }
+
+        .service-img-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+
+        .service-img-wrap:hover img { transform: scale(1.03); }
+
+        .service-content { }
+
+        .service-number {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 64px;
+            font-weight: 900;
+            color: rgba(232,99,10,0.10);
+            line-height: 1;
+            margin-bottom: -12px;
+        }
+
+        .service-tag {
+            display: inline-block;
+            background: rgba(232,99,10,0.1);
+            color: var(--orange);
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            padding: 5px 12px;
+            border-radius: 4px;
+            margin-bottom: 16px;
+        }
+
+        .service-content h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 30px;
+            font-weight: 800;
+            color: var(--charcoal);
+            line-height: 1.2;
+            margin-bottom: 18px;
+        }
+
+        .service-content h2 span { color: var(--orange); }
+
+        .service-content p {
+            font-size: 16px;
+            color: var(--text-mid);
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .service-bullets {
+            list-style: none;
+            margin-bottom: 28px;
+        }
+
+        .service-bullets li {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            font-size: 14px;
+            color: var(--text-mid);
+            margin-bottom: 10px;
+        }
+
+        .service-bullets li::before {
+            content: '✓';
+            color: var(--orange);
+            font-weight: 700;
+            font-size: 14px;
+            flex-shrink: 0;
+            margin-top: 1px;
+        }
+
+        .btn-primary {
+            display: inline-block;
+            background: var(--orange);
+            color: var(--white);
+            padding: 14px 28px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 14px;
+            letter-spacing: 0.5px;
+            transition: background 0.2s, transform 0.15s;
+        }
+
+        .btn-primary:hover {
+            background: var(--orange-dark);
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 900px) {
+            .service-block {
+                grid-template-columns: 1fr;
+                gap: 36px;
+                margin-bottom: 64px;
+                padding-bottom: 64px;
+            }
+            .service-block.reverse { direction: ltr; }
+            .services-section { padding: 56px 24px; }
+            .page-hero { padding: 56px 24px; }
+            .intro-strip { padding: 40px 24px; }
+        }
+
+        /* =============================================
+           CTA BANNER
+        ============================================= */
+        .cta-banner {
+            background: var(--charcoal);
+            padding: 80px 48px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-banner::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: url('assets/IMG_7877.jpg') center/cover no-repeat;
+            opacity: 0.12;
+        }
+
+        .cta-banner-inner {
+            position: relative;
+            max-width: 680px;
+            margin: 0 auto;
+        }
+
+        .cta-banner h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: clamp(28px, 4vw, 42px);
+            font-weight: 900;
+            color: var(--white);
+            margin-bottom: 16px;
+            line-height: 1.15;
+        }
+
+        .cta-banner h2 .hl { color: var(--orange); }
+
+        .cta-banner p {
+            font-size: 17px;
+            color: rgba(255,255,255,0.72);
+            margin-bottom: 36px;
+            line-height: 1.7;
+        }
+
+        /* =============================================
+           FOOTER
+        ============================================= */
+        footer {
+            background: var(--charcoal);
+            color: rgba(255,255,255,0.65);
+            padding: 56px 48px 24px;
+        }
+
+        .footer-inner { max-width: 1200px; margin: 0 auto; }
+
+        .footer-top {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 48px;
+            margin-bottom: 44px;
+        }
+
+        .footer-about p {
+            font-size: 14px;
+            line-height: 1.75;
+            max-width: 320px;
+            margin-bottom: 16px;
+        }
+
+        .footer-tagline {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            color: var(--orange);
+            font-size: 12px;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+        }
+
+        .footer-col h4 {
+            color: var(--white);
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 18px;
+        }
+
+        .footer-col ul { list-style: none; }
+        .footer-col ul li { margin-bottom: 10px; }
+
+        .footer-col ul li a {
+            color: rgba(255,255,255,0.6);
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.2s;
+        }
+
+        .footer-col ul li a:hover { color: var(--orange); }
+
+        .footer-social { display: flex; gap: 10px; margin-bottom: 24px; }
+
+        .social-btn {
+            width: 36px;
+            height: 36px;
+            border-radius: 6px;
+            border: 1px solid rgba(255,255,255,0.18);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgba(255,255,255,0.65);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 700;
+            transition: background 0.2s, border-color 0.2s, color 0.2s;
+        }
+
+        .social-btn:hover {
+            background: var(--orange);
+            border-color: var(--orange);
+            color: var(--white);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.08);
+            padding-top: 22px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 13px;
+        }
+
+        @media (max-width: 768px) {
+            .footer-top { grid-template-columns: 1fr; gap: 32px; }
+            footer { padding: 48px 24px 20px; }
+            .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
+            .cta-banner { padding: 64px 24px; }
+        }
+
+        /* =============================================
+           ANIMATIONS
+        ============================================= */
+        .reveal {
+            opacity: 0;
+            transform: translateY(32px);
+            transition: opacity 0.65s ease, transform 0.65s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- ===== TOP BAR ===== -->
+    <div class="top-bar">
+        <div class="top-bar-left">
+            <a href="tel:6612828584">
+                <span class="top-bar-icon">📞</span>
+                (661) 282-8584
+            </a>
+            <a href="mailto:contactus@ariptcare.com">
+                <span class="top-bar-icon">✉</span>
+                contactus@ariptcare.com
+            </a>
+        </div>
+        <a href="appointment.html" class="btn-book-topbar">Book an Appointment</a>
+    </div>
+
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar">
+        <a href="index.html" class="nav-logo">
+            <img src="assets/logo-dark.png" alt="ARI Physical Therapy">
+        </a>
+        <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html" class="active">Services</a></li>
+            <li><a href="appointment.html">Book an Appointment</a></li>
+            <li><a href="careers.html" class="nav-careers">Careers</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- ===== PAGE HERO ===== -->
+    <section class="page-hero">
+        <div class="page-hero-inner">
+            <p class="page-eyebrow">What We Treat</p>
+            <h1>Our <span class="hl">Specialties</span></h1>
+            <p>Eight specialized programs built around your unique needs — because recovery isn't one-size-fits-all.</p>
+        </div>
+    </section>
+
+    <!-- ===== INTRO ===== -->
+    <div class="intro-strip">
+        <p>At ARI Physical Therapy, every treatment plan starts with <strong>listening to you</strong>. Whether you're recovering from surgery, managing chronic pain, or looking to stay active and injury-free, our team of certified professionals brings the expertise and compassion to get you there.</p>
+    </div>
+
+    <!-- ===== SERVICES ===== -->
+    <div class="services-section">
+
+        <!-- 1. Orthopedic Rehabilitation -->
+        <div class="service-block reveal">
+            <div class="service-img-wrap">
+                <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&q=80" alt="Orthopedic Rehabilitation">
+            </div>
+            <div class="service-content">
+                <div class="service-number">01</div>
+                <span class="service-tag">Orthopedic</span>
+                <h2>Orthopedic <span>Rehabilitation</span></h2>
+                <p>Musculoskeletal injuries — from fractures and ligament tears to arthritis and joint pain — require precise, targeted therapy to heal correctly and fully. Our orthopedic rehab program combines hands-on manual therapy with progressive exercise to restore strength, range of motion, and function.</p>
+                <ul class="service-bullets">
+                    <li>Joint pain and stiffness</li>
+                    <li>Fracture and ligament recovery</li>
+                    <li>Hip, knee, shoulder, and spine conditions</li>
+                    <li>Arthritis management</li>
+                </ul>
+                <a href="appointment.html" class="btn-primary">Book a Consultation</a>
+            </div>
+        </div>
+
+        <!-- 2. Sports Injury Recovery -->
+        <div class="service-block reverse reveal">
+            <div class="service-img-wrap">
+                <img src="https://images.unsplash.com/photo-1517963879433-6ad2b056d712?w=800&q=80" alt="Sports Injury Recovery">
+            </div>
+            <div class="service-content">
+                <div class="service-number">02</div>
+                <span class="service-tag">Sports</span>
+                <h2>Sports Injury <span>Recovery</span></h2>
+                <p>Whether you're a weekend warrior or a competitive athlete, a sports injury can sideline you fast. We specialize in getting athletes back to peak performance safely, combining sport-specific rehab with injury prevention strategies to keep you in the game long-term.</p>
+                <ul class="service-bullets">
+                    <li>ACL, MCL, and rotator cuff injuries</li>
+                    <li>Sprains, strains, and tendinopathies</li>
+                    <li>Return-to-sport programs</li>
+                    <li>Performance optimization</li>
+                </ul>
+                <a href="appointment.html" class="btn-primary">Book a Consultation</a>
+            </div>
+        </div>
+
+        <!-- 3. Post-Operative Care -->
+        <div class="service-block reveal">
+            <div class="service-img-wrap">
+                <img src="https://images.unsplash.com/photo-1559757175-5700dde675bc?w=800&q=80" alt="Post-Operative Care">
+            </div>
+            <div class="service-content">
+                <div class="service-number">03</div>
+                <span class="service-tag">Post-Surgery</span>
+                <h2>Post-Operative <span>Care</span></h2>
+                <p>Surgery is only the first step — what happens during recovery determines your outcome. Our post-operative rehab programs are designed in close coordination with your surgeon's protocol to minimize scar tissue, restore mobility, and rebuild strength in a safe, structured progression.</p>
+                <ul class="service-bullets">
+                    <li>Total joint replacement recovery</li>
+                    <li>Spinal surgery rehabilitation</li>
+                    <li>Surgical wound and scar management</li>
+                    <li>Coordinated care with your surgical team</li>
+                </ul>
+                <a href="appointment.html" class="btn-primary">Book a Consultation</a>
+            </div>
+        </div>
+
+        <!-- 4. Chronic Pain Rehab -->
+        <div class="service-block reverse reveal">
+            <div class="service-img-wrap">
+                <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800&q=80" alt="Chronic Pain Rehabilitation">
+            </div>
+            <div class="service-content">
+                <div class="service-number">04</div>
+                <span class="service-tag">Chronic Pain</span>
+                <h2>Chronic Pain <span>Rehab</span></h2>
+                <p>Living with chronic pain is exhausting — and you deserve more than just "managing" it. Our approach addresses the root causes of persistent pain through movement therapy, manual techniques, and patient education, helping you build long-term strategies for a more comfortable, active life.</p>
+                <ul class="service-bullets">
+                    <li>Low back and neck pain</li>
+                    <li>Fibromyalgia and widespread pain</li>
+                    <li>Headaches and TMJ dysfunction</li>
+                    <li>Pain education and self-management tools</li>
+                </ul>
+                <a href="appointment.html" class="btn-primary">Book a Consultation</a>
+            </div>
+        </div>
+
+        <!-- 5. Pelvic Pain -->
+        <div class="service-block reveal">
+            <div class="service-img-wrap">
+                <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?w=800&q=80" alt="Pelvic Pain Therapy">
+            </div>
+            <div class="service-content">
+                <div class="service-number">05</div>
+                <span class="service-tag">Pelvic Health</span>
+                <h2>Pelvic <span>Pain</span></h2>
+                <p>Pelvic floor dysfunction is far more common than most people realize — and far more treatable. Our certified pelvic health therapists provide discreet, evidence-based care for a range of pelvic conditions affecting both men and women, restoring comfort and confidence.</p>
+                <ul class="service-bullets">
+                    <li>Pelvic floor muscle dysfunction</li>
+                    <li>Urinary and bowel incontinence</li>
+                    <li>Pelvic organ prolapse</li>
+                    <li>Pelvic pain and interstitial cystitis</li>
+                </ul>
+                <a href="appointment.html" class="btn-primary">Book a Consultation</a>
+            </div>
+        </div>
+
+        <!-- 6. Pediatric Rehabilitation -->
+        <div class="service-block reverse reveal">
+            <div class="service-img-wrap">
+                <img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=800&q=80" alt="Pediatric Rehabilitation">
+            </div>
+            <div class="service-content">
+                <div class="service-number">06</div>
+                <span class="service-tag">Pediatric</span>
+                <h2>Pediatric <span>Rehabilitation</span></h2>
+                <p>Children have unique physical and developmental needs. Our pediatric therapists create a fun, encouraging environment where kids can heal, grow, and reach their milestones. We work closely with families to ensure progress continues at home as well as in the clinic.</p>
+                <ul class="service-bullets">
+                    <li>Developmental delays and coordination</li>
+                    <li>Sports injuries in young athletes</li>
+                    <li>Post-surgical pediatric rehab</li>
+                    <li>Torticollis and musculoskeletal conditions</li>
+                </ul>
+                <a href="appointment.html" class="btn-primary">Book a Consultation</a>
+            </div>
+        </div>
+
+        <!-- 7. Pre/Post Partum Rehab -->
+        <div class="service-block reveal">
+            <div class="service-img-wrap">
+                <img src="https://images.unsplash.com/photo-1493894473891-10fc1e5dbd22?w=800&q=80" alt="Pre and Post Partum Rehab">
+            </div>
+            <div class="service-content">
+                <div class="service-number">07</div>
+                <span class="service-tag">Women's Health</span>
+                <h2>Pre / Post <span>Partum Rehab</span></h2>
+                <p>Pregnancy and childbirth put enormous demands on the body — demands that don't disappear once baby arrives. We support women through every stage, from prenatal body changes to postpartum recovery, with a focus on pelvic health, core strength, and return to activity.</p>
+                <ul class="service-bullets">
+                    <li>Prenatal back and pelvic pain</li>
+                    <li>Diastasis recti (abdominal separation)</li>
+                    <li>C-section and birth recovery</li>
+                    <li>Postpartum return-to-exercise guidance</li>
+                </ul>
+                <a href="appointment.html" class="btn-primary">Book a Consultation</a>
+            </div>
+        </div>
+
+        <!-- 8. Health Programs -->
+        <div class="service-block reverse reveal">
+            <div class="service-img-wrap">
+                <img src="https://images.unsplash.com/photo-1576678927484-cc907957088c?w=800&q=80" alt="Health and Wellness Programs">
+            </div>
+            <div class="service-content">
+                <div class="service-number">08</div>
+                <span class="service-tag">Wellness</span>
+                <h2>Health <span>Programs</span></h2>
+                <p>Great health doesn't stop when your formal therapy ends. Our wellness programs are designed to keep you moving, strong, and injury-free for the long term. Whether you're focused on fall prevention, general fitness, or maintaining the gains from therapy, we have a program for you.</p>
+                <ul class="service-bullets">
+                    <li>Fall prevention for older adults</li>
+                    <li>Injury prevention and movement screening</li>
+                    <li>Strength and conditioning programs</li>
+                    <li>Post-discharge wellness maintenance</li>
+                </ul>
+                <a href="appointment.html" class="btn-primary">Book a Consultation</a>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- ===== CTA BANNER ===== -->
+    <section class="cta-banner">
+        <div class="cta-banner-inner">
+            <h2>Not Sure Which <span class="hl">Service Is Right</span> for You?</h2>
+            <p>Give us a call or book a consultation — our team will help match you with the right program for your condition and goals.</p>
+            <a href="appointment.html" class="btn-primary">Book a Free Consultation</a>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-top">
+                <div class="footer-about">
+                    <img src="assets/logo-white.png" alt="ARI Physical Therapy" style="height:48px; margin-bottom:18px; display:block;">
+                    <p>Compassionate, personalized physical therapy in Bakersfield, CA. We're here to help you move better, feel better, and live better.</p>
+                    <div class="footer-tagline">Empowering Every Move</div>
+                    <div class="footer-social" style="margin-top:20px;">
+                        <a href="https://www.instagram.com/ariptcare" target="_blank" rel="noopener" class="social-btn" aria-label="Instagram">IG</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="appointment.html">Book an Appointment</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="tel:6612828584">(661) 282-8584</a></li>
+                        <li><a href="mailto:contactus@ariptcare.com">contactus@ariptcare.com</a></li>
+                        <li><a href="contact.html">8200 Stockdale Hwy, Suite B2<br>Bakersfield, CA 93311</a></li>
+                        <li style="color:rgba(255,255,255,0.5); font-size:14px;">Mon–Fri · Open until 6 PM</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>© 2025 ARI Physical Therapy. All rights reserved.</span>
+                <span>8200 Stockdale Hwy Suite B2, Bakersfield, CA 93311</span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Navbar shadow on scroll
+        const navbar = document.querySelector('.navbar');
+        window.addEventListener('scroll', () => {
+            navbar.classList.toggle('scrolled', window.scrollY > 10);
+        });
+
+        // Mobile menu toggle
+        const toggle = document.querySelector('.nav-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        toggle.addEventListener('click', () => {
+            const open = navLinks.classList.toggle('open');
+            toggle.setAttribute('aria-expanded', open);
+        });
+
+        // Scroll reveal
+        const reveals = document.querySelectorAll('.reveal');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.12 });
+        reveals.forEach(el => observer.observe(el));
+    </script>
+
+</body>
+</html>
