@@ -1,0 +1,1356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARI Physical Therapy | Bakersfield, CA</title>
+    <meta name="description" content="ARI Physical Therapy in Bakersfield, CA. Personalized, compassionate physical therapy for orthopedic, sports, pelvic, pediatric, and more. Empowering Every Move.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+
+        /* =============================================
+           RESET & BASE
+        ============================================= */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --orange:        #E8630A;
+            --orange-dark:   #C4520A;
+            --orange-light:  #FF8C42;
+            --charcoal:      #2B2B2B;
+            --charcoal-mid:  #3D3D3D;
+            --cream:         #FAF8F4;
+            --white:         #FFFFFF;
+            --text-dark:     #1A1A1A;
+            --text-mid:      #555555;
+            --text-light:    #888888;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-dark);
+            background: var(--white);
+            line-height: 1.6;
+        }
+
+        /* =============================================
+           TOP BAR
+        ============================================= */
+        .top-bar {
+            background: var(--charcoal);
+            color: var(--white);
+            padding: 10px 48px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 13px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .top-bar-left {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+        }
+
+        .top-bar a {
+            color: rgba(255,255,255,0.85);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: color 0.2s;
+        }
+
+        .top-bar a:hover { color: var(--orange-light); }
+
+        .top-bar-icon { font-size: 14px; }
+
+        .btn-book-topbar {
+            background: var(--orange);
+            color: var(--white) !important;
+            padding: 7px 18px;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 13px;
+            letter-spacing: 0.3px;
+            transition: background 0.2s !important;
+        }
+
+        .btn-book-topbar:hover {
+            background: var(--orange-dark) !important;
+        }
+
+        /* =============================================
+           NAVIGATION
+        ============================================= */
+        .navbar {
+            background: var(--white);
+            padding: 14px 48px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+            position: sticky;
+            top: 39px;
+            z-index: 999;
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .nav-logo img {
+            height: 56px;
+            width: auto;
+        }
+
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 36px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--charcoal);
+            font-weight: 500;
+            font-size: 15px;
+            transition: color 0.2s;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--orange);
+            transition: width 0.25s;
+        }
+
+        .nav-links a:hover { color: var(--orange); }
+        .nav-links a:hover::after { width: 100%; }
+
+        .nav-careers {
+            color: var(--orange) !important;
+            font-weight: 700 !important;
+        }
+
+        .nav-careers::after {
+            background: var(--orange) !important;
+        }
+
+        /* Navbar deepens shadow slightly when scrolled */
+        .navbar.scrolled {
+            box-shadow: 0 4px 24px rgba(0,0,0,0.13);
+        }
+
+        /* Hamburger toggle — hidden on desktop */
+        .nav-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 6px;
+        }
+        .nav-toggle span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: var(--charcoal);
+            border-radius: 2px;
+            transition: all 0.25s;
+        }
+
+        /* Mobile styles */
+        @media (max-width: 768px) {
+            .navbar { padding: 14px 20px; top: 0; }
+            .top-bar { display: none; }
+            .nav-toggle { display: flex; }
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--white);
+                flex-direction: column;
+                gap: 0;
+                padding: 12px 0 20px;
+                box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+            }
+            .nav-links.open { display: flex; }
+            .nav-links li { width: 100%; }
+            .nav-links a {
+                display: block;
+                padding: 12px 24px;
+                font-size: 16px;
+            }
+        }
+
+        /* =============================================
+           HERO
+        ============================================= */
+        .hero {
+            position: relative;
+            min-height: 88vh;
+            display: flex;
+            align-items: center;
+            background: var(--charcoal);
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            background-image: url('assets/IMG_8165.png');
+            background-size: cover;
+            background-position: center 40%;
+            opacity: 0.28;
+        }
+
+        /* Orange accent stripe on the right */
+        .hero-accent {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 6px;
+            height: 100%;
+            background: var(--orange);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 100px 48px;
+            width: 100%;
+        }
+
+        .hero-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--orange);
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+        }
+
+        .hero-eyebrow::before {
+            content: '';
+            display: inline-block;
+            width: 28px;
+            height: 2px;
+            background: var(--orange);
+        }
+
+        .hero h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: clamp(54px, 7.5vw, 96px);
+            font-weight: 900;
+            color: var(--white);
+            line-height: 0.95;
+            text-transform: uppercase;
+            margin-bottom: 28px;
+            letter-spacing: -1px;
+        }
+
+        .hero h1 .highlight { color: var(--orange); }
+
+        .hero-subtitle {
+            font-size: 19px;
+            color: rgba(255,255,255,0.75);
+            max-width: 520px;
+            margin-bottom: 44px;
+            font-style: italic;
+            line-height: 1.55;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: var(--orange);
+            color: var(--white);
+            padding: 15px 34px;
+            border-radius: 4px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 15px;
+            letter-spacing: 0.5px;
+            text-decoration: none;
+            display: inline-block;
+            transition: background 0.2s, transform 0.2s;
+        }
+
+        .btn-primary:hover {
+            background: var(--orange-dark);
+            transform: translateY(-2px);
+        }
+
+        .btn-ghost {
+            background: transparent;
+            color: var(--white);
+            padding: 15px 34px;
+            border-radius: 4px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 15px;
+            text-decoration: none;
+            display: inline-block;
+            border: 2px solid rgba(255,255,255,0.45);
+            transition: border-color 0.2s, color 0.2s;
+        }
+
+        .btn-ghost:hover {
+            border-color: var(--orange);
+            color: var(--orange);
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 48px;
+            margin-top: 64px;
+            padding-top: 40px;
+            border-top: 1px solid rgba(255,255,255,0.12);
+        }
+
+        .stat-number {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 34px;
+            font-weight: 900;
+            color: var(--orange);
+            line-height: 1;
+        }
+
+        .stat-label {
+            font-size: 11px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.55);
+            margin-top: 4px;
+        }
+
+        /* =============================================
+           SHARED SECTION STYLES
+        ============================================= */
+        .section-eyebrow {
+            color: var(--orange);
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 3.5px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .section-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: clamp(28px, 3.5vw, 40px);
+            font-weight: 800;
+            color: var(--charcoal);
+            line-height: 1.15;
+        }
+
+        .section-title .hl { color: var(--orange); }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 56px;
+        }
+
+        /* =============================================
+           WHY ARI
+        ============================================= */
+        .why-ari {
+            background: var(--cream);
+            padding: 88px 48px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Mural watermark — ARI's own wall art, faint right-side accent */
+        .why-ari::after {
+            content: '';
+            position: absolute;
+            right: -40px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 320px;
+            height: 420px;
+            background: url('assets/IMG_7877.png') center/cover no-repeat;
+            opacity: 0.08;
+            pointer-events: none;
+        }
+
+        .why-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 28px;
+        }
+
+        .why-card {
+            background: var(--white);
+            padding: 36px 26px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            transition: transform 0.25s, box-shadow 0.25s;
+            border-bottom: 3px solid transparent;
+        }
+
+        .why-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 36px rgba(0,0,0,0.10);
+            border-bottom-color: var(--orange);
+        }
+
+        .why-icon {
+            width: 60px;
+            height: 60px;
+            background: rgba(232,99,10,0.10);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            margin: 0 auto 18px;
+        }
+
+        .why-card h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--charcoal);
+            margin-bottom: 10px;
+            line-height: 1.3;
+        }
+
+        .why-card p {
+            font-size: 14px;
+            color: var(--text-mid);
+            line-height: 1.65;
+        }
+
+        /* =============================================
+           SERVICES
+        ============================================= */
+        .services {
+            background: var(--white);
+            padding: 88px 48px;
+        }
+
+        .services-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+
+        .service-card {
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 18px rgba(0,0,0,0.07);
+            transition: transform 0.25s, box-shadow 0.25s;
+            background: var(--white);
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 14px 36px rgba(0,0,0,0.13);
+        }
+
+        .service-img {
+            width: 100%;
+            height: 155px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .service-body {
+            padding: 20px 18px 22px;
+        }
+
+        .service-body h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--charcoal);
+            margin-bottom: 7px;
+            line-height: 1.3;
+        }
+
+        .service-body p {
+            font-size: 13px;
+            color: var(--text-mid);
+            line-height: 1.55;
+        }
+
+        .service-link {
+            display: inline-block;
+            margin-top: 11px;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--orange);
+            text-decoration: none;
+            transition: gap 0.2s;
+        }
+
+        .service-link:hover { text-decoration: underline; }
+
+        /* =============================================
+           CAREERS BANNER
+        ============================================= */
+        .careers-banner {
+            background: var(--charcoal);
+            padding: 72px 48px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .careers-banner::before,
+        .careers-banner::after {
+            content: '';
+            position: absolute;
+            border-radius: 50%;
+            background: var(--orange);
+            opacity: 0.12;
+        }
+
+        .careers-banner::before {
+            width: 280px; height: 280px;
+            top: -100px; left: -80px;
+        }
+
+        .careers-banner::after {
+            width: 220px; height: 220px;
+            bottom: -80px; right: -60px;
+        }
+
+        .careers-banner h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: clamp(26px, 3vw, 38px);
+            font-weight: 800;
+            color: var(--white);
+            margin-bottom: 12px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .careers-banner h2 .hl { color: var(--orange); }
+
+        .careers-banner p {
+            color: rgba(255,255,255,0.65);
+            font-size: 17px;
+            max-width: 520px;
+            margin: 0 auto 32px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .careers-banner .btn-primary {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* =============================================
+           TESTIMONIALS
+        ============================================= */
+        .testimonials {
+            background: var(--cream);
+            padding: 88px 48px;
+        }
+
+        .testimonials-grid {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+        }
+
+        .testimonial-card {
+            background: var(--white);
+            padding: 36px 28px;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .t-stars {
+            color: var(--orange);
+            font-size: 16px;
+            letter-spacing: 3px;
+            margin-bottom: 18px;
+        }
+
+        .t-quote {
+            font-size: 15px;
+            color: var(--text-mid);
+            line-height: 1.72;
+            font-style: italic;
+            flex: 1;
+            margin-bottom: 24px;
+            position: relative;
+            padding-left: 18px;
+        }
+
+        .t-quote::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 4px;
+            width: 3px;
+            height: calc(100% - 4px);
+            background: var(--orange);
+            border-radius: 2px;
+        }
+
+        .t-author {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .t-avatar {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            background: var(--orange);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-weight: 700;
+            font-size: 16px;
+            flex-shrink: 0;
+        }
+
+        .t-name {
+            font-weight: 600;
+            font-size: 14px;
+            color: var(--charcoal);
+        }
+
+        .t-source {
+            font-size: 12px;
+            color: var(--text-light);
+            margin-top: 2px;
+        }
+
+        .reviews-footer {
+            text-align: center;
+            margin-top: 44px;
+            font-size: 14px;
+            color: var(--text-mid);
+        }
+
+        .reviews-footer a {
+            color: var(--orange);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .reviews-footer a:hover { text-decoration: underline; }
+
+        /* =============================================
+           CONTACT STRIP
+        ============================================= */
+        .contact-strip {
+            background: var(--white);
+            padding: 88px 48px;
+        }
+
+        .contact-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1.1fr;
+            gap: 64px;
+            align-items: start;
+        }
+
+        .contact-info h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 34px;
+            font-weight: 800;
+            color: var(--charcoal);
+            margin-bottom: 36px;
+            line-height: 1.15;
+        }
+
+        .contact-info h2 .hl { color: var(--orange); }
+
+        .contact-row {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            margin-bottom: 22px;
+        }
+
+        .contact-row-icon {
+            width: 40px;
+            height: 40px;
+            background: rgba(232,99,10,0.10);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            flex-shrink: 0;
+        }
+
+        .contact-row-text strong {
+            display: block;
+            font-size: 11px;
+            font-weight: 700;
+            color: var(--orange);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 3px;
+        }
+
+        .contact-row-text span,
+        .contact-row-text a {
+            font-size: 15px;
+            color: var(--charcoal);
+            text-decoration: none;
+            line-height: 1.5;
+        }
+
+        .contact-row-text a:hover { color: var(--orange); }
+
+        .map-wrap {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 6px 28px rgba(0,0,0,0.10);
+        }
+
+        .map-wrap iframe {
+            width: 100%;
+            height: 380px;
+            border: none;
+            display: block;
+        }
+
+        /* =============================================
+           FOOTER
+        ============================================= */
+        footer {
+            background: var(--charcoal);
+            color: rgba(255,255,255,0.65);
+            padding: 56px 48px 24px;
+        }
+
+        .footer-inner { max-width: 1200px; margin: 0 auto; }
+
+        .footer-top {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 48px;
+            margin-bottom: 44px;
+        }
+
+        .footer-about p {
+            font-size: 14px;
+            line-height: 1.75;
+            max-width: 320px;
+            margin-bottom: 16px;
+        }
+
+        .footer-tagline {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            color: var(--orange);
+            font-size: 12px;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+        }
+
+        .footer-col h4 {
+            color: var(--white);
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 18px;
+        }
+
+        .footer-col ul { list-style: none; }
+
+        .footer-col ul li { margin-bottom: 10px; }
+
+        .footer-col ul li a {
+            color: rgba(255,255,255,0.6);
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.2s;
+        }
+
+        .footer-col ul li a:hover { color: var(--orange); }
+
+        .footer-social {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 24px;
+        }
+
+        .social-btn {
+            width: 36px;
+            height: 36px;
+            border-radius: 6px;
+            border: 1px solid rgba(255,255,255,0.18);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgba(255,255,255,0.65);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 700;
+            transition: background 0.2s, border-color 0.2s, color 0.2s;
+        }
+
+        .social-btn:hover {
+            background: var(--orange);
+            border-color: var(--orange);
+            color: var(--white);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.08);
+            padding-top: 22px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 13px;
+        }
+
+        /* =============================================
+           ANIMATIONS
+        ============================================= */
+
+        /* Hero entrance */
+        @keyframes fadeSlideUp {
+            from { opacity: 0; transform: translateY(28px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        .hero-eyebrow { animation: fadeSlideUp 0.7s ease both; animation-delay: 0.15s; }
+        .hero h1      { animation: fadeSlideUp 0.7s ease both; animation-delay: 0.30s; }
+        .hero-subtitle{ animation: fadeSlideUp 0.7s ease both; animation-delay: 0.45s; }
+        .hero-cta     { animation: fadeSlideUp 0.7s ease both; animation-delay: 0.60s; }
+        .hero-stats   { animation: fadeSlideUp 0.7s ease both; animation-delay: 0.75s; }
+
+        /* Scroll fade-in */
+        .reveal {
+            opacity: 0;
+            transform: translateY(32px);
+            transition: opacity 0.65s ease, transform 0.65s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Stagger children inside a revealed container */
+        .reveal-stagger > * {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity 0.55s ease, transform 0.55s ease;
+        }
+
+        .reveal-stagger.visible > *:nth-child(1) { opacity:1; transform:none; transition-delay: 0.05s; }
+        .reveal-stagger.visible > *:nth-child(2) { opacity:1; transform:none; transition-delay: 0.15s; }
+        .reveal-stagger.visible > *:nth-child(3) { opacity:1; transform:none; transition-delay: 0.25s; }
+        .reveal-stagger.visible > *:nth-child(4) { opacity:1; transform:none; transition-delay: 0.35s; }
+        .reveal-stagger.visible > *:nth-child(5) { opacity:1; transform:none; transition-delay: 0.45s; }
+        .reveal-stagger.visible > *:nth-child(6) { opacity:1; transform:none; transition-delay: 0.55s; }
+        .reveal-stagger.visible > *:nth-child(7) { opacity:1; transform:none; transition-delay: 0.65s; }
+        .reveal-stagger.visible > *:nth-child(8) { opacity:1; transform:none; transition-delay: 0.75s; }
+
+    </style>
+</head>
+<body>
+
+    <!-- ===== TOP BAR ===== -->
+    <div class="top-bar">
+        <div class="top-bar-left">
+            <a href="tel:6612828584">
+                <span class="top-bar-icon">📞</span>
+                (661) 282-8584
+            </a>
+            <a href="mailto:contactus@ariptcare.com">
+                <span class="top-bar-icon">✉</span>
+                contactus@ariptcare.com
+            </a>
+        </div>
+        <a href="appointment.html" class="btn-book-topbar">Book an Appointment</a>
+    </div>
+
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar">
+        <a href="index.html" class="nav-logo">
+            <img src="assets/logo-dark.png" alt="ARI Physical Therapy">
+        </a>
+        <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="appointment.html">Book an Appointment</a></li>
+            <li><a href="careers.html" class="nav-careers">Careers</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-accent"></div>
+        <div class="hero-content">
+            <p class="hero-eyebrow">ARI Physical Therapy &nbsp;·&nbsp; Bakersfield, CA</p>
+            <h1>
+                Empowering<br>
+                <span class="highlight">Every Move</span>
+            </h1>
+            <p class="hero-subtitle">
+                Regain your Freedom of Movement with our Targeted Treatment Plans
+            </p>
+            <div class="hero-cta">
+                <a href="appointment.html" class="btn-primary">Book Your Consultation</a>
+                <a href="services.html" class="btn-ghost">Our Services</a>
+            </div>
+            <div class="hero-stats">
+                <div>
+                    <div class="stat-number">5.0 ★</div>
+                    <div class="stat-label">Google Rating</div>
+                </div>
+                <div>
+                    <div class="stat-number">8+</div>
+                    <div class="stat-label">Specialties</div>
+                </div>
+                <div>
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Personalized Care</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== WHY ARI ===== -->
+    <section class="why-ari">
+        <div class="section-header reveal">
+            <p class="section-eyebrow">Why Choose Us</p>
+            <h2 class="section-title">Why Patients <span class="hl">Trust ARI</span></h2>
+        </div>
+        <div class="why-grid reveal-stagger">
+            <div class="why-card">
+                <div class="why-icon">🏅</div>
+                <h3>Certified Experienced Professionals</h3>
+                <p>Our therapists hold advanced certifications and bring deep clinical expertise to every patient's care.</p>
+            </div>
+            <div class="why-card">
+                <div class="why-icon">📋</div>
+                <h3>Custom Treatment Plans</h3>
+                <p>Every patient receives an individualized plan tailored to their unique condition, goals, and lifestyle.</p>
+            </div>
+            <div class="why-card">
+                <div class="why-icon">⚙️</div>
+                <h3>Modern Equipment</h3>
+                <p>We invest in the latest therapeutic technology to ensure the most effective treatment outcomes.</p>
+            </div>
+            <div class="why-card">
+                <div class="why-icon">🤝</div>
+                <h3>Caring Environment</h3>
+                <p>From the moment you walk in, you'll experience a warm, supportive atmosphere focused on your recovery.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SERVICES ===== -->
+    <section class="services">
+        <div class="section-header reveal">
+            <p class="section-eyebrow">What We Treat</p>
+            <h2 class="section-title">Our <span class="hl">Specialties</span></h2>
+        </div>
+        <div class="services-grid reveal-stagger">
+
+            <div class="service-card">
+                <img class="service-img"
+                     src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=600&q=80"
+                     alt="Orthopedic Rehabilitation">
+                <div class="service-body">
+                    <h3>Orthopedic Rehabilitation</h3>
+                    <p>Expert care for joint, muscle, and bone injuries to restore strength and range of motion.</p>
+                    <a href="services.html" class="service-link">Learn more →</a>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <img class="service-img"
+                     src="https://images.unsplash.com/photo-1552674605-db6ffd4facb5?w=600&q=80"
+                     alt="Sports Injury Recovery">
+                <div class="service-body">
+                    <h3>Sports Injury Recovery</h3>
+                    <p>Targeted programs to get athletes back in the game safely and at peak performance.</p>
+                    <a href="services.html" class="service-link">Learn more →</a>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <img class="service-img"
+                     src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=600&q=80"
+                     alt="Post-Operative Care">
+                <div class="service-body">
+                    <h3>Post-Operative Care</h3>
+                    <p>Structured rehabilitation following surgery to accelerate healing and prevent complications.</p>
+                    <a href="services.html" class="service-link">Learn more →</a>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <img class="service-img"
+                     src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=600&q=80"
+                     alt="Chronic Pain Rehab">
+                <div class="service-body">
+                    <h3>Chronic Pain Rehab</h3>
+                    <p>Evidence-based strategies to reduce chronic pain using non-pharmacological methods.</p>
+                    <a href="services.html" class="service-link">Learn more →</a>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <img class="service-img"
+                     src="https://images.unsplash.com/photo-1518611012118-696072aa579a?w=600&q=80"
+                     alt="Pelvic Pain">
+                <div class="service-body">
+                    <h3>Pelvic Pain</h3>
+                    <p>Specialized pelvic floor therapy addressing pain, dysfunction, and related conditions.</p>
+                    <a href="services.html" class="service-link">Learn more →</a>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <img class="service-img"
+                     src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=600&q=80"
+                     alt="Pediatric Rehabilitation">
+                <div class="service-body">
+                    <h3>Pediatric Rehabilitation</h3>
+                    <p>Gentle, age-appropriate therapy helping children recover, develop, and thrive.</p>
+                    <a href="services.html" class="service-link">Learn more →</a>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <img class="service-img"
+                     src="https://images.unsplash.com/photo-1493894473891-10fc1e5dbd22?w=600&q=80"
+                     alt="Pre/Post Partum Rehab">
+                <div class="service-body">
+                    <h3>Pre / Post Partum Rehab</h3>
+                    <p>Supportive care during pregnancy and postpartum recovery including pelvic health.</p>
+                    <a href="services.html" class="service-link">Learn more →</a>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <img class="service-img"
+                     src="https://images.unsplash.com/photo-1576678927484-cc907957088c?w=600&q=80"
+                     alt="Health Programs">
+                <div class="service-body">
+                    <h3>Health Programs</h3>
+                    <p>Wellness and prevention programs to keep you active, strong, and injury-free long-term.</p>
+                    <a href="services.html" class="service-link">Learn more →</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ===== CAREERS BANNER ===== -->
+    <section class="careers-banner">
+        <h2>Join Our <span class="hl">Growing Team</span></h2>
+        <p>We're looking for passionate physical therapists ready to help us empower Bakersfield — one patient at a time.</p>
+        <a href="careers.html" class="btn-primary">View Open Positions</a>
+    </section>
+
+    <!-- ===== TESTIMONIALS ===== -->
+    <section class="testimonials">
+        <div class="section-header reveal">
+            <p class="section-eyebrow">Patient Stories</p>
+            <h2 class="section-title">What Our <span class="hl">Patients Say</span></h2>
+        </div>
+        <div class="testimonials-grid reveal-stagger">
+
+            <div class="testimonial-card">
+                <div class="t-stars">★★★★★</div>
+                <p class="t-quote">I had a great experience with Physical Therapist, Deepa! She was incredibly knowledgeable, patient, and really took the time to understand my shoulder issues. She provided targeted exercises that helped improve my strength and mobility.</p>
+                <div class="t-author">
+                    <div class="t-avatar">E</div>
+                    <div>
+                        <div class="t-name">Elizabeth Gomez</div>
+                        <div class="t-source">Google Review</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="t-stars">★★★★★</div>
+                <p class="t-quote">Hands down the best physical therapist I've ever been to. Deepa is very knowledgeable, so kind, and has the best sense of humor. I love that she is firm in pushing me harder when I think I can't go any further.</p>
+                <div class="t-author">
+                    <div class="t-avatar">R</div>
+                    <div>
+                        <div class="t-name">Rebecca Baker</div>
+                        <div class="t-source">Google Review</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="t-stars">★★★★★</div>
+                <p class="t-quote">Awesome facility, great people and good treatment. The entire staff is very friendly and attentive to your needs. I actually look forward to going for therapy!</p>
+                <div class="t-author">
+                    <div class="t-avatar">B</div>
+                    <div>
+                        <div class="t-name">Bryan Garcia</div>
+                        <div class="t-source">Google Review</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="reviews-footer">
+            ⭐ <strong>5.0 out of 5</strong> on Google &nbsp;·&nbsp;
+            <a href="https://search.google.com/local/writereview?placeid=ChIJLTo6Cv1D6IARx3H2vKWpntU" target="_blank" rel="noopener">Leave us a review</a>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT STRIP ===== -->
+    <section class="contact-strip">
+        <div class="contact-inner">
+            <div class="contact-info">
+                <h2>Come <span class="hl">Find Us</span></h2>
+
+                <div class="contact-row">
+                    <div class="contact-row-icon">📍</div>
+                    <div class="contact-row-text">
+                        <strong>Address</strong>
+                        <span>8200 Stockdale Hwy, Suite B2<br>Bakersfield, CA 93311</span>
+                    </div>
+                </div>
+
+                <div class="contact-row">
+                    <div class="contact-row-icon">📞</div>
+                    <div class="contact-row-text">
+                        <strong>Phone</strong>
+                        <a href="tel:6612828584">(661) 282-8584</a>
+                    </div>
+                </div>
+
+                <div class="contact-row">
+                    <div class="contact-row-icon">✉️</div>
+                    <div class="contact-row-text">
+                        <strong>Email</strong>
+                        <a href="mailto:contactus@ariptcare.com">contactus@ariptcare.com</a>
+                    </div>
+                </div>
+
+                <div class="contact-row">
+                    <div class="contact-row-icon">🕐</div>
+                    <div class="contact-row-text">
+                        <strong>Hours</strong>
+                        <span>Monday – Friday &nbsp;·&nbsp; Open until 6:00 PM</span>
+                    </div>
+                </div>
+
+            </div>
+            <div class="map-wrap">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3285.12!2d-119.09561!3d35.35721!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80ea43fd0a3a3a2d%3A0xd59ec9a5bcf611f7!2sARI%20Physical%20Therapy!5e0!3m2!1sen!2sus!4v1681234567890"
+                    allowfullscreen=""
+                    loading="lazy"
+                    title="ARI Physical Therapy — 8200 Stockdale Hwy, Bakersfield CA">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-top">
+
+                <div class="footer-about">
+                    <img src="assets/logo-white.png" alt="ARI Physical Therapy" style="height:52px; width:auto; margin-bottom:18px; display:block;">
+                    <p>Founded with a mission to provide compassionate, effective, and personalized physical therapy. We provide not just temporary relief, but long-term solutions and education on prevention to empower every patient.</p>
+                    <p class="footer-tagline">Empowering Every Move</p>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="appointment.html">Book Appointment</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Follow Us</h4>
+                    <div class="footer-social">
+                        <a href="https://instagram.com/ariptcare" target="_blank" rel="noopener" class="social-btn" title="Instagram">IG</a>
+                        <a href="https://facebook.com" target="_blank" rel="noopener" class="social-btn" title="Facebook">FB</a>
+                    </div>
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="tel:6612828584">(661) 282-8584</a></li>
+                        <li><a href="mailto:contactus@ariptcare.com">contactus@ariptcare.com</a></li>
+                        <li><a href="contact.html">Get Directions</a></li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="footer-bottom">
+                <span>© 2025 ARI Physical Therapy, Inc. All rights reserved.</span>
+                <span>8200 Stockdale Hwy, Ste B2, Bakersfield, CA 93311</span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        /* =============================================
+           SCROLL REVEAL — Intersection Observer
+        ============================================= */
+        (function () {
+            const observer = new IntersectionObserver(
+                (entries) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('visible');
+                            observer.unobserve(entry.target); // fire once
+                        }
+                    });
+                },
+                { threshold: 0.15 }   // trigger when 15% of element is visible
+            );
+
+            // Observe every .reveal and .reveal-stagger element
+            document.querySelectorAll('.reveal, .reveal-stagger').forEach((el) => {
+                observer.observe(el);
+            });
+        })();
+
+        /* =============================================
+           STATS COUNTER ANIMATION (hero numbers)
+        ============================================= */
+        (function () {
+            const statsEl = document.querySelector('.hero-stats');
+            if (!statsEl) return;
+
+            // Map each stat-number to its final display value and optional suffix
+            const stats = [
+                { el: statsEl.querySelectorAll('.stat-number')[0], end: 5.0, decimals: 1, suffix: ' ★' },
+                { el: statsEl.querySelectorAll('.stat-number')[1], end: 8,   decimals: 0, suffix: '+'  },
+                { el: statsEl.querySelectorAll('.stat-number')[2], end: 100, decimals: 0, suffix: '%'  },
+            ];
+
+            function animateCounter(stat) {
+                const duration = 1400;  // ms
+                const startTime = performance.now();
+
+                function step(now) {
+                    const elapsed = now - startTime;
+                    const progress = Math.min(elapsed / duration, 1);
+                    // Ease-out curve
+                    const eased = 1 - Math.pow(1 - progress, 3);
+                    const value = (eased * stat.end).toFixed(stat.decimals);
+                    stat.el.textContent = value + stat.suffix;
+                    if (progress < 1) requestAnimationFrame(step);
+                }
+                requestAnimationFrame(step);
+            }
+
+            // Kick off counters once the hero-stats div enters the viewport
+            const statsObserver = new IntersectionObserver(
+                (entries) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            // Small delay so the fade-in animation plays first
+                            setTimeout(() => stats.forEach(animateCounter), 800);
+                            statsObserver.unobserve(entry.target);
+                        }
+                    });
+                },
+                { threshold: 0.5 }
+            );
+            statsObserver.observe(statsEl);
+        })();
+
+        /* =============================================
+           MOBILE MENU TOGGLE (hamburger)
+        ============================================= */
+        (function () {
+            const toggle = document.querySelector('.nav-toggle');
+            const navLinks = document.querySelector('.nav-links');
+            if (!toggle || !navLinks) return;
+
+            toggle.addEventListener('click', () => {
+                const open = navLinks.classList.toggle('open');
+                toggle.setAttribute('aria-expanded', open);
+            });
+
+            // Close menu when a link is clicked
+            navLinks.querySelectorAll('a').forEach((a) => {
+                a.addEventListener('click', () => {
+                    navLinks.classList.remove('open');
+                    toggle.setAttribute('aria-expanded', 'false');
+                });
+            });
+        })();
+
+        /* =============================================
+           NAVBAR SCROLL SHADOW
+        ============================================= */
+        (function () {
+            const navbar = document.querySelector('.navbar');
+            if (!navbar) return;
+            window.addEventListener('scroll', () => {
+                navbar.classList.toggle('scrolled', window.scrollY > 20);
+            }, { passive: true });
+        })();
+    </script>
+
+</body>
+</html>
