@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Book an Appointment | ARI Physical Therapy – Bakersfield, CA</title>
-    <meta name="description" content="Book your physical therapy appointment at ARI Physical Therapy in Bakersfield, CA. Same-week appointments available. Call (661) 282-8584 or request online.">
+    <title>For Physicians | ARI Physical Therapy – Bakersfield, CA</title>
+    <meta name="description" content="Referring physicians can request ARI Physical Therapy referral pads, download the referral form, or fax referrals to (661) 727-0005. Serving Bakersfield, CA.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
@@ -205,52 +205,244 @@
         .page-hero p {
             font-size: 18px;
             color: rgba(255,255,255,0.72);
-            max-width: 560px;
+            max-width: 580px;
             line-height: 1.7;
         }
 
         @media (max-width: 768px) { .page-hero { padding: 56px 24px; } }
 
-        /* ===== MAIN CONTENT LAYOUT ===== */
-        .appt-layout {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 80px 48px;
-            display: grid;
-            grid-template-columns: 1fr 420px;
-            gap: 72px;
-            align-items: start;
+        /* ===== QUICK CONTACT BAR ===== */
+        .quick-bar {
+            background: var(--orange);
+            padding: 20px 48px;
         }
 
-        @media (max-width: 960px) {
-            .appt-layout {
-                grid-template-columns: 1fr;
-                gap: 48px;
-                padding: 56px 24px;
-            }
+        .quick-bar-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 48px;
+            flex-wrap: wrap;
+        }
+
+        .quick-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: var(--white);
+        }
+
+        .quick-item .icon {
+            font-size: 20px;
+        }
+
+        .quick-item-text strong {
+            display: block;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            opacity: 0.8;
+            margin-bottom: 2px;
+        }
+
+        .quick-item-text a,
+        .quick-item-text span {
+            font-size: 16px;
+            font-weight: 700;
+            font-family: 'Montserrat', sans-serif;
+            color: var(--white);
+            text-decoration: none;
+        }
+
+        .quick-item-text a:hover { text-decoration: underline; }
+
+        .quick-divider {
+            width: 1px;
+            height: 36px;
+            background: rgba(255,255,255,0.3);
+        }
+
+        @media (max-width: 768px) {
+            .quick-bar { padding: 24px; }
+            .quick-divider { display: none; }
+            .quick-bar-inner { gap: 24px; }
+        }
+
+        /* ===== OPTIONS SECTION ===== */
+        .options-section {
+            padding: 88px 48px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 56px;
+        }
+
+        .section-eyebrow {
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--orange);
+            margin-bottom: 10px;
+        }
+
+        .section-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 34px;
+            font-weight: 800;
+            color: var(--charcoal);
+            line-height: 1.2;
+            margin-top: 8px;
+        }
+
+        .section-title .hl { color: var(--orange); }
+
+        .section-sub {
+            font-size: 16px;
+            color: var(--text-mid);
+            max-width: 580px;
+            margin: 16px auto 0;
+            line-height: 1.7;
+        }
+
+        .options-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+        }
+
+        /* Option card */
+        .option-card {
+            border-radius: 12px;
+            padding: 48px 44px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .option-card.order {
+            background: var(--charcoal);
+            color: var(--white);
+        }
+
+        .option-card.download {
+            background: var(--cream);
+            border: 2px solid rgba(232,99,10,0.15);
+        }
+
+        .option-icon {
+            width: 56px;
+            height: 56px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 26px;
+            margin-bottom: 24px;
+            flex-shrink: 0;
+        }
+
+        .option-card.order .option-icon {
+            background: rgba(255,255,255,0.1);
+        }
+
+        .option-card.download .option-icon {
+            background: rgba(232,99,10,0.1);
+        }
+
+        .option-card h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 24px;
+            font-weight: 800;
+            margin-bottom: 12px;
+            line-height: 1.2;
+        }
+
+        .option-card.order h2 { color: var(--white); }
+        .option-card.download h2 { color: var(--charcoal); }
+
+        .option-card.order h2 span { color: var(--orange-light); }
+        .option-card.download h2 span { color: var(--orange); }
+
+        .option-card p {
+            font-size: 15px;
+            line-height: 1.75;
+            margin-bottom: 32px;
+            flex: 1;
+        }
+
+        .option-card.order p { color: rgba(255,255,255,0.72); }
+        .option-card.download p { color: var(--text-mid); }
+
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--orange);
+            color: var(--white);
+            padding: 14px 28px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 14px;
+            letter-spacing: 0.3px;
+            transition: background 0.2s, transform 0.15s;
+            align-self: flex-start;
+        }
+
+        .btn-primary:hover { background: var(--orange-dark); transform: translateY(-2px); }
+
+        .btn-ghost-dark {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: transparent;
+            color: var(--charcoal);
+            padding: 14px 28px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 14px;
+            border: 2px solid var(--charcoal);
+            transition: background 0.2s, color 0.2s, transform 0.15s;
+            align-self: flex-start;
+        }
+
+        .btn-ghost-dark:hover {
+            background: var(--charcoal);
+            color: var(--white);
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 860px) {
+            .options-grid { grid-template-columns: 1fr; }
+            .options-section { padding: 56px 24px; }
         }
 
         /* ===== REQUEST FORM ===== */
+        .form-section {
+            background: var(--cream);
+            padding: 88px 48px;
+        }
+
+        .form-inner {
+            max-width: 760px;
+            margin: 0 auto;
+        }
+
+        .form-inner .section-header { margin-bottom: 44px; }
+
         .form-card {
             background: var(--white);
             border-radius: 12px;
-            box-shadow: 0 8px 40px rgba(0,0,0,0.09);
             padding: 48px 44px;
+            box-shadow: 0 6px 32px rgba(0,0,0,0.07);
             border-top: 4px solid var(--orange);
-        }
-
-        .form-card h2 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 26px;
-            font-weight: 800;
-            color: var(--charcoal);
-            margin-bottom: 8px;
-        }
-
-        .form-card p.sub {
-            font-size: 14px;
-            color: var(--text-light);
-            margin-bottom: 32px;
         }
 
         .form-group {
@@ -270,7 +462,6 @@
             font-size: 13px;
             font-weight: 600;
             color: var(--charcoal);
-            letter-spacing: 0.3px;
         }
 
         .form-group input,
@@ -324,7 +515,7 @@
         .form-success {
             display: none;
             text-align: center;
-            padding: 40px 24px;
+            padding: 48px 24px;
         }
 
         .form-success .icon { font-size: 52px; margin-bottom: 16px; }
@@ -340,148 +531,44 @@
         .form-success p { font-size: 15px; color: var(--text-mid); line-height: 1.7; }
 
         @media (max-width: 768px) {
+            .form-section { padding: 56px 24px; }
             .form-card { padding: 32px 24px; }
             .form-row { grid-template-columns: 1fr; }
         }
 
-        /* ===== SIDEBAR INFO ===== */
-        .appt-sidebar {}
+        /* ===== WHY ARI STRIP ===== */
+        .why-strip {
+            padding: 80px 48px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
 
-        .info-card {
+        .why-strip .section-header { text-align: left; margin-bottom: 44px; }
+
+        .specialties-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+        }
+
+        .specialty-pill {
             background: var(--cream);
-            border-radius: 12px;
-            padding: 36px 32px;
-            margin-bottom: 24px;
-        }
-
-        .info-card h3 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 18px;
-            font-weight: 800;
-            color: var(--charcoal);
-            margin-bottom: 20px;
-        }
-
-        .info-row {
-            display: flex;
-            align-items: flex-start;
-            gap: 14px;
-            margin-bottom: 18px;
-        }
-
-        .info-icon {
-            width: 38px;
-            height: 38px;
-            background: rgba(232,99,10,0.10);
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 16px;
-            flex-shrink: 0;
-        }
-
-        .info-text strong {
-            display: block;
-            font-size: 11px;
-            font-weight: 700;
-            color: var(--orange);
-            text-transform: uppercase;
-            letter-spacing: 1.2px;
-            margin-bottom: 3px;
-        }
-
-        .info-text span,
-        .info-text a {
-            font-size: 14px;
-            color: var(--charcoal);
-            text-decoration: none;
-            line-height: 1.5;
-        }
-
-        .info-text a:hover { color: var(--orange); }
-
-        .call-card {
-            background: var(--orange);
-            border-radius: 12px;
-            padding: 36px 32px;
-            text-align: center;
-            color: var(--white);
-        }
-
-        .call-card h3 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 18px;
-            font-weight: 800;
-            margin-bottom: 8px;
-        }
-
-        .call-card p {
-            font-size: 14px;
-            opacity: 0.85;
-            margin-bottom: 20px;
-            line-height: 1.6;
-        }
-
-        .call-card a.phone-link {
-            display: inline-block;
-            background: var(--white);
-            color: var(--orange);
-            padding: 13px 28px;
+            border-left: 3px solid var(--orange);
             border-radius: 6px;
-            text-decoration: none;
-            font-weight: 800;
-            font-size: 18px;
-            font-family: 'Montserrat', sans-serif;
-            transition: transform 0.15s;
-        }
-
-        .call-card a.phone-link:hover { transform: translateY(-2px); }
-
-        .what-to-expect {
-            background: var(--cream);
-            border-radius: 12px;
-            padding: 36px 32px;
-        }
-
-        .what-to-expect h3 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 18px;
-            font-weight: 800;
-            color: var(--charcoal);
-            margin-bottom: 20px;
-        }
-
-        .step {
-            display: flex;
-            gap: 14px;
-            margin-bottom: 18px;
-        }
-
-        .step-num {
-            width: 28px;
-            height: 28px;
-            background: var(--orange);
-            color: var(--white);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 12px;
-            font-weight: 800;
-            flex-shrink: 0;
-            margin-top: 2px;
-        }
-
-        .step-text strong {
-            display: block;
+            padding: 14px 18px;
             font-size: 14px;
             font-weight: 600;
             color: var(--charcoal);
-            margin-bottom: 3px;
         }
 
-        .step-text span { font-size: 13px; color: var(--text-mid); line-height: 1.5; }
+        @media (max-width: 900px) {
+            .specialties-grid { grid-template-columns: repeat(2, 1fr); }
+            .why-strip { padding: 56px 24px; }
+        }
+
+        @media (max-width: 540px) {
+            .specialties-grid { grid-template-columns: 1fr; }
+        }
 
         /* ===== FOOTER ===== */
         footer {
@@ -593,7 +680,7 @@
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="services.html">Services</a></li>
-            <li><a href="appointment.html" class="active">Book an Appointment</a></li>
+            <li><a href="appointment.html">Book an Appointment</a></li>
             <li><a href="careers.html" class="nav-careers">Careers</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
@@ -602,188 +689,170 @@
     <!-- ===== PAGE HERO ===== -->
     <section class="page-hero">
         <div class="page-hero-inner">
-            <p class="page-eyebrow">Get Started</p>
-            <h1>Book Your <span class="hl">Appointment</span></h1>
-            <p>Request an appointment online and we'll confirm within one business day. Prefer to talk? Call us directly.</p>
+            <p class="page-eyebrow">Physician Resources</p>
+            <h1>For <span class="hl">Physicians</span></h1>
+            <p>We make referring your patients to ARI Physical Therapy simple. Order referral pads, download the form, or send referrals directly by fax.</p>
         </div>
     </section>
 
-    <!-- ===== MAIN LAYOUT ===== -->
-    <div class="appt-layout">
-
-        <!-- REQUEST FORM -->
-        <div class="form-card reveal">
-            <h2>Request an Appointment</h2>
-            <p class="sub">Fill out the form below and our team will confirm your appointment within one business day.</p>
-
-            <form id="appt-form" action="https://formspree.io/f/contactus@ariptcare.com" method="POST">
-
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="first-name">First Name *</label>
-                        <input type="text" id="first-name" name="first_name" placeholder="Jane" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="last-name">Last Name *</label>
-                        <input type="text" id="last-name" name="last_name" placeholder="Smith" required>
-                    </div>
-                </div>
-
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="email">Email Address *</label>
-                        <input type="email" id="email" name="email" placeholder="jane@example.com" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="phone">Phone Number *</label>
-                        <input type="tel" id="phone" name="phone" placeholder="(661) 555-0100" required>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label for="service">Service Needed</label>
-                    <select id="service" name="service">
-                        <option value="" disabled selected>Select a service (optional)</option>
-                        <option>Orthopedic Rehabilitation</option>
-                        <option>Sports Injury Recovery</option>
-                        <option>Post-Operative Care</option>
-                        <option>Chronic Pain Rehab</option>
-                        <option>Pelvic Pain</option>
-                        <option>Pediatric Rehabilitation</option>
-                        <option>Pre / Post Partum Rehab</option>
-                        <option>Health Programs</option>
-                        <option>Not Sure / General Inquiry</option>
-                    </select>
-                </div>
-
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="preferred-date">Preferred Date</label>
-                        <input type="date" id="preferred-date" name="preferred_date">
-                    </div>
-                    <div class="form-group">
-                        <label for="preferred-time">Preferred Time</label>
-                        <select id="preferred-time" name="preferred_time">
-                            <option value="" disabled selected>Any time</option>
-                            <option>Morning (8 AM – 12 PM)</option>
-                            <option>Afternoon (12 PM – 4 PM)</option>
-                            <option>Late Afternoon (4 PM – 6 PM)</option>
-                        </select>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label for="referral">Were you referred by a physician?</label>
-                    <select id="referral" name="referral">
-                        <option value="" disabled selected>Select one</option>
-                        <option>Yes — I have a referral</option>
-                        <option>No — I'm self-referring</option>
-                        <option>Not sure</option>
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label for="message">Tell us about your condition or concern</label>
-                    <textarea id="message" name="message" placeholder="Briefly describe what's been going on — this helps us prepare for your visit..."></textarea>
-                </div>
-
-                <button type="submit" class="btn-submit">Request My Appointment →</button>
-                <p class="form-note">We'll confirm within one business day. No obligation.</p>
-
-            </form>
-
-            <div class="form-success" id="form-success">
-                <div class="icon">✅</div>
-                <h3>Request Received!</h3>
-                <p>Thank you! Our team will review your request and reach out to confirm your appointment within one business day. If you need immediate assistance, please call us at <a href="tel:6612828584" style="color:var(--orange); font-weight:600;">(661) 282-8584</a>.</p>
-            </div>
-        </div>
-
-        <!-- SIDEBAR -->
-        <div class="appt-sidebar reveal">
-
-            <div class="call-card">
-                <h3>Prefer to Call?</h3>
-                <p>Our front desk team is ready to help you schedule and answer any questions.</p>
-                <a href="tel:6612828584" class="phone-link">(661) 282-8584</a>
-            </div>
-
-            <br>
-
-            <div class="info-card">
-                <h3>Clinic Information</h3>
-
-                <div class="info-row">
-                    <div class="info-icon">📍</div>
-                    <div class="info-text">
-                        <strong>Address</strong>
-                        <span>8200 Stockdale Hwy, Suite B2<br>Bakersfield, CA 93311</span>
-                    </div>
-                </div>
-
-                <div class="info-row">
-                    <div class="info-icon">🕐</div>
-                    <div class="info-text">
-                        <strong>Hours</strong>
-                        <span>Monday – Friday<br>Open until 6:00 PM</span>
-                    </div>
-                </div>
-
-                <div class="info-row">
-                    <div class="info-icon">📠</div>
-                    <div class="info-text">
-                        <strong>Fax (Referrals)</strong>
-                        <span>(661) 727-0005</span>
-                    </div>
-                </div>
-
-                <div class="info-row">
-                    <div class="info-icon">✉️</div>
-                    <div class="info-text">
-                        <strong>Email</strong>
-                        <a href="mailto:contactus@ariptcare.com">contactus@ariptcare.com</a>
-                    </div>
+    <!-- ===== QUICK CONTACT BAR ===== -->
+    <div class="quick-bar">
+        <div class="quick-bar-inner">
+            <div class="quick-item">
+                <span class="icon">📠</span>
+                <div class="quick-item-text">
+                    <strong>Send Referrals by Fax</strong>
+                    <span>(661) 727-0005</span>
                 </div>
             </div>
-
-            <div class="what-to-expect">
-                <h3>What to Expect</h3>
-
-                <div class="step">
-                    <div class="step-num">1</div>
-                    <div class="step-text">
-                        <strong>Submit your request</strong>
-                        <span>Fill out the form or give us a call — either works.</span>
-                    </div>
-                </div>
-
-                <div class="step">
-                    <div class="step-num">2</div>
-                    <div class="step-text">
-                        <strong>We confirm your appointment</strong>
-                        <span>Our team will reach out within one business day to confirm your date and time.</span>
-                    </div>
-                </div>
-
-                <div class="step">
-                    <div class="step-num">3</div>
-                    <div class="step-text">
-                        <strong>Your first visit</strong>
-                        <span>We'll do a full evaluation and build your personalized treatment plan together.</span>
-                    </div>
-                </div>
-
-                <div class="step">
-                    <div class="step-num">4</div>
-                    <div class="step-text">
-                        <strong>Start your recovery</strong>
-                        <span>Begin your program with a team that's fully committed to your goals.</span>
-                    </div>
+            <div class="quick-divider"></div>
+            <div class="quick-item">
+                <span class="icon">📞</span>
+                <div class="quick-item-text">
+                    <strong>Call Us Directly</strong>
+                    <a href="tel:6612828584">(661) 282-8584</a>
                 </div>
             </div>
-
+            <div class="quick-divider"></div>
+            <div class="quick-item">
+                <span class="icon">✉️</span>
+                <div class="quick-item-text">
+                    <strong>Email</strong>
+                    <a href="mailto:contactus@ariptcare.com">contactus@ariptcare.com</a>
+                </div>
+            </div>
         </div>
     </div>
+
+    <!-- ===== TWO OPTIONS ===== -->
+    <section class="options-section reveal">
+        <div class="section-header">
+            <p class="section-eyebrow">Referral Forms</p>
+            <h2 class="section-title">Two Ways to Get Our <span class="hl">Referral Pad</span></h2>
+            <p class="section-sub">Whether you need a fresh supply of printed pads or just a quick form to send right now, we've got you covered.</p>
+        </div>
+
+        <div class="options-grid">
+
+            <!-- Option 1: Order pads -->
+            <div class="option-card order">
+                <div class="option-icon">📦</div>
+                <h2>Order <span>Referral Pads</span></h2>
+                <p>Need a new supply of our printed referral notepads? Fill out the quick form below and we'll have them delivered to your practice. No cost to you.</p>
+                <a href="#order-form" class="btn-primary">Order Pads →</a>
+            </div>
+
+            <!-- Option 2: Download -->
+            <div class="option-card download">
+                <div class="option-icon">⬇️</div>
+                <h2>Download & <span>Print the Form</span></h2>
+                <p>Need to send a referral right now? Download our referral form as a PDF, print it, complete it, and fax it to us at <strong>(661) 727-0005</strong>.</p>
+                <a href="assets/ReferralPadForm.pdf" download class="btn-ghost-dark">⬇ Download PDF</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ===== ORDER FORM ===== -->
+    <section class="form-section" id="order-form">
+        <div class="form-inner">
+            <div class="section-header reveal">
+                <p class="section-eyebrow">Request Referral Pads</p>
+                <h2 class="section-title">Order <span class="hl">Your Pads</span></h2>
+            </div>
+
+            <div class="form-card reveal">
+                <form id="pad-order-form" action="https://formspree.io/f/contactus@ariptcare.com" method="POST">
+
+                    <!-- Hidden field to identify this form -->
+                    <input type="hidden" name="_subject" value="Referral Pad Order Request">
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="physician-name">Physician Name *</label>
+                            <input type="text" id="physician-name" name="physician_name" placeholder="Dr. Jane Smith" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="specialty">Specialty</label>
+                            <input type="text" id="specialty" name="specialty" placeholder="e.g. Family Medicine, Ortho">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="practice-name">Practice / Clinic Name *</label>
+                        <input type="text" id="practice-name" name="practice_name" placeholder="Bakersfield Medical Group" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="delivery-address">Delivery Address *</label>
+                        <input type="text" id="delivery-address" name="delivery_address" placeholder="1234 Clinic Blvd, Bakersfield, CA 93301" required>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" placeholder="(661) 555-0100" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="fax">Fax Number</label>
+                            <input type="tel" id="fax" name="fax" placeholder="(661) 555-0101">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" placeholder="doctor@practice.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="quantity">Quantity Requested</label>
+                        <select id="quantity" name="quantity">
+                            <option value="" disabled selected>Select quantity</option>
+                            <option>1 pad (~50 forms)</option>
+                            <option>2 pads (~100 forms)</option>
+                            <option>3 pads (~150 forms)</option>
+                            <option>5 pads (~250 forms)</option>
+                            <option>Other — I'll specify in the notes</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="notes">Additional Notes</label>
+                        <textarea id="notes" name="notes" placeholder="Any special delivery instructions or questions..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-submit">Submit Order Request →</button>
+                    <p class="form-note">Orders are typically fulfilled and delivered within 3–5 business days.</p>
+
+                </form>
+
+                <div class="form-success" id="form-success">
+                    <div class="icon">✅</div>
+                    <h3>Order Received!</h3>
+                    <p>Thank you, Doctor. We'll process your referral pad order and have them delivered to your practice within 3–5 business days. Questions? Call us at <a href="tel:6612828584" style="color:var(--orange); font-weight:600;">(661) 282-8584</a>.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SPECIALTIES STRIP ===== -->
+    <section class="why-strip reveal">
+        <div class="section-header">
+            <p class="section-eyebrow">What We Treat</p>
+            <h2 class="section-title">Our <span class="hl">Specialties</span></h2>
+            <p class="section-sub" style="text-align:left; margin:12px 0 0;">We accept referrals across a wide range of conditions. <a href="services.html" style="color:var(--orange); font-weight:600;">View full service descriptions →</a></p>
+        </div>
+        <div class="specialties-grid">
+            <div class="specialty-pill">🦴 Orthopedic Rehabilitation</div>
+            <div class="specialty-pill">⚡ Sports Injury Recovery</div>
+            <div class="specialty-pill">🏥 Post-Operative Care</div>
+            <div class="specialty-pill">💊 Chronic Pain Rehab</div>
+            <div class="specialty-pill">🩺 Pelvic Pain</div>
+            <div class="specialty-pill">👶 Pediatric Rehabilitation</div>
+            <div class="specialty-pill">🤰 Pre / Post Partum Rehab</div>
+            <div class="specialty-pill">💪 Health Programs</div>
+        </div>
+    </section>
 
     <!-- ===== FOOTER ===== -->
     <footer>
@@ -814,7 +883,7 @@
                         <li><a href="tel:6612828584">(661) 282-8584</a></li>
                         <li><a href="mailto:contactus@ariptcare.com">contactus@ariptcare.com</a></li>
                         <li><a href="contact.html">8200 Stockdale Hwy, Suite B2<br>Bakersfield, CA 93311</a></li>
-                        <li style="color:rgba(255,255,255,0.5); font-size:14px;">Mon–Fri · Open until 6 PM</li>
+                        <li style="color:rgba(255,255,255,0.5); font-size:14px;">Fax: (661) 727-0005</li>
                     </ul>
                 </div>
             </div>
