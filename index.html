@@ -898,6 +898,79 @@
         .reveal-stagger.visible > *:nth-child(7) { opacity:1; transform:none; transition-delay: 0.65s; }
         .reveal-stagger.visible > *:nth-child(8) { opacity:1; transform:none; transition-delay: 0.75s; }
 
+        /* =============================================
+           RESPONSIVE — TABLET (max-width: 900px)
+        ============================================= */
+        @media (max-width: 900px) {
+            .why-ari,
+            .services,
+            .testimonials,
+            .contact-strip { padding: 64px 28px; }
+
+            .contact-inner {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .map-wrap iframe { height: 300px; }
+        }
+
+        /* =============================================
+           RESPONSIVE — MOBILE (max-width: 768px)
+        ============================================= */
+        @media (max-width: 768px) {
+            /* Hero */
+            .hero { min-height: auto; }
+            .hero-content { padding: 64px 20px 48px; }
+            .hero-subtitle { font-size: 17px; }
+            .hero-cta { gap: 12px; }
+            .hero-stats {
+                gap: 24px;
+                margin-top: 40px;
+                padding-top: 28px;
+                flex-wrap: wrap;
+            }
+            .stat-number { font-size: 28px; }
+
+            /* Sections */
+            .why-ari,
+            .services,
+            .testimonials,
+            .contact-strip { padding: 52px 20px; }
+
+            .careers-banner { padding: 52px 20px; }
+
+            /* Why ARI: 4-col → 2-col */
+            .why-grid { grid-template-columns: 1fr 1fr; gap: 16px; }
+
+            /* Services: 4-col → 2-col */
+            .services-grid { grid-template-columns: 1fr 1fr; gap: 16px; }
+
+            /* Testimonials: 3-col → 1-col */
+            .testimonials-grid { grid-template-columns: 1fr; }
+
+            /* Footer */
+            .footer-top { grid-template-columns: 1fr; gap: 32px; }
+            footer { padding: 48px 20px 20px; }
+            .footer-bottom {
+                flex-direction: column;
+                gap: 8px;
+                text-align: center;
+            }
+        }
+
+        /* =============================================
+           RESPONSIVE — SMALL MOBILE (max-width: 480px)
+        ============================================= */
+        @media (max-width: 480px) {
+            .why-grid { grid-template-columns: 1fr; }
+            .services-grid { grid-template-columns: 1fr; }
+            .hero-cta { flex-direction: column; }
+            .hero-cta .btn-primary,
+            .hero-cta .btn-ghost { text-align: center; width: 100%; }
+            .section-title { font-size: 26px; }
+        }
+
     </style>
 </head>
 <body>
@@ -914,7 +987,7 @@
                 contactus@ariptcare.com
             </a>
         </div>
-        <a href="appointment.html" class="btn-book-topbar">Book an Appointment</a>
+        <div style="display:flex;align-items:center;gap:20px;"><a href="physicians.html" style="color:rgba(255,255,255,0.75);text-decoration:none;font-size:13px;font-weight:500;letter-spacing:0.3px;transition:color 0.2s;" onmouseover="this.style.color='#FF8C42'" onmouseout="this.style.color='rgba(255,255,255,0.75)'">For Physicians</a><a href="appointment.html" class="btn-book-topbar">Book an Appointment</a></div>
     </div>
 
     <!-- ===== NAVBAR ===== -->
@@ -1244,7 +1317,7 @@
 
             </div>
             <div class="footer-bottom">
-                <span>© 2025 ARI Physical Therapy, Inc. All rights reserved.</span>
+                <span>© 2026 ARI Physical Therapy, Inc. All rights reserved.</span>
                 <span>8200 Stockdale Hwy, Ste B2, Bakersfield, CA 93311</span>
             </div>
         </div>
