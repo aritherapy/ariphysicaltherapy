@@ -1005,6 +1005,7 @@
             <li><a href="appointment.html">Book an Appointment</a></li>
             <li><a href="careers.html" class="nav-careers">Careers</a></li>
             <li><a href="contact.html">Contact</a></li>
+            <li><a href="physicians.html">For Physicians</a></li>
         </ul>
     </nav>
 
@@ -1027,16 +1028,16 @@
             </div>
             <div class="hero-stats">
                 <div>
-                    <div class="stat-number">5.0 ★</div>
-                    <div class="stat-label">Google Rating</div>
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Personalized Care</div>
                 </div>
                 <div>
                     <div class="stat-number">8+</div>
                     <div class="stat-label">Specialties</div>
                 </div>
                 <div>
-                    <div class="stat-number">100%</div>
-                    <div class="stat-label">Personalized Care</div>
+                    <div class="stat-number">5.0 ★</div>
+                    <div class="stat-label">Google Rating</div>
                 </div>
             </div>
         </div>
@@ -1298,6 +1299,7 @@
                         <li><a href="appointment.html">Book Appointment</a></li>
                         <li><a href="careers.html">Careers</a></li>
                         <li><a href="contact.html">Contact</a></li>
+            <li><a href="physicians.html">For Physicians</a></li>
                         <li><a href="physicians.html">For Physicians</a></li>
                     </ul>
                 </div>
@@ -1356,9 +1358,9 @@
 
             // Map each stat-number to its final display value and optional suffix
             const stats = [
-                { el: statsEl.querySelectorAll('.stat-number')[0], end: 5.0, decimals: 1, suffix: ' ★' },
+                { el: statsEl.querySelectorAll('.stat-number')[0], end: 100, decimals: 0, suffix: '%'  },
                 { el: statsEl.querySelectorAll('.stat-number')[1], end: 8,   decimals: 0, suffix: '+'  },
-                { el: statsEl.querySelectorAll('.stat-number')[2], end: 100, decimals: 0, suffix: '%'  },
+                { el: statsEl.querySelectorAll('.stat-number')[2], end: 5.0, decimals: 1, suffix: ' ★' },
             ];
 
             function animateCounter(stat) {
