@@ -806,10 +806,7 @@
 
             <!-- WebPT Intake Widget loads here -->
             <div id="webpt-intake-widget" class="reveal">
-                <div class="form-loading" id="form-loading">
-                    <div class="spinner"></div>
-                    <p>Loading your intake form…</p>
-                </div>
+                <script type="text/javascript" src="https://app.webpt.com/intake/index/intake/key/EKgQH4IRsvE%253D"></script>
             </div>
 
             <div class="secure-badge">
@@ -963,18 +960,7 @@
         </div>
     </footer>
 
-    <!-- WebPT Patient Intake Widget -->
-    <script type="text/javascript" src="https://app.webpt.com/intake/index/intake/key/EKgQH4IRsvE%253D"></script>
-
     <script>
-        // Hide loading spinner once WebPT script has had a chance to render
-        window.addEventListener('load', function() {
-            setTimeout(function() {
-                const loader = document.getElementById('form-loading');
-                if (loader) loader.style.display = 'none';
-            }, 2000);
-        });
-
         // Navbar sticky scroll effect
         const navbar = document.querySelector('.navbar');
         window.addEventListener('scroll', () => {
