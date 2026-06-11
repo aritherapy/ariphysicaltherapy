@@ -254,6 +254,7 @@
         }
 
         .hero-eyebrow {
+            margin-top: 0;
             display: inline-flex;
             align-items: center;
             gap: 8px;
@@ -273,7 +274,8 @@
             background: var(--orange);
         }
 
-        .hero h1 {
+        .hero .hero-title {
+            margin-top: 0;
             font-family: 'Montserrat', sans-serif;
             font-size: clamp(54px, 7.5vw, 96px);
             font-weight: 900;
@@ -284,7 +286,7 @@
             letter-spacing: -1px;
         }
 
-        .hero h1 .highlight { color: var(--orange); }
+        .hero .hero-title .highlight { color: var(--orange); }
 
         .hero-subtitle {
             font-size: 19px;
@@ -872,7 +874,7 @@
         }
 
         .hero-eyebrow { animation: fadeSlideUp 0.7s ease both; animation-delay: 0.15s; }
-        .hero h1      { animation: fadeSlideUp 0.7s ease both; animation-delay: 0.30s; }
+        .hero .hero-title { animation: fadeSlideUp 0.7s ease both; animation-delay: 0.30s; }
         .hero-subtitle{ animation: fadeSlideUp 0.7s ease both; animation-delay: 0.45s; }
         .hero-cta     { animation: fadeSlideUp 0.7s ease both; animation-delay: 0.60s; }
         .hero-stats   { animation: fadeSlideUp 0.7s ease both; animation-delay: 0.75s; }
@@ -929,7 +931,7 @@
             /* Hero */
             .hero { min-height: auto; }
             .hero-content { padding: 64px 20px 48px; }
-            .hero h1 { font-size: clamp(32px, 9vw, 52px); letter-spacing: -0.5px; }
+            .hero .hero-title { font-size: clamp(32px, 9vw, 52px); letter-spacing: -0.5px; }
             .hero-subtitle { font-size: 17px; }
             .hero-cta { gap: 12px; }
             .hero-stats {
@@ -1072,13 +1074,13 @@
         <div class="hero-bg"></div>
         <div class="hero-accent"></div>
         <div class="hero-content">
-            <p class="hero-eyebrow">ARI Physical Therapy &nbsp;·&nbsp; Bakersfield, CA</p>
-            <h1>
-                Bakersfield<br>
-                <span class="highlight">Physical Therapy</span>
-            </h1>
+            <h1 class="hero-eyebrow">ARI Physical Therapy &nbsp;·&nbsp; Bakersfield, CA</h1>
+            <p class="hero-title">
+                Empowering<br>
+                <span class="highlight">Every Move</span>
+            </p>
             <p class="hero-subtitle">
-                Empowering every move — regain your freedom of movement with our targeted treatment plans
+                Regain your Freedom of Movement with our Targeted Treatment Plans
             </p>
             <div class="hero-cta">
                 <a href="appointment.html" class="btn-primary">Book Your Consultation</a>
