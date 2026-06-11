@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/Mockups_icons_HDsquare/Icons/favicon-32x32.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="https://ariphysicaltherapy.com/sms-terms.html">
+    <title>SMS Terms of Service | ARI Physical Therapy | Bakersfield, CA</title>
+    <meta name="description" content="SMS Terms of Service for ARI Physical Therapy in Bakersfield, CA. Appointment reminders, confirmations, and patient-care text messages. Consent, opt-out (STOP), help (HELP), message frequency, and rates.">
+    <meta name="robots" content="index, follow">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --orange:        #E8630A;
+            --orange-dark:   #C4520A;
+            --orange-light:  #FF8C42;
+            --charcoal:      #2B2B2B;
+            --charcoal-mid:  #3D3D3D;
+            --cream:         #FAF8F4;
+            --white:         #FFFFFF;
+            --text-dark:     #1A1A1A;
+            --text-mid:      #555555;
+            --text-light:    #888888;
+            --border:        #E6E2DA;
+        }
+
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; color: var(--text-dark); background: var(--white); line-height: 1.7; }
+
+        /* ===== TOP BAR ===== */
+        .top-bar {
+            background: var(--charcoal); color: var(--white);
+            padding: 10px 48px; display: flex; justify-content: space-between;
+            align-items: center; font-size: 13px; flex-wrap: wrap; gap: 10px;
+        }
+        .top-bar a { color: var(--white); text-decoration: none; display: inline-flex; align-items: center; gap: 6px; margin-right: 22px; }
+        .top-bar a:hover { color: var(--orange-light); }
+        .btn-book-topbar { background: var(--orange); padding: 7px 16px; border-radius: 4px; font-weight: 600; margin-right: 0 !important; }
+        .btn-book-topbar:hover { background: var(--orange-dark); color: var(--white) !important; }
+
+        /* ===== NAVBAR ===== */
+        .navbar {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 16px 48px; background: var(--white); border-bottom: 1px solid var(--border);
+            position: sticky; top: 0; z-index: 100;
+        }
+        .nav-logo img { height: 46px; display: block; }
+        .nav-links { list-style: none; display: flex; gap: 30px; align-items: center; }
+        .nav-links a { text-decoration: none; color: var(--charcoal); font-weight: 500; font-size: 15px; }
+        .nav-links a:hover { color: var(--orange); }
+        .nav-careers { color: var(--orange) !important; font-weight: 600 !important; }
+
+        /* ===== HERO ===== */
+        .legal-hero {
+            background: linear-gradient(135deg, var(--charcoal) 0%, var(--charcoal-mid) 100%);
+            color: var(--white); padding: 64px 48px 56px;
+        }
+        .legal-hero .inner { max-width: 900px; margin: 0 auto; }
+        .legal-hero h1 { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: clamp(30px, 5vw, 46px); line-height: 1.15; }
+        .legal-hero .eyebrow { color: var(--orange-light); font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; font-size: 13px; margin-bottom: 14px; }
+        .legal-hero .dates { margin-top: 18px; font-size: 14px; color: rgba(255,255,255,0.75); }
+
+        /* ===== CONTENT ===== */
+        .legal-wrap { max-width: 900px; margin: 0 auto; padding: 48px 48px 72px; }
+        .legal-wrap h2 {
+            font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 24px;
+            color: var(--charcoal); margin: 40px 0 14px; padding-bottom: 10px; border-bottom: 2px solid var(--orange);
+        }
+        .legal-wrap h3 { font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 18px; color: var(--charcoal); margin: 26px 0 10px; }
+        .legal-wrap p { color: var(--text-mid); margin-bottom: 14px; }
+        .legal-wrap ul { margin: 0 0 16px 22px; color: var(--text-mid); }
+        .legal-wrap li { margin-bottom: 8px; }
+        .legal-wrap a { color: var(--orange-dark); }
+        .legal-wrap strong { color: var(--text-dark); }
+
+        .keyword-row { display: flex; gap: 16px; flex-wrap: wrap; margin: 22px 0 8px; }
+        .keyword { flex: 1 1 260px; background: var(--cream); border: 1px solid var(--border); border-radius: 10px; padding: 20px 22px; }
+        .keyword .kw { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 20px; color: var(--orange-dark); letter-spacing: 1px; }
+        .keyword p { margin: 6px 0 0; font-size: 14px; }
+
+        .callout { background: var(--cream); border-left: 4px solid var(--orange); border-radius: 0 8px 8px 0; padding: 18px 22px; margin: 18px 0; }
+        .callout p:last-child { margin-bottom: 0; }
+        .callout.notice { border-left-color: var(--charcoal); }
+
+        .contact-card { background: var(--charcoal); color: var(--white); border-radius: 12px; padding: 28px 32px; margin-top: 18px; }
+        .contact-card h3 { color: var(--white); margin-top: 0; }
+        .contact-card a { color: var(--orange-light); text-decoration: none; }
+        .contact-card p { color: rgba(255,255,255,0.85); }
+
+        /* ===== FOOTER ===== */
+        footer { background: var(--charcoal); color: rgba(255,255,255,0.8); padding: 56px 48px 24px; }
+        .footer-inner { max-width: 1180px; margin: 0 auto; }
+        .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px; padding-bottom: 36px; border-bottom: 1px solid rgba(255,255,255,0.12); }
+        .footer-about img { height: 46px; margin-bottom: 16px; display: block; }
+        .footer-about p { font-size: 14px; line-height: 1.7; margin-bottom: 14px; }
+        .footer-tagline { color: var(--orange-light); font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 15px; }
+        .footer-col h4 { color: var(--white); font-family: 'Montserrat', sans-serif; font-size: 15px; margin-bottom: 16px; }
+        .footer-col ul { list-style: none; }
+        .footer-col li { margin-bottom: 10px; }
+        .footer-col a { color: rgba(255,255,255,0.75); text-decoration: none; font-size: 14px; }
+        .footer-col a:hover { color: var(--orange-light); }
+        .footer-bottom { display: flex; justify-content: space-between; align-items: center; padding-top: 20px; font-size: 13px; color: rgba(255,255,255,0.55); flex-wrap: wrap; gap: 10px; }
+
+        @media (max-width: 820px) {
+            .top-bar, .navbar, .legal-hero, .legal-wrap, footer { padding-left: 22px; padding-right: 22px; }
+            .nav-links { display: none; }
+            .footer-top { grid-template-columns: 1fr; gap: 28px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===== TOP BAR ===== -->
+    <div class="top-bar">
+        <div class="top-bar-left">
+            <a href="tel:6612828584"><span>📞</span>(661) 282-8584</a>
+            <a href="mailto:contactus@ariptcare.com"><span>✉</span>contactus@ariptcare.com</a>
+        </div>
+        <div><a href="appointment.html" class="btn-book-topbar">Book an Appointment</a></div>
+    </div>
+
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar">
+        <a href="index.html" class="nav-logo"><img src="assets/logo-dark.png" alt="ARI Physical Therapy"></a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="appointment.html">Book an Appointment</a></li>
+            <li><a href="careers.html" class="nav-careers">Careers</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="physicians.html">For Physicians</a></li>
+        </ul>
+    </nav>
+
+    <!-- ===== HERO ===== -->
+    <section class="legal-hero">
+        <div class="inner">
+            <div class="eyebrow">Text Messaging</div>
+            <h1>SMS Terms of Service</h1>
+            <div class="dates">Effective date: June 10, 2026 &nbsp;·&nbsp; Last updated: June 10, 2026</div>
+        </div>
+    </section>
+
+    <div class="legal-wrap">
+
+        <p>These SMS Terms of Service ("SMS Terms") govern the text-messaging program operated by ARI Physical Therapy ("ARI Physical Therapy," "we," "us," or "our"). By providing your mobile number and consenting to receive text messages from us, you agree to these SMS Terms. They should be read together with our <a href="privacy-policy.html">Privacy Policy</a>.</p>
+
+        <h2 id="program">1. Program Description</h2>
+        <p>ARI Physical Therapy's text-messaging program sends <strong>transactional, service-related messages only</strong> to patients who have agreed to receive them. We use text messaging to support your care, including:</p>
+        <ul>
+            <li>appointment reminders;</li>
+            <li>appointment confirmations, scheduling, and rescheduling;</li>
+            <li>patient-care notifications related to your visits.</li>
+        </ul>
+        <p>We do <strong>not</strong> send marketing, advertising, or promotional text messages through this program.</p>
+
+        <h2 id="consent">2. How You Sign Up (Consent)</h2>
+        <p>You are enrolled only after you provide consent. Consent is obtained <strong>verbally</strong> &mdash; in person at our clinic or by phone &mdash; when you provide your mobile number and agree to receive text messages from us. Consent to receive text messages is <strong>not a condition</strong> of receiving care or any service from us. You may decline at sign-up or withdraw your consent at any time (see Section 6).</p>
+
+        <h2 id="types">3. Types of Messages You May Receive</h2>
+        <p>Messages are limited to the categories described in Section 1 &mdash; appointment reminders, confirmations and scheduling, and patient-care notifications. Messages may come from a phone number or short code associated with our practice or our messaging provider.</p>
+
+        <h2 id="frequency">4. Message Frequency &amp; Rates</h2>
+        <ul>
+            <li><strong>Message frequency varies</strong> based on your appointments and the needs of your care.</li>
+            <li><strong>Message and data rates may apply.</strong> These charges are set by your mobile carrier and plan and are your responsibility. Contact your carrier for details about your plan.</li>
+        </ul>
+
+        <h2 id="keywords">5. Opt Out &amp; Help</h2>
+        <div class="keyword-row">
+            <div class="keyword">
+                <div class="kw">STOP</div>
+                <p>Reply <strong>STOP</strong> to any message to unsubscribe at any time. You may also opt out by calling us at (661) 282-8584. After you opt out, we may send one final message confirming you've been unsubscribed, and we will stop sending texts.</p>
+            </div>
+            <div class="keyword">
+                <div class="kw">HELP</div>
+                <p>Reply <strong>HELP</strong> for assistance, or contact us directly at (661) 282-8584 or contactus@ariptcare.com.</p>
+            </div>
+        </div>
+        <p>If you opt out of text messages, we will continue to contact you about your appointments and care by other means, such as phone or email.</p>
+
+        <h2 id="privacy">6. Privacy &amp; Your Information</h2>
+        <div class="callout">
+            <p><strong>We never share or sell your mobile number or SMS consent.</strong> Your mobile information and your opt-in are not shared with or sold to any third parties or affiliates for their marketing purposes. Mobile information is shared only with the messaging providers that operate this texting service on our behalf, solely to deliver the messages you've asked to receive.</p>
+        </div>
+        <p>Our handling of your information is described in full in our <a href="privacy-policy.html">Privacy Policy</a>.</p>
+
+        <h2 id="security">7. Text Messaging Is Not Secure</h2>
+        <div class="callout notice">
+            <p>Standard SMS text messages are <strong>not encrypted</strong> and are not a fully secure channel. Messages could be seen by anyone with access to your device. To protect your privacy, we keep our messages general and avoid including detailed clinical or sensitive health information. <strong>Please do not include sensitive personal or medical details in your replies.</strong> If you'd prefer we not contact you by text, let us know and we'll use another method.</p>
+        </div>
+
+        <h2 id="carriers">8. Carrier Disclaimer</h2>
+        <p>Carriers (including wireless carriers) are not liable for delayed or undelivered messages. Delivery of messages is subject to effective transmission by your mobile carrier and is not guaranteed. Message delivery is on an "as available" basis.</p>
+
+        <h2 id="changes">9. Changes to These Terms</h2>
+        <p>We may update these SMS Terms from time to time. When we do, we will revise the "Last updated" date above and post the updated terms here. Your continued participation in the text-messaging program after an update means you accept the revised terms.</p>
+
+        <h2 id="contact">10. Contact Us</h2>
+        <div class="contact-card">
+            <h3>ARI Physical Therapy</h3>
+            <p>8200 Stockdale Hwy, Suite B2<br>Bakersfield, CA 93311</p>
+            <p>Phone: <a href="tel:6612828584">(661) 282-8584</a><br>
+            Email: <a href="mailto:contactus@ariptcare.com">contactus@ariptcare.com</a><br>
+            Web: <a href="https://ariphysicaltherapy.com">ariphysicaltherapy.com</a></p>
+            <p>Questions about our text-messaging program? Contact us using the information above.</p>
+        </div>
+
+    </div>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-top">
+                <div class="footer-about">
+                    <img src="assets/logo-white.png" alt="ARI Physical Therapy">
+                    <p>Compassionate, personalized physical therapy in Bakersfield, CA. We're here to help you move better, feel better, and live better.</p>
+                    <div class="footer-tagline">Empowering Every Move</div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="appointment.html">Book an Appointment</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="physicians.html">For Physicians</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal &amp; Contact</h4>
+                    <ul>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="sms-terms.html">SMS Terms of Service</a></li>
+                        <li><a href="tel:6612828584">(661) 282-8584</a></li>
+                        <li><a href="mailto:contactus@ariptcare.com">contactus@ariptcare.com</a></li>
+                        <li><a href="contact.html">8200 Stockdale Hwy, Suite B2<br>Bakersfield, CA 93311</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>© 2026 ARI Physical Therapy. All rights reserved.</span>
+                <span>8200 Stockdale Hwy Suite B2, Bakersfield, CA 93311</span>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
