@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/Mockups_icons_HDsquare/Icons/favicon-32x32.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="https://ariphysicaltherapy.com/faq.html">
+    <title>Physical Therapy FAQ | ARI Physical Therapy – Bakersfield, CA</title>
+    <meta name="description" content="Common physical therapy questions answered — referrals, insurance, what to expect at your first visit, hours, and parking — at ARI Physical Therapy in Bakersfield, CA.">
+    <meta name="robots" content="index, follow">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --orange:        #E8630A;
+            --orange-dark:   #C4520A;
+            --orange-light:  #FF8C42;
+            --charcoal:      #2B2B2B;
+            --charcoal-mid:  #3D3D3D;
+            --cream:         #FAF8F4;
+            --white:         #FFFFFF;
+            --text-dark:     #1A1A1A;
+            --text-mid:      #555555;
+            --text-light:    #888888;
+            --border:        #E6E2DA;
+        }
+
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; color: var(--text-dark); background: var(--white); line-height: 1.7; }
+
+        /* ===== TOP BAR ===== */
+        .top-bar {
+            background: var(--charcoal); color: var(--white);
+            padding: 10px 48px; display: flex; justify-content: space-between;
+            align-items: center; font-size: 13px; flex-wrap: wrap; gap: 10px;
+        }
+        .top-bar a { color: var(--white); text-decoration: none; display: inline-flex; align-items: center; gap: 6px; margin-right: 22px; }
+        .top-bar a:hover { color: var(--orange-light); }
+        .btn-book-topbar { background: var(--orange); padding: 7px 16px; border-radius: 4px; font-weight: 600; margin-right: 0 !important; }
+        .btn-book-topbar:hover { background: var(--orange-dark); color: var(--white) !important; }
+
+        /* ===== NAVBAR ===== */
+        .navbar {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 16px 48px; background: var(--white); border-bottom: 1px solid var(--border);
+            position: sticky; top: 0; z-index: 100;
+        }
+        .nav-logo img { height: 46px; display: block; }
+        .nav-links { list-style: none; display: flex; gap: 30px; align-items: center; }
+        .nav-links a { text-decoration: none; color: var(--charcoal); font-weight: 500; font-size: 15px; }
+        .nav-links a:hover { color: var(--orange); }
+        .nav-careers { color: var(--orange) !important; font-weight: 600 !important; }
+        .nav-toggle { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; }
+        .nav-toggle span { width: 26px; height: 3px; background: var(--charcoal); border-radius: 2px; }
+
+        /* ===== HERO ===== */
+        .legal-hero {
+            background: linear-gradient(135deg, var(--charcoal) 0%, var(--charcoal-mid) 100%);
+            color: var(--white); padding: 64px 48px 56px;
+        }
+        .legal-hero .inner { max-width: 900px; margin: 0 auto; }
+        .legal-hero h1 { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: clamp(30px, 5vw, 46px); line-height: 1.15; }
+        .legal-hero .eyebrow { color: var(--orange-light); font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; font-size: 13px; margin-bottom: 14px; }
+        .legal-hero .dates { margin-top: 18px; font-size: 14px; color: rgba(255,255,255,0.75); }
+
+        /* ===== CONTENT ===== */
+        .legal-wrap { max-width: 900px; margin: 0 auto; padding: 48px 48px 72px; }
+        .legal-wrap h2 {
+            font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 24px;
+            color: var(--charcoal); margin: 40px 0 14px; padding-bottom: 10px; border-bottom: 2px solid var(--orange);
+        }
+        .legal-wrap h3 { font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 18px; color: var(--charcoal); margin: 26px 0 10px; }
+        .legal-wrap p { color: var(--text-mid); margin-bottom: 14px; }
+        .legal-wrap ul { margin: 0 0 16px 22px; color: var(--text-mid); }
+        .legal-wrap li { margin-bottom: 8px; }
+        .legal-wrap a { color: var(--orange-dark); }
+        .legal-wrap strong { color: var(--text-dark); }
+
+        .toc { background: var(--cream); border: 1px solid var(--border); border-radius: 10px; padding: 24px 28px; margin-bottom: 8px; }
+        .toc h2 { border: none; margin: 0 0 12px; padding: 0; font-size: 18px; }
+        .toc ol { margin-left: 20px; columns: 2; column-gap: 36px; }
+        .toc a { color: var(--charcoal); text-decoration: none; font-size: 14px; }
+        .toc a:hover { color: var(--orange); }
+
+        .callout { background: var(--cream); border-left: 4px solid var(--orange); border-radius: 0 8px 8px 0; padding: 18px 22px; margin: 18px 0; }
+        .callout p:last-child { margin-bottom: 0; }
+        .callout.notice { border-left-color: var(--charcoal); }
+
+        .contact-card { background: var(--charcoal); color: var(--white); border-radius: 12px; padding: 28px 32px; margin-top: 18px; }
+        .contact-card h3 { color: var(--white); margin-top: 0; }
+        .contact-card a { color: var(--orange-light); text-decoration: none; }
+        .contact-card p { color: rgba(255,255,255,0.85); }
+
+        /* ===== FOOTER ===== */
+        footer { background: var(--charcoal); color: rgba(255,255,255,0.8); padding: 56px 48px 24px; }
+        .footer-inner { max-width: 1180px; margin: 0 auto; }
+        .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px; padding-bottom: 36px; border-bottom: 1px solid rgba(255,255,255,0.12); }
+        .footer-about img { height: 46px; margin-bottom: 16px; display: block; }
+        .footer-about p { font-size: 14px; line-height: 1.7; margin-bottom: 14px; }
+        .footer-tagline { color: var(--orange-light); font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 15px; }
+        .footer-col h4 { color: var(--white); font-family: 'Montserrat', sans-serif; font-size: 15px; margin-bottom: 16px; }
+        .footer-col ul { list-style: none; }
+        .footer-col li { margin-bottom: 10px; }
+        .footer-col a { color: rgba(255,255,255,0.75); text-decoration: none; font-size: 14px; }
+        .footer-col a:hover { color: var(--orange-light); }
+        .footer-bottom { display: flex; justify-content: space-between; align-items: center; padding-top: 20px; font-size: 13px; color: rgba(255,255,255,0.55); flex-wrap: wrap; gap: 10px; }
+
+        @media (max-width: 820px) {
+            .top-bar, .navbar, .legal-hero, .legal-wrap, footer { padding-left: 22px; padding-right: 22px; }
+            .nav-links { display: none; }
+            .toc ol { columns: 1; }
+            .footer-top { grid-template-columns: 1fr; gap: 28px; }
+        }
+
+        /* ===== FAQ ===== */
+        .faq-intro { color: var(--text-mid); font-size: 17px; margin-bottom: 28px; }
+        .faq-item { border: 1px solid var(--border); border-radius: 10px; margin-bottom: 14px; background: var(--white); }
+        .faq-item summary { list-style: none; cursor: pointer; padding: 20px 24px; font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 17px; color: var(--charcoal); display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+        .faq-item summary::-webkit-details-marker { display: none; }
+        .faq-item summary::after { content: '+'; color: var(--orange); font-size: 26px; font-weight: 400; line-height: 1; }
+        .faq-item[open] summary::after { content: '\2013'; }
+        .faq-item summary:hover { color: var(--orange); }
+        .faq-answer { padding: 0 24px 22px; color: var(--text-mid); }
+        .faq-answer a { color: var(--orange-dark); }
+        .faq-cta { background: var(--charcoal); color: #fff; border-radius: 12px; padding: 30px 32px; margin-top: 34px; text-align: center; }
+        .faq-cta h2 { border: none; color: #fff; margin: 0 0 10px; padding: 0; font-size: 24px; }
+        .faq-cta p { color: rgba(255,255,255,0.85); margin-bottom: 20px; }
+        .faq-cta .btn { display: inline-block; background: var(--orange); color: #fff; padding: 13px 30px; border-radius: 6px; text-decoration: none; font-weight: 600; font-family: 'Montserrat', sans-serif; }
+        .faq-cta .btn:hover { background: var(--orange-dark); }
+    </style>
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="ARI Physical Therapy">
+    <meta property="og:title" content="Physical Therapy FAQ | ARI Physical Therapy – Bakersfield, CA">
+    <meta property="og:description" content="Common physical therapy questions answered — referrals, insurance, what to expect at your first visit, hours, and parking — at ARI Physical Therapy in Bakersfield, CA.">
+    <meta property="og:url" content="https://ariphysicaltherapy.com/faq.html">
+    <meta property="og:image" content="https://ariphysicaltherapy.com/assets/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MedicalClinic",
+      "@id": "https://ariphysicaltherapy.com/#clinic",
+      "name": "ARI Physical Therapy",
+      "url": "https://ariphysicaltherapy.com/",
+      "image": "https://ariphysicaltherapy.com/assets/og-image.jpg",
+      "logo": "https://ariphysicaltherapy.com/assets/logo-dark.png",
+      "telephone": "+1-661-282-8584",
+      "medicalSpecialty": "Physiotherapy",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "8200 Stockdale Hwy Suite B2",
+        "addressLocality": "Bakersfield",
+        "addressRegion": "CA",
+        "postalCode": "93311",
+        "addressCountry": "US"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "08:00",
+          "closes": "18:00"
+        }
+      ],
+      "hasMap": "https://www.google.com/maps/search/?api=1&query=ARI+Physical+Therapy+8200+Stockdale+Hwy+Suite+B2+Bakersfield+CA+93311",
+      "sameAs": [
+        "https://www.instagram.com/ariptcare",
+        "https://www.linkedin.com/company/ariphysicaltherapy/"
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Do I need a doctor's referral to start physical therapy?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In California, you can be seen directly by a physical therapist without a physician referral for up to 12 visits or 45 days \u2014 whichever comes first. However, some insurance plans still require a referral for coverage, so we recommend calling your insurance beforehand."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What conditions and services do you treat?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We provide one-on-one care across eight specialties: orthopedic rehabilitation, sports injury recovery, post-operative care, chronic pain rehabilitation, pelvic pain therapy, pediatric rehabilitation, pre- and post-partum rehab, and health & wellness programs. See our Services page for details."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you offer pelvic floor and women's health therapy?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Pelvic pain therapy is one of our specialties, provided one-on-one with a licensed physical therapist. Call us at (661) 282-8584 to learn whether it's right for you."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long will my first appointment take?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Your initial evaluation typically takes 45 to 60 minutes. This includes a thorough assessment, discussion of your goals, and the start of your personalized treatment plan. Follow-up visits are usually 30 to 45 minutes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What should I bring to my first visit?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Please bring a photo ID (driver's license or state ID), your insurance card(s) \u2014 primary and secondary if applicable \u2014 and a physician referral or prescription if your insurance requires one (if it hasn't already been sent directly by your doctor)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What should I wear to my appointment?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Wear comfortable, loose-fitting clothing that allows easy access to the area being treated. For example, if you're being treated for a knee injury, shorts are ideal. Athletic wear generally works well."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Will physical therapy hurt?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Some discomfort during therapy is normal, especially early on. Our goal is to work within your tolerance and never push you beyond what's appropriate. Communication with your therapist is key \u2014 let them know how you're feeling throughout each session."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many visits will I need?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Every patient is different. After your initial evaluation, your therapist will outline an estimated treatment plan. Many conditions improve significantly in 6\u201312 visits, while others may require more time. We'll keep you informed every step of the way."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you accept my insurance?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ARI Physical Therapy accepts most private insurance plans and Medicare. Because coverage and referral requirements vary by plan, call us at (661) 282-8584 and we'll verify your benefits before your first visit."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you offer telehealth or virtual visits?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Our physical therapy is hands-on and provided in person at our Bakersfield clinic, 8200 Stockdale Hwy, Suite B2. We don't currently offer virtual visits."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I book an appointment?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You can request your first visit online through our appointment page, or call us at (661) 282-8584. New patients can also complete the intake paperwork online ahead of time to save time at check-in."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is your cancellation policy?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "If you need to cancel or reschedule, we ask for at least 24 hours' notice so we can offer your appointment time to another patient who needs care."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What languages do you speak?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Our team speaks English, Spanish, and Hindi."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is parking available at your location?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes \u2014 free parking is available directly at our Stockdale Hwy location. We're conveniently located at 8200 Stockdale Hwy, Suite B2, Bakersfield, CA 93311."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are your hours?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We're open Monday through Friday, 8:00 AM to 6:00 PM."
+      }
+    }
+  ]
+}
+    </script>
+</head>
+<body>
+
+    <!-- ===== TOP BAR ===== -->
+    <div class="top-bar">
+        <div class="top-bar-left">
+            <a href="tel:6612828584"><span>📞</span>(661) 282-8584</a>
+            <a href="mailto:contactus@ariptcare.com"><span>✉</span>contactus@ariptcare.com</a>
+        </div>
+        <div><a href="appointment.html" class="btn-book-topbar">Book an Appointment</a></div>
+    </div>
+
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar">
+        <a href="index.html" class="nav-logo"><img src="assets/logo-dark.png" alt="ARI Physical Therapy"></a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="appointment.html">Book an Appointment</a></li>
+            <li><a href="careers.html" class="nav-careers">Careers</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="physicians.html">For Physicians</a></li>
+        </ul>
+    </nav>
+
+    <!-- ===== HERO ===== -->
+    <section class="legal-hero">
+        <div class="inner">
+            <div class="eyebrow">Patient Resources</div>
+            <h1>Frequently Asked Questions</h1>
+            <div class="dates">Physical therapy in Bakersfield, CA — referrals, insurance, what to expect, and more.</div>
+        </div>
+    </section>
+
+    <div class="legal-wrap">
+        <p class="faq-intro">Answers to the questions we hear most from new and prospective patients. Don’t see yours? <a href="contact.html">Get in touch</a> — we’re happy to help.</p>
+
+        <details class="faq-item">
+            <summary>Do I need a doctor's referral to start physical therapy?</summary>
+            <div class="faq-answer"><p>In California, you can be seen directly by a physical therapist without a physician referral for up to 12 visits or 45 days — whichever comes first. However, some insurance plans still require a referral for coverage, so we recommend calling your insurance beforehand.</p></div>
+        </details>
+
+        <details class="faq-item">
+            <summary>What conditions and services do you treat?</summary>
+            <div class="faq-answer"><p>We provide one-on-one care across eight specialties: orthopedic rehabilitation, sports injury recovery, post-operative care, chronic pain rehabilitation, pelvic pain therapy, pediatric rehabilitation, pre- and post-partum rehab, and health &amp; wellness programs. See our <a href="services.html">Services</a> page for details.</p></div>
+        </details>
+
+        <details class="faq-item">
+            <summary>Do you offer pelvic floor and women's health therapy?</summary>
+            <div class="faq-answer"><p>Yes. Pelvic pain therapy is one of our specialties, provided one-on-one with a licensed physical therapist. Call us at (661) 282-8584 to learn whether it's right for you.</p></div>
+        </details>
+
+        <details class="faq-item">
+            <summary>How long will my first appointment take?</summary>
+            <div class="faq-answer"><p>Your initial evaluation typically takes 45 to 60 minutes. This includes a thorough assessment, discussion of your goals, and the start of your personalized treatment plan. Follow-up visits are usually 30 to 45 minutes.</p></div>
+        </details>
+
+        <details class="faq-item">
+            <summary>What should I bring to my first visit?</summary>
+            <div class="faq-answer"><p>Please bring a photo ID (driver's license or state ID), your insurance card(s) — primary and secondary if applicable — and a physician referral or prescription if your insurance requires one (if it hasn't already been sent directly by your doctor).</p></div>
+        </details>
+
+        <details class="faq-item">
+            <summary>What should I wear to my appointment?</summary>
+            <div class="faq-answer"><p>Wear comfortable, loose-fitting clothing that allows easy access to the area being treated. For example, if you're being treated for a knee injury, shorts are ideal. Athletic wear generally works well.</p></div>
+        </details>
+
+        <details class="faq-item">
+            <summary>Will physical therapy hurt?</summary>
+            <div class="faq-answer"><p>Some discomfort during therapy is normal, especially early on. Our goal is to work within your tolerance and never push you beyond what's appropriate. Communication with your therapist is key — let them know how you're feeling throughout each session.</p></div>
+        </details>
+
+        <details class="faq-item">
+            <summary>How many visits will I need?</summary>
+            <div class="faq-answer"><p>Every patient is different. After your initial evaluation, your therapist will outline an estimated treatment plan. Many conditions improve significantly in 6–12 visits, while others may require more time. We'll keep you informed every step of the way.</p></div>
+        </details>
+
+        <details class="faq-item">
+            <summary>Do you accept my insurance?</summary>
+            <div class="faq-answer"><p>ARI Physical Therapy accepts most private insurance plans and Medicare. Because coverage and referral requirements vary by plan, call us at (661) 282-8584 and we'll verify your benefits before your first visit.</p></div>
+        </details>
+
+        <details class="faq-item">
+            <summary>Do you offer telehealth or virtual visits?</summary>
+            <div class="faq-answer"><p>Our physical therapy is hands-on and provided in person at our Bakersfield clinic, 8200 Stockdale Hwy, Suite B2. We don't currently offer virtual visits.</p></div>
+        </details>
+
+        <details class="faq-item">
+            <summary>How do I book an appointment?</summary>
+            <div class="faq-answer"><p>You can request your first visit online through our <a href="appointment.html">appointment page</a>, or call us at (661) 282-8584. New patients can also complete the intake paperwork online ahead of time to save time at check-in.</p></div>
+        </details>
+
+        <details class="faq-item">
+            <summary>What is your cancellation policy?</summary>
+            <div class="faq-answer"><p>If you need to cancel or reschedule, we ask for at least 24 hours' notice so we can offer your appointment time to another patient who needs care.</p></div>
+        </details>
+
+        <details class="faq-item">
+            <summary>What languages do you speak?</summary>
+            <div class="faq-answer"><p>Our team speaks English, Spanish, and Hindi.</p></div>
+        </details>
+
+        <details class="faq-item">
+            <summary>Is parking available at your location?</summary>
+            <div class="faq-answer"><p>Yes — free parking is available directly at our Stockdale Hwy location. We're conveniently located at 8200 Stockdale Hwy, Suite B2, Bakersfield, CA 93311.</p></div>
+        </details>
+
+        <details class="faq-item">
+            <summary>What are your hours?</summary>
+            <div class="faq-answer"><p>We're open Monday through Friday, 8:00 AM to 6:00 PM.</p></div>
+        </details>
+
+        <div class="faq-cta">
+            <h2>Still have questions?</h2>
+            <p>Call us or request a consultation and we’ll point you in the right direction.</p>
+            <a class="btn" href="appointment.html">Request a Free Consultation</a>
+        </div>
+
+    </div>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-top">
+                <div class="footer-about">
+                    <img src="assets/logo-white.png" alt="ARI Physical Therapy">
+                    <p>Compassionate, personalized physical therapy in Bakersfield, CA. We're here to help you move better, feel better, and live better.</p>
+                    <div class="footer-tagline">Empowering Every Move</div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="appointment.html">Book an Appointment</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="physicians.html">For Physicians</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal &amp; Contact</h4>
+                    <ul>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="sms-terms.html">SMS Terms of Service</a></li>
+                        <li><a href="tel:6612828584">(661) 282-8584</a></li>
+                        <li><a href="mailto:contactus@ariptcare.com">contactus@ariptcare.com</a></li>
+                        <li><a href="contact.html">8200 Stockdale Hwy, Suite B2<br>Bakersfield, CA 93311</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>© 2026 ARI Physical Therapy. All rights reserved.</span>
+                <span>8200 Stockdale Hwy Suite B2, Bakersfield, CA 93311</span>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
