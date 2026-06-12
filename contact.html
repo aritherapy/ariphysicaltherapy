@@ -539,6 +539,14 @@
         }
         .reveal.visible { opacity: 1; transform: translateY(0); }
 
+
+        /* ===== SMS consent ===== */
+        .sms-consent { background: var(--cream); border: 1.5px solid #E0E0E0; border-radius: 8px; padding: 14px 16px; margin-top: 4px; }
+        .sms-consent .sms-check { display: flex; gap: 11px; align-items: flex-start; cursor: pointer; }
+        .sms-consent .sms-check input[type="checkbox"] { width: 18px; height: 18px; margin-top: 2px; flex-shrink: 0; accent-color: var(--orange); cursor: pointer; }
+        .sms-consent .sms-check span { font-size: 14px; color: var(--text-dark); font-weight: 500; line-height: 1.5; }
+        .sms-disclosure { font-size: 12px; color: var(--text-light); line-height: 1.6; margin: 10px 0 0; }
+        .sms-disclosure a { color: var(--orange-dark); text-decoration: underline; }
     </style>
 
     <meta property="og:type" content="website">
@@ -703,6 +711,14 @@
                 <div class="form-group">
                     <label for="message">Message *</label>
                     <textarea id="message" name="message" placeholder="How can we help you?" required></textarea>
+                </div>
+
+                <div class="form-group sms-consent">
+                    <label class="sms-check">
+                        <input type="checkbox" id="sms_consent" name="sms_consent" value="Yes — agreed to receive SMS text messages">
+                        <span>Yes, text me about my care. I agree to receive SMS text messages from ARI Physical Therapy at the phone number provided &mdash; appointment reminders, confirmations, scheduling, and patient-care notifications.</span>
+                    </label>
+                    <p class="sms-disclosure">Consent is not a condition of any purchase or of receiving care. Message frequency varies. Message &amp; data rates may apply. Reply <strong>STOP</strong> to opt out at any time, or <strong>HELP</strong> for help. See our <a href="privacy-policy.html">Privacy Policy</a> and <a href="sms-terms.html">SMS Terms</a>.</p>
                 </div>
 
                 <button type="submit" class="btn-submit">Send Message →</button>
