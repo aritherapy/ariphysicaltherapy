@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/Mockups_icons_HDsquare/Icons/favicon-32x32.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="https://ariphysicaltherapy.com/pediatric-therapy.html">
+    <title>Pediatric Physical Therapy in Bakersfield, CA | ARI Physical Therapy</title>
+    <meta name="description" content="One-on-one pediatric physical therapy in Bakersfield, CA — developmental delays, coordination, young-athlete injuries, post-surgical rehab, and torticollis, in a kid-friendly setting.">
+    <meta name="robots" content="index, follow">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --orange:        #E8630A;
+            --orange-dark:   #C4520A;
+            --orange-light:  #FF8C42;
+            --charcoal:      #2B2B2B;
+            --charcoal-mid:  #3D3D3D;
+            --cream:         #FAF8F4;
+            --white:         #FFFFFF;
+            --text-dark:     #1A1A1A;
+            --text-mid:      #555555;
+            --text-light:    #888888;
+            --border:        #E6E2DA;
+        }
+
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; color: var(--text-dark); background: var(--white); line-height: 1.7; }
+
+        /* ===== TOP BAR ===== */
+        .top-bar {
+            background: var(--charcoal); color: var(--white);
+            padding: 10px 48px; display: flex; justify-content: space-between;
+            align-items: center; font-size: 13px; flex-wrap: wrap; gap: 10px;
+        }
+        .top-bar a { color: var(--white); text-decoration: none; display: inline-flex; align-items: center; gap: 6px; margin-right: 22px; }
+        .top-bar a:hover { color: var(--orange-light); }
+        .btn-book-topbar { background: var(--orange); padding: 7px 16px; border-radius: 4px; font-weight: 600; margin-right: 0 !important; }
+        .btn-book-topbar:hover { background: var(--orange-dark); color: var(--white) !important; }
+
+        /* ===== NAVBAR ===== */
+        .navbar {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 16px 48px; background: var(--white); border-bottom: 1px solid var(--border);
+            position: sticky; top: 0; z-index: 100;
+        }
+        .nav-logo img { height: 46px; display: block; }
+        .nav-links { list-style: none; display: flex; gap: 30px; align-items: center; }
+        .nav-links a { text-decoration: none; color: var(--charcoal); font-weight: 500; font-size: 15px; }
+        .nav-links a:hover { color: var(--orange); }
+        .nav-careers { color: var(--orange) !important; font-weight: 600 !important; }
+        .nav-toggle { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; }
+        .nav-toggle span { width: 26px; height: 3px; background: var(--charcoal); border-radius: 2px; }
+
+        /* ===== HERO ===== */
+        .legal-hero {
+            background: linear-gradient(135deg, var(--charcoal) 0%, var(--charcoal-mid) 100%);
+            color: var(--white); padding: 64px 48px 56px;
+        }
+        .legal-hero .inner { max-width: 900px; margin: 0 auto; }
+        .legal-hero h1 { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: clamp(30px, 5vw, 46px); line-height: 1.15; }
+        .legal-hero .eyebrow { color: var(--orange-light); font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; font-size: 13px; margin-bottom: 14px; }
+        .legal-hero .dates { margin-top: 18px; font-size: 14px; color: rgba(255,255,255,0.75); }
+
+        /* ===== CONTENT ===== */
+        .legal-wrap { max-width: 900px; margin: 0 auto; padding: 48px 48px 72px; }
+        .legal-wrap h2 {
+            font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 24px;
+            color: var(--charcoal); margin: 40px 0 14px; padding-bottom: 10px; border-bottom: 2px solid var(--orange);
+        }
+        .legal-wrap h3 { font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 18px; color: var(--charcoal); margin: 26px 0 10px; }
+        .legal-wrap p { color: var(--text-mid); margin-bottom: 14px; }
+        .legal-wrap ul { margin: 0 0 16px 22px; color: var(--text-mid); }
+        .legal-wrap li { margin-bottom: 8px; }
+        .legal-wrap a { color: var(--orange-dark); }
+        .legal-wrap strong { color: var(--text-dark); }
+
+        .toc { background: var(--cream); border: 1px solid var(--border); border-radius: 10px; padding: 24px 28px; margin-bottom: 8px; }
+        .toc h2 { border: none; margin: 0 0 12px; padding: 0; font-size: 18px; }
+        .toc ol { margin-left: 20px; columns: 2; column-gap: 36px; }
+        .toc a { color: var(--charcoal); text-decoration: none; font-size: 14px; }
+        .toc a:hover { color: var(--orange); }
+
+        .callout { background: var(--cream); border-left: 4px solid var(--orange); border-radius: 0 8px 8px 0; padding: 18px 22px; margin: 18px 0; }
+        .callout p:last-child { margin-bottom: 0; }
+        .callout.notice { border-left-color: var(--charcoal); }
+
+        .contact-card { background: var(--charcoal); color: var(--white); border-radius: 12px; padding: 28px 32px; margin-top: 18px; }
+        .contact-card h3 { color: var(--white); margin-top: 0; }
+        .contact-card a { color: var(--orange-light); text-decoration: none; }
+        .contact-card p { color: rgba(255,255,255,0.85); }
+
+        /* ===== FOOTER ===== */
+        footer { background: var(--charcoal); color: rgba(255,255,255,0.8); padding: 56px 48px 24px; }
+        .footer-inner { max-width: 1180px; margin: 0 auto; }
+        .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px; padding-bottom: 36px; border-bottom: 1px solid rgba(255,255,255,0.12); }
+        .footer-about img { height: 46px; margin-bottom: 16px; display: block; }
+        .footer-about p { font-size: 14px; line-height: 1.7; margin-bottom: 14px; }
+        .footer-tagline { color: var(--orange-light); font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 15px; }
+        .footer-col h4 { color: var(--white); font-family: 'Montserrat', sans-serif; font-size: 15px; margin-bottom: 16px; }
+        .footer-col ul { list-style: none; }
+        .footer-col li { margin-bottom: 10px; }
+        .footer-col a { color: rgba(255,255,255,0.75); text-decoration: none; font-size: 14px; }
+        .footer-col a:hover { color: var(--orange-light); }
+        .footer-bottom { display: flex; justify-content: space-between; align-items: center; padding-top: 20px; font-size: 13px; color: rgba(255,255,255,0.55); flex-wrap: wrap; gap: 10px; }
+
+        @media (max-width: 820px) {
+            .top-bar, .navbar, .legal-hero, .legal-wrap, footer { padding-left: 22px; padding-right: 22px; }
+            .nav-links { display: none; }
+            .toc ol { columns: 1; }
+            .footer-top { grid-template-columns: 1fr; gap: 28px; }
+        }
+
+        /* ===== SERVICE PAGE ===== */
+        .svc-hero .cta-btn { display:inline-block; margin-top:22px; background:var(--orange); color:#fff; padding:14px 30px; border-radius:6px; text-decoration:none; font-family:'Montserrat',sans-serif; font-weight:700; font-size:15px; }
+        .svc-hero .cta-btn:hover { background:var(--orange-dark); }
+        .svc-lead { font-size:19px; color:var(--text-mid); line-height:1.7; margin-bottom:10px; }
+        .svc-figure { float:right; width:42%; margin:6px 0 22px 30px; border-radius:12px; overflow:hidden; box-shadow:0 12px 40px rgba(0,0,0,0.12); }
+        .svc-figure img { width:100%; display:block; aspect-ratio:4/3; object-fit:cover; }
+        .cond-grid { list-style:none; display:grid; grid-template-columns:1fr 1fr; gap:12px 24px; margin:8px 0 8px; }
+        .cond-grid li { position:relative; padding:10px 0 10px 30px; border-bottom:1px solid var(--border); color:var(--text-dark); font-weight:500; }
+        .cond-grid li::before { content:'✓'; position:absolute; left:0; top:9px; color:var(--orange); font-weight:700; }
+        .steps { counter-reset:s; list-style:none; margin:8px 0; }
+        .steps li { position:relative; padding:0 0 20px 56px; }
+        .steps li::before { counter-increment:s; content:counter(s); position:absolute; left:0; top:-2px; width:36px; height:36px; background:var(--orange); color:#fff; border-radius:50%; display:flex; align-items:center; justify-content:center; font-family:'Montserrat',sans-serif; font-weight:700; }
+        .steps li strong { display:block; color:var(--text-dark); margin-bottom:2px; font-family:'Montserrat',sans-serif; }
+        .faq-item { border:1px solid var(--border); border-radius:10px; margin-bottom:12px; }
+        .faq-item summary { list-style:none; cursor:pointer; padding:16px 20px; font-family:'Montserrat',sans-serif; font-weight:600; font-size:16px; color:var(--charcoal); display:flex; justify-content:space-between; gap:14px; }
+        .faq-item summary::-webkit-details-marker { display:none; }
+        .faq-item summary::after { content:'+'; color:var(--orange); font-size:24px; line-height:1; }
+        .faq-item[open] summary::after { content:'\2013'; }
+        .faq-item .a { padding:0 20px 18px; color:var(--text-mid); }
+        .svc-cta { background:var(--charcoal); color:#fff; border-radius:12px; padding:34px; text-align:center; margin-top:36px; }
+        .svc-cta h2 { border:none; color:#fff; margin:0 0 10px; padding:0; }
+        .svc-cta p { color:rgba(255,255,255,0.85); margin-bottom:20px; }
+        .svc-cta .cta-btn { display:inline-block; background:var(--orange); color:#fff; padding:14px 32px; border-radius:6px; text-decoration:none; font-family:'Montserrat',sans-serif; font-weight:700; }
+        .svc-cta .cta-btn:hover { background:var(--orange-dark); }
+        @media (max-width:680px){ .svc-figure{ float:none; width:100%; margin:0 0 22px; } .cond-grid{ grid-template-columns:1fr; } }
+    </style>
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="ARI Physical Therapy">
+    <meta property="og:title" content="Pediatric Physical Therapy in Bakersfield, CA | ARI Physical Therapy">
+    <meta property="og:description" content="One-on-one pediatric physical therapy in Bakersfield, CA — developmental delays, coordination, young-athlete injuries, post-surgical rehab, and torticollis, in a kid-friendly setting.">
+    <meta property="og:url" content="https://ariphysicaltherapy.com/pediatric-therapy.html">
+    <meta property="og:image" content="https://ariphysicaltherapy.com/assets/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MedicalClinic",
+      "@id": "https://ariphysicaltherapy.com/#clinic",
+      "name": "ARI Physical Therapy",
+      "alternateName": "ARI PT",
+      "url": "https://ariphysicaltherapy.com/",
+      "image": "https://ariphysicaltherapy.com/assets/og-image.jpg",
+      "logo": "https://ariphysicaltherapy.com/assets/logo-dark.png",
+      "telephone": "+1-661-282-8584",
+      "medicalSpecialty": "Physiotherapy",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "8200 Stockdale Hwy Suite B2",
+        "addressLocality": "Bakersfield",
+        "addressRegion": "CA",
+        "postalCode": "93311",
+        "addressCountry": "US"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "08:00",
+          "closes": "18:00"
+        }
+      ],
+      "hasMap": "https://www.google.com/maps/search/?api=1&query=ARI+Physical+Therapy+8200+Stockdale+Hwy+Suite+B2+Bakersfield+CA+93311",
+      "sameAs": [
+        "https://www.instagram.com/ariptcare",
+        "https://www.linkedin.com/company/ariphysicaltherapy/"
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Do I need a referral for pediatric therapy?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In California you can see a physical therapist directly, though many families come in with a pediatrician's referral \u2014 either works, and we coordinate with your child's doctor. Some insurance plans require a referral for coverage, so we recommend checking with your plan."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What ages and conditions do you treat?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We work with children of all ages on developmental, coordination, post-injury, and post-surgical needs. Call us at (661) 282-8584 and we'll let you know how we can help your child."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are parents involved in the sessions?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. We work closely with families and give you a home program so the progress your child makes in the clinic continues at home."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens at the first visit?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The initial evaluation takes about 45 to 60 minutes. We get to know your child, discuss your concerns and goals, assess their movement and development, and start a fun, personalized plan."
+      }
+    }
+  ]
+}
+    </script>
+</head>
+<body>
+
+    <!-- ===== TOP BAR ===== -->
+    <div class="top-bar">
+        <div class="top-bar-left">
+            <a href="tel:6612828584"><span>📞</span>(661) 282-8584</a>
+            <a href="mailto:contactus@ariptcare.com"><span>✉</span>contactus@ariptcare.com</a>
+        </div>
+        <div><a href="appointment.html" class="btn-book-topbar">Book an Appointment</a></div>
+    </div>
+
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar">
+        <a href="index.html" class="nav-logo"><img src="assets/logo-dark.png" alt="ARI Physical Therapy"></a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="appointment.html">Book an Appointment</a></li>
+            <li><a href="careers.html" class="nav-careers">Careers</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="physicians.html">For Physicians</a></li>
+        </ul>
+    </nav>
+
+    <!-- ===== HERO ===== -->
+    <section class="legal-hero svc-hero">
+        <div class="inner">
+            <div class="eyebrow">Pediatric</div>
+            <h1>Pediatric Physical Therapy in Bakersfield</h1>
+            <div class="dates">A fun, encouraging environment where kids heal, grow, and reach their milestones — with families involved every step of the way.</div>
+            <a class="cta-btn" href="appointment.html">Request a Consultation</a>
+        </div>
+    </section>
+
+    <div class="legal-wrap">
+
+        <figure class="svc-figure"><img src="assets/stock-pediatric.jpg" alt="Pediatric Physical Therapy in Bakersfield at ARI Physical Therapy in Bakersfield"></figure>
+
+        <p class="svc-lead">Children have unique physical and developmental needs. At ARI Physical Therapy, our pediatric therapists create a fun, encouraging, one-on-one environment where kids can heal, grow, and reach their milestones — and we work closely with families so progress continues at home as well as in the clinic.</p>
+
+        <h2>What we help with</h2>
+        <ul class="cond-grid">
+            <li>Developmental delays &amp; coordination</li>
+            <li>Sports injuries in young athletes</li>
+            <li>Post-surgical pediatric rehab</li>
+            <li>Torticollis &amp; musculoskeletal conditions</li>
+            <li>Gross motor delays</li>
+            <li>Balance &amp; coordination challenges</li>
+        </ul>
+
+        <h2>What to expect</h2>
+        <ul class="steps">
+            <li><strong>A thorough evaluation</strong>Your first visit (about 45–60 minutes) includes a hands-on assessment and a discussion of your history and goals.</li>
+            <li><strong>A personalized plan</strong>Hands-on care plus targeted, progressive exercise built around you — never a one-size-fits-all program.</li>
+            <li><strong>Real, lasting progress</strong>We track your improvement and guide you back to the activities that matter, with strategies to keep the gains.</li>
+        </ul>
+
+        <div class="callout"><p><strong>No referral needed to start.</strong> In California, you can see a physical therapist directly — for up to 12 visits or 45 days — so you can begin right away. Some insurance plans still require a referral for coverage; call us at <a href="tel:6612828584">(661) 282-8584</a> and we'll help you check.</p></div>
+
+        <h2>Why patients choose ARI</h2>
+        <p>Care is always <strong>one-on-one and in person</strong> at our Bakersfield clinic — 8200 Stockdale Hwy, Suite B2, in the Town &amp; Country Village center next to Trader Joe's. We accept most private insurance plans and Medicare, and our team speaks English, Spanish, and Hindi.</p>
+
+        <h2>Frequently asked questions</h2>
+        <details class="faq-item"><summary>Do I need a referral for pediatric therapy?</summary><div class="a">In California you can see a physical therapist directly, though many families come in with a pediatrician's referral — either works, and we coordinate with your child's doctor. Some insurance plans require a referral for coverage, so we recommend checking with your plan.</div></details>
+        <details class="faq-item"><summary>What ages and conditions do you treat?</summary><div class="a">We work with children of all ages on developmental, coordination, post-injury, and post-surgical needs. Call us at (661) 282-8584 and we'll let you know how we can help your child.</div></details>
+        <details class="faq-item"><summary>Are parents involved in the sessions?</summary><div class="a">Yes. We work closely with families and give you a home program so the progress your child makes in the clinic continues at home.</div></details>
+        <details class="faq-item"><summary>What happens at the first visit?</summary><div class="a">The initial evaluation takes about 45 to 60 minutes. We get to know your child, discuss your concerns and goals, assess their movement and development, and start a fun, personalized plan.</div></details>
+
+        <div class="svc-cta">
+            <h2>Help your child thrive</h2>
+            <p>Request a consultation and our team will help you take the first step.</p>
+            <a class="cta-btn" href="appointment.html">Request a Consultation</a>
+        </div>
+    </div>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-top">
+                <div class="footer-about">
+                    <img src="assets/logo-white.png" alt="ARI Physical Therapy">
+                    <p>Compassionate, personalized physical therapy in Bakersfield, CA. We're here to help you move better, feel better, and live better.</p>
+                    <div class="footer-tagline">Empowering Every Move</div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="appointment.html">Book an Appointment</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="physicians.html">For Physicians</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal &amp; Contact</h4>
+                    <ul>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="sms-terms.html">SMS Terms of Service</a></li>
+                        <li><a href="tel:6612828584">(661) 282-8584</a></li>
+                        <li><a href="mailto:contactus@ariptcare.com">contactus@ariptcare.com</a></li>
+                        <li><a href="contact.html">8200 Stockdale Hwy, Suite B2<br>Bakersfield, CA 93311</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>© 2026 ARI Physical Therapy. All rights reserved.</span>
+                <span>8200 Stockdale Hwy Suite B2, Bakersfield, CA 93311</span>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
