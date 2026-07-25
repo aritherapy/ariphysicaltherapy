@@ -261,7 +261,17 @@
             font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 15px;
         }
         .page-hero .cta-btn:hover { background: var(--orange-dark); }
-        @media (max-width: 768px) { .page-hero { padding: 56px 24px; } .page-eyebrow { font-size: 15px; } }
+        @media (max-width: 768px) {
+            .page-hero { padding: 48px 24px 44px; }
+            .page-eyebrow {
+                font-size: 12px; letter-spacing: 2px; gap: 8px;
+                align-items: flex-start; margin-bottom: 14px;
+            }
+            .page-eyebrow::before { margin-top: 7px; }
+            .page-hero h1 { font-size: clamp(28px, 7.4vw, 40px); line-height: 1.18; margin-bottom: 16px; }
+            .page-hero p { font-size: 16px; line-height: 1.6; }
+            .page-hero .cta-btn { margin-top: 22px; padding: 13px 26px; }
+        }
     </style>
 
     <meta property="og:type" content="website">
@@ -478,7 +488,7 @@
     <!-- ===== HERO ===== -->
     <section class="page-hero">
         <div class="page-hero-inner">
-            <p class="page-eyebrow">About ARI Physical Therapy</p>
+            <p class="page-eyebrow">Our Practice</p>
             <h1>Specialist-led physical therapy in <span class="hl">Bakersfield</span></h1>
             <p>Board-certified expertise, and a licensed therapist with you for your entire visit.</p>
         </div>
