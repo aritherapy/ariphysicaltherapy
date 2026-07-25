@@ -189,9 +189,9 @@
         .page-hero { background: var(--charcoal); padding: 80px 48px 72px; position: relative; overflow: hidden; }
         .page-hero-inner { max-width: 1200px; margin: 0 auto; }
         .page-eyebrow {
-            font-size: 18px; font-weight: 700; letter-spacing: 3px;
+            font-size: 15px; font-weight: 700; letter-spacing: 3px;
             text-transform: uppercase; color: rgba(255,255,255,0.72);
-            margin: 0 0 16px; display: flex; align-items: center; gap: 10px;
+            margin: 0 0 26px; display: flex; align-items: center; gap: 10px;
         }
         .page-eyebrow::before { content: ''; display: inline-block; width: 32px; height: 2px; background: var(--orange); flex: none; }
         .page-hero h1 {
@@ -199,7 +199,7 @@
             font-weight: 900; color: var(--white); line-height: 1.1; margin: 0 0 20px;
         }
         .page-hero h1 .hl { color: var(--orange); }
-        .page-hero p { font-size: 18px; color: rgba(255,255,255,0.72); max-width: 560px; line-height: 1.7; margin: 0; }
+        .page-hero p:not(.page-eyebrow) { font-size: 18px; color: rgba(255,255,255,0.72); max-width: 560px; line-height: 1.7; margin: 0; }
         .page-hero .cta-btn {
             display: inline-block; margin-top: 26px; background: var(--orange); color: #fff;
             padding: 14px 30px; border-radius: 6px; text-decoration: none;
@@ -210,11 +210,11 @@
             .page-hero { padding: 48px 24px 44px; }
             .page-eyebrow {
                 font-size: 12px; letter-spacing: 2px; gap: 8px;
-                align-items: flex-start; margin-bottom: 14px;
+                align-items: flex-start; margin-bottom: 20px;
             }
             .page-eyebrow::before { margin-top: 7px; }
             .page-hero h1 { font-size: clamp(28px, 7.4vw, 40px); line-height: 1.18; margin-bottom: 16px; }
-            .page-hero p { font-size: 16px; line-height: 1.6; }
+            .page-hero p:not(.page-eyebrow) { font-size: 16px; line-height: 1.6; }
             .page-hero .cta-btn { margin-top: 22px; padding: 13px 26px; }
         }
     </style>
