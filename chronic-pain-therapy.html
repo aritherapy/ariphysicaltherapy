@@ -139,6 +139,12 @@
         .svc-cta p { color:rgba(255,255,255,0.85); margin-bottom:20px; }
         .svc-cta .cta-btn { display:inline-block; background:var(--orange); color:#fff; padding:14px 32px; border-radius:6px; text-decoration:none; font-family:'Montserrat',sans-serif; font-weight:700; }
         .svc-cta .cta-btn:hover { background:var(--orange-dark); }
+        .svc-related { margin-top:38px; padding-top:26px; border-top:1px solid var(--border); }
+        .svc-related h2 { border:none; padding:0; margin:0 0 14px; font-size:20px; }
+        .svc-related ul { list-style:none; margin:0; padding:0; display:grid; grid-template-columns:repeat(3,1fr); gap:12px; }
+        .svc-related a { display:block; padding:14px 16px; border:1px solid var(--border); border-radius:10px; text-decoration:none; color:var(--charcoal); font-family:'Montserrat',sans-serif; font-weight:600; font-size:15px; background:var(--cream); transition:border-color .15s,color .15s; }
+        .svc-related a:hover { border-color:var(--orange); color:var(--orange-dark); }
+        @media (max-width:680px){ .svc-related ul{ grid-template-columns:1fr; } }
         @media (max-width:680px){ .svc-figure{ float:none; width:100%; margin:0 0 22px; } .cond-grid{ grid-template-columns:1fr; } }
     </style>
 
@@ -186,9 +192,21 @@
         }
       ],
       "hasMap": "https://www.google.com/maps/search/?api=1&query=ARI+Physical+Therapy+8200+Stockdale+Hwy+Suite+B2+Bakersfield+CA+93311",
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 35.3572119,
+        "longitude": -119.0931977
+      },
+      "areaServed": [
+        { "@type": "City", "name": "Bakersfield" },
+        { "@type": "AdministrativeArea", "name": "Kern County" }
+      ],
+      "availableLanguage": ["English", "Spanish", "Hindi"],
       "sameAs": [
         "https://www.instagram.com/ariptcare",
-        "https://www.linkedin.com/company/ariphysicaltherapy/"
+        "https://www.linkedin.com/company/ariphysicaltherapy/",
+        "https://www.yelp.com/biz/ari-physical-therapy-bakersfield",
+        "https://www.google.com/maps/place/ARI+Physical+Therapy/@35.3572119,-119.0931977,17z/data=!3m1!4b1!4m6!3m5!1s0x80ea43fd0a3a3a2d:0xd59ec9a5bcf611f7"
       ]
     }
     </script>
@@ -300,6 +318,15 @@
         <details class="faq-item"><summary>How is this different from just managing pain?</summary><div class="a">We look for the underlying drivers of your pain — movement patterns, strength, and tissue restrictions — and address them with hands-on care, targeted exercise, and education, so you build lasting relief rather than just masking symptoms.</div></details>
         <details class="faq-item"><summary>How long will it take?</summary><div class="a">Every person is different. After your evaluation your therapist will outline a realistic plan and timeline, and adjust it as you improve.</div></details>
         <details class="faq-item"><summary>What happens at the first visit?</summary><div class="a">Your initial evaluation takes about 45 to 60 minutes. We discuss your history and goals, assess your movement, and begin your personalized plan.</div></details>
+
+        <div class="svc-related">
+            <h2>Related services</h2>
+            <ul>
+                <li><a href="orthopedic-rehab.html">Orthopedic Rehabilitation</a></li>
+                <li><a href="pelvic-floor-therapy.html">Pelvic Floor Therapy</a></li>
+                <li><a href="wellness-programs.html">Wellness & Fitness Programs</a></li>
+            </ul>
+        </div>
 
         <div class="svc-cta">
             <h2>Live with less pain</h2>
