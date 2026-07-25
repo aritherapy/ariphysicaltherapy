@@ -5,9 +5,9 @@
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/Mockups_icons_HDsquare/Icons/favicon-32x32.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="canonical" href="https://ariphysicaltherapy.com/orthopedic-rehab.html">
-    <title>Orthopedic Rehab in Bakersfield, CA | ARI Physical Therapy</title>
-    <meta name="description" content="One-on-one orthopedic physical therapy in Bakersfield, CA. Hands-on rehab for joint pain, fractures, ligament injuries, and arthritis.">
+    <link rel="canonical" href="https://ariphysicaltherapy.com/about.html">
+    <title>About ARI Physical Therapy | Bakersfield, CA</title>
+    <meta name="description" content="Meet Deepa Konnur, PT, MPT, OCS. USC orthopedic residency-trained, board-certified specialist and founder of ARI Physical Therapy in Bakersfield, CA.">
     <meta name="robots" content="index, follow">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -108,44 +108,63 @@
         .footer-col a:hover { color: var(--orange-light); }
         .footer-bottom { display: flex; justify-content: space-between; align-items: center; padding-top: 20px; font-size: 13px; color: rgba(255,255,255,0.55); flex-wrap: wrap; gap: 10px; }
 
+
+        /* ===== ABOUT PAGE ===== */
+        .lead { font-size: 19px; line-height: 1.7; color: var(--text-mid); }
+        .lead strong { color: var(--text-dark); }
+
+        .director { display: grid; grid-template-columns: 300px 1fr; gap: 40px; align-items: start;
+                    background: var(--cream); border: 1px solid var(--border); border-radius: 14px;
+                    padding: 36px; margin: 10px 0 34px; }
+        .director-photo { position: relative; }
+        .director-photo .frame { position: relative; border-radius: 12px; overflow: hidden;
+                    background: var(--white); aspect-ratio: 3/4; border: 1px solid var(--border); }
+        .director-photo .frame::after { content:''; position:absolute; left:0; right:0; bottom:0; height:6px; background:var(--orange); }
+        .director-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; }
+        .director-facts { margin-top: 16px; border: 1px solid var(--border); border-radius: 10px; background: var(--white); overflow: hidden; }
+        .director-facts div { padding: 12px 14px; border-bottom: 1px solid var(--border); }
+        .director-facts div:last-child { border-bottom: none; }
+        .director-facts strong { display:block; font-family:'Montserrat',sans-serif; font-size:14px; color:var(--charcoal); }
+        .director-facts span { font-size: 12.5px; color: var(--text-light); }
+        .director-name { font-family:'Montserrat',sans-serif; font-weight:800; font-size:26px; color:var(--charcoal); margin:0 0 4px; }
+        .director-creds { color: var(--orange-dark); font-family:'Montserrat',sans-serif; font-weight:600; font-size:15px; letter-spacing:.3px; margin-bottom:6px; }
+        .director-role { color: var(--text-light); font-size:14px; text-transform:uppercase; letter-spacing:1.2px; font-weight:600; margin-bottom:18px; }
+        .director p { margin-bottom: 14px; }
+
+        .quote { border-left: 4px solid var(--orange); background: var(--white); border-radius: 0 10px 10px 0;
+                 padding: 22px 26px; margin: 26px 0; }
+        .quote p { font-size: 18px; line-height: 1.65; color: var(--text-dark); font-style: italic; margin: 0; }
+
+        .creds { list-style: none; margin: 8px 0 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 10px 26px; }
+        .creds li { position: relative; padding: 11px 0 11px 30px; border-bottom: 1px solid var(--border);
+                    color: var(--text-dark); font-weight: 500; font-size: 15px; }
+        .creds li::before { content:'✓'; position:absolute; left:0; top:10px; color:var(--orange); font-weight:700; }
+        .creds li span { display:block; color:var(--text-light); font-weight:400; font-size:13px; margin-top:2px; }
+
+        .pillars { display: grid; grid-template-columns: repeat(3,1fr); gap: 18px; margin: 18px 0 8px; }
+        .pillar { background: var(--white); border: 1px solid var(--border); border-radius: 12px; padding: 22px; }
+        .pillar h3 { margin: 0 0 8px; font-size: 17px; }
+        .pillar p { font-size: 15px; margin: 0; color: var(--text-mid); }
+
+        .about-cta { background: var(--charcoal); color:#fff; border-radius:12px; padding:34px; text-align:center; margin-top:40px; }
+        .about-cta h2 { border:none; color:#fff; margin:0 0 10px; padding:0; }
+        .about-cta p { color:rgba(255,255,255,0.85); margin-bottom:20px; }
+        .about-cta .cta-btn { display:inline-block; background:var(--orange); color:#fff; padding:14px 32px;
+                    border-radius:6px; text-decoration:none; font-family:'Montserrat',sans-serif; font-weight:700; }
+        .about-cta .cta-btn:hover { background: var(--orange-dark); }
+
+        @media (max-width: 780px) {
+            .director { grid-template-columns: 1fr; gap: 26px; padding: 26px; }
+            .director-photo { max-width: 260px; margin: 0 auto; }
+            .creds, .pillars { grid-template-columns: 1fr; }
+        }
+
         @media (max-width: 820px) {
             .top-bar, .navbar, .legal-hero, .legal-wrap, footer { padding-left: 22px; padding-right: 22px; }
             .nav-links { display: none; }
             .toc ol { columns: 1; }
             .footer-top { grid-template-columns: 1fr; gap: 28px; }
         }
-
-        /* ===== SERVICE PAGE ===== */
-        .svc-hero .cta-btn { display:inline-block; margin-top:22px; background:var(--orange); color:#fff; padding:14px 30px; border-radius:6px; text-decoration:none; font-family:'Montserrat',sans-serif; font-weight:700; font-size:15px; }
-        .svc-hero .cta-btn:hover { background:var(--orange-dark); }
-        .svc-lead { font-size:19px; color:var(--text-mid); line-height:1.7; margin-bottom:10px; }
-        .svc-figure { float:right; width:42%; margin:6px 0 22px 30px; border-radius:12px; overflow:hidden; box-shadow:0 12px 40px rgba(0,0,0,0.12); }
-        .svc-figure img { width:100%; display:block; aspect-ratio:4/3; object-fit:cover; }
-        .cond-grid { list-style:none; display:grid; grid-template-columns:1fr 1fr; gap:12px 24px; margin:8px 0 8px; }
-        .cond-grid li { position:relative; padding:10px 0 10px 30px; border-bottom:1px solid var(--border); color:var(--text-dark); font-weight:500; }
-        .cond-grid li::before { content:'✓'; position:absolute; left:0; top:9px; color:var(--orange); font-weight:700; }
-        .steps { counter-reset:s; list-style:none; margin:8px 0; }
-        .steps li { position:relative; padding:0 0 20px 56px; }
-        .steps li::before { counter-increment:s; content:counter(s); position:absolute; left:0; top:-2px; width:36px; height:36px; background:var(--orange); color:#fff; border-radius:50%; display:flex; align-items:center; justify-content:center; font-family:'Montserrat',sans-serif; font-weight:700; }
-        .steps li strong { display:block; color:var(--text-dark); margin-bottom:2px; font-family:'Montserrat',sans-serif; }
-        .faq-item { border:1px solid var(--border); border-radius:10px; margin-bottom:12px; }
-        .faq-item summary { list-style:none; cursor:pointer; padding:16px 20px; font-family:'Montserrat',sans-serif; font-weight:600; font-size:16px; color:var(--charcoal); display:flex; justify-content:space-between; gap:14px; }
-        .faq-item summary::-webkit-details-marker { display:none; }
-        .faq-item summary::after { content:'+'; color:var(--orange); font-size:24px; line-height:1; }
-        .faq-item[open] summary::after { content:'\2013'; }
-        .faq-item .a { padding:0 20px 18px; color:var(--text-mid); }
-        .svc-cta { background:var(--charcoal); color:#fff; border-radius:12px; padding:34px; text-align:center; margin-top:36px; }
-        .svc-cta h2 { border:none; color:#fff; margin:0 0 10px; padding:0; }
-        .svc-cta p { color:rgba(255,255,255,0.85); margin-bottom:20px; }
-        .svc-cta .cta-btn { display:inline-block; background:var(--orange); color:#fff; padding:14px 32px; border-radius:6px; text-decoration:none; font-family:'Montserrat',sans-serif; font-weight:700; }
-        .svc-cta .cta-btn:hover { background:var(--orange-dark); }
-        .svc-related { margin-top:38px; padding-top:26px; border-top:1px solid var(--border); }
-        .svc-related h2 { border:none; padding:0; margin:0 0 14px; font-size:20px; }
-        .svc-related ul { list-style:none; margin:0; padding:0; display:grid; grid-template-columns:repeat(3,1fr); gap:12px; }
-        .svc-related a { display:block; padding:14px 16px; border:1px solid var(--border); border-radius:10px; text-decoration:none; color:var(--charcoal); font-family:'Montserrat',sans-serif; font-weight:600; font-size:15px; background:var(--cream); transition:border-color .15s,color .15s; }
-        .svc-related a:hover { border-color:var(--orange); color:var(--orange-dark); }
-        @media (max-width:680px){ .svc-related ul{ grid-template-columns:1fr; } }
-        @media (max-width:680px){ .svc-figure{ float:none; width:100%; margin:0 0 22px; } .cond-grid{ grid-template-columns:1fr; } }
     
         /* ============================================================
            SHARED HEADER SYSTEM - identical on every page.
@@ -247,9 +266,9 @@
 
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="ARI Physical Therapy">
-    <meta property="og:title" content="Orthopedic Rehab in Bakersfield, CA | ARI Physical Therapy">
-    <meta property="og:description" content="One-on-one orthopedic physical therapy in Bakersfield, CA. Hands-on rehab for joint pain, fractures, ligament injuries, and arthritis.">
-    <meta property="og:url" content="https://ariphysicaltherapy.com/orthopedic-rehab.html">
+    <meta property="og:title" content="About ARI Physical Therapy | Bakersfield, CA">
+    <meta property="og:description" content="Meet Deepa Konnur, PT, MPT, OCS, board-certified Orthopedic Clinical Specialist and founder of ARI Physical Therapy.">
+    <meta property="og:url" content="https://ariphysicaltherapy.com/about.html">
     <meta property="og:image" content="https://ariphysicaltherapy.com/assets/og-image.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -290,6 +309,7 @@
       ],
       "hasMap": "https://www.google.com/maps/search/?api=1&query=ARI+Physical+Therapy+8200+Stockdale+Hwy+Suite+B2+Bakersfield+CA+93311",
       "founder": { "@id": "https://ariphysicaltherapy.com/about.html#deepa" },
+      "employee": { "@id": "https://ariphysicaltherapy.com/about.html#deepa" },
       "geo": {
         "@type": "GeoCoordinates",
         "latitude": 35.3572119,
@@ -308,46 +328,122 @@
       ]
     }
     </script>
+
     <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
     {
-      "@type": "Question",
-      "name": "Do I need a referral for orthopedic physical therapy?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "No. In California you can see a physical therapist directly for up to 12 visits or 45 days, whichever comes first, so you can start without a doctor's referral. Some insurance plans still require a referral for coverage, so we recommend checking with your plan, and we're happy to help."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How many visits will I need?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "It depends on your condition and goals. After your initial evaluation, your therapist will outline an estimated plan. Many orthopedic conditions improve significantly in 6\u201312 visits, while others take more time; we'll keep you informed at every step."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Do you treat my injury or condition?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "We treat a wide range of musculoskeletal problems: joints, muscles, tendons, and bones, from acute injuries to chronic pain and arthritis. Call us at (661) 282-8584 and we'll let you know how we can help."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What happens at the first visit?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Your initial evaluation takes about 45 to 60 minutes. We discuss your history and goals, assess your movement and strength, and begin your personalized treatment plan."
-      }
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "@id": "https://ariphysicaltherapy.com/about.html#deepa",
+      "name": "Deepa Konnur",
+      "givenName": "Deepa",
+      "familyName": "Konnur",
+      "honorificSuffix": "PT, MPT, OCS",
+      "jobTitle": "Founder & Clinic Director",
+      "description": "Board-certified Orthopedic Clinical Specialist (OCS) and USC orthopedic residency-trained physical therapist with more than 15 years of experience, including a Spine Clinical Specialist role at Kaiser Permanente and postgraduate pelvic rehabilitation training. Founder of ARI Physical Therapy in Bakersfield, California.",
+      "url": "https://ariphysicaltherapy.com/about.html",
+      "image": "https://ariphysicaltherapy.com/assets/deepa-konnur.jpg",
+      "worksFor": { "@id": "https://ariphysicaltherapy.com/#clinic" },
+      "workLocation": {
+        "@type": "Place",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "8200 Stockdale Hwy Suite B2",
+          "addressLocality": "Bakersfield",
+          "addressRegion": "CA",
+          "postalCode": "93311",
+          "addressCountry": "US"
+        }
+      },
+      "knowsLanguage": ["English", "Spanish", "Hindi"],
+      "alumniOf": [
+        {
+          "@type": "CollegeOrUniversity",
+          "name": "University of Southern California",
+          "sameAs": "https://www.usc.edu/"
+        },
+        {
+          "@type": "CollegeOrUniversity",
+          "name": "Loma Linda University",
+          "sameAs": "https://home.llu.edu/"
+        }
+      ],
+      "knowsAbout": [
+        "Orthopedic physical therapy",
+        "Spine rehabilitation",
+        "Pelvic floor physical therapy",
+        "Pediatric physical therapy",
+        "Non-surgical management of spine conditions",
+        "Sports injury rehabilitation",
+        "Post-surgical rehabilitation",
+        "Chronic pain management",
+        "Pelvic floor physical therapy",
+        "Manual therapy"
+      ],
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "Board Certification",
+          "name": "Board-Certified Orthopedic Clinical Specialist (OCS)",
+          "recognizedBy": {
+            "@type": "Organization",
+            "name": "American Board of Physical Therapy Specialties"
+          }
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "Residency",
+          "name": "Orthopedic Physical Therapy Residency",
+          "recognizedBy": {
+            "@type": "CollegeOrUniversity",
+            "name": "University of Southern California"
+          }
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "Postgraduate Training",
+          "name": "Pelvic Rehabilitation Training",
+          "recognizedBy": {
+            "@type": "Organization",
+            "name": "Herman & Wallace Pelvic Rehabilitation Institute"
+          }
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "Professional License",
+          "name": "California Physical Therapist License PT292525",
+          "recognizedBy": {
+            "@type": "Organization",
+            "name": "Physical Therapy Board of California"
+          }
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "degree",
+          "name": "Master of Physical Therapy (MPT)"
+        }
+      ],
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "NPI",
+        "value": "1245655307"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/deepa-konnur-pt-mpt-ocs-5659558b"
+      ]
     }
-  ]
-}
     </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "AboutPage",
+      "name": "About ARI Physical Therapy",
+      "url": "https://ariphysicaltherapy.com/about.html",
+      "mainEntity": { "@id": "https://ariphysicaltherapy.com/#clinic" },
+      "about": { "@id": "https://ariphysicaltherapy.com/about.html#deepa" }
+    }
+    </script>
+
 </head>
 <body>
 
@@ -371,8 +467,8 @@
         </button>
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="services.html" class="active">Services</a></li>
+            <li><a href="about.html" class="active">About</a></li>
+            <li><a href="services.html">Services</a></li>
             <li><a href="careers.html" class="nav-careers">Careers</a></li>
             <li><a href="contact.html">Contact</a></li>
             <li><a href="physicians.html">For Physicians</a></li>
@@ -382,63 +478,97 @@
     <!-- ===== HERO ===== -->
     <section class="page-hero">
         <div class="page-hero-inner">
-            <p class="page-eyebrow">Orthopedic Rehab</p>
-            <h1>Orthopedic Physical Therapy in <span class="hl">Bakersfield</span></h1>
-            <p>Hands-on, one-on-one care for joints, muscles, and bones, aimed at relieving pain, restoring motion, and rebuilding strength.</p>
-            <a class="cta-btn" href="appointment.html">Request a Consultation</a>
+            <p class="page-eyebrow">About ARI Physical Therapy</p>
+            <h1>Specialist-led physical therapy in <span class="hl">Bakersfield</span></h1>
+            <p>Board-certified expertise, and a licensed therapist with you for your entire visit.</p>
         </div>
     </section>
 
     <div class="legal-wrap">
 
-        <figure class="svc-figure"><img src="assets/stock-ortho.jpg" alt="Orthopedic rehabilitation at ARI Physical Therapy in Bakersfield"></figure>
+        <p class="lead">ARI Physical Therapy is an independent, clinician-owned outpatient practice in southwest Bakersfield. We were built on a simple conviction: <strong>empowering movement changes lives.</strong> Your licensed physical therapist stays with you for the whole visit, watching how you move, adjusting as you go, and treating with their hands.</p>
 
-        <p class="svc-lead">Musculoskeletal injuries, from fractures and ligament tears to arthritis and joint pain, need precise, targeted therapy to heal correctly and fully. At ARI Physical Therapy, orthopedic rehab is one-on-one, combining hands-on manual therapy with progressive exercise to restore strength, range of motion, and function.</p>
+        <p>That takes more time than the industry norm, and we chose it on purpose. Every plan begins with what you want to get back to, and we track your progress against it visit by visit, so you can feel the difference in your strength, in your comfort, and in what your day allows.</p>
 
-        <h2>What we treat</h2>
-        <ul class="cond-grid">
-            <li>Joint pain &amp; stiffness</li>
-            <li>Fractures &amp; ligament recovery</li>
-            <li>Hip, knee, shoulder &amp; spine conditions</li>
-            <li>Arthritis management</li>
-            <li>Tendonitis &amp; overuse injuries</li>
-            <li>Back &amp; neck pain</li>
-        </ul>
+        <p>We treat orthopedic and sports injuries, post-surgical recovery, chronic pain, pelvic health, pediatric needs, and prenatal and postpartum care. We accept most private insurance plans and Medicare.</p>
 
-        <h2>What to expect</h2>
-        <ul class="steps">
-            <li><strong>A thorough evaluation</strong>Your first visit (about 45–60 minutes) includes a hands-on assessment of your strength, mobility, and the mechanics behind your pain or injury.</li>
-            <li><strong>A personalized treatment plan</strong>Hands-on manual therapy plus targeted, progressive exercise. It's built around your body and your goals, not a generic protocol.</li>
-            <li><strong>A return to full function</strong>We rebuild strength and range of motion and guide you back to the activities that matter, with strategies to prevent re-injury.</li>
-        </ul>
+        <h2>Meet Our Clinic Director</h2>
 
-        <div class="callout">
-            <p><strong>No referral needed to start.</strong> In California, you can see a physical therapist directly for up to 12 visits or 45 days, so you can begin right away. Some insurance plans still require a referral for coverage; call us at <a href="tel:6612828584">(661) 282-8584</a> and we'll help you check.</p>
+        <div class="director">
+            <div class="director-photo">
+                <div class="frame">
+                    <img src="assets/deepa-konnur.jpg" alt="Deepa Konnur, PT, MPT, OCS, founder and Clinic Director of ARI Physical Therapy in Bakersfield, CA" width="900" height="1200">
+                </div>
+                <div class="director-facts">
+                    <div><strong>Board-Certified</strong><span>Orthopedic Clinical Specialist (OCS)</span></div>
+                    <div><strong>USC Residency-Trained</strong><span>Orthopedic physical therapy</span></div>
+                    <div><strong>Spine Specialist PT</strong><span>Formerly Kaiser Permanente</span></div>
+                    <div><strong>Pelvic Health Trained</strong><span>Herman &amp; Wallace Institute</span></div>
+                    <div><strong>15+ Years</strong><span>Outpatient physical therapy</span></div>
+                    <div><strong>English &middot; Spanish &middot; Hindi</strong><span>Languages spoken</span></div>
+                </div>
+            </div>
+            <div class="director-bio">
+                <p class="director-name">Deepa Konnur</p>
+                <div class="director-creds">PT, MPT, OCS</div>
+                <div class="director-role">Founder &amp; Clinic Director</div>
+
+                <p>Deepa Konnur is a <strong>board-certified Orthopedic Clinical Specialist (OCS)</strong> with more than 15 years of experience in outpatient physical therapy. She earned her <strong>Master of Physical Therapy at Loma Linda University</strong>, then completed an <strong>Orthopedic Physical Therapy Residency through the University of Southern California</strong>, one of the top-ranked physical therapy programs in the country.</p>
+
+                <p>She went on to earn <strong>board certification in the Orthopedic Specialty</strong> from the American Board of Physical Therapy Specialties, a credential held by only a small percentage of licensed physical therapists nationwide. She has never really stopped being a student, and continues to train under some of the most respected physical therapists in the country.</p>
+
+                <p>Before opening ARI, Deepa served as a <strong>Spine Clinical Specialist PT at Kaiser Permanente</strong>, a specialist role dedicated to complex spine conditions and to finding conservative, non-invasive alternatives for patients heading toward surgery. She has also completed postgraduate pelvic rehabilitation training through the <strong>Herman &amp; Wallace Pelvic Rehabilitation Institute</strong>, care she is especially passionate about providing to women in our community, and she has treated children throughout her career, an interest that dates back to her undergraduate years.</p>
+
+                <p>Patients most often describe her the same way: she listens, she explains what is actually happening in plain language, and she pushes you a little further than you thought you could go.</p>
+            </div>
         </div>
 
-        <h2>Why patients choose ARI</h2>
-        <p>Care is always <strong>one-on-one and in person</strong> at our Bakersfield clinic (8200 Stockdale Hwy, Suite B2), in the Town &amp; Country Village center next to Trader Joe's. We accept most private insurance plans and Medicare, and our team speaks English, Spanish, and Hindi.</p>
-
-        <h2>Orthopedic therapy FAQs</h2>
-        <details class="faq-item"><summary>Do I need a referral for orthopedic physical therapy?</summary><div class="a">No. In California you can see a physical therapist directly for up to 12 visits or 45 days, whichever comes first, so you can start without a doctor's referral. Some insurance plans still require a referral for coverage, so we recommend checking with your plan, and we're happy to help.</div></details>
-        <details class="faq-item"><summary>How many visits will I need?</summary><div class="a">It depends on your condition and goals. After your initial evaluation, your therapist will outline an estimated plan. Many orthopedic conditions improve significantly in 6–12 visits, while others take more time; we'll keep you informed at every step.</div></details>
-        <details class="faq-item"><summary>Do you treat my injury or condition?</summary><div class="a">We treat a wide range of musculoskeletal problems: joints, muscles, tendons, and bones, from acute injuries to chronic pain and arthritis. Call us at (661) 282-8584 and we'll let you know how we can help.</div></details>
-        <details class="faq-item"><summary>What happens at the first visit?</summary><div class="a">Your initial evaluation takes about 45 to 60 minutes. We discuss your history and goals, assess your movement and strength, and begin your personalized treatment plan.</div></details>
-
-        <div class="svc-related">
-            <h2>Related services</h2>
-            <ul>
-                <li><a href="sports-injury-therapy.html">Sports Injury Therapy</a></li>
-                <li><a href="post-surgery-rehab.html">Post-Surgical Rehab</a></li>
-                <li><a href="chronic-pain-therapy.html">Chronic Pain Therapy</a></li>
-            </ul>
+        <div class="quote">
+            <p>She launched ARI Physical Therapy with a clear goal: to bring Bakersfield the same standard of specialized, unhurried care she spent her career training for.</p>
         </div>
 
-        <div class="svc-cta">
-            <h2>Move without pain again</h2>
-            <p>Request a consultation and our team will help you take the first step.</p>
+        <h3>Credentials &amp; training</h3>
+        <ul class="creds">
+            <li>Board Certification in the Orthopedic Specialty (OCS)<span>American Board of Physical Therapy Specialties</span></li>
+            <li>Orthopedic Physical Therapy Residency<span>University of Southern California</span></li>
+            <li>Spine Clinical Specialist PT<span>Kaiser Permanente, complex spine conditions</span></li>
+            <li>Pelvic rehabilitation training<span>Herman &amp; Wallace Pelvic Rehabilitation Institute</span></li>
+            <li>Master of Physical Therapy (MPT)<span>Graduate study at Loma Linda University</span></li>
+            <li>15+ years in outpatient physical therapy<span>Orthopedic, spine, pelvic, pediatric and post-surgical care</span></li>
+        </ul>
+        <p style="font-size:14px;color:var(--text-light);margin-top:14px;">California Physical Therapist License #PT292525 &middot; NPI #1245655307</p>
+
+        <h2>How we practice</h2>
+
+        <div class="pillars">
+            <div class="pillar">
+                <h3>One-on-one attention</h3>
+                <p>Your licensed physical therapist works with you directly for your full session, so your plan keeps pace with how you are actually responding.</p>
+            </div>
+            <div class="pillar">
+                <h3>Find the cause, not the symptom</h3>
+                <p>Pain is usually the last thing to show up and the first thing to be treated. We look upstream, at how you load, move, and compensate.</p>
+            </div>
+            <div class="pillar">
+                <h3>You leave knowing why</h3>
+                <p>Every plan is explained in plain language, with a home program you understand well enough to keep doing after discharge.</p>
+            </div>
+        </div>
+
+        <h2>The clinic</h2>
+
+        <p>ARI Physical Therapy is located at <strong>8200 Stockdale Highway, Suite B2</strong>, in the Town &amp; Country Village shopping center, right next door to Trader Joe&rsquo;s, with free parking directly in front. Care is provided in person; we do not offer telehealth visits.</p>
+
+        <p>Our team speaks <strong>English, Spanish, and Hindi</strong>. We accept most private insurance plans and Medicare, and under California&rsquo;s direct access law you may be able to begin physical therapy without a physician referral for up to 12 visits or 45 days, whichever comes first. If you are not sure what your plan requires, <a href="contact.html">call us</a> and we will help you find out.</p>
+
+        <p>Have a question before you book? Our <a href="faq.html">frequently asked questions</a> page covers what to expect at your first visit, insurance and referrals, cancellations, and parking. You can also review <a href="services.html">everything we treat</a>.</p>
+
+        <div class="about-cta">
+            <h2>Ready to get started?</h2>
+            <p>Request a consultation and we will help you take the first step.</p>
             <a class="cta-btn" href="appointment.html">Request a Consultation</a>
         </div>
+
     </div>
 
     <!-- ===== FOOTER ===== -->

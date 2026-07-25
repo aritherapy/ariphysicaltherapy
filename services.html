@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="canonical" href="https://ariphysicaltherapy.com/services.html">
     <title>Our Services | ARI Physical Therapy – Bakersfield, CA</title>
-    <meta name="description" content="8 specialized physical therapy services in Bakersfield, CA — orthopedic rehab, sports injury recovery, pelvic health, pediatric therapy, and more.">
+    <meta name="description" content="8 specialized physical therapy services in Bakersfield, CA: orthopedic rehab, sports injury recovery, pelvic health, pediatric therapy, and more.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
@@ -92,7 +92,7 @@
             transition: background 0.2s !important;
         }
 
-        .btn-book-topbar:hover { background: var(--orange-dark) !important; }
+        .top-bar .btn-book-topbar:hover { background: var(--orange-dark) !important; }
 
         /* =============================================
            NAVIGATION
@@ -155,6 +155,8 @@
         }
 
         .navbar.scrolled { box-shadow: 0 4px 24px rgba(0,0,0,0.13); }
+        .nav-logo { display: flex; align-items: center; text-decoration: none; }
+        .nav-logo img { height: 56px; width: auto; display: block; }
 
         .nav-toggle {
             display: none;
@@ -174,6 +176,17 @@
             border-radius: 2px;
             transition: all 0.25s;
         }
+
+        .svc-learn {
+            display: block;
+            margin-top: 16px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 15px;
+            color: var(--orange-dark);
+            text-decoration: none;
+        }
+        .svc-learn:hover { text-decoration: underline; }
 
         @media (max-width: 768px) {
             .navbar { padding: 14px 20px; top: 0; }
@@ -571,12 +584,109 @@
             transform: translateY(0);
         }
 
+    
+        /* ============================================================
+           SHARED HEADER SYSTEM - identical on every page.
+           Keep this block in sync across all pages when editing.
+        ============================================================ */
+        .top-bar {
+            background: var(--charcoal); color: var(--white);
+            padding: 10px 48px; display: flex; justify-content: space-between;
+            align-items: center; font-size: 13px;
+            position: sticky; top: 0; z-index: 1000;
+        }
+        .top-bar-left { display: flex; align-items: center; gap: 28px; }
+        .top-bar-right { display: flex; align-items: center; gap: 20px; }
+        .top-bar a { color: rgba(255,255,255,0.85); text-decoration: none; display: flex; align-items: center; gap: 6px; margin: 0; padding: 0; transition: color 0.2s; }
+        .top-bar a:hover { color: var(--orange-light); }
+        .top-bar-fax { display: flex; align-items: center; gap: 6px; color: rgba(255,255,255,0.85); }
+        .top-bar-icon { font-size: 14px; }
+        .top-bar .btn-book-topbar {
+            background: var(--orange); color: var(--white) !important;
+            padding: 7px 18px; border-radius: 4px;
+            font-weight: 600; font-size: 13px; letter-spacing: 0.3px;
+            line-height: 1.4; white-space: nowrap; text-decoration: none;
+            display: inline-flex; align-items: center;
+            transition: background 0.2s !important;
+        }
+        .top-bar .btn-book-topbar:hover { background: var(--orange-dark) !important; }
+
+        .navbar {
+            background: var(--white); padding: 14px 48px;
+            display: flex; justify-content: space-between; align-items: center;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.07); border-bottom: none;
+            position: sticky; top: 52px; z-index: 999;
+        }
+        .navbar.scrolled { box-shadow: 0 4px 24px rgba(0,0,0,0.13); }
+        .nav-logo { display: flex; align-items: center; text-decoration: none; }
+        .nav-logo img { height: 56px; width: auto; display: block; }
+        .nav-links { display: flex; list-style: none; gap: 36px; align-items: center; margin: 0; padding: 0; }
+        .nav-links li { margin: 0; }
+        .nav-links a {
+            text-decoration: none; color: var(--charcoal);
+            font-weight: 500; font-size: 15px;
+            transition: color 0.2s; position: relative;
+        }
+        .nav-links a::after {
+            content: ''; position: absolute; bottom: -4px; left: 0;
+            width: 0; height: 2px; background: var(--orange); transition: width 0.25s;
+        }
+        .nav-links a:hover { color: var(--orange); }
+        .nav-links a:hover::after,
+        .nav-links a.active::after { width: 100%; }
+        .nav-links a.active { color: var(--orange); }
+        .nav-careers { color: var(--orange) !important; font-weight: 700 !important; }
+        .nav-careers::after { background: var(--orange) !important; }
+
+        .nav-toggle { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 6px; }
+        .nav-toggle span { display: block; width: 24px; height: 2px; background: var(--charcoal); border-radius: 2px; transition: all 0.25s; }
+
+        @media (max-width: 768px) {
+            .top-bar { display: none; }
+            .navbar { padding: 14px 20px; top: 0; }
+            .nav-toggle { display: flex; }
+            .nav-links {
+                display: none; position: absolute; top: 100%; left: 0; right: 0;
+                background: var(--white); flex-direction: column; gap: 0;
+                padding: 12px 0 20px; box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+            }
+            .nav-links.open { display: flex; }
+            .nav-links li { width: 100%; }
+            .nav-links a { display: block; padding: 12px 24px; font-size: 16px; }
+            .nav-links a::after { display: none; }
+            .nav-links a.active { font-weight: 700; }
+        }
+    
+        /* ============================================================
+           SHARED PAGE HERO - identical on every interior page.
+        ============================================================ */
+        .page-hero { background: var(--charcoal); padding: 80px 48px 72px; position: relative; overflow: hidden; }
+        .page-hero-inner { max-width: 1200px; margin: 0 auto; }
+        .page-eyebrow {
+            font-size: 18px; font-weight: 700; letter-spacing: 3px;
+            text-transform: uppercase; color: rgba(255,255,255,0.72);
+            margin: 0 0 16px; display: flex; align-items: center; gap: 10px;
+        }
+        .page-eyebrow::before { content: ''; display: inline-block; width: 32px; height: 2px; background: var(--orange); flex: none; }
+        .page-hero h1 {
+            font-family: 'Montserrat', sans-serif; font-size: clamp(36px, 5vw, 56px);
+            font-weight: 900; color: var(--white); line-height: 1.1; margin: 0 0 20px;
+        }
+        .page-hero h1 .hl { color: var(--orange); }
+        .page-hero p { font-size: 18px; color: rgba(255,255,255,0.72); max-width: 560px; line-height: 1.7; margin: 0; }
+        .page-hero .cta-btn {
+            display: inline-block; margin-top: 26px; background: var(--orange); color: #fff;
+            padding: 14px 30px; border-radius: 6px; text-decoration: none;
+            font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 15px;
+        }
+        .page-hero .cta-btn:hover { background: var(--orange-dark); }
+        @media (max-width: 768px) { .page-hero { padding: 56px 24px; } .page-eyebrow { font-size: 15px; } }
     </style>
 
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="ARI Physical Therapy">
     <meta property="og:title" content="Our Services | ARI Physical Therapy – Bakersfield, CA">
-    <meta property="og:description" content="8 specialized physical therapy services in Bakersfield, CA — orthopedic rehab, sports injury recovery, pelvic health, pediatric therapy, and more.">
+    <meta property="og:description" content="8 specialized physical therapy services in Bakersfield, CA: orthopedic rehab, sports injury recovery, pelvic health, pediatric therapy, and more.">
     <meta property="og:url" content="https://ariphysicaltherapy.com/services.html">
     <meta property="og:image" content="https://ariphysicaltherapy.com/assets/og-image.jpg">
     <meta property="og:image:width" content="1200">
@@ -663,6 +773,7 @@
           }
         ]
       },
+      "founder": { "@id": "https://ariphysicaltherapy.com/about.html#deepa" },
       "geo": {
         "@type": "GeoCoordinates",
         "latitude": 35.3572119,
@@ -687,17 +798,11 @@
     <!-- ===== TOP BAR ===== -->
     <div class="top-bar">
         <div class="top-bar-left">
-            <a href="tel:6612828584">
-                <span class="top-bar-icon">📞</span>
-                (661) 282-8584
-            </a>
-            <a href="mailto:contactus@ariptcare.com">
-                <span class="top-bar-icon">✉</span>
-                contactus@ariptcare.com
-            </a>
-            <span style="display:flex;align-items:center;gap:6px;color:rgba(255,255,255,0.85)"><span class="top-bar-icon">📠</span>Fax: (661) 727-0005</span>
+            <a href="tel:6612828584"><span class="top-bar-icon">&#128222;</span>(661) 282-8584</a>
+            <a href="mailto:contactus@ariptcare.com"><span class="top-bar-icon">&#9993;</span>contactus@ariptcare.com</a>
+            <span class="top-bar-fax"><span class="top-bar-icon">&#128224;</span>Fax: (661) 727-0005</span>
         </div>
-        <div style="display:flex;align-items:center;gap:20px;"><a href="appointment.html" class="btn-book-topbar">Book an Appointment</a></div>
+        <div class="top-bar-right"><a href="appointment.html" class="btn-book-topbar">Book an Appointment</a></div>
     </div>
 
     <!-- ===== NAVBAR ===== -->
@@ -710,8 +815,8 @@
         </button>
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
             <li><a href="services.html" class="active">Services</a></li>
-            <li><a href="appointment.html">Book an Appointment</a></li>
             <li><a href="careers.html" class="nav-careers">Careers</a></li>
             <li><a href="contact.html">Contact</a></li>
             <li><a href="physicians.html">For Physicians</a></li>
@@ -723,7 +828,7 @@
         <div class="page-hero-inner">
             <p class="page-eyebrow">What We Treat</p>
             <h1>Our <span class="hl">Specialties</span></h1>
-            <p>Eight specialized programs built around your unique needs — because recovery isn't one-size-fits-all.</p>
+            <p>Eight specialized programs built around your unique needs, because recovery isn't one-size-fits-all.</p>
         </div>
     </section>
 
@@ -744,7 +849,7 @@
                 <div class="service-number">01</div>
                 <span class="service-tag">Orthopedic</span>
                 <h2>Orthopedic <span>Rehabilitation</span></h2>
-                <p>Musculoskeletal injuries — from fractures and ligament tears to arthritis and joint pain — require precise, targeted therapy to heal correctly and fully. Our orthopedic rehab program combines hands-on manual therapy with progressive exercise to restore strength, range of motion, and function.</p>
+                <p>Musculoskeletal injuries, from fractures and ligament tears to arthritis and joint pain, require precise, targeted therapy to heal correctly and fully. Our orthopedic rehab program combines hands-on manual therapy with progressive exercise to restore strength, range of motion, and function.</p>
                 <ul class="service-bullets">
                     <li>Joint pain and stiffness</li>
                     <li>Fracture and ligament recovery</li>
@@ -752,7 +857,7 @@
                     <li>Arthritis management</li>
                 </ul>
                 <a href="appointment.html" class="btn-primary">Book a Consultation</a>
-                <a href="orthopedic-rehab.html" style="display:inline-block; margin-left:20px; font-weight:600; color:#C4520A; text-decoration:none;">Learn more about orthopedic rehab &rarr;</a>
+                <a href="orthopedic-rehab.html" class="svc-learn">Learn more about orthopedic rehab &rarr;</a>
             </div>
         </div>
 
@@ -773,7 +878,7 @@
                     <li>Performance optimization</li>
                 </ul>
                 <a href="appointment.html" class="btn-primary">Book a Consultation</a>
-                <a href="sports-injury-therapy.html" style="display:inline-block; margin-left:20px; font-weight:600; color:#C4520A; text-decoration:none;">Learn more about sports injury therapy &rarr;</a>
+                <a href="sports-injury-therapy.html" class="svc-learn">Learn more about sports injury therapy &rarr;</a>
             </div>
         </div>
 
@@ -786,7 +891,7 @@
                 <div class="service-number">03</div>
                 <span class="service-tag">Post-Surgery</span>
                 <h2>Post-Operative <span>Care</span></h2>
-                <p>Surgery is only the first step — what happens during recovery determines your outcome. Our post-operative rehab programs are designed in close coordination with your surgeon's protocol to minimize scar tissue, restore mobility, and rebuild strength in a safe, structured progression.</p>
+                <p>Surgery is only the first step. What happens during recovery determines your outcome. Our post-operative rehab programs are designed in close coordination with your surgeon's protocol to minimize scar tissue, restore mobility, and rebuild strength in a safe, structured progression.</p>
                 <ul class="service-bullets">
                     <li>Total joint replacement recovery</li>
                     <li>Spinal surgery rehabilitation</li>
@@ -794,7 +899,7 @@
                     <li>Coordinated care with your surgical team</li>
                 </ul>
                 <a href="appointment.html" class="btn-primary">Book a Consultation</a>
-                <a href="post-surgery-rehab.html" style="display:inline-block; margin-left:20px; font-weight:600; color:#C4520A; text-decoration:none;">Learn more about post-op rehab &rarr;</a>
+                <a href="post-surgery-rehab.html" class="svc-learn">Learn more about post-op rehab &rarr;</a>
             </div>
         </div>
 
@@ -807,7 +912,7 @@
                 <div class="service-number">04</div>
                 <span class="service-tag">Chronic Pain</span>
                 <h2>Chronic Pain <span>Rehab</span></h2>
-                <p>Living with chronic pain is exhausting — and you deserve more than just "managing" it. Our approach addresses the root causes of persistent pain through movement therapy, manual techniques, and patient education, helping you build long-term strategies for a more comfortable, active life.</p>
+                <p>Living with chronic pain is exhausting, and you deserve more than just "managing" it. Our approach addresses the root causes of persistent pain through movement therapy, manual techniques, and patient education, helping you build long-term strategies for a more comfortable, active life.</p>
                 <ul class="service-bullets">
                     <li>Low back and neck pain</li>
                     <li>Fibromyalgia and widespread pain</li>
@@ -815,7 +920,7 @@
                     <li>Pain education and self-management tools</li>
                 </ul>
                 <a href="appointment.html" class="btn-primary">Book a Consultation</a>
-                <a href="chronic-pain-therapy.html" style="display:inline-block; margin-left:20px; font-weight:600; color:#C4520A; text-decoration:none;">Learn more about chronic pain therapy &rarr;</a>
+                <a href="chronic-pain-therapy.html" class="svc-learn">Learn more about chronic pain therapy &rarr;</a>
             </div>
         </div>
 
@@ -828,7 +933,7 @@
                 <div class="service-number">05</div>
                 <span class="service-tag">Pelvic Health</span>
                 <h2>Pelvic <span>Pain</span></h2>
-                <p>Pelvic floor dysfunction is far more common than most people realize — and far more treatable. Our certified pelvic health therapists provide discreet, evidence-based care for a range of pelvic conditions in women, restoring comfort and confidence.</p>
+                <p>Pelvic floor dysfunction is far more common than most people realize, and far more treatable. Our certified pelvic health therapists provide discreet, evidence-based care for a range of pelvic conditions in women, restoring comfort and confidence.</p>
                 <ul class="service-bullets">
                     <li>Pelvic floor muscle dysfunction</li>
                     <li>Urinary and bowel incontinence</li>
@@ -836,7 +941,7 @@
                     <li>Pelvic pain and interstitial cystitis</li>
                 </ul>
                 <a href="appointment.html" class="btn-primary">Book a Consultation</a>
-                <a href="pelvic-floor-therapy.html" style="display:inline-block; margin-left:20px; font-weight:600; color:#C4520A; text-decoration:none;">Learn more about pelvic floor therapy &rarr;</a>
+                <a href="pelvic-floor-therapy.html" class="svc-learn">Learn more about pelvic floor therapy &rarr;</a>
             </div>
         </div>
 
@@ -857,7 +962,7 @@
                     <li>Torticollis and musculoskeletal conditions</li>
                 </ul>
                 <a href="appointment.html" class="btn-primary">Book a Consultation</a>
-                <a href="pediatric-therapy.html" style="display:inline-block; margin-left:20px; font-weight:600; color:#C4520A; text-decoration:none;">Learn more about pediatric therapy &rarr;</a>
+                <a href="pediatric-therapy.html" class="svc-learn">Learn more about pediatric therapy &rarr;</a>
             </div>
         </div>
 
@@ -870,7 +975,7 @@
                 <div class="service-number">07</div>
                 <span class="service-tag">Women's Health</span>
                 <h2>Pre / Post <span>Partum Rehab</span></h2>
-                <p>Pregnancy and childbirth put enormous demands on the body — demands that don't disappear once baby arrives. We support women through every stage, from prenatal body changes to postpartum recovery, with a focus on pelvic health, core strength, and return to activity.</p>
+                <p>Pregnancy and childbirth put enormous demands on the body; those demands don't disappear once baby arrives. We support women through every stage, from prenatal body changes to postpartum recovery, with a focus on pelvic health, core strength, and return to activity.</p>
                 <ul class="service-bullets">
                     <li>Prenatal back and pelvic pain</li>
                     <li>Diastasis recti (abdominal separation)</li>
@@ -878,7 +983,7 @@
                     <li>Postpartum return-to-exercise guidance</li>
                 </ul>
                 <a href="appointment.html" class="btn-primary">Book a Consultation</a>
-                <a href="postpartum-therapy.html" style="display:inline-block; margin-left:20px; font-weight:600; color:#C4520A; text-decoration:none;">Learn more about prenatal &amp; postpartum therapy &rarr;</a>
+                <a href="postpartum-therapy.html" class="svc-learn">Learn more about prenatal &amp; postpartum therapy &rarr;</a>
             </div>
         </div>
 
@@ -899,7 +1004,7 @@
                     <li>Post-discharge wellness maintenance</li>
                 </ul>
                 <a href="appointment.html" class="btn-primary">Book a Consultation</a>
-                <a href="wellness-programs.html" style="display:inline-block; margin-left:20px; font-weight:600; color:#C4520A; text-decoration:none;">Learn more about our wellness programs &rarr;</a>
+                <a href="wellness-programs.html" class="svc-learn">Learn more about our wellness programs &rarr;</a>
             </div>
         </div>
 
@@ -931,6 +1036,7 @@
                     <h4>Quick Links</h4>
                     <ul>
                         <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
                         <li><a href="services.html">Services</a></li>
                         <li><a href="appointment.html">Book an Appointment</a></li>
                         <li><a href="careers.html">Careers</a></li>
@@ -964,15 +1070,6 @@
         window.addEventListener('scroll', () => {
             navbar.classList.toggle('scrolled', window.scrollY > 10);
         });
-
-        // Mobile menu toggle
-        const toggle = document.querySelector('.nav-toggle');
-        const navLinks = document.querySelector('.nav-links');
-        toggle.addEventListener('click', () => {
-            const open = navLinks.classList.toggle('open');
-            toggle.setAttribute('aria-expanded', open);
-        });
-
         // Scroll reveal
         const reveals = document.querySelectorAll('.reveal');
         const observer = new IntersectionObserver((entries) => {
@@ -986,5 +1083,25 @@
         reveals.forEach(el => observer.observe(el));
     </script>
 
+
+    <script>
+    /* Shared mobile-nav toggle - identical on every page. */
+    (function () {
+        const toggle = document.querySelector('.nav-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        if (toggle && navLinks) {
+            toggle.addEventListener('click', function () {
+                const open = navLinks.classList.toggle('open');
+                toggle.setAttribute('aria-expanded', open);
+            });
+        }
+        const navbar = document.querySelector('.navbar');
+        if (navbar) {
+            window.addEventListener('scroll', function () {
+                navbar.classList.toggle('scrolled', window.scrollY > 20);
+            });
+        }
+    })();
+    </script>
 </body>
 </html>

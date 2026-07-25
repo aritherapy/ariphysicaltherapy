@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="canonical" href="https://ariphysicaltherapy.com/wellness-programs.html">
     <title>Wellness &amp; Fitness Programs in Bakersfield, CA | ARI Physical Therapy</title>
-    <meta name="description" content="Physical therapy-led wellness and fitness programs in Bakersfield, CA — fall prevention, injury prevention, strength and conditioning, and post-therapy maintenance.">
+    <meta name="description" content="Physical therapy-led wellness and fitness programs in Bakersfield, CA, including fall prevention, injury prevention, strength and conditioning, and post-therapy maintenance.">
     <meta name="robots" content="index, follow">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -146,12 +146,109 @@
         .svc-related a:hover { border-color:var(--orange); color:var(--orange-dark); }
         @media (max-width:680px){ .svc-related ul{ grid-template-columns:1fr; } }
         @media (max-width:680px){ .svc-figure{ float:none; width:100%; margin:0 0 22px; } .cond-grid{ grid-template-columns:1fr; } }
+    
+        /* ============================================================
+           SHARED HEADER SYSTEM - identical on every page.
+           Keep this block in sync across all pages when editing.
+        ============================================================ */
+        .top-bar {
+            background: var(--charcoal); color: var(--white);
+            padding: 10px 48px; display: flex; justify-content: space-between;
+            align-items: center; font-size: 13px;
+            position: sticky; top: 0; z-index: 1000;
+        }
+        .top-bar-left { display: flex; align-items: center; gap: 28px; }
+        .top-bar-right { display: flex; align-items: center; gap: 20px; }
+        .top-bar a { color: rgba(255,255,255,0.85); text-decoration: none; display: flex; align-items: center; gap: 6px; margin: 0; padding: 0; transition: color 0.2s; }
+        .top-bar a:hover { color: var(--orange-light); }
+        .top-bar-fax { display: flex; align-items: center; gap: 6px; color: rgba(255,255,255,0.85); }
+        .top-bar-icon { font-size: 14px; }
+        .top-bar .btn-book-topbar {
+            background: var(--orange); color: var(--white) !important;
+            padding: 7px 18px; border-radius: 4px;
+            font-weight: 600; font-size: 13px; letter-spacing: 0.3px;
+            line-height: 1.4; white-space: nowrap; text-decoration: none;
+            display: inline-flex; align-items: center;
+            transition: background 0.2s !important;
+        }
+        .top-bar .btn-book-topbar:hover { background: var(--orange-dark) !important; }
+
+        .navbar {
+            background: var(--white); padding: 14px 48px;
+            display: flex; justify-content: space-between; align-items: center;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.07); border-bottom: none;
+            position: sticky; top: 52px; z-index: 999;
+        }
+        .navbar.scrolled { box-shadow: 0 4px 24px rgba(0,0,0,0.13); }
+        .nav-logo { display: flex; align-items: center; text-decoration: none; }
+        .nav-logo img { height: 56px; width: auto; display: block; }
+        .nav-links { display: flex; list-style: none; gap: 36px; align-items: center; margin: 0; padding: 0; }
+        .nav-links li { margin: 0; }
+        .nav-links a {
+            text-decoration: none; color: var(--charcoal);
+            font-weight: 500; font-size: 15px;
+            transition: color 0.2s; position: relative;
+        }
+        .nav-links a::after {
+            content: ''; position: absolute; bottom: -4px; left: 0;
+            width: 0; height: 2px; background: var(--orange); transition: width 0.25s;
+        }
+        .nav-links a:hover { color: var(--orange); }
+        .nav-links a:hover::after,
+        .nav-links a.active::after { width: 100%; }
+        .nav-links a.active { color: var(--orange); }
+        .nav-careers { color: var(--orange) !important; font-weight: 700 !important; }
+        .nav-careers::after { background: var(--orange) !important; }
+
+        .nav-toggle { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 6px; }
+        .nav-toggle span { display: block; width: 24px; height: 2px; background: var(--charcoal); border-radius: 2px; transition: all 0.25s; }
+
+        @media (max-width: 768px) {
+            .top-bar { display: none; }
+            .navbar { padding: 14px 20px; top: 0; }
+            .nav-toggle { display: flex; }
+            .nav-links {
+                display: none; position: absolute; top: 100%; left: 0; right: 0;
+                background: var(--white); flex-direction: column; gap: 0;
+                padding: 12px 0 20px; box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+            }
+            .nav-links.open { display: flex; }
+            .nav-links li { width: 100%; }
+            .nav-links a { display: block; padding: 12px 24px; font-size: 16px; }
+            .nav-links a::after { display: none; }
+            .nav-links a.active { font-weight: 700; }
+        }
+    
+        /* ============================================================
+           SHARED PAGE HERO - identical on every interior page.
+        ============================================================ */
+        .page-hero { background: var(--charcoal); padding: 80px 48px 72px; position: relative; overflow: hidden; }
+        .page-hero-inner { max-width: 1200px; margin: 0 auto; }
+        .page-eyebrow {
+            font-size: 18px; font-weight: 700; letter-spacing: 3px;
+            text-transform: uppercase; color: rgba(255,255,255,0.72);
+            margin: 0 0 16px; display: flex; align-items: center; gap: 10px;
+        }
+        .page-eyebrow::before { content: ''; display: inline-block; width: 32px; height: 2px; background: var(--orange); flex: none; }
+        .page-hero h1 {
+            font-family: 'Montserrat', sans-serif; font-size: clamp(36px, 5vw, 56px);
+            font-weight: 900; color: var(--white); line-height: 1.1; margin: 0 0 20px;
+        }
+        .page-hero h1 .hl { color: var(--orange); }
+        .page-hero p { font-size: 18px; color: rgba(255,255,255,0.72); max-width: 560px; line-height: 1.7; margin: 0; }
+        .page-hero .cta-btn {
+            display: inline-block; margin-top: 26px; background: var(--orange); color: #fff;
+            padding: 14px 30px; border-radius: 6px; text-decoration: none;
+            font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 15px;
+        }
+        .page-hero .cta-btn:hover { background: var(--orange-dark); }
+        @media (max-width: 768px) { .page-hero { padding: 56px 24px; } .page-eyebrow { font-size: 15px; } }
     </style>
 
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="ARI Physical Therapy">
     <meta property="og:title" content="Wellness &amp; Fitness Programs in Bakersfield, CA | ARI Physical Therapy">
-    <meta property="og:description" content="Physical therapy-led wellness and fitness programs in Bakersfield, CA — fall prevention, injury prevention, strength and conditioning, and post-therapy maintenance.">
+    <meta property="og:description" content="Physical therapy-led wellness and fitness programs in Bakersfield, CA, including fall prevention, injury prevention, strength and conditioning, and post-therapy maintenance.">
     <meta property="og:url" content="https://ariphysicaltherapy.com/wellness-programs.html">
     <meta property="og:image" content="https://ariphysicaltherapy.com/assets/og-image.jpg">
     <meta property="og:image:width" content="1200">
@@ -192,6 +289,7 @@
         }
       ],
       "hasMap": "https://www.google.com/maps/search/?api=1&query=ARI+Physical+Therapy+8200+Stockdale+Hwy+Suite+B2+Bakersfield+CA+93311",
+      "founder": { "@id": "https://ariphysicaltherapy.com/about.html#deepa" },
       "geo": {
         "@type": "GeoCoordinates",
         "latitude": 35.3572119,
@@ -220,7 +318,7 @@
       "name": "Do I have to be a physical therapy patient to join?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No. Our wellness programs are open to anyone who wants to stay strong, mobile, and injury-free \u2014 whether or not you've been a therapy patient with us."
+        "text": "No. Our wellness programs are open to anyone who wants to stay strong, mobile, and injury-free, whether or not you've been a therapy patient with us."
       }
     },
     {
@@ -236,7 +334,7 @@
       "name": "Are wellness programs covered by insurance?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Wellness and general fitness programs are typically not billed to insurance \u2014 call us at (661) 282-8584 and we'll explain the program and pricing options."
+        "text": "Wellness and general fitness programs are typically not billed to insurance. Call us at (661) 282-8584 and we'll explain the program and pricing options."
       }
     },
     {
@@ -256,19 +354,25 @@
     <!-- ===== TOP BAR ===== -->
     <div class="top-bar">
         <div class="top-bar-left">
-            <a href="tel:6612828584"><span>📞</span>(661) 282-8584</a>
-            <a href="mailto:contactus@ariptcare.com"><span>✉</span>contactus@ariptcare.com</a>
+            <a href="tel:6612828584"><span class="top-bar-icon">&#128222;</span>(661) 282-8584</a>
+            <a href="mailto:contactus@ariptcare.com"><span class="top-bar-icon">&#9993;</span>contactus@ariptcare.com</a>
+            <span class="top-bar-fax"><span class="top-bar-icon">&#128224;</span>Fax: (661) 727-0005</span>
         </div>
-        <div><a href="appointment.html" class="btn-book-topbar">Book an Appointment</a></div>
+        <div class="top-bar-right"><a href="appointment.html" class="btn-book-topbar">Book an Appointment</a></div>
     </div>
 
     <!-- ===== NAVBAR ===== -->
     <nav class="navbar">
-        <a href="index.html" class="nav-logo"><img src="assets/logo-dark.png" alt="ARI Physical Therapy"></a>
+        <a href="index.html" class="nav-logo">
+            <img src="assets/logo-dark.png" alt="ARI Physical Therapy">
+        </a>
+        <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="appointment.html">Book an Appointment</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html" class="active">Services</a></li>
             <li><a href="careers.html" class="nav-careers">Careers</a></li>
             <li><a href="contact.html">Contact</a></li>
             <li><a href="physicians.html">For Physicians</a></li>
@@ -276,11 +380,11 @@
     </nav>
 
     <!-- ===== HERO ===== -->
-    <section class="legal-hero svc-hero">
-        <div class="inner">
-            <div class="eyebrow">Wellness</div>
-            <h1>Wellness &amp; Fitness Programs in Bakersfield</h1>
-            <div class="dates">Stay moving, strong, and injury-free for the long term — fall prevention, fitness, and maintaining the gains you made in therapy.</div>
+    <section class="page-hero">
+        <div class="page-hero-inner">
+            <p class="page-eyebrow">Wellness</p>
+            <h1>Wellness &amp; Fitness Programs in <span class="hl">Bakersfield</span></h1>
+            <p>Stay moving, strong, and injury-free for the long term: fall prevention, fitness, and maintaining the gains you made in therapy.</p>
             <a class="cta-btn" href="appointment.html">Request a Consultation</a>
         </div>
     </section>
@@ -289,7 +393,7 @@
 
         <figure class="svc-figure"><img src="assets/stock-wellness.jpg" alt="Wellness &amp; Fitness Programs in Bakersfield at ARI Physical Therapy in Bakersfield"></figure>
 
-        <p class="svc-lead">Great health doesn't stop when your formal therapy ends. At ARI Physical Therapy, our wellness programs keep you moving, strong, and injury-free for the long term — whether you're focused on fall prevention, general fitness, or maintaining the gains you made in therapy.</p>
+        <p class="svc-lead">Great health doesn't stop when your formal therapy ends. At ARI Physical Therapy, our wellness programs keep you moving, strong, and injury-free for the long term, whether you're focused on fall prevention, general fitness, or maintaining the gains you made in therapy.</p>
 
         <h2>Our programs</h2>
         <ul class="cond-grid">
@@ -304,19 +408,19 @@
         <h2>What to expect</h2>
         <ul class="steps">
             <li><strong>A thorough evaluation</strong>Your first visit (about 45–60 minutes) includes a hands-on assessment and a discussion of your history and goals.</li>
-            <li><strong>A personalized plan</strong>Hands-on care plus targeted, progressive exercise built around you — never a one-size-fits-all program.</li>
+            <li><strong>A personalized plan</strong>Hands-on care plus targeted, progressive exercise built around you (never a one-size-fits-all program).</li>
             <li><strong>Real, lasting progress</strong>We track your improvement and guide you back to the activities that matter, with strategies to keep the gains.</li>
         </ul>
 
         <div class="callout"><p><strong>You don't need to be a current patient.</strong> Our wellness programs are open to anyone looking to stay strong, mobile, and active. Call us at <a href="tel:6612828584">(661) 282-8584</a> to find the right program for you.</p></div>
 
         <h2>Why patients choose ARI</h2>
-        <p>Programs are led <strong>one-on-one and in person</strong> at our Bakersfield clinic — 8200 Stockdale Hwy, Suite B2, in the Town &amp; Country Village center next to Trader Joe's. Our team speaks English, Spanish, and Hindi. Call us to ask about program options and pricing.</p>
+        <p>Programs are led <strong>one-on-one and in person</strong> at our Bakersfield clinic, which is at 8200 Stockdale Hwy, Suite B2, in the Town &amp; Country Village center next to Trader Joe's. Our team speaks English, Spanish, and Hindi. Call us to ask about program options and pricing.</p>
 
         <h2>Frequently asked questions</h2>
-        <details class="faq-item"><summary>Do I have to be a physical therapy patient to join?</summary><div class="a">No. Our wellness programs are open to anyone who wants to stay strong, mobile, and injury-free — whether or not you've been a therapy patient with us.</div></details>
+        <details class="faq-item"><summary>Do I have to be a physical therapy patient to join?</summary><div class="a">No. Our wellness programs are open to anyone who wants to stay strong, mobile, and injury-free, whether or not you've been a therapy patient with us.</div></details>
         <details class="faq-item"><summary>What kinds of programs do you offer?</summary><div class="a">Fall prevention, injury-prevention and movement screening, strength and conditioning, and maintenance programs for people finishing formal therapy. Call us and we'll match you to the right fit.</div></details>
-        <details class="faq-item"><summary>Are wellness programs covered by insurance?</summary><div class="a">Wellness and general fitness programs are typically not billed to insurance — call us at (661) 282-8584 and we'll explain the program and pricing options.</div></details>
+        <details class="faq-item"><summary>Are wellness programs covered by insurance?</summary><div class="a">Wellness and general fitness programs are typically not billed to insurance. Call us at (661) 282-8584 and we'll explain the program and pricing options.</div></details>
         <details class="faq-item"><summary>How do I get started?</summary><div class="a">Call us at (661) 282-8584 or request a consultation online, and we'll help you choose the right program for your goals.</div></details>
 
         <div class="svc-related">
@@ -348,6 +452,7 @@
                     <h4>Quick Links</h4>
                     <ul>
                         <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
                         <li><a href="services.html">Services</a></li>
                         <li><a href="appointment.html">Book an Appointment</a></li>
                         <li><a href="careers.html">Careers</a></li>
@@ -374,5 +479,25 @@
         </div>
     </footer>
 
+
+    <script>
+    /* Shared mobile-nav toggle - identical on every page. */
+    (function () {
+        const toggle = document.querySelector('.nav-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        if (toggle && navLinks) {
+            toggle.addEventListener('click', function () {
+                const open = navLinks.classList.toggle('open');
+                toggle.setAttribute('aria-expanded', open);
+            });
+        }
+        const navbar = document.querySelector('.navbar');
+        if (navbar) {
+            window.addEventListener('scroll', function () {
+                navbar.classList.toggle('scrolled', window.scrollY > 20);
+            });
+        }
+    })();
+    </script>
 </body>
 </html>

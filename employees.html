@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="canonical" href="https://ariphysicaltherapy.com/employees.html">
     <title>Employee Portal | ARI Physical Therapy – Bakersfield, CA</title>
-    <meta name="description" content="ARI Physical Therapy employee portal — submit timesheets, access clinic documents, and refer great people to join our team.">
+    <meta name="description" content="ARI Physical Therapy employee portal: submit timesheets, access clinic documents, and refer great people to join our team.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
@@ -71,7 +71,7 @@
             transition: background 0.2s !important;
         }
 
-        .btn-book-topbar:hover { background: var(--orange-dark) !important; }
+        .top-bar .btn-book-topbar:hover { background: var(--orange-dark) !important; }
 
         /* ===== NAVBAR ===== */
         .navbar {
@@ -123,6 +123,8 @@
 
         .nav-careers { color: var(--orange) !important; font-weight: 700 !important; }
         .navbar.scrolled { box-shadow: 0 4px 24px rgba(0,0,0,0.13); }
+        .nav-logo { display: flex; align-items: center; text-decoration: none; }
+        .nav-logo img { height: 56px; width: auto; display: block; }
 
         .nav-toggle {
             display: none;
@@ -643,12 +645,109 @@
         }
         .reveal.visible { opacity: 1; transform: translateY(0); }
 
+    
+        /* ============================================================
+           SHARED HEADER SYSTEM - identical on every page.
+           Keep this block in sync across all pages when editing.
+        ============================================================ */
+        .top-bar {
+            background: var(--charcoal); color: var(--white);
+            padding: 10px 48px; display: flex; justify-content: space-between;
+            align-items: center; font-size: 13px;
+            position: sticky; top: 0; z-index: 1000;
+        }
+        .top-bar-left { display: flex; align-items: center; gap: 28px; }
+        .top-bar-right { display: flex; align-items: center; gap: 20px; }
+        .top-bar a { color: rgba(255,255,255,0.85); text-decoration: none; display: flex; align-items: center; gap: 6px; margin: 0; padding: 0; transition: color 0.2s; }
+        .top-bar a:hover { color: var(--orange-light); }
+        .top-bar-fax { display: flex; align-items: center; gap: 6px; color: rgba(255,255,255,0.85); }
+        .top-bar-icon { font-size: 14px; }
+        .top-bar .btn-book-topbar {
+            background: var(--orange); color: var(--white) !important;
+            padding: 7px 18px; border-radius: 4px;
+            font-weight: 600; font-size: 13px; letter-spacing: 0.3px;
+            line-height: 1.4; white-space: nowrap; text-decoration: none;
+            display: inline-flex; align-items: center;
+            transition: background 0.2s !important;
+        }
+        .top-bar .btn-book-topbar:hover { background: var(--orange-dark) !important; }
+
+        .navbar {
+            background: var(--white); padding: 14px 48px;
+            display: flex; justify-content: space-between; align-items: center;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.07); border-bottom: none;
+            position: sticky; top: 52px; z-index: 999;
+        }
+        .navbar.scrolled { box-shadow: 0 4px 24px rgba(0,0,0,0.13); }
+        .nav-logo { display: flex; align-items: center; text-decoration: none; }
+        .nav-logo img { height: 56px; width: auto; display: block; }
+        .nav-links { display: flex; list-style: none; gap: 36px; align-items: center; margin: 0; padding: 0; }
+        .nav-links li { margin: 0; }
+        .nav-links a {
+            text-decoration: none; color: var(--charcoal);
+            font-weight: 500; font-size: 15px;
+            transition: color 0.2s; position: relative;
+        }
+        .nav-links a::after {
+            content: ''; position: absolute; bottom: -4px; left: 0;
+            width: 0; height: 2px; background: var(--orange); transition: width 0.25s;
+        }
+        .nav-links a:hover { color: var(--orange); }
+        .nav-links a:hover::after,
+        .nav-links a.active::after { width: 100%; }
+        .nav-links a.active { color: var(--orange); }
+        .nav-careers { color: var(--orange) !important; font-weight: 700 !important; }
+        .nav-careers::after { background: var(--orange) !important; }
+
+        .nav-toggle { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 6px; }
+        .nav-toggle span { display: block; width: 24px; height: 2px; background: var(--charcoal); border-radius: 2px; transition: all 0.25s; }
+
+        @media (max-width: 768px) {
+            .top-bar { display: none; }
+            .navbar { padding: 14px 20px; top: 0; }
+            .nav-toggle { display: flex; }
+            .nav-links {
+                display: none; position: absolute; top: 100%; left: 0; right: 0;
+                background: var(--white); flex-direction: column; gap: 0;
+                padding: 12px 0 20px; box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+            }
+            .nav-links.open { display: flex; }
+            .nav-links li { width: 100%; }
+            .nav-links a { display: block; padding: 12px 24px; font-size: 16px; }
+            .nav-links a::after { display: none; }
+            .nav-links a.active { font-weight: 700; }
+        }
+    
+        /* ============================================================
+           SHARED PAGE HERO - identical on every interior page.
+        ============================================================ */
+        .page-hero { background: var(--charcoal); padding: 80px 48px 72px; position: relative; overflow: hidden; }
+        .page-hero-inner { max-width: 1200px; margin: 0 auto; }
+        .page-eyebrow {
+            font-size: 18px; font-weight: 700; letter-spacing: 3px;
+            text-transform: uppercase; color: rgba(255,255,255,0.72);
+            margin: 0 0 16px; display: flex; align-items: center; gap: 10px;
+        }
+        .page-eyebrow::before { content: ''; display: inline-block; width: 32px; height: 2px; background: var(--orange); flex: none; }
+        .page-hero h1 {
+            font-family: 'Montserrat', sans-serif; font-size: clamp(36px, 5vw, 56px);
+            font-weight: 900; color: var(--white); line-height: 1.1; margin: 0 0 20px;
+        }
+        .page-hero h1 .hl { color: var(--orange); }
+        .page-hero p { font-size: 18px; color: rgba(255,255,255,0.72); max-width: 560px; line-height: 1.7; margin: 0; }
+        .page-hero .cta-btn {
+            display: inline-block; margin-top: 26px; background: var(--orange); color: #fff;
+            padding: 14px 30px; border-radius: 6px; text-decoration: none;
+            font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 15px;
+        }
+        .page-hero .cta-btn:hover { background: var(--orange-dark); }
+        @media (max-width: 768px) { .page-hero { padding: 56px 24px; } .page-eyebrow { font-size: 15px; } }
     </style>
 
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="ARI Physical Therapy">
     <meta property="og:title" content="Employee Portal | ARI Physical Therapy – Bakersfield, CA">
-    <meta property="og:description" content="ARI Physical Therapy employee portal — submit timesheets, access clinic documents, and refer great people to join our team.">
+    <meta property="og:description" content="ARI Physical Therapy employee portal: submit timesheets, access clinic documents, and refer great people to join our team.">
     <meta property="og:url" content="https://ariphysicaltherapy.com/employees.html">
     <meta property="og:image" content="https://ariphysicaltherapy.com/assets/og-image.jpg">
     <meta property="og:image:width" content="1200">
@@ -689,6 +788,7 @@
         }
       ],
       "hasMap": "https://www.google.com/maps/search/?api=1&query=ARI+Physical+Therapy+8200+Stockdale+Hwy+Suite+B2+Bakersfield+CA+93311",
+      "founder": { "@id": "https://ariphysicaltherapy.com/about.html#deepa" },
       "geo": {
         "@type": "GeoCoordinates",
         "latitude": 35.3572119,
@@ -713,13 +813,11 @@
     <!-- ===== TOP BAR ===== -->
     <div class="top-bar">
         <div class="top-bar-left">
-            <a href="tel:6612828584"><span>📞</span>(661) 282-8584</a>
-            <a href="mailto:contactus@ariptcare.com"><span>✉</span>contactus@ariptcare.com</a>
-            <span style="display:flex;align-items:center;gap:6px;color:rgba(255,255,255,0.85)"><span>📠</span>Fax: (661) 727-0005</span>
+            <a href="tel:6612828584"><span class="top-bar-icon">&#128222;</span>(661) 282-8584</a>
+            <a href="mailto:contactus@ariptcare.com"><span class="top-bar-icon">&#9993;</span>contactus@ariptcare.com</a>
+            <span class="top-bar-fax"><span class="top-bar-icon">&#128224;</span>Fax: (661) 727-0005</span>
         </div>
-        <div style="display:flex;align-items:center;gap:20px;">
-            <a href="appointment.html" class="btn-book-topbar">Book an Appointment</a>
-        </div>
+        <div class="top-bar-right"><a href="appointment.html" class="btn-book-topbar">Book an Appointment</a></div>
     </div>
 
     <!-- ===== NAVBAR ===== -->
@@ -732,12 +830,11 @@
         </button>
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
             <li><a href="services.html">Services</a></li>
-            <li><a href="appointment.html">Book an Appointment</a></li>
             <li><a href="careers.html" class="nav-careers">Careers</a></li>
             <li><a href="contact.html">Contact</a></li>
             <li><a href="physicians.html">For Physicians</a></li>
-            <li><a href="employees.html" class="active">Employees</a></li>
         </ul>
     </nav>
 
@@ -746,7 +843,7 @@
         <div class="page-hero-inner">
             <p class="page-eyebrow">Team Hub</p>
             <h1>Welcome, <span class="hl">ARI Team</span></h1>
-            <p>Everything you need in one place — submit your timesheet, access clinic documents, and help us grow the team by referring someone great.</p>
+            <p>Everything you need in one place. Submit your timesheet, access clinic documents, and help us grow the team by referring someone great.</p>
         </div>
     </section>
 
@@ -755,7 +852,7 @@
         <div class="reveal">
             <p class="section-eyebrow">Quick Access</p>
             <h2 class="section-title">Your <span class="hl">Portal</span></h2>
-            <p class="section-sub">Click below to access your tools. Each opens in a new tab — log in with your own account credentials.</p>
+            <p class="section-sub">Click below to access your tools. Each opens in a new tab; log in with your own account credentials.</p>
         </div>
 
         <div class="portal-grid reveal">
@@ -825,19 +922,19 @@
                 <div class="referral-header-text">
                     <p class="section-eyebrow">Know Someone Great?</p>
                     <h2>Refer a <span class="hl">New Hire</span></h2>
-                    <p>Our best hires have come from people already on our team. If you know someone who'd be a great fit at ARI — a fellow clinician, an aide, or anyone who shares our commitment to patient care — send us their info and we'll take it from there.</p>
+                    <p>Our best hires have come from people already on our team. If you know someone who'd be a great fit at ARI (a fellow clinician, an aide, or anyone who shares our commitment to patient care), send us their info and we'll take it from there.</p>
                     <p style="margin-top:12px;">We take staff referrals seriously. A recommendation from someone who works here carries real weight in our hiring process.</p>
                 </div>
                 <div class="referral-trust">
                     <p>"We built this clinic on the belief that great teams come from great people. If someone you respect is looking for the right opportunity, we want to meet them."</p>
-                    <div class="referral-trust-sig">— Deepa Konnur, Founder · ARI Physical Therapy</div>
+                    <div class="referral-trust-sig">Deepa Konnur, Founder · ARI Physical Therapy</div>
                 </div>
             </div>
 
             <form id="referral-form" action="https://formspree.io/f/mykleqoz" method="POST" class="reveal">
 
                 <!-- Hidden field to distinguish this from the careers form -->
-                <input type="hidden" name="_subject" value="New Employee Referral — ARI PT">
+                <input type="hidden" name="_subject" value="New Employee Referral for ARI PT">
                 <input type="hidden" name="form_type" value="employee_referral">
 
                 <div class="form-grid">
@@ -879,7 +976,7 @@
                             <option value="Sr. Physical Therapist">Sr. Physical Therapist</option>
                             <option value="PT Aide">PT Aide</option>
                             <option value="Front Desk / Admin">Front Desk / Admin</option>
-                            <option value="Not Sure">Not Sure — Just a Great Person</option>
+                            <option value="Not Sure">Not Sure: Just a Great Person</option>
                         </select>
                     </div>
 
@@ -890,7 +987,7 @@
 
                     <div class="form-group full">
                         <label for="ref-why">Why would they be a great fit? *</label>
-                        <textarea id="ref-why" name="why_great_fit" placeholder="Tell us what makes this person stand out — their skills, work ethic, attitude, experience..." required></textarea>
+                        <textarea id="ref-why" name="why_great_fit" placeholder="Tell us what makes this person stand out. Think skills, work ethic, attitude, experience..." required></textarea>
                     </div>
 
                 </div>
@@ -904,8 +1001,8 @@
 
             <div class="form-success" id="form-success">
                 <div class="icon">🙌</div>
-                <h3>Referral Received — Thank You!</h3>
-                <p>We'll follow up with your candidate soon. We genuinely appreciate you helping us find great people — it means a lot that you thought of us.</p>
+                <h3>Referral Received. Thank You!</h3>
+                <p>We'll follow up with your candidate soon. We genuinely appreciate you helping us find great people; it means a lot that you thought of us.</p>
             </div>
 
         </div>
@@ -928,6 +1025,7 @@
                     <h4>Quick Links</h4>
                     <ul>
                         <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
                         <li><a href="services.html">Services</a></li>
                         <li><a href="appointment.html">Book an Appointment</a></li>
                         <li><a href="careers.html">Careers</a></li>
@@ -961,15 +1059,6 @@
         window.addEventListener('scroll', () => {
             navbar.classList.toggle('scrolled', window.scrollY > 10);
         });
-
-        // Mobile menu toggle
-        const toggle = document.querySelector('.nav-toggle');
-        const navLinks = document.querySelector('.nav-links');
-        toggle.addEventListener('click', () => {
-            const open = navLinks.classList.toggle('open');
-            toggle.setAttribute('aria-expanded', open);
-        });
-
         // Referral form submission
         const referralForm = document.getElementById('referral-form');
         const formSuccess = document.getElementById('form-success');
@@ -1015,5 +1104,25 @@
         reveals.forEach(el => observer.observe(el));
     </script>
 
+
+    <script>
+    /* Shared mobile-nav toggle - identical on every page. */
+    (function () {
+        const toggle = document.querySelector('.nav-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        if (toggle && navLinks) {
+            toggle.addEventListener('click', function () {
+                const open = navLinks.classList.toggle('open');
+                toggle.setAttribute('aria-expanded', open);
+            });
+        }
+        const navbar = document.querySelector('.navbar');
+        if (navbar) {
+            window.addEventListener('scroll', function () {
+                navbar.classList.toggle('scrolled', window.scrollY > 20);
+            });
+        }
+    })();
+    </script>
 </body>
 </html>

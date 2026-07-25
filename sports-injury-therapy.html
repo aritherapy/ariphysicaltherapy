@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="canonical" href="https://ariphysicaltherapy.com/sports-injury-therapy.html">
     <title>Sports Injury Therapy in Bakersfield, CA | ARI Physical Therapy</title>
-    <meta name="description" content="One-on-one sports injury physical therapy in Bakersfield, CA — rehab and return-to-sport care for ACL/MCL, rotator cuff, sprains, and strains.">
+    <meta name="description" content="One-on-one sports injury physical therapy in Bakersfield, CA: rehab and return-to-sport care for ACL/MCL, rotator cuff, sprains, and strains.">
     <meta name="robots" content="index, follow">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -146,12 +146,109 @@
         .svc-related a:hover { border-color:var(--orange); color:var(--orange-dark); }
         @media (max-width:680px){ .svc-related ul{ grid-template-columns:1fr; } }
         @media (max-width:680px){ .svc-figure{ float:none; width:100%; margin:0 0 22px; } .cond-grid{ grid-template-columns:1fr; } }
+    
+        /* ============================================================
+           SHARED HEADER SYSTEM - identical on every page.
+           Keep this block in sync across all pages when editing.
+        ============================================================ */
+        .top-bar {
+            background: var(--charcoal); color: var(--white);
+            padding: 10px 48px; display: flex; justify-content: space-between;
+            align-items: center; font-size: 13px;
+            position: sticky; top: 0; z-index: 1000;
+        }
+        .top-bar-left { display: flex; align-items: center; gap: 28px; }
+        .top-bar-right { display: flex; align-items: center; gap: 20px; }
+        .top-bar a { color: rgba(255,255,255,0.85); text-decoration: none; display: flex; align-items: center; gap: 6px; margin: 0; padding: 0; transition: color 0.2s; }
+        .top-bar a:hover { color: var(--orange-light); }
+        .top-bar-fax { display: flex; align-items: center; gap: 6px; color: rgba(255,255,255,0.85); }
+        .top-bar-icon { font-size: 14px; }
+        .top-bar .btn-book-topbar {
+            background: var(--orange); color: var(--white) !important;
+            padding: 7px 18px; border-radius: 4px;
+            font-weight: 600; font-size: 13px; letter-spacing: 0.3px;
+            line-height: 1.4; white-space: nowrap; text-decoration: none;
+            display: inline-flex; align-items: center;
+            transition: background 0.2s !important;
+        }
+        .top-bar .btn-book-topbar:hover { background: var(--orange-dark) !important; }
+
+        .navbar {
+            background: var(--white); padding: 14px 48px;
+            display: flex; justify-content: space-between; align-items: center;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.07); border-bottom: none;
+            position: sticky; top: 52px; z-index: 999;
+        }
+        .navbar.scrolled { box-shadow: 0 4px 24px rgba(0,0,0,0.13); }
+        .nav-logo { display: flex; align-items: center; text-decoration: none; }
+        .nav-logo img { height: 56px; width: auto; display: block; }
+        .nav-links { display: flex; list-style: none; gap: 36px; align-items: center; margin: 0; padding: 0; }
+        .nav-links li { margin: 0; }
+        .nav-links a {
+            text-decoration: none; color: var(--charcoal);
+            font-weight: 500; font-size: 15px;
+            transition: color 0.2s; position: relative;
+        }
+        .nav-links a::after {
+            content: ''; position: absolute; bottom: -4px; left: 0;
+            width: 0; height: 2px; background: var(--orange); transition: width 0.25s;
+        }
+        .nav-links a:hover { color: var(--orange); }
+        .nav-links a:hover::after,
+        .nav-links a.active::after { width: 100%; }
+        .nav-links a.active { color: var(--orange); }
+        .nav-careers { color: var(--orange) !important; font-weight: 700 !important; }
+        .nav-careers::after { background: var(--orange) !important; }
+
+        .nav-toggle { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 6px; }
+        .nav-toggle span { display: block; width: 24px; height: 2px; background: var(--charcoal); border-radius: 2px; transition: all 0.25s; }
+
+        @media (max-width: 768px) {
+            .top-bar { display: none; }
+            .navbar { padding: 14px 20px; top: 0; }
+            .nav-toggle { display: flex; }
+            .nav-links {
+                display: none; position: absolute; top: 100%; left: 0; right: 0;
+                background: var(--white); flex-direction: column; gap: 0;
+                padding: 12px 0 20px; box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+            }
+            .nav-links.open { display: flex; }
+            .nav-links li { width: 100%; }
+            .nav-links a { display: block; padding: 12px 24px; font-size: 16px; }
+            .nav-links a::after { display: none; }
+            .nav-links a.active { font-weight: 700; }
+        }
+    
+        /* ============================================================
+           SHARED PAGE HERO - identical on every interior page.
+        ============================================================ */
+        .page-hero { background: var(--charcoal); padding: 80px 48px 72px; position: relative; overflow: hidden; }
+        .page-hero-inner { max-width: 1200px; margin: 0 auto; }
+        .page-eyebrow {
+            font-size: 18px; font-weight: 700; letter-spacing: 3px;
+            text-transform: uppercase; color: rgba(255,255,255,0.72);
+            margin: 0 0 16px; display: flex; align-items: center; gap: 10px;
+        }
+        .page-eyebrow::before { content: ''; display: inline-block; width: 32px; height: 2px; background: var(--orange); flex: none; }
+        .page-hero h1 {
+            font-family: 'Montserrat', sans-serif; font-size: clamp(36px, 5vw, 56px);
+            font-weight: 900; color: var(--white); line-height: 1.1; margin: 0 0 20px;
+        }
+        .page-hero h1 .hl { color: var(--orange); }
+        .page-hero p { font-size: 18px; color: rgba(255,255,255,0.72); max-width: 560px; line-height: 1.7; margin: 0; }
+        .page-hero .cta-btn {
+            display: inline-block; margin-top: 26px; background: var(--orange); color: #fff;
+            padding: 14px 30px; border-radius: 6px; text-decoration: none;
+            font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 15px;
+        }
+        .page-hero .cta-btn:hover { background: var(--orange-dark); }
+        @media (max-width: 768px) { .page-hero { padding: 56px 24px; } .page-eyebrow { font-size: 15px; } }
     </style>
 
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="ARI Physical Therapy">
     <meta property="og:title" content="Sports Injury Therapy in Bakersfield, CA | ARI Physical Therapy">
-    <meta property="og:description" content="One-on-one sports injury physical therapy in Bakersfield, CA — rehab and return-to-sport care for ACL/MCL, rotator cuff, sprains, and strains.">
+    <meta property="og:description" content="One-on-one sports injury physical therapy in Bakersfield, CA: rehab and return-to-sport care for ACL/MCL, rotator cuff, sprains, and strains.">
     <meta property="og:url" content="https://ariphysicaltherapy.com/sports-injury-therapy.html">
     <meta property="og:image" content="https://ariphysicaltherapy.com/assets/og-image.jpg">
     <meta property="og:image:width" content="1200">
@@ -192,6 +289,7 @@
         }
       ],
       "hasMap": "https://www.google.com/maps/search/?api=1&query=ARI+Physical+Therapy+8200+Stockdale+Hwy+Suite+B2+Bakersfield+CA+93311",
+      "founder": { "@id": "https://ariphysicaltherapy.com/about.html#deepa" },
       "geo": {
         "@type": "GeoCoordinates",
         "latitude": 35.3572119,
@@ -220,7 +318,7 @@
       "name": "Do I need a referral to start sports injury therapy?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No. In California you can see a physical therapist directly \u2014 for up to 12 visits or 45 days, whichever comes first \u2014 so you can start without a doctor's referral. Some insurance plans still require a referral for coverage, so we recommend checking with your plan, and we're happy to help."
+        "text": "No. In California you can see a physical therapist directly for up to 12 visits or 45 days, whichever comes first, so you can start without a doctor's referral. Some insurance plans still require a referral for coverage, so we recommend checking with your plan, and we're happy to help."
       }
     },
     {
@@ -228,7 +326,7 @@
       "name": "How soon can I get back to my sport?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "It depends on your injury, sport, and goals. After your evaluation, your therapist will map out a realistic timeline and use return-to-sport testing to confirm you're ready before you go back \u2014 so you return strong and reduce the risk of re-injury."
+        "text": "It depends on your injury, sport, and goals. After your evaluation, your therapist will map out a realistic timeline and use return-to-sport testing to confirm you're ready before you go back, so you return strong and reduce the risk of re-injury."
       }
     },
     {
@@ -256,19 +354,25 @@
     <!-- ===== TOP BAR ===== -->
     <div class="top-bar">
         <div class="top-bar-left">
-            <a href="tel:6612828584"><span>📞</span>(661) 282-8584</a>
-            <a href="mailto:contactus@ariptcare.com"><span>✉</span>contactus@ariptcare.com</a>
+            <a href="tel:6612828584"><span class="top-bar-icon">&#128222;</span>(661) 282-8584</a>
+            <a href="mailto:contactus@ariptcare.com"><span class="top-bar-icon">&#9993;</span>contactus@ariptcare.com</a>
+            <span class="top-bar-fax"><span class="top-bar-icon">&#128224;</span>Fax: (661) 727-0005</span>
         </div>
-        <div><a href="appointment.html" class="btn-book-topbar">Book an Appointment</a></div>
+        <div class="top-bar-right"><a href="appointment.html" class="btn-book-topbar">Book an Appointment</a></div>
     </div>
 
     <!-- ===== NAVBAR ===== -->
     <nav class="navbar">
-        <a href="index.html" class="nav-logo"><img src="assets/logo-dark.png" alt="ARI Physical Therapy"></a>
+        <a href="index.html" class="nav-logo">
+            <img src="assets/logo-dark.png" alt="ARI Physical Therapy">
+        </a>
+        <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="appointment.html">Book an Appointment</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html" class="active">Services</a></li>
             <li><a href="careers.html" class="nav-careers">Careers</a></li>
             <li><a href="contact.html">Contact</a></li>
             <li><a href="physicians.html">For Physicians</a></li>
@@ -276,11 +380,11 @@
     </nav>
 
     <!-- ===== HERO ===== -->
-    <section class="legal-hero svc-hero">
-        <div class="inner">
-            <div class="eyebrow">Sports Rehab</div>
-            <h1>Sports Injury Physical Therapy in Bakersfield</h1>
-            <div class="dates">One-on-one rehab and return-to-sport care — get back to peak performance safely, and stay in the game.</div>
+    <section class="page-hero">
+        <div class="page-hero-inner">
+            <p class="page-eyebrow">Sports Rehab</p>
+            <h1>Sports Injury Physical Therapy in <span class="hl">Bakersfield</span></h1>
+            <p>One-on-one rehab and return-to-sport care. Get back to peak performance safely, and stay in the game.</p>
             <a class="cta-btn" href="appointment.html">Request a Consultation</a>
         </div>
     </section>
@@ -289,7 +393,7 @@
 
         <figure class="svc-figure"><img src="assets/stock-sports.jpg" alt="Sports injury rehabilitation at ARI Physical Therapy in Bakersfield"></figure>
 
-        <p class="svc-lead">Whether you're a weekend warrior or a competitive athlete, a sports injury can sideline you fast. At ARI Physical Therapy, we specialize in getting athletes back to peak performance safely — combining sport-specific, one-on-one rehab with injury-prevention strategies to keep you in the game long-term.</p>
+        <p class="svc-lead">Whether you're a weekend warrior or a competitive athlete, a sports injury can sideline you fast. At ARI Physical Therapy, we specialize in getting athletes back to peak performance safely, combining sport-specific, one-on-one rehab with injury-prevention strategies to keep you in the game long-term.</p>
 
         <h2>What we treat</h2>
         <ul class="cond-grid">
@@ -304,20 +408,20 @@
         <h2>What to expect</h2>
         <ul class="steps">
             <li><strong>A thorough movement evaluation</strong>Your first visit (about 45–60 minutes) includes a hands-on assessment of strength, mobility, and the mechanics behind your injury.</li>
-            <li><strong>A sport-specific rehab plan</strong>Hands-on treatment plus targeted, progressive exercise built around your sport and your goals — not a generic protocol.</li>
+            <li><strong>A sport-specific rehab plan</strong>Hands-on treatment plus targeted, progressive exercise, built around your sport and your goals rather than a generic protocol.</li>
             <li><strong>A confident return to sport</strong>We use return-to-sport testing so you go back when you're truly ready, stronger and less likely to re-injure.</li>
         </ul>
 
         <div class="callout">
-            <p><strong>No referral needed to start.</strong> In California, you can see a physical therapist directly — for up to 12 visits or 45 days — so you can begin recovery right away. Some insurance plans still require a referral for coverage; call us at <a href="tel:6612828584">(661) 282-8584</a> and we'll help you check.</p>
+            <p><strong>No referral needed to start.</strong> In California, you can see a physical therapist directly for up to 12 visits or 45 days, so you can begin recovery right away. Some insurance plans still require a referral for coverage; call us at <a href="tel:6612828584">(661) 282-8584</a> and we'll help you check.</p>
         </div>
 
         <h2>Why athletes choose ARI</h2>
-        <p>Care is always <strong>one-on-one and in person</strong> at our Bakersfield clinic — 8200 Stockdale Hwy, Suite B2, in the Town &amp; Country Village center next to Trader Joe's. We accept most private insurance plans and Medicare, and our team speaks English, Spanish, and Hindi.</p>
+        <p>Care is always <strong>one-on-one and in person</strong> at our Bakersfield clinic (8200 Stockdale Hwy, Suite B2), in the Town &amp; Country Village center next to Trader Joe's. We accept most private insurance plans and Medicare, and our team speaks English, Spanish, and Hindi.</p>
 
         <h2>Sports injury therapy FAQs</h2>
-        <details class="faq-item"><summary>Do I need a referral to start sports injury therapy?</summary><div class="a">No. In California you can see a physical therapist directly — for up to 12 visits or 45 days, whichever comes first — so you can start without a doctor's referral. Some insurance plans still require a referral for coverage, so we recommend checking with your plan, and we're happy to help.</div></details>
-        <details class="faq-item"><summary>How soon can I get back to my sport?</summary><div class="a">It depends on your injury, sport, and goals. After your evaluation, your therapist will map out a realistic timeline and use return-to-sport testing to confirm you're ready before you go back — so you return strong and reduce the risk of re-injury.</div></details>
+        <details class="faq-item"><summary>Do I need a referral to start sports injury therapy?</summary><div class="a">No. In California you can see a physical therapist directly for up to 12 visits or 45 days, whichever comes first, so you can start without a doctor's referral. Some insurance plans still require a referral for coverage, so we recommend checking with your plan, and we're happy to help.</div></details>
+        <details class="faq-item"><summary>How soon can I get back to my sport?</summary><div class="a">It depends on your injury, sport, and goals. After your evaluation, your therapist will map out a realistic timeline and use return-to-sport testing to confirm you're ready before you go back, so you return strong and reduce the risk of re-injury.</div></details>
         <details class="faq-item"><summary>Do you treat my sport or injury?</summary><div class="a">We work with weekend warriors and competitive athletes across all sports, treating everything from acute injuries to overuse problems. Call us at (661) 282-8584 and we'll let you know how we can help.</div></details>
         <details class="faq-item"><summary>What happens at the first visit?</summary><div class="a">Your initial evaluation takes about 45 to 60 minutes. We discuss your history and goals, assess your movement, and begin your personalized rehab plan.</div></details>
 
@@ -350,6 +454,7 @@
                     <h4>Quick Links</h4>
                     <ul>
                         <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
                         <li><a href="services.html">Services</a></li>
                         <li><a href="appointment.html">Book an Appointment</a></li>
                         <li><a href="careers.html">Careers</a></li>
@@ -376,5 +481,25 @@
         </div>
     </footer>
 
+
+    <script>
+    /* Shared mobile-nav toggle - identical on every page. */
+    (function () {
+        const toggle = document.querySelector('.nav-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        if (toggle && navLinks) {
+            toggle.addEventListener('click', function () {
+                const open = navLinks.classList.toggle('open');
+                toggle.setAttribute('aria-expanded', open);
+            });
+        }
+        const navbar = document.querySelector('.navbar');
+        if (navbar) {
+            window.addEventListener('scroll', function () {
+                navbar.classList.toggle('scrolled', window.scrollY > 20);
+            });
+        }
+    })();
+    </script>
 </body>
 </html>

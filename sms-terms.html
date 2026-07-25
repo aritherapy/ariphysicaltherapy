@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="canonical" href="https://ariphysicaltherapy.com/sms-terms.html">
     <title>SMS Terms of Service | ARI Physical Therapy | Bakersfield, CA</title>
-    <meta name="description" content="SMS Terms for ARI Physical Therapy in Bakersfield, CA — appointment reminders and care texts, consent, opt-out (STOP), HELP, frequency, and rates.">
+    <meta name="description" content="SMS Terms for ARI Physical Therapy in Bakersfield, CA: appointment reminders and care texts, consent, opt-out (STOP), HELP, frequency, and rates.">
     <meta name="robots" content="index, follow">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -110,12 +110,109 @@
             .nav-links { display: none; }
             .footer-top { grid-template-columns: 1fr; gap: 28px; }
         }
+    
+        /* ============================================================
+           SHARED HEADER SYSTEM - identical on every page.
+           Keep this block in sync across all pages when editing.
+        ============================================================ */
+        .top-bar {
+            background: var(--charcoal); color: var(--white);
+            padding: 10px 48px; display: flex; justify-content: space-between;
+            align-items: center; font-size: 13px;
+            position: sticky; top: 0; z-index: 1000;
+        }
+        .top-bar-left { display: flex; align-items: center; gap: 28px; }
+        .top-bar-right { display: flex; align-items: center; gap: 20px; }
+        .top-bar a { color: rgba(255,255,255,0.85); text-decoration: none; display: flex; align-items: center; gap: 6px; margin: 0; padding: 0; transition: color 0.2s; }
+        .top-bar a:hover { color: var(--orange-light); }
+        .top-bar-fax { display: flex; align-items: center; gap: 6px; color: rgba(255,255,255,0.85); }
+        .top-bar-icon { font-size: 14px; }
+        .top-bar .btn-book-topbar {
+            background: var(--orange); color: var(--white) !important;
+            padding: 7px 18px; border-radius: 4px;
+            font-weight: 600; font-size: 13px; letter-spacing: 0.3px;
+            line-height: 1.4; white-space: nowrap; text-decoration: none;
+            display: inline-flex; align-items: center;
+            transition: background 0.2s !important;
+        }
+        .top-bar .btn-book-topbar:hover { background: var(--orange-dark) !important; }
+
+        .navbar {
+            background: var(--white); padding: 14px 48px;
+            display: flex; justify-content: space-between; align-items: center;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.07); border-bottom: none;
+            position: sticky; top: 52px; z-index: 999;
+        }
+        .navbar.scrolled { box-shadow: 0 4px 24px rgba(0,0,0,0.13); }
+        .nav-logo { display: flex; align-items: center; text-decoration: none; }
+        .nav-logo img { height: 56px; width: auto; display: block; }
+        .nav-links { display: flex; list-style: none; gap: 36px; align-items: center; margin: 0; padding: 0; }
+        .nav-links li { margin: 0; }
+        .nav-links a {
+            text-decoration: none; color: var(--charcoal);
+            font-weight: 500; font-size: 15px;
+            transition: color 0.2s; position: relative;
+        }
+        .nav-links a::after {
+            content: ''; position: absolute; bottom: -4px; left: 0;
+            width: 0; height: 2px; background: var(--orange); transition: width 0.25s;
+        }
+        .nav-links a:hover { color: var(--orange); }
+        .nav-links a:hover::after,
+        .nav-links a.active::after { width: 100%; }
+        .nav-links a.active { color: var(--orange); }
+        .nav-careers { color: var(--orange) !important; font-weight: 700 !important; }
+        .nav-careers::after { background: var(--orange) !important; }
+
+        .nav-toggle { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 6px; }
+        .nav-toggle span { display: block; width: 24px; height: 2px; background: var(--charcoal); border-radius: 2px; transition: all 0.25s; }
+
+        @media (max-width: 768px) {
+            .top-bar { display: none; }
+            .navbar { padding: 14px 20px; top: 0; }
+            .nav-toggle { display: flex; }
+            .nav-links {
+                display: none; position: absolute; top: 100%; left: 0; right: 0;
+                background: var(--white); flex-direction: column; gap: 0;
+                padding: 12px 0 20px; box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+            }
+            .nav-links.open { display: flex; }
+            .nav-links li { width: 100%; }
+            .nav-links a { display: block; padding: 12px 24px; font-size: 16px; }
+            .nav-links a::after { display: none; }
+            .nav-links a.active { font-weight: 700; }
+        }
+    
+        /* ============================================================
+           SHARED PAGE HERO - identical on every interior page.
+        ============================================================ */
+        .page-hero { background: var(--charcoal); padding: 80px 48px 72px; position: relative; overflow: hidden; }
+        .page-hero-inner { max-width: 1200px; margin: 0 auto; }
+        .page-eyebrow {
+            font-size: 18px; font-weight: 700; letter-spacing: 3px;
+            text-transform: uppercase; color: rgba(255,255,255,0.72);
+            margin: 0 0 16px; display: flex; align-items: center; gap: 10px;
+        }
+        .page-eyebrow::before { content: ''; display: inline-block; width: 32px; height: 2px; background: var(--orange); flex: none; }
+        .page-hero h1 {
+            font-family: 'Montserrat', sans-serif; font-size: clamp(36px, 5vw, 56px);
+            font-weight: 900; color: var(--white); line-height: 1.1; margin: 0 0 20px;
+        }
+        .page-hero h1 .hl { color: var(--orange); }
+        .page-hero p { font-size: 18px; color: rgba(255,255,255,0.72); max-width: 560px; line-height: 1.7; margin: 0; }
+        .page-hero .cta-btn {
+            display: inline-block; margin-top: 26px; background: var(--orange); color: #fff;
+            padding: 14px 30px; border-radius: 6px; text-decoration: none;
+            font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 15px;
+        }
+        .page-hero .cta-btn:hover { background: var(--orange-dark); }
+        @media (max-width: 768px) { .page-hero { padding: 56px 24px; } .page-eyebrow { font-size: 15px; } }
     </style>
 
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="ARI Physical Therapy">
     <meta property="og:title" content="SMS Terms of Service | ARI Physical Therapy | Bakersfield, CA">
-    <meta property="og:description" content="SMS Terms for ARI Physical Therapy in Bakersfield, CA — appointment reminders and care texts, consent, opt-out (STOP), HELP, frequency, and rates.">
+    <meta property="og:description" content="SMS Terms for ARI Physical Therapy in Bakersfield, CA: appointment reminders and care texts, consent, opt-out (STOP), HELP, frequency, and rates.">
     <meta property="og:url" content="https://ariphysicaltherapy.com/sms-terms.html">
     <meta property="og:image" content="https://ariphysicaltherapy.com/assets/og-image.jpg">
     <meta property="og:image:width" content="1200">
@@ -156,6 +253,7 @@
         }
       ],
       "hasMap": "https://www.google.com/maps/search/?api=1&query=ARI+Physical+Therapy+8200+Stockdale+Hwy+Suite+B2+Bakersfield+CA+93311",
+      "founder": { "@id": "https://ariphysicaltherapy.com/about.html#deepa" },
       "geo": {
         "@type": "GeoCoordinates",
         "latitude": 35.3572119,
@@ -180,19 +278,25 @@
     <!-- ===== TOP BAR ===== -->
     <div class="top-bar">
         <div class="top-bar-left">
-            <a href="tel:6612828584"><span>📞</span>(661) 282-8584</a>
-            <a href="mailto:contactus@ariptcare.com"><span>✉</span>contactus@ariptcare.com</a>
+            <a href="tel:6612828584"><span class="top-bar-icon">&#128222;</span>(661) 282-8584</a>
+            <a href="mailto:contactus@ariptcare.com"><span class="top-bar-icon">&#9993;</span>contactus@ariptcare.com</a>
+            <span class="top-bar-fax"><span class="top-bar-icon">&#128224;</span>Fax: (661) 727-0005</span>
         </div>
-        <div><a href="appointment.html" class="btn-book-topbar">Book an Appointment</a></div>
+        <div class="top-bar-right"><a href="appointment.html" class="btn-book-topbar">Book an Appointment</a></div>
     </div>
 
     <!-- ===== NAVBAR ===== -->
     <nav class="navbar">
-        <a href="index.html" class="nav-logo"><img src="assets/logo-dark.png" alt="ARI Physical Therapy"></a>
+        <a href="index.html" class="nav-logo">
+            <img src="assets/logo-dark.png" alt="ARI Physical Therapy">
+        </a>
+        <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
             <li><a href="services.html">Services</a></li>
-            <li><a href="appointment.html">Book an Appointment</a></li>
             <li><a href="careers.html" class="nav-careers">Careers</a></li>
             <li><a href="contact.html">Contact</a></li>
             <li><a href="physicians.html">For Physicians</a></li>
@@ -200,11 +304,11 @@
     </nav>
 
     <!-- ===== HERO ===== -->
-    <section class="legal-hero">
-        <div class="inner">
-            <div class="eyebrow">Text Messaging</div>
-            <h1>SMS Terms of Service</h1>
-            <div class="dates">Effective date: June 10, 2026 &nbsp;·&nbsp; Last updated: July 7, 2026</div>
+    <section class="page-hero">
+        <div class="page-hero-inner">
+            <p class="page-eyebrow">Text Messaging</p>
+            <h1>SMS <span class="hl">Terms of Service</span></h1>
+            <p>Effective date: June 10, 2026 &nbsp;·&nbsp; Last updated: July 7, 2026</p>
         </div>
     </section>
 
@@ -222,12 +326,12 @@
         <p>We do <strong>not</strong> send marketing, advertising, or promotional text messages through this program.</p>
 
         <h2 id="consent">2. How You Sign Up (Consent)</h2>
-        <p>You are enrolled only after you provide consent. Consent is obtained <strong>verbally</strong> &mdash; in person at our clinic or by phone &mdash; when you provide your mobile number and agree to receive text messages from us. Consent to receive text messages is <strong>not a condition</strong> of receiving care or any service from us. You may decline at sign-up or withdraw your consent at any time (see Section 6).</p>
+        <p>You are enrolled only after you provide consent. Consent is obtained <strong>verbally</strong> (in person at our clinic or by phone) when you provide your mobile number and agree to receive text messages from us. Consent to receive text messages is <strong>not a condition</strong> of receiving care or any service from us. You may decline at sign-up or withdraw your consent at any time (see Section 6).</p>
 
         <h2 id="types">3. Types of Messages You May Receive</h2>
-        <p>Messages are limited to the categories described in Section 1 &mdash; appointment reminders, confirmations and scheduling, and patient-care notifications. Messages may come from a phone number or short code associated with our practice or our messaging provider.</p>
+        <p>Messages are limited to the categories described in Section 1: appointment reminders, confirmations and scheduling, and patient-care notifications. Messages may come from a phone number or short code associated with our practice or our messaging provider.</p>
 
-        <p>From time to time we may also send <strong>pre-visit and administrative messages</strong> — for example, a secure link to provide documents (such as your insurance card or ID) before your appointment. These are service messages related to your care and scheduling, not marketing.</p>
+        <p>From time to time we may also send <strong>pre-visit and administrative messages</strong>. One example is a secure link to provide documents (such as your insurance card or ID) before your appointment. These are service messages related to your care and scheduling, not marketing.</p>
 
         <h2 id="frequency">4. Message Frequency &amp; Rates</h2>
         <ul>
@@ -255,13 +359,13 @@
         <p>Our handling of your information is described in full in our <a href="privacy-policy.html">Privacy Policy</a>.</p>
 
         <h3>Links in Our Messages</h3>
-        <p>Some of our messages may include a link to a secure ARI Physical Therapy web page — for example, to provide your insurance or ID information before your first visit. We will only ever link to our own official websites (<strong>ariphysicaltherapy.com</strong> or <strong>dfo.ariptcare.com</strong>). We keep our texts general and will <strong>never</strong> ask you to send sensitive information, passwords, or payment details by text, and we will never ask for money. Any documents you provide are submitted only through our secure page, never in a text reply. If you are ever unsure whether a message is really from us, call us at <a href="tel:6612828584">(661) 282-8584</a>.</p>
+        <p>Some of our messages may include a link to a secure ARI Physical Therapy web page (for example, to provide your insurance or ID information before your first visit). We will only ever link to our own official websites (<strong>ariphysicaltherapy.com</strong> or <strong>dfo.ariptcare.com</strong>). We keep our texts general and will <strong>never</strong> ask you to send sensitive information, passwords, or payment details by text, and we will never ask for money. Any documents you provide are submitted only through our secure page, never in a text reply. If you are ever unsure whether a message is really from us, call us at <a href="tel:6612828584">(661) 282-8584</a>.</p>
 
         <h2 id="security">7. Text Messaging Is Not Secure</h2>
         <div class="callout notice">
             <p>Standard SMS text messages are <strong>not encrypted</strong> and are not a fully secure channel. Messages could be seen by anyone with access to your device. To protect your privacy, we keep our messages general and avoid including detailed clinical or sensitive health information. <strong>Please do not include sensitive personal or medical details in your replies.</strong> If you'd prefer we not contact you by text, let us know and we'll use another method.</p>
         </div>
-        <p>This is exactly why we collect documents such as your insurance card and ID through a secure upload page rather than by text — so your sensitive information stays protected.</p>
+        <p>This is exactly why we collect documents such as your insurance card and ID through a secure upload page rather than by text, so your sensitive information stays protected.</p>
 
         <h2 id="carriers">8. Carrier Disclaimer</h2>
         <p>Carriers (including wireless carriers) are not liable for delayed or undelivered messages. Delivery of messages is subject to effective transmission by your mobile carrier and is not guaranteed. Message delivery is on an "as available" basis.</p>
@@ -294,6 +398,7 @@
                     <h4>Quick Links</h4>
                     <ul>
                         <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
                         <li><a href="services.html">Services</a></li>
                         <li><a href="appointment.html">Book an Appointment</a></li>
                         <li><a href="careers.html">Careers</a></li>
@@ -320,5 +425,25 @@
         </div>
     </footer>
 
+
+    <script>
+    /* Shared mobile-nav toggle - identical on every page. */
+    (function () {
+        const toggle = document.querySelector('.nav-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        if (toggle && navLinks) {
+            toggle.addEventListener('click', function () {
+                const open = navLinks.classList.toggle('open');
+                toggle.setAttribute('aria-expanded', open);
+            });
+        }
+        const navbar = document.querySelector('.navbar');
+        if (navbar) {
+            window.addEventListener('scroll', function () {
+                navbar.classList.toggle('scrolled', window.scrollY > 20);
+            });
+        }
+    })();
+    </script>
 </body>
 </html>

@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="canonical" href="https://ariphysicaltherapy.com/faq.html">
     <title>Physical Therapy FAQ | ARI Physical Therapy – Bakersfield, CA</title>
-    <meta name="description" content="Common physical therapy questions — referrals, insurance, first-visit expectations, hours, and parking — answered by ARI Physical Therapy in Bakersfield, CA.">
+    <meta name="description" content="Common physical therapy questions about referrals, insurance, first-visit expectations, hours, and parking, answered by ARI Physical Therapy in Bakersfield, CA.">
     <meta name="robots" content="index, follow">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -130,12 +130,109 @@
         .faq-cta p { color: rgba(255,255,255,0.85); margin-bottom: 20px; }
         .faq-cta .btn { display: inline-block; background: var(--orange); color: #fff; padding: 13px 30px; border-radius: 6px; text-decoration: none; font-weight: 600; font-family: 'Montserrat', sans-serif; }
         .faq-cta .btn:hover { background: var(--orange-dark); }
+    
+        /* ============================================================
+           SHARED HEADER SYSTEM - identical on every page.
+           Keep this block in sync across all pages when editing.
+        ============================================================ */
+        .top-bar {
+            background: var(--charcoal); color: var(--white);
+            padding: 10px 48px; display: flex; justify-content: space-between;
+            align-items: center; font-size: 13px;
+            position: sticky; top: 0; z-index: 1000;
+        }
+        .top-bar-left { display: flex; align-items: center; gap: 28px; }
+        .top-bar-right { display: flex; align-items: center; gap: 20px; }
+        .top-bar a { color: rgba(255,255,255,0.85); text-decoration: none; display: flex; align-items: center; gap: 6px; margin: 0; padding: 0; transition: color 0.2s; }
+        .top-bar a:hover { color: var(--orange-light); }
+        .top-bar-fax { display: flex; align-items: center; gap: 6px; color: rgba(255,255,255,0.85); }
+        .top-bar-icon { font-size: 14px; }
+        .top-bar .btn-book-topbar {
+            background: var(--orange); color: var(--white) !important;
+            padding: 7px 18px; border-radius: 4px;
+            font-weight: 600; font-size: 13px; letter-spacing: 0.3px;
+            line-height: 1.4; white-space: nowrap; text-decoration: none;
+            display: inline-flex; align-items: center;
+            transition: background 0.2s !important;
+        }
+        .top-bar .btn-book-topbar:hover { background: var(--orange-dark) !important; }
+
+        .navbar {
+            background: var(--white); padding: 14px 48px;
+            display: flex; justify-content: space-between; align-items: center;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.07); border-bottom: none;
+            position: sticky; top: 52px; z-index: 999;
+        }
+        .navbar.scrolled { box-shadow: 0 4px 24px rgba(0,0,0,0.13); }
+        .nav-logo { display: flex; align-items: center; text-decoration: none; }
+        .nav-logo img { height: 56px; width: auto; display: block; }
+        .nav-links { display: flex; list-style: none; gap: 36px; align-items: center; margin: 0; padding: 0; }
+        .nav-links li { margin: 0; }
+        .nav-links a {
+            text-decoration: none; color: var(--charcoal);
+            font-weight: 500; font-size: 15px;
+            transition: color 0.2s; position: relative;
+        }
+        .nav-links a::after {
+            content: ''; position: absolute; bottom: -4px; left: 0;
+            width: 0; height: 2px; background: var(--orange); transition: width 0.25s;
+        }
+        .nav-links a:hover { color: var(--orange); }
+        .nav-links a:hover::after,
+        .nav-links a.active::after { width: 100%; }
+        .nav-links a.active { color: var(--orange); }
+        .nav-careers { color: var(--orange) !important; font-weight: 700 !important; }
+        .nav-careers::after { background: var(--orange) !important; }
+
+        .nav-toggle { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 6px; }
+        .nav-toggle span { display: block; width: 24px; height: 2px; background: var(--charcoal); border-radius: 2px; transition: all 0.25s; }
+
+        @media (max-width: 768px) {
+            .top-bar { display: none; }
+            .navbar { padding: 14px 20px; top: 0; }
+            .nav-toggle { display: flex; }
+            .nav-links {
+                display: none; position: absolute; top: 100%; left: 0; right: 0;
+                background: var(--white); flex-direction: column; gap: 0;
+                padding: 12px 0 20px; box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+            }
+            .nav-links.open { display: flex; }
+            .nav-links li { width: 100%; }
+            .nav-links a { display: block; padding: 12px 24px; font-size: 16px; }
+            .nav-links a::after { display: none; }
+            .nav-links a.active { font-weight: 700; }
+        }
+    
+        /* ============================================================
+           SHARED PAGE HERO - identical on every interior page.
+        ============================================================ */
+        .page-hero { background: var(--charcoal); padding: 80px 48px 72px; position: relative; overflow: hidden; }
+        .page-hero-inner { max-width: 1200px; margin: 0 auto; }
+        .page-eyebrow {
+            font-size: 18px; font-weight: 700; letter-spacing: 3px;
+            text-transform: uppercase; color: rgba(255,255,255,0.72);
+            margin: 0 0 16px; display: flex; align-items: center; gap: 10px;
+        }
+        .page-eyebrow::before { content: ''; display: inline-block; width: 32px; height: 2px; background: var(--orange); flex: none; }
+        .page-hero h1 {
+            font-family: 'Montserrat', sans-serif; font-size: clamp(36px, 5vw, 56px);
+            font-weight: 900; color: var(--white); line-height: 1.1; margin: 0 0 20px;
+        }
+        .page-hero h1 .hl { color: var(--orange); }
+        .page-hero p { font-size: 18px; color: rgba(255,255,255,0.72); max-width: 560px; line-height: 1.7; margin: 0; }
+        .page-hero .cta-btn {
+            display: inline-block; margin-top: 26px; background: var(--orange); color: #fff;
+            padding: 14px 30px; border-radius: 6px; text-decoration: none;
+            font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 15px;
+        }
+        .page-hero .cta-btn:hover { background: var(--orange-dark); }
+        @media (max-width: 768px) { .page-hero { padding: 56px 24px; } .page-eyebrow { font-size: 15px; } }
     </style>
 
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="ARI Physical Therapy">
     <meta property="og:title" content="Physical Therapy FAQ | ARI Physical Therapy – Bakersfield, CA">
-    <meta property="og:description" content="Common physical therapy questions — referrals, insurance, first-visit expectations, hours, and parking — answered by ARI Physical Therapy in Bakersfield, CA.">
+    <meta property="og:description" content="Common physical therapy questions about referrals, insurance, first-visit expectations, hours, and parking, answered by ARI Physical Therapy in Bakersfield, CA.">
     <meta property="og:url" content="https://ariphysicaltherapy.com/faq.html">
     <meta property="og:image" content="https://ariphysicaltherapy.com/assets/og-image.jpg">
     <meta property="og:image:width" content="1200">
@@ -176,6 +273,7 @@
         }
       ],
       "hasMap": "https://www.google.com/maps/search/?api=1&query=ARI+Physical+Therapy+8200+Stockdale+Hwy+Suite+B2+Bakersfield+CA+93311",
+      "founder": { "@id": "https://ariphysicaltherapy.com/about.html#deepa" },
       "geo": {
         "@type": "GeoCoordinates",
         "latitude": 35.3572119,
@@ -204,7 +302,7 @@
       "name": "Do I need a doctor's referral to start physical therapy?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "In California, you can be seen directly by a physical therapist without a physician referral for up to 12 visits or 45 days \u2014 whichever comes first. However, some insurance plans still require a referral for coverage, so we recommend calling your insurance beforehand."
+        "text": "In California, you can be seen directly by a physical therapist without a physician referral for up to 12 visits or 45 days, whichever comes first. However, some insurance plans still require a referral for coverage, so we recommend calling your insurance beforehand."
       }
     },
     {
@@ -236,7 +334,7 @@
       "name": "What should I bring to my first visit?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Please bring a photo ID (driver's license or state ID), your insurance card(s) \u2014 primary and secondary if applicable \u2014 and a physician referral or prescription if your insurance requires one (if it hasn't already been sent directly by your doctor)."
+        "text": "Please bring a photo ID (driver's license or state ID), your insurance card(s) (primary and secondary if applicable), and a physician referral or prescription if your insurance requires one (if it hasn't already been sent directly by your doctor)."
       }
     },
     {
@@ -252,7 +350,7 @@
       "name": "Will physical therapy hurt?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Some discomfort during therapy is normal, especially early on. Our goal is to work within your tolerance and never push you beyond what's appropriate. Communication with your therapist is key \u2014 let them know how you're feeling throughout each session."
+        "text": "Some discomfort during therapy is normal, especially early on. Our goal is to work within your tolerance and never push you beyond what's appropriate. Communication with your therapist is key, so let them know how you're feeling throughout each session."
       }
     },
     {
@@ -260,7 +358,7 @@
       "name": "How many visits will I need?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Every patient is different. After your initial evaluation, your therapist will outline an estimated treatment plan. Many conditions improve significantly in 6\u201312 visits, while others may require more time. We'll keep you informed every step of the way."
+        "text": "Every patient is different. After your initial evaluation, your therapist will outline an estimated treatment plan. Many conditions improve significantly in 6–12 visits, while others may require more time. We'll keep you informed every step of the way."
       }
     },
     {
@@ -284,7 +382,7 @@
       "name": "How do I book an appointment?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "You can request your first visit online through our appointment page, or call us at (661) 282-8584. New patients can also complete the intake paperwork online ahead of time to save time at check-in."
+        "text": "You can request your first visit online through our appointment page , or call us at (661) 282-8584. New patients can also complete the intake paperwork online ahead of time to save time at check-in."
       }
     },
     {
@@ -308,7 +406,7 @@
       "name": "Where are you located, and is parking available?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes \u2014 free parking is available right at our location, and we're easy to find: we're at 8200 Stockdale Hwy, Suite B2, Bakersfield, CA 93311, in the same shopping center as Trader Joe's \u2014 right next door."
+        "text": "Yes. Free parking is available right at our location, and we're easy to find: we're at 8200 Stockdale Hwy, Suite B2, Bakersfield, CA 93311, in the same shopping center as Trader Joe's (right next door)."
       }
     },
     {
@@ -328,19 +426,25 @@
     <!-- ===== TOP BAR ===== -->
     <div class="top-bar">
         <div class="top-bar-left">
-            <a href="tel:6612828584"><span>📞</span>(661) 282-8584</a>
-            <a href="mailto:contactus@ariptcare.com"><span>✉</span>contactus@ariptcare.com</a>
+            <a href="tel:6612828584"><span class="top-bar-icon">&#128222;</span>(661) 282-8584</a>
+            <a href="mailto:contactus@ariptcare.com"><span class="top-bar-icon">&#9993;</span>contactus@ariptcare.com</a>
+            <span class="top-bar-fax"><span class="top-bar-icon">&#128224;</span>Fax: (661) 727-0005</span>
         </div>
-        <div><a href="appointment.html" class="btn-book-topbar">Book an Appointment</a></div>
+        <div class="top-bar-right"><a href="appointment.html" class="btn-book-topbar">Book an Appointment</a></div>
     </div>
 
     <!-- ===== NAVBAR ===== -->
     <nav class="navbar">
-        <a href="index.html" class="nav-logo"><img src="assets/logo-dark.png" alt="ARI Physical Therapy"></a>
+        <a href="index.html" class="nav-logo">
+            <img src="assets/logo-dark.png" alt="ARI Physical Therapy">
+        </a>
+        <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
             <li><a href="services.html">Services</a></li>
-            <li><a href="appointment.html">Book an Appointment</a></li>
             <li><a href="careers.html" class="nav-careers">Careers</a></li>
             <li><a href="contact.html">Contact</a></li>
             <li><a href="physicians.html">For Physicians</a></li>
@@ -348,20 +452,20 @@
     </nav>
 
     <!-- ===== HERO ===== -->
-    <section class="legal-hero">
-        <div class="inner">
-            <div class="eyebrow">Patient Resources</div>
-            <h1>Frequently Asked Questions</h1>
-            <div class="dates">Physical therapy in Bakersfield, CA — referrals, insurance, what to expect, and more.</div>
+    <section class="page-hero">
+        <div class="page-hero-inner">
+            <p class="page-eyebrow">Patient Resources</p>
+            <h1>Frequently Asked <span class="hl">Questions</span></h1>
+            <p>Physical therapy in Bakersfield, CA: referrals, insurance, what to expect, and more.</p>
         </div>
     </section>
 
     <div class="legal-wrap">
-        <p class="faq-intro">Answers to the questions we hear most from new and prospective patients. Don’t see yours? <a href="contact.html">Get in touch</a> — we’re happy to help.</p>
+        <p class="faq-intro">Answers to the questions we hear most from new and prospective patients. Don’t see yours? <a href="contact.html">Get in touch</a>. We’re happy to help.</p>
 
         <details class="faq-item">
             <summary>Do I need a doctor's referral to start physical therapy?</summary>
-            <div class="faq-answer"><p>In California, you can be seen directly by a physical therapist without a physician referral for up to 12 visits or 45 days — whichever comes first. However, some insurance plans still require a referral for coverage, so we recommend calling your insurance beforehand.</p></div>
+            <div class="faq-answer"><p>In California, you can be seen directly by a physical therapist without a physician referral for up to 12 visits or 45 days, whichever comes first. However, some insurance plans still require a referral for coverage, so we recommend calling your insurance beforehand.</p></div>
         </details>
 
         <details class="faq-item">
@@ -381,7 +485,7 @@
 
         <details class="faq-item">
             <summary>What should I bring to my first visit?</summary>
-            <div class="faq-answer"><p>Please bring a photo ID (driver's license or state ID), your insurance card(s) — primary and secondary if applicable — and a physician referral or prescription if your insurance requires one (if it hasn't already been sent directly by your doctor).</p></div>
+            <div class="faq-answer"><p>Please bring a photo ID (driver's license or state ID), your insurance card(s) (primary and secondary if applicable), and a physician referral or prescription if your insurance requires one (if it hasn't already been sent directly by your doctor).</p></div>
         </details>
 
         <details class="faq-item">
@@ -391,7 +495,7 @@
 
         <details class="faq-item">
             <summary>Will physical therapy hurt?</summary>
-            <div class="faq-answer"><p>Some discomfort during therapy is normal, especially early on. Our goal is to work within your tolerance and never push you beyond what's appropriate. Communication with your therapist is key — let them know how you're feeling throughout each session.</p></div>
+            <div class="faq-answer"><p>Some discomfort during therapy is normal, especially early on. Our goal is to work within your tolerance and never push you beyond what's appropriate. Communication with your therapist is key, so let them know how you're feeling throughout each session.</p></div>
         </details>
 
         <details class="faq-item">
@@ -426,7 +530,7 @@
 
         <details class="faq-item">
             <summary>Where are you located, and is parking available?</summary>
-            <div class="faq-answer"><p>Yes — free parking is available right at our location, and we're easy to find: we're at 8200 Stockdale Hwy, Suite B2, Bakersfield, CA 93311, in the same shopping center as Trader Joe's — right next door.</p></div>
+            <div class="faq-answer"><p>Yes. Free parking is available right at our location, and we're easy to find: we're at 8200 Stockdale Hwy, Suite B2, Bakersfield, CA 93311, in the same shopping center as Trader Joe's (right next door).</p></div>
         </details>
 
         <details class="faq-item">
@@ -455,6 +559,7 @@
                     <h4>Quick Links</h4>
                     <ul>
                         <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
                         <li><a href="services.html">Services</a></li>
                         <li><a href="appointment.html">Book an Appointment</a></li>
                         <li><a href="careers.html">Careers</a></li>
@@ -481,5 +586,25 @@
         </div>
     </footer>
 
+
+    <script>
+    /* Shared mobile-nav toggle - identical on every page. */
+    (function () {
+        const toggle = document.querySelector('.nav-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        if (toggle && navLinks) {
+            toggle.addEventListener('click', function () {
+                const open = navLinks.classList.toggle('open');
+                toggle.setAttribute('aria-expanded', open);
+            });
+        }
+        const navbar = document.querySelector('.navbar');
+        if (navbar) {
+            window.addEventListener('scroll', function () {
+                navbar.classList.toggle('scrolled', window.scrollY > 20);
+            });
+        }
+    })();
+    </script>
 </body>
 </html>

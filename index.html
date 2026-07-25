@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="canonical" href="https://ariphysicaltherapy.com/">
     <title>Physical Therapy in Bakersfield, CA | ARI Physical Therapy</title>
-    <meta name="description" content="ARI Physical Therapy in Bakersfield, CA — personalized, compassionate care for orthopedic, sports, pelvic, and pediatric physical therapy.">
+    <meta name="description" content="ARI Physical Therapy in Bakersfield, CA offers personalized, compassionate care for orthopedic, sports, pelvic, and pediatric physical therapy.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
@@ -168,7 +168,7 @@
             box-shadow: 0 4px 24px rgba(0,0,0,0.13);
         }
 
-        /* Hamburger toggle — hidden on desktop */
+        /* Hamburger toggle, hidden on desktop */
         .nav-toggle {
             display: none;
             flex-direction: column;
@@ -402,7 +402,7 @@
             overflow: hidden;
         }
 
-        /* Mural watermark — ARI's own wall art, faint right-side accent */
+        /* Mural watermark: ARI's own wall art, faint right-side accent */
         .why-ari::after {
             content: '';
             position: absolute;
@@ -908,7 +908,7 @@
         .reveal-stagger.visible > *:nth-child(8) { opacity:1; transform:none; transition-delay: 0.75s; }
 
         /* =============================================
-           RESPONSIVE — TABLET (max-width: 900px)
+           RESPONSIVE: TABLET (max-width: 900px)
         ============================================= */
         @media (max-width: 900px) {
             .why-ari,
@@ -925,7 +925,7 @@
         }
 
         /* =============================================
-           RESPONSIVE — MOBILE (max-width: 768px)
+           RESPONSIVE: MOBILE (max-width: 768px)
         ============================================= */
         @media (max-width: 768px) {
             /* Hero */
@@ -970,7 +970,7 @@
         }
 
         /* =============================================
-           RESPONSIVE — SMALL MOBILE (max-width: 480px)
+           RESPONSIVE: SMALL MOBILE (max-width: 480px)
         ============================================= */
         @media (max-width: 480px) {
             .why-grid { grid-template-columns: 1fr; }
@@ -981,12 +981,95 @@
             .section-title { font-size: 26px; }
         }
 
+    
+        /* ============================================================
+           SHARED HEADER SYSTEM - identical on every page.
+           Keep this block in sync across all pages when editing.
+        ============================================================ */
+        .top-bar {
+            background: var(--charcoal); color: var(--white);
+            padding: 10px 48px; display: flex; justify-content: space-between;
+            align-items: center; font-size: 13px;
+            position: sticky; top: 0; z-index: 1000;
+        }
+        .top-bar-left { display: flex; align-items: center; gap: 28px; }
+        .top-bar-right { display: flex; align-items: center; gap: 20px; }
+        .top-bar a { color: rgba(255,255,255,0.85); text-decoration: none; display: flex; align-items: center; gap: 6px; margin: 0; padding: 0; transition: color 0.2s; }
+        .top-bar a:hover { color: var(--orange-light); }
+        .top-bar-fax { display: flex; align-items: center; gap: 6px; color: rgba(255,255,255,0.85); }
+        .top-bar-icon { font-size: 14px; }
+        .top-bar .btn-book-topbar {
+            background: var(--orange); color: var(--white) !important;
+            padding: 7px 18px; border-radius: 4px;
+            font-weight: 600; font-size: 13px; letter-spacing: 0.3px;
+            line-height: 1.4; white-space: nowrap; text-decoration: none;
+            display: inline-flex; align-items: center;
+            transition: background 0.2s !important;
+        }
+        .top-bar .btn-book-topbar:hover { background: var(--orange-dark) !important; }
+
+        .navbar {
+            background: var(--white); padding: 14px 48px;
+            display: flex; justify-content: space-between; align-items: center;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.07); border-bottom: none;
+            position: sticky; top: 52px; z-index: 999;
+        }
+        .navbar.scrolled { box-shadow: 0 4px 24px rgba(0,0,0,0.13); }
+        .nav-logo { display: flex; align-items: center; text-decoration: none; }
+        .nav-logo img { height: 56px; width: auto; display: block; }
+        .nav-links { display: flex; list-style: none; gap: 36px; align-items: center; margin: 0; padding: 0; }
+        .nav-links li { margin: 0; }
+        .nav-links a {
+            text-decoration: none; color: var(--charcoal);
+            font-weight: 500; font-size: 15px;
+            transition: color 0.2s; position: relative;
+        }
+        .nav-links a::after {
+            content: ''; position: absolute; bottom: -4px; left: 0;
+            width: 0; height: 2px; background: var(--orange); transition: width 0.25s;
+        }
+        .nav-links a:hover { color: var(--orange); }
+        .nav-links a:hover::after,
+        .nav-links a.active::after { width: 100%; }
+        .nav-links a.active { color: var(--orange); }
+        .nav-careers { color: var(--orange) !important; font-weight: 700 !important; }
+        .nav-careers::after { background: var(--orange) !important; }
+
+        .nav-toggle { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 6px; }
+        .nav-toggle span { display: block; width: 24px; height: 2px; background: var(--charcoal); border-radius: 2px; transition: all 0.25s; }
+
+        @media (max-width: 768px) {
+            .top-bar { display: none; }
+            .navbar { padding: 14px 20px; top: 0; }
+            .nav-toggle { display: flex; }
+            .nav-links {
+                display: none; position: absolute; top: 100%; left: 0; right: 0;
+                background: var(--white); flex-direction: column; gap: 0;
+                padding: 12px 0 20px; box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+            }
+            .nav-links.open { display: flex; }
+            .nav-links li { width: 100%; }
+            .nav-links a { display: block; padding: 12px 24px; font-size: 16px; }
+            .nav-links a::after { display: none; }
+            .nav-links a.active { font-weight: 700; }
+        }
+    
+        /* ===== HERO IMAGE: settle on load, then a very slow drift ===== */
+        @keyframes heroSettle { from { transform: scale(1.14); } to { transform: scale(1.05); } }
+        @keyframes heroDrift  { from { transform: scale(1.05) translate3d(0, 0, 0); }
+                                to   { transform: scale(1.13) translate3d(-1.2%, -0.8%, 0); } }
+        .hero-bg {
+            will-change: transform;
+            animation: heroSettle 2.4s cubic-bezier(.16,.7,.3,1) both,
+                       heroDrift 32s ease-in-out 2.4s infinite alternate;
+        }
+        @media (prefers-reduced-motion: reduce) { .hero-bg { animation: none; } }
     </style>
 
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="ARI Physical Therapy">
     <meta property="og:title" content="Physical Therapy in Bakersfield, CA | ARI Physical Therapy">
-    <meta property="og:description" content="ARI Physical Therapy in Bakersfield, CA — personalized, compassionate care for orthopedic, sports, pelvic, and pediatric physical therapy.">
+    <meta property="og:description" content="ARI Physical Therapy in Bakersfield, CA offers personalized, compassionate care for orthopedic, sports, pelvic, and pediatric physical therapy.">
     <meta property="og:url" content="https://ariphysicaltherapy.com/">
     <meta property="og:image" content="https://ariphysicaltherapy.com/assets/og-image.jpg">
     <meta property="og:image:width" content="1200">
@@ -1072,6 +1155,7 @@
           }
         ]
       },
+      "founder": { "@id": "https://ariphysicaltherapy.com/about.html#deepa" },
       "geo": {
         "@type": "GeoCoordinates",
         "latitude": 35.3572119,
@@ -1105,17 +1189,11 @@
     <!-- ===== TOP BAR ===== -->
     <div class="top-bar">
         <div class="top-bar-left">
-            <a href="tel:6612828584">
-                <span class="top-bar-icon">📞</span>
-                (661) 282-8584
-            </a>
-            <a href="mailto:contactus@ariptcare.com">
-                <span class="top-bar-icon">✉</span>
-                contactus@ariptcare.com
-            </a>
-            <span style="display:flex;align-items:center;gap:6px;color:rgba(255,255,255,0.85)"><span class="top-bar-icon">📠</span>Fax: (661) 727-0005</span>
+            <a href="tel:6612828584"><span class="top-bar-icon">&#128222;</span>(661) 282-8584</a>
+            <a href="mailto:contactus@ariptcare.com"><span class="top-bar-icon">&#9993;</span>contactus@ariptcare.com</a>
+            <span class="top-bar-fax"><span class="top-bar-icon">&#128224;</span>Fax: (661) 727-0005</span>
         </div>
-        <div style="display:flex;align-items:center;gap:20px;"><a href="appointment.html" class="btn-book-topbar">Book an Appointment</a></div>
+        <div class="top-bar-right"><a href="appointment.html" class="btn-book-topbar">Book an Appointment</a></div>
     </div>
 
     <!-- ===== NAVBAR ===== -->
@@ -1127,9 +1205,9 @@
             <span></span><span></span><span></span>
         </button>
         <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="about.html">About</a></li>
             <li><a href="services.html">Services</a></li>
-            <li><a href="appointment.html">Book an Appointment</a></li>
             <li><a href="careers.html" class="nav-careers">Careers</a></li>
             <li><a href="contact.html">Contact</a></li>
             <li><a href="physicians.html">For Physicians</a></li>
@@ -1302,7 +1380,7 @@
     <!-- ===== CAREERS BANNER ===== -->
     <section class="careers-banner">
         <h2>Join Our <span class="hl">Growing Team</span></h2>
-        <p>We're looking for passionate physical therapists ready to help us empower Bakersfield — one patient at a time.</p>
+        <p>We're looking for passionate physical therapists ready to help us empower Bakersfield, one patient at a time.</p>
         <a href="careers.html" class="btn-primary">View Open Positions</a>
     </section>
 
@@ -1401,7 +1479,7 @@
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3285.12!2d-119.09561!3d35.35721!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80ea43fd0a3a3a2d%3A0xd59ec9a5bcf611f7!2sARI%20Physical%20Therapy!5e0!3m2!1sen!2sus!4v1681234567890"
                     allowfullscreen=""
                     loading="lazy"
-                    title="ARI Physical Therapy — 8200 Stockdale Hwy, Bakersfield CA">
+                    title="ARI Physical Therapy at 8200 Stockdale Hwy, Bakersfield CA">
                 </iframe>
             </div>
         </div>
@@ -1425,6 +1503,7 @@
                     <h4>Quick Links</h4>
                     <ul>
                         <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
                         <li><a href="services.html">Services</a></li>
                         <li><a href="appointment.html">Book an Appointment</a></li>
                         <li><a href="careers.html">Careers</a></li>
@@ -1455,7 +1534,7 @@
 
     <script>
         /* =============================================
-           SCROLL REVEAL — Intersection Observer
+           SCROLL REVEAL via Intersection Observer
         ============================================= */
         (function () {
             const observer = new IntersectionObserver(
@@ -1522,27 +1601,7 @@
             statsObserver.observe(statsEl);
         })();
 
-        /* =============================================
-           MOBILE MENU TOGGLE (hamburger)
-        ============================================= */
-        (function () {
-            const toggle = document.querySelector('.nav-toggle');
-            const navLinks = document.querySelector('.nav-links');
-            if (!toggle || !navLinks) return;
-
-            toggle.addEventListener('click', () => {
-                const open = navLinks.classList.toggle('open');
-                toggle.setAttribute('aria-expanded', open);
-            });
-
-            // Close menu when a link is clicked
-            navLinks.querySelectorAll('a').forEach((a) => {
-                a.addEventListener('click', () => {
-                    navLinks.classList.remove('open');
-                    toggle.setAttribute('aria-expanded', 'false');
-                });
-            });
-        })();
+        
 
         /* =============================================
            NAVBAR SCROLL SHADOW
@@ -1556,5 +1615,25 @@
         })();
     </script>
 
+
+    <script>
+    /* Shared mobile-nav toggle - identical on every page. */
+    (function () {
+        const toggle = document.querySelector('.nav-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        if (toggle && navLinks) {
+            toggle.addEventListener('click', function () {
+                const open = navLinks.classList.toggle('open');
+                toggle.setAttribute('aria-expanded', open);
+            });
+        }
+        const navbar = document.querySelector('.navbar');
+        if (navbar) {
+            window.addEventListener('scroll', function () {
+                navbar.classList.toggle('scrolled', window.scrollY > 20);
+            });
+        }
+    })();
+    </script>
 </body>
 </html>
