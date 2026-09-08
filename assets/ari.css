@@ -470,20 +470,20 @@ footer img{height:46px;margin-bottom:18px}
 @keyframes breathe{0%,100%{scale:1}50%{scale:1.06}}
 
 /* Homepage hero: staggered entrance, same rhythm as the old site */
-.hero .eyebrow{animation:fadeSlideUp .7s var(--ease) both .15s}
-.hero h1{animation:fadeSlideUp .7s var(--ease) both .30s}
-.hero .lead{animation:fadeSlideUp .7s var(--ease) both .45s}
-.hero-cta{animation:fadeSlideUp .7s var(--ease) both .60s}
-.stats-inner{animation:fadeSlideUp .7s var(--ease) both .75s}
-.hero-photo{animation:heroPhotoIn .9s var(--ease) both .1s}
+.hero .eyebrow{animation:fadeSlideUp .7s var(--ease) backwards .15s}
+.hero h1{animation:fadeSlideUp .7s var(--ease) backwards .30s}
+.hero .lead{animation:fadeSlideUp .7s var(--ease) backwards .45s}
+.hero-cta{animation:fadeSlideUp .7s var(--ease) backwards .60s}
+.stats-inner{animation:fadeSlideUp .7s var(--ease) backwards .75s}
+.hero-photo{animation:heroPhotoIn .9s var(--ease) backwards .1s}
 .hero-photo img{animation:breathe 22s ease-in-out 1s infinite}
 
 /* Interior page headers get the same entrance */
-.page-hero .eyebrow{animation:fadeSlideUp .7s var(--ease) both .1s}
-.page-hero h1{animation:fadeSlideUp .7s var(--ease) both .22s}
-.page-hero .lead{animation:fadeSlideUp .7s var(--ease) both .34s}
-.page-hero .btn,.page-hero .side-card{animation:fadeSlideUp .7s var(--ease) both .46s}
-.breadcrumb{animation:fadeSlideUp .6s var(--ease) both .05s}
+.page-hero .eyebrow{animation:fadeSlideUp .7s var(--ease) backwards .1s}
+.page-hero h1{animation:fadeSlideUp .7s var(--ease) backwards .22s}
+.page-hero .lead{animation:fadeSlideUp .7s var(--ease) backwards .34s}
+.page-hero .btn,.page-hero .side-card{animation:fadeSlideUp .7s var(--ease) backwards .46s}
+.breadcrumb{animation:fadeSlideUp .6s var(--ease) backwards .05s}
 
 /* Scroll reveal */
 .js .reveal{opacity:0;transform:translateY(28px);transition:opacity .65s var(--ease),transform .65s var(--ease)}
@@ -497,3 +497,42 @@ footer img{height:46px;margin-bottom:18px}
   .page-hero .eyebrow,.page-hero h1,.page-hero .lead,.page-hero .btn,.page-hero .side-card,.breadcrumb{animation:none}
   .js .reveal{opacity:1;transform:none;transition:none}
 }
+
+/* ---------- FIXES ---------- */
+/* Logo is 1262x562; let height drive and width follow so it never skews. */
+.nav-logo img{height:56px;width:auto}
+footer img{height:46px;width:auto}
+/* .grid-2 never collapsed, so the physicians cards were cramped on a phone. */
+@media(max-width:768px){.grid-2{grid-template-columns:1fr}}
+/* Reserve the media box so a slow photo shows a placeholder, not an empty white card. */
+.media,.svc-img,.hero-photo,.dir-portrait .frame{background:var(--cream)}
+
+/* =========================================================
+   HERO HEADLINE — each line masked and lifted into place
+   ========================================================= */
+.hero-title{animation:none!important}          /* lines animate individually */
+.hero-title .line{display:block;overflow:hidden;padding-bottom:.06em;margin-bottom:-.06em}
+.hero-title .line > span{display:block;animation:lineUp .85s cubic-bezier(.22,.9,.28,1) backwards}
+.hero-title .line:nth-child(1) > span{animation-delay:.28s}
+.hero-title .line:nth-child(2) > span{animation-delay:.40s}
+.hero-title .line:nth-child(3) > span{animation-delay:.52s}
+@keyframes lineUp{from{transform:translateY(105%)}to{transform:translateY(0)}}
+
+/* Cards rise further and settle, so scrolling feels alive rather than static */
+.js .reveal{opacity:0;transform:translateY(38px)}
+.js .reveal.visible{opacity:1;transform:none}
+.js .card.reveal,.js .svc.reveal,.js .rev.reveal,.js .portal.reveal,.js .info.reveal,.js .pos-row.reveal{
+  transform:translateY(44px) scale(.985);
+  transition:opacity .6s var(--ease),transform .7s cubic-bezier(.22,.9,.28,1)}
+.js .card.reveal.visible,.js .svc.reveal.visible,.js .rev.reveal.visible,
+.js .portal.reveal.visible,.js .info.reveal.visible,.js .pos-row.reveal.visible{transform:none}
+/* Section headings lead their group in */
+.js .section-head.reveal{transform:translateY(26px)}
+
+@media(prefers-reduced-motion:reduce){
+  .hero-title .line > span{animation:none;transform:none}
+}
+
+/* An intrinsic height="" attribute beats aspect-ratio unless height is auto.
+   Without this, a stale height attribute stretches the box (careers mural bug). */
+.media img,.svc-row-img img,.dir-portrait img{height:auto}
