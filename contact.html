@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/Mockups_icons_HDsquare/Icons/favicon-16x16.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/Mockups_icons_HDsquare/Icons/favicon-32x32.png">
@@ -12,684 +12,6 @@
     <link rel="canonical" href="https://ariphysicaltherapy.com/contact.html">
     <title>Contact Us | ARI Physical Therapy – Bakersfield, CA</title>
     <meta name="description" content="Contact ARI Physical Therapy in Bakersfield, CA. Call (661) 282-8584, email us, or visit us at 8200 Stockdale Hwy Suite B2.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <style>
-
-        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-
-        :root {
-            --orange:        #E8630A;
-            --orange-dark:   #C4520A;
-            --orange-light:  #FF8C42;
-            --charcoal:      #2B2B2B;
-            --charcoal-mid:  #3D3D3D;
-            --cream:         #FAF8F4;
-            --white:         #FFFFFF;
-            --text-dark:     #1A1A1A;
-            --text-mid:      #555555;
-            --text-light:    #888888;
-        }
-
-        html { scroll-behavior: smooth; }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            color: var(--text-dark);
-            background: var(--white);
-            line-height: 1.6;
-        }
-
-        /* ===== TOP BAR ===== */
-        .top-bar {
-            background: var(--charcoal);
-            color: var(--white);
-            padding: 10px 48px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 13px;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .top-bar-left { display: flex; align-items: center; gap: 28px; }
-
-        .top-bar a {
-            color: rgba(255,255,255,0.85);
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            transition: color 0.2s;
-        }
-
-        .top-bar a:hover { color: var(--orange-light); }
-
-        .btn-book-topbar {
-            background: var(--orange);
-            color: var(--white) !important;
-            padding: 7px 18px;
-            border-radius: 4px;
-            font-weight: 600;
-            font-size: 13px;
-            transition: background 0.2s !important;
-        }
-
-        .top-bar .btn-book-topbar:hover { background: var(--orange-dark) !important; }
-
-        /* ===== NAVBAR ===== */
-        .navbar {
-            background: var(--white);
-            padding: 14px 48px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 2px 12px rgba(0,0,0,0.07);
-            position: sticky;
-            top: 39px;
-            z-index: 999;
-        }
-
-        .nav-logo { display: flex; align-items: center; text-decoration: none; }
-        .nav-logo img { height: 56px; width: auto; }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 36px;
-            align-items: center;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: var(--charcoal);
-            font-weight: 500;
-            font-size: 15px;
-            transition: color 0.2s;
-            position: relative;
-        }
-
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: -4px; left: 0;
-            width: 0; height: 2px;
-            background: var(--orange);
-            transition: width 0.25s;
-        }
-
-        .nav-links a:hover { color: var(--orange); }
-        .nav-links a:hover::after { width: 100%; }
-        .nav-links a.active { color: var(--orange); }
-        .nav-links a.active::after { width: 100%; }
-        .nav-careers { color: var(--orange) !important; font-weight: 700 !important; }
-        .navbar.scrolled { box-shadow: 0 4px 24px rgba(0,0,0,0.13); }
-        .nav-logo { display: flex; align-items: center; text-decoration: none; }
-        .nav-logo img { height: 56px; width: auto; display: block; }
-
-        .nav-toggle {
-            display: none;
-            flex-direction: column;
-            gap: 5px;
-            background: none;
-            border: none;
-            cursor: pointer;
-            padding: 6px;
-        }
-
-        .nav-toggle span {
-            display: block; width: 24px; height: 2px;
-            background: var(--charcoal); border-radius: 2px; transition: all 0.25s;
-        }
-
-        @media (max-width: 768px) {
-            .navbar { padding: 14px 20px; top: 0; }
-            .top-bar { display: none; }
-            .nav-toggle { display: flex; }
-            .nav-links {
-                display: none;
-                position: absolute;
-                top: 100%; left: 0; right: 0;
-                background: var(--white);
-                flex-direction: column;
-                gap: 0;
-                padding: 12px 0 20px;
-                box-shadow: 0 8px 24px rgba(0,0,0,0.1);
-            }
-            .nav-links.open { display: flex; }
-            .nav-links li { width: 100%; }
-            .nav-links a { display: block; padding: 12px 24px; font-size: 16px; }
-        }
-
-        /* ===== PAGE HERO ===== */
-        .page-hero {
-            background: var(--charcoal);
-            padding: 80px 48px 72px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .page-hero::after {
-            content: '';
-            position: absolute;
-            top: 0; right: 0;
-            width: 6px; height: 100%;
-            background: var(--orange);
-        }
-
-        .page-hero::before, .page-hero::after {
-            content: ''; position: absolute; border-radius: 50%;
-            background: var(--orange); opacity: 0.12; pointer-events: none;
-        }
-        .page-hero::before { width: 300px; height: 300px; top: -110px; right: -70px; }
-        .page-hero::after  { width: 210px; height: 210px; bottom: -85px; right: 210px; }
-        .page-hero-inner { max-width: 1200px; margin: 0 auto; position: relative; z-index: 1; }
-
-        .page-eyebrow {
-            font-size: 12px;
-            font-weight: 700;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            color: var(--orange);
-            margin-bottom: 16px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .page-eyebrow::before {
-            content: '';
-            display: inline-block;
-            width: 32px; height: 2px;
-            background: var(--orange);
-        }
-
-        .page-hero h1 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: clamp(36px, 5vw, 56px);
-            font-weight: 900;
-            color: var(--white);
-            line-height: 1.1;
-            margin-bottom: 20px;
-        }
-
-        .page-hero h1 .hl { color: var(--orange); }
-
-        .page-hero p:not(.page-eyebrow) {
-            font-size: 18px;
-            color: rgba(255,255,255,0.72);
-            max-width: 560px;
-            line-height: 1.7;
-        }
-
-        @media (max-width: 768px) { .page-hero { padding: 56px 24px; } }
-
-        /* ===== CONTACT CARDS STRIP ===== */
-        .contact-cards {
-            background: var(--cream);
-            padding: 64px 48px;
-        }
-
-        .cards-inner {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 24px;
-        }
-
-        .contact-card {
-            background: var(--white);
-            border-radius: 10px;
-            padding: 32px 28px;
-            box-shadow: 0 3px 16px rgba(0,0,0,0.06);
-            text-align: center;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-
-        .contact-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 28px rgba(0,0,0,0.10);
-        }
-
-        .contact-card .icon {
-            width: 52px;
-            height: 52px;
-            background: rgba(232,99,10,0.10);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 22px;
-            margin: 0 auto 16px;
-        }
-
-        .contact-card h3 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 14px;
-            font-weight: 700;
-            color: var(--orange);
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
-            margin-bottom: 10px;
-        }
-
-        .contact-card p,
-        .contact-card a {
-            font-size: 15px;
-            color: var(--charcoal);
-            text-decoration: none;
-            line-height: 1.6;
-            font-weight: 500;
-        }
-
-        .contact-card a:hover { color: var(--orange); }
-
-        @media (max-width: 900px) {
-            .cards-inner { grid-template-columns: 1fr 1fr; }
-            .contact-cards { padding: 48px 24px; }
-        }
-
-        @media (max-width: 540px) {
-            .cards-inner { grid-template-columns: 1fr; }
-        }
-
-        /* ===== MAIN CONTACT SECTION ===== */
-        .contact-main {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 88px 48px;
-            display: grid;
-            grid-template-columns: 1fr 1.1fr;
-            gap: 72px;
-            align-items: start;
-        }
-
-        @media (max-width: 900px) {
-            .contact-main { grid-template-columns: 1fr; gap: 48px; padding: 56px 24px; }
-        }
-
-        /* Message Form */
-        .message-form-wrap h2 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 30px;
-            font-weight: 800;
-            color: var(--charcoal);
-            margin-bottom: 8px;
-        }
-
-        .message-form-wrap h2 .hl { color: var(--orange); }
-
-        .message-form-wrap > p {
-            font-size: 15px;
-            color: var(--text-mid);
-            margin-bottom: 36px;
-            line-height: 1.7;
-        }
-
-        .form-group {
-            display: flex;
-            flex-direction: column;
-            gap: 7px;
-            margin-bottom: 20px;
-        }
-
-        .form-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 16px;
-        }
-
-        .form-group label {
-            font-size: 13px;
-            font-weight: 600;
-            color: var(--charcoal);
-        }
-
-        .form-group input,
-        .form-group select,
-        .form-group textarea {
-            padding: 12px 16px;
-            border: 1.5px solid #E0E0E0;
-            border-radius: 7px;
-            font-family: 'Inter', sans-serif;
-            font-size: 15px;
-            color: var(--text-dark);
-            background: var(--white);
-            transition: border-color 0.2s, box-shadow 0.2s;
-            outline: none;
-            width: 100%;
-        }
-
-        .form-group input:focus,
-        .form-group select:focus,
-        .form-group textarea:focus {
-            border-color: var(--orange);
-            box-shadow: 0 0 0 3px rgba(232,99,10,0.10);
-        }
-
-        .form-group textarea { resize: vertical; min-height: 130px; }
-
-        .btn-submit {
-            background: var(--orange);
-            color: var(--white);
-            border: none;
-            padding: 14px 36px;
-            border-radius: 6px;
-            font-family: 'Inter', sans-serif;
-            font-size: 15px;
-            font-weight: 700;
-            cursor: pointer;
-            transition: background 0.2s, transform 0.15s;
-        }
-
-        .btn-submit:hover { background: var(--orange-dark); transform: translateY(-1px); }
-
-        .form-success-msg {
-            display: none;
-            padding: 32px;
-            background: rgba(232,99,10,0.05);
-            border-radius: 10px;
-            border: 1px solid rgba(232,99,10,0.15);
-            text-align: center;
-        }
-
-        .form-success-msg .icon { font-size: 40px; margin-bottom: 12px; }
-
-        .form-success-msg h3 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 20px;
-            font-weight: 800;
-            color: var(--charcoal);
-            margin-bottom: 8px;
-        }
-
-        .form-success-msg p { font-size: 14px; color: var(--text-mid); }
-
-        @media (max-width: 640px) { .form-row { grid-template-columns: 1fr; } }
-
-        /* Map & Hours side */
-        .map-side {}
-
-        .map-wrap {
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 6px 28px rgba(0,0,0,0.10);
-            margin-bottom: 32px;
-        }
-
-        .map-wrap iframe {
-            width: 100%;
-            height: 340px;
-            border: none;
-            display: block;
-        }
-
-        .hours-card {
-            background: var(--cream);
-            border-radius: 10px;
-            padding: 28px 30px;
-        }
-
-        .hours-card h3 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 16px;
-            font-weight: 800;
-            color: var(--charcoal);
-            margin-bottom: 18px;
-        }
-
-        .hours-row {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 0;
-            border-bottom: 1px solid rgba(0,0,0,0.06);
-            font-size: 14px;
-        }
-
-        .hours-row:last-child { border-bottom: none; }
-
-        .hours-row .day { color: var(--text-mid); font-weight: 500; }
-
-        .hours-row .time {
-            color: var(--charcoal);
-            font-weight: 600;
-        }
-
-        .hours-row .closed { color: var(--text-light); font-weight: 400; }
-
-        /* ===== FOOTER ===== */
-        footer {
-            background: var(--charcoal);
-            color: rgba(255,255,255,0.65);
-            padding: 56px 48px 24px;
-        }
-
-        .footer-inner { max-width: 1200px; margin: 0 auto; }
-
-        .footer-top {
-            display: grid;
-            grid-template-columns: 2fr 1fr 1fr;
-            gap: 48px;
-            margin-bottom: 44px;
-        }
-
-        .footer-about p { font-size: 14px; line-height: 1.75; max-width: 320px; margin-bottom: 16px; }
-
-        .footer-tagline {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 800;
-            color: var(--orange);
-            font-size: 12px;
-            letter-spacing: 2.5px;
-            text-transform: uppercase;
-        }
-
-        .footer-col h4 {
-            color: var(--white);
-            font-size: 12px;
-            font-weight: 700;
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
-            margin-bottom: 18px;
-        }
-
-        .footer-col ul { list-style: none; }
-        .footer-col ul li { margin-bottom: 10px; }
-
-        .footer-col ul li a {
-            color: rgba(255,255,255,0.6);
-            text-decoration: none;
-            font-size: 14px;
-            transition: color 0.2s;
-        }
-
-        .footer-col ul li a:hover { color: var(--orange); }
-
-        .footer-social { display: flex; gap: 10px; margin-top: 20px; }
-
-        .social-btn {
-            width: 40px; height: 40px;
-            border-radius: 8px;
-            border: 1px solid rgba(255,255,255,0.18);
-            display: flex; align-items: center; justify-content: center;
-            color: rgba(255,255,255,0.65);
-            text-decoration: none;
-            font-size: 14px; font-weight: 700;
-            transition: background 0.2s, border-color 0.2s, color 0.2s;
-        }
-
-        .social-btn:hover { background: var(--orange); border-color: var(--orange); color: var(--white); }
-
-        .footer-bottom {
-            border-top: 1px solid rgba(255,255,255,0.08);
-            padding-top: 22px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 13px;
-        }
-
-        @media (max-width: 768px) {
-            .footer-top { grid-template-columns: 1fr; gap: 32px; }
-            footer { padding: 48px 24px 20px; }
-            .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
-        }
-
-        /* ===== ANIMATIONS ===== */
-        .reveal {
-            opacity: 0;
-            transform: translateY(32px);
-            transition: opacity 0.65s ease, transform 0.65s ease;
-        }
-        .reveal.visible { opacity: 1; transform: translateY(0); }
-
-
-        /* ===== SMS consent ===== */
-        .sms-consent { background: var(--cream); border: 1.5px solid #E0E0E0; border-radius: 8px; padding: 14px 16px; margin-top: 4px; }
-        .sms-consent .sms-check { display: flex; gap: 11px; align-items: flex-start; cursor: pointer; }
-        .sms-consent .sms-check input[type="checkbox"] { width: 18px; height: 18px; margin-top: 2px; flex-shrink: 0; accent-color: var(--orange); cursor: pointer; }
-        .sms-consent .sms-check span { font-size: 14px; color: var(--text-dark); font-weight: 500; line-height: 1.5; }
-        .sms-disclosure { font-size: 12px; color: var(--text-light); line-height: 1.6; margin: 10px 0 0; }
-        .sms-disclosure a { color: var(--orange-dark); text-decoration: underline; }
-    
-        /* ============================================================
-           SHARED HEADER SYSTEM - identical on every page.
-           Keep this block in sync across all pages when editing.
-        ============================================================ */
-        .top-bar {
-            background: var(--charcoal); color: var(--white);
-            padding: 10px 48px; display: flex; justify-content: space-between;
-            align-items: center; font-size: 13px;
-            position: sticky; top: 0; z-index: 1000;
-        }
-        .top-bar-left { display: flex; align-items: center; gap: 28px; }
-        .top-bar-right { display: flex; align-items: center; gap: 20px; }
-        .top-bar a { color: rgba(255,255,255,0.85); text-decoration: none; display: flex; align-items: center; gap: 6px; margin: 0; padding: 0; transition: color 0.2s; }
-        .top-bar a:hover { color: var(--orange-light); }
-        .top-bar-fax { display: flex; align-items: center; gap: 6px; color: rgba(255,255,255,0.85); }
-        .top-bar-icon { font-size: 14px; }
-        .top-bar .btn-book-topbar {
-            background: var(--orange); color: var(--white) !important;
-            padding: 7px 18px; border-radius: 4px;
-            font-weight: 600; font-size: 13px; letter-spacing: 0.3px;
-            line-height: 1.4; white-space: nowrap; text-decoration: none;
-            display: inline-flex; align-items: center;
-            transition: background 0.2s !important;
-        }
-        .top-bar .btn-book-topbar:hover { background: var(--orange-dark) !important; }
-
-        .navbar {
-            background: var(--white); padding: 14px 48px;
-            display: flex; justify-content: space-between; align-items: center;
-            box-shadow: 0 2px 12px rgba(0,0,0,0.07); border-bottom: none;
-            position: sticky; top: 52px; z-index: 999;
-        }
-        .navbar.scrolled { box-shadow: 0 4px 24px rgba(0,0,0,0.13); }
-        .nav-logo { display: flex; align-items: center; text-decoration: none; }
-        .nav-logo img { height: 56px; width: auto; display: block; }
-        .nav-links { display: flex; list-style: none; gap: 36px; align-items: center; margin: 0; padding: 0; }
-        .nav-links li { margin: 0; }
-        .nav-links a {
-            text-decoration: none; color: var(--charcoal);
-            font-weight: 500; font-size: 15px;
-            transition: color 0.2s; position: relative;
-        }
-        .nav-links a::after {
-            content: ''; position: absolute; bottom: -4px; left: 0;
-            width: 0; height: 2px; background: var(--orange); transition: width 0.25s;
-        }
-        .nav-links a:hover { color: var(--orange); }
-        .nav-links a:hover::after,
-        .nav-links a.active::after { width: 100%; }
-        .nav-links a.active { color: var(--orange); }
-        .nav-careers { color: var(--orange) !important; font-weight: 700 !important; }
-        .nav-careers::after { background: var(--orange) !important; }
-
-        .nav-toggle { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 6px; }
-        .nav-toggle span { display: block; width: 24px; height: 2px; background: var(--charcoal); border-radius: 2px; transition: all 0.25s; }
-
-        .nav-contact { display: none; }
-
-        @media (max-width: 768px) {
-            /* keep phone + booking reachable at the top of every page */
-            .top-bar { display: flex; position: static; padding: 9px 20px; font-size: 12.5px; gap: 12px; }
-            .top-bar-left { gap: 14px; }
-            .top-bar-left a[href^="mailto"], .top-bar-fax { display: none; }
-            .top-bar .btn-book-topbar { padding: 6px 14px; font-size: 12px; letter-spacing: 0.2px; }
-            .navbar { padding: 14px 20px; top: 0; }
-            /* full contact details one tap away, inside the menu */
-            .nav-contact {
-                display: block; border-top: 1px solid var(--border);
-                margin-top: 8px; padding: 14px 24px 4px;
-            }
-            .nav-contact a {
-                display: flex !important; align-items: center; gap: 10px;
-                padding: 9px 0 !important; font-size: 15px !important;
-                color: var(--text-mid); font-weight: 500;
-            }
-            .nav-contact a:hover { color: var(--orange); }
-            .nav-contact a::after { display: none; }
-            .nav-toggle { display: flex; }
-            .nav-links {
-                display: none; position: absolute; top: 100%; left: 0; right: 0;
-                background: var(--white); flex-direction: column; gap: 0;
-                padding: 12px 0 20px; box-shadow: 0 8px 24px rgba(0,0,0,0.1);
-            }
-            .nav-links.open { display: flex; }
-            .nav-links li { width: 100%; }
-            .nav-links a { display: block; padding: 12px 24px; font-size: 16px; }
-            .nav-links a::after { display: none; }
-            .nav-links a.active { font-weight: 700; }
-        }
-    
-        /* ============================================================
-           SHARED PAGE HERO - identical on every interior page.
-        ============================================================ */
-        .page-hero { background: var(--charcoal); padding: 80px 48px 72px; position: relative; overflow: hidden; border-right: 6px solid var(--orange); }
-        .page-hero::before, .page-hero::after {
-            content: ''; position: absolute; border-radius: 50%;
-            background: var(--orange); opacity: 0.12; pointer-events: none;
-        }
-        .page-hero::before { width: 300px; height: 300px; top: -110px; right: -70px; }
-        .page-hero::after  { width: 210px; height: 210px; bottom: -85px; right: 210px; }
-        .page-hero-inner { max-width: 1200px; margin: 0 auto; position: relative; z-index: 1; }
-        .page-eyebrow {
-            font-size: 15px; font-weight: 700; letter-spacing: 3px;
-            text-transform: uppercase; color: rgba(255,255,255,0.72);
-            margin: 0 0 26px; display: flex; align-items: center; gap: 10px;
-        }
-        .page-eyebrow::before { content: ''; display: inline-block; width: 32px; height: 2px; background: var(--orange); flex: none; }
-        .page-hero h1 {
-            font-family: 'Montserrat', sans-serif; font-size: clamp(36px, 5vw, 56px);
-            font-weight: 900; color: var(--white); line-height: 1.1; margin: 0 0 20px;
-        }
-        .page-hero h1 .hl { color: var(--orange); }
-        .page-hero p:not(.page-eyebrow) { font-size: 18px; color: rgba(255,255,255,0.72); max-width: 560px; line-height: 1.7; margin: 0; }
-        .page-hero .cta-btn {
-            display: inline-block; margin-top: 26px; background: var(--orange); color: #fff;
-            padding: 14px 30px; border-radius: 6px; text-decoration: none;
-            font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 15px;
-        }
-        .page-hero .cta-btn:hover { background: var(--orange-dark); }
-        @media (max-width: 768px) {
-            .page-hero { padding: 48px 24px 44px; }
-            .page-hero::before { width: 190px; height: 190px; top: -80px; right: -60px; }
-            .page-hero::after  { width: 130px; height: 130px; bottom: -55px; right: 55px; }
-            .page-eyebrow {
-                font-size: 12px; letter-spacing: 2px; gap: 8px;
-                align-items: flex-start; margin-bottom: 20px;
-            }
-            .page-eyebrow::before { margin-top: 7px; }
-            .page-hero h1 { font-size: clamp(28px, 7.4vw, 40px); line-height: 1.18; margin-bottom: 16px; }
-            .page-hero p:not(.page-eyebrow) { font-size: 16px; line-height: 1.6; }
-            .page-hero .cta-btn { margin-top: 22px; padding: 13px 26px; }
-        }
-    </style>
-
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="ARI Physical Therapy">
     <meta property="og:title" content="Contact Us | ARI Physical Therapy – Bakersfield, CA">
@@ -753,274 +75,132 @@
       ]
     }
     </script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/ari.css">
 </head>
 <body>
-
-    <!-- ===== TOP BAR ===== -->
-    <div class="top-bar">
-        <div class="top-bar-left">
-            <a href="tel:6612828584"><span class="top-bar-icon">&#128222;</span>(661) 282-8584</a>
-            <a href="mailto:contactus@ariptcare.com"><span class="top-bar-icon">&#9993;</span>contactus@ariptcare.com</a>
-            <span class="top-bar-fax"><span class="top-bar-icon">&#128224;</span>Fax: (661) 727-0005</span>
-        </div>
-        <div class="top-bar-right"><a href="appointment.html" class="btn-book-topbar">Book an Appointment</a></div>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<g id="i-award"><circle cx="12" cy="8.5" r="6.2"/><path d="M8.3 13.7 7 22l5-2.8L17 22l-1.3-8.3"/></g>
+<g id="i-plan"><path d="M15.5 4H18a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2.5"/><rect x="8.5" y="2.2" width="7" height="4" rx="1.2"/><path d="M8.6 12.2h6.8M8.6 16.2h4.6"/></g>
+<g id="i-equipment"><path d="M4 9.5v5M7.2 6.4v11.2M16.8 6.4v11.2M20 9.5v5M7.2 12h9.6"/></g>
+<g id="i-care"><path d="M12 20.3s-7.6-4.6-7.6-9.7a4.3 4.3 0 0 1 7.6-2.7 4.3 4.3 0 0 1 7.6 2.7c0 5.1-7.6 9.7-7.6 9.7Z"/></g>
+<g id="i-phone"><path d="M21.5 16.9v2.9a2 2 0 0 1-2.2 2 19.6 19.6 0 0 1-8.5-3 19.3 19.3 0 0 1-5.9-5.9 19.6 19.6 0 0 1-3-8.6 2 2 0 0 1 2-2.2h2.9a2 2 0 0 1 2 1.7c.13.96.36 1.9.7 2.8a2 2 0 0 1-.45 2.1L8.1 9.8a15.8 15.8 0 0 0 5.9 5.9l1.1-1.1a2 2 0 0 1 2.1-.45c.9.34 1.84.57 2.8.7a2 2 0 0 1 1.7 2Z"/></g>
+<g id="i-mail"><rect x="2.5" y="4.5" width="19" height="15" rx="2"/><path d="m3 6 9 6.5L21 6"/></g>
+<g id="i-fax"><path d="M7 9V3.5h10V9"/><path d="M7 18H4.5a2 2 0 0 1-2-2v-4.5a2 2 0 0 1 2-2h15a2 2 0 0 1 2 2V16a2 2 0 0 1-2 2H17"/><rect x="7" y="14" width="10" height="6.5" rx="1"/><path d="M5.6 12.2h.01"/></g>
+<g id="i-pin"><path d="M20 10.4c0 6.3-8 12.1-8 12.1s-8-5.8-8-12.1a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10.2" r="2.9"/></g>
+<g id="i-clock"><circle cx="12" cy="12" r="9"/><path d="M12 6.6V12l3.6 2.1"/></g>
+<g id="i-calendar"><rect x="3.2" y="4.8" width="17.6" height="16" rx="2"/><path d="M3.2 9.6h17.6M8.3 2.8v4M15.7 2.8v4"/></g>
+<g id="i-download"><path d="M20.5 15.5v3.4a2 2 0 0 1-2 2h-13a2 2 0 0 1-2-2v-3.4"/><path d="m7.6 10.4 4.4 4.5 4.4-4.5M12 14.9V3.2"/></g>
+<g id="i-lock"><rect x="3.6" y="10.8" width="16.8" height="10.4" rx="2"/><path d="M7.4 10.8V7.2a4.6 4.6 0 0 1 9.2 0v3.6"/></g>
+<g id="i-clip"><path d="M20.9 11.4 12 20.3a5.6 5.6 0 0 1-7.9-7.9l8.9-8.9a3.7 3.7 0 0 1 5.3 5.3l-8.9 8.9a1.9 1.9 0 0 1-2.6-2.6l8.2-8.2"/></g>
+<g id="i-folder"><path d="M21 19a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5.6a2 2 0 0 1 2-2h4.3l2 3H19a2 2 0 0 1 2 2Z"/></g>
+<g id="i-package"><path d="M20.5 16V8a2 2 0 0 0-1-1.73l-6.5-3.7a2 2 0 0 0-2 0L4.5 6.27A2 2 0 0 0 3.5 8v8a2 2 0 0 0 1 1.73l6.5 3.7a2 2 0 0 0 2 0l6.5-3.7A2 2 0 0 0 20.5 16Z"/><path d="m3.8 7 8.2 4.7L20.2 7M12 21.3v-9.6M8 4.6l8 4.6"/></g>
+<g id="i-search"><circle cx="10.8" cy="10.8" r="7.3"/><path d="m21 21-5.1-5.1"/></g>
+<g id="i-check"><path d="M21.3 11.1v.9a9.3 9.3 0 1 1-5.5-8.5"/><path d="m8.6 11.3 3.3 3.3 9-9"/></g>
+<g id="i-grad"><path d="M21.5 9.4 12 4.7 2.5 9.4l9.5 4.7 9.5-4.7Z"/><path d="M6.4 11.4v4.9c0 1.6 2.5 2.9 5.6 2.9s5.6-1.3 5.6-2.9v-4.9M21.5 9.4v5.4"/></g>
+<g id="i-clinic"><path d="M3.6 20.8V9.2l8.4-5.4 8.4 5.4v11.6"/><path d="M2.4 20.8h19.2M12 11.4v5.6M9.2 14.2h5.6"/></g>
+<g id="i-growth"><path d="M22 6.6 13.7 15l-4.4-4.4L2 17.9"/><path d="M16.6 6.6H22v5.4"/></g>
+<g id="i-star"><path d="m12 3.2 2.7 5.5 6.1.9-4.4 4.3 1 6-5.4-2.9-5.4 2.9 1-6-4.4-4.3 6.1-.9L12 3.2Z"/></g>
+<g id="i-team"><path d="M16.2 20.8v-1.9a3.8 3.8 0 0 0-3.8-3.8H5.8A3.8 3.8 0 0 0 2 18.9v1.9"/><circle cx="9.1" cy="7.4" r="3.8"/><path d="M22 20.8v-1.9a3.8 3.8 0 0 0-2.9-3.7M15.4 3.8a3.8 3.8 0 0 1 0 7.3"/></g>
+<g id="i-spine"><rect x="8.2" y="2.8" width="7.6" height="3.7" rx="1.6"/><rect x="8.2" y="8.1" width="7.6" height="3.7" rx="1.6"/><rect x="8.2" y="13.4" width="7.6" height="3.7" rx="1.6"/><path d="M12 6.5v1.6M12 11.8v1.6M12 17.1v3.9M9.6 21h4.8"/></g>
+<g id="i-sports"><path d="M14.6 5.1a1.9 1.9 0 1 0 0-3.8 1.9 1.9 0 0 0 0 3.8Z"/><path d="m8.4 22 2.3-5.6-3-2.8.9-5.1 3.2-1.4 3 2.6 3 .9"/><path d="m10.7 16.4 3.6 1.5 1.5 4.1M8.5 8.8 5 10.2l-1.4 3.4"/></g>
+<g id="i-postop"><path d="M12 21.5s7.8-4 7.8-10V5.7L12 2.9 4.2 5.7v5.8c0 6 7.8 10 7.8 10Z"/><path d="M12 8.6v6.4M8.8 11.8h6.4"/></g>
+<g id="i-pain"><circle cx="12" cy="12" r="2.5"/><path d="M7.4 7.4a6.5 6.5 0 0 0 0 9.2M16.6 16.6a6.5 6.5 0 0 0 0-9.2M4.2 4.2a11 11 0 0 0 0 15.6M19.8 19.8a11 11 0 0 0 0-15.6"/></g>
+<g id="i-pelvic"><path d="M4.9 4.6v4c0 3.9 3.2 7.1 7.1 7.1s7.1-3.2 7.1-7.1v-4"/><path d="M2.9 4.6h3.4M17.7 4.6h3.4"/><path d="M5.7 19.9c1.9-1.7 4-2.5 6.3-2.5s4.4.8 6.3 2.5"/></g>
+<g id="i-child"><circle cx="12" cy="5.3" r="3"/><path d="M12 8.3c-2.6 0-4.4 1.7-4.4 4.2v3.6h1.8l.6 5.6h4l.6-5.6h1.8v-3.6c0-2.5-1.8-4.2-4.4-4.2Z"/></g>
+<g id="i-prenatal"><circle cx="10.6" cy="4.6" r="2.6"/><path d="M10.6 7.2c-2 0-3.2 1.5-3.4 3.4L6.4 16h2l.5 5.8"/><path d="M13.2 21.8 12.8 16h1.4a3.9 3.9 0 0 0 0-7.8h-1.6"/></g>
+<g id="i-wellness"><path d="M12 20.3s-7.6-4.6-7.6-9.7a4.3 4.3 0 0 1 7.6-2.7 4.3 4.3 0 0 1 7.6 2.7c0 5.1-7.6 9.7-7.6 9.7Z"/><path d="M4.9 12.6h3.3l1.4-2.6 2 4.8 1.5-2.9 1 1.4h3.7"/></g>
+<g id="i-beach"><path d="M2.6 20.4h18.8"/><path d="M12.4 20.4V9.6"/><path d="M12.4 9.6a6.6 6.6 0 0 1 8.6 3.1c-3-1-5.7-.4-8.6 1"/><path d="M12.4 9.6a6.6 6.6 0 0 0-8.6 3.1c3-1 5.7-.4 8.6 1"/></g>
+<g id="i-welcome"><path d="M14.2 3.2H18a2 2 0 0 1 2 2v13.6a2 2 0 0 1-2 2h-3.8"/><path d="m9.4 16.6-4.6-4.6 4.6-4.6M4.8 12h9.8"/></g>
+<g id="i-understand"><path d="M9.2 18.4h5.6M10 21.4h4"/><path d="M12 2.6a6.6 6.6 0 0 0-3.8 12c.6.5 1 1.2 1 2h5.6c0-.8.4-1.5 1-2A6.6 6.6 0 0 0 12 2.6Z"/></g></defs></svg>
+<div class="top-bar">
+  <div class="top-bar-left">
+    <a href="tel:6612828584"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-phone"/></svg> (661) 282-8584</a>
+    <a href="mailto:contactus@ariptcare.com"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-mail"/></svg> contactus@ariptcare.com</a>
+    <a class="top-bar-fax" href="tel:6617270005"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-fax"/></svg> Fax: (661) 727-0005</a>
+  </div>
+  <a href="appointment.html" class="btn-book-topbar">Book an Appointment</a>
+</div>
+<nav class="navbar">
+  <a href="index.html" class="nav-logo"><img src="assets/logo-dark.png" alt="ARI Physical Therapy" width="200" height="56"></a>
+  <div class="nav-links"><a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="faq.html">FAQ</a><a href="physicians.html">For Physicians</a><a href="careers.html">Careers</a><a href="contact.html" class="active">Contact</a><div class="nav-contact">
+      <a href="tel:6612828584"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-phone"/></svg> (661) 282-8584</a>
+      <a href="tel:6617270005"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-fax"/></svg> Fax: (661) 727-0005</a>
+      <a href="mailto:contactus@ariptcare.com"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-mail"/></svg> contactus@ariptcare.com</a>
+      <a href="appointment.html" class="btn btn-primary">Book an Appointment</a>
+    </div></div>
+  <button class="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+</nav>
+<section class="page-hero"><div class="page-hero-inner"><p class="eyebrow">Get in Touch</p><h1>Contact ARI PT</h1><p class="lead">We'd love to hear from you. Reach out with any questions; our team is here to help.</p></div></section>
+<section class="section"><div class="section-inner">
+  <div class="info-cards" style="margin-bottom:56px">
+    <div class="info"><svg class="ico" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-phone"/></svg><b>Call Us</b><span><a href="tel:6612828584">(661) 282-8584</a></span></div>
+    <div class="info"><svg class="ico" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-mail"/></svg><b>Email Us</b><span><a href="mailto:contactus@ariptcare.com">contactus@ariptcare.com</a></span></div>
+    <div class="info"><svg class="ico" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-pin"/></svg><b>Our Location</b><span>8200 Stockdale Hwy, Suite B2<br>Bakersfield, CA 93311</span></div>
+    <div class="info"><svg class="ico" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-clock"/></svg><b>Hours</b><span>Mon &ndash; Fri<br>8:00 AM &ndash; 6:00 PM</span></div>
+  </div>
+  <div class="split-wide">
+    <div class="form-card"><h3>Send Us a Message</h3><p>Have a question about our services, insurance, or what to expect? Fill out the form and we'll get back to you within one business day.</p>
+      <form id="contact-form" action="https://formspree.io/f/mwvaldnw" method="POST">
+        <div class="field-row"><div class="field"><label for="name">Your Name *</label><input type="text" id="name" name="name" placeholder="" required></div><div class="field"><label for="phone">Phone Number</label><input type="tel" id="phone" name="phone" placeholder=""></div></div>
+        <div class="field-row"><div class="field"><label for="email">Email Address *</label><input type="email" id="email" name="email" placeholder="" required></div><div class="field"><label for="subject">Subject</label><select id="subject" name="subject"><option value="">What's this about?</option><option value="General Question">General Question</option><option value="Services &amp; Specialties">Services &amp; Specialties</option><option value="Appointment Request">Appointment Request</option><option value="Insurance Question">Insurance Question</option><option value="Physician Referral">Physician Referral</option><option value="Other">Other</option></select></div></div>
+        <div class="field"><label for="message">Message *</label><textarea id="message" name="message" placeholder="" required></textarea></div><div class="sms-box">
+  <label for="sms_consent"><input type="checkbox" id="sms_consent" name="sms_consent" value="yes"> <span>Yes, text me about my care. I agree to receive SMS text messages from ARI Physical Therapy at the phone number provided: appointment reminders, confirmations, scheduling, and patient-care notifications.</span></label>
+  <p class="fine">Consent is not a condition of any purchase or of receiving care. Message frequency varies. Message &amp; data rates may apply. Reply <strong>STOP</strong> to opt out at any time, or <strong>HELP</strong> for help. See our <a href="privacy-policy.html">Privacy Policy</a> and <a href="sms-terms.html">SMS Terms</a>.</p>
+</div>
+        <button type="submit" class="btn btn-primary btn-submit" style="width:100%">Send Message &rarr;</button>
+      </form>
+      <div class="form-success" id="form-success">
+  <svg class="ico" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-check"/></svg><h3>Message Sent!</h3><p>Thank you for reaching out. We'll be in touch within one business day.</p>
+</div>
     </div>
-
-    <!-- ===== NAVBAR ===== -->
-    <nav class="navbar">
-        <a href="index.html" class="nav-logo">
-            <img src="assets/logo-dark.png" alt="ARI Physical Therapy">
-        </a>
-        <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
-            <span></span><span></span><span></span>
-        </button>
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="careers.html" class="nav-careers">Careers</a></li>
-            <li><a href="contact.html" class="active">Contact</a></li>
-            <li><a href="physicians.html">For Physicians</a></li>
-            <li class="nav-contact">
-                <a href="tel:6612828584"><span>&#128222;</span>(661) 282-8584</a>
-                <a href="tel:6617270005"><span>&#128224;</span>Fax: (661) 727-0005</a>
-                <a href="mailto:contactus@ariptcare.com"><span>&#9993;</span>contactus@ariptcare.com</a>
-                <a href="https://www.google.com/maps/search/?api=1&amp;query=ARI+Physical+Therapy+8200+Stockdale+Hwy+Suite+B2+Bakersfield+CA+93311" target="_blank" rel="noopener"><span>&#128205;</span>8200 Stockdale Hwy, Suite B2</a>
-            </li>
-        </ul>
-    </nav>
-
-    <!-- ===== PAGE HERO ===== -->
-    <section class="page-hero">
-        <div class="page-hero-inner">
-            <p class="page-eyebrow">Get in Touch</p>
-            <h1>Contact <span class="hl">ARI PT</span></h1>
-            <p>We'd love to hear from you. Reach out with any questions; our team is here to help.</p>
-        </div>
-    </section>
-
-    <!-- ===== CONTACT CARDS ===== -->
-    <div class="contact-cards">
-        <div class="cards-inner reveal">
-
-            <div class="contact-card">
-                <div class="icon">📞</div>
-                <h3>Call Us</h3>
-                <a href="tel:6612828584">(661) 282-8584</a>
-            </div>
-
-            <div class="contact-card">
-                <div class="icon">✉️</div>
-                <h3>Email Us</h3>
-                <a href="mailto:contactus@ariptcare.com">contactus@ariptcare.com</a>
-            </div>
-
-            <div class="contact-card">
-                <div class="icon">📍</div>
-                <h3>Our Location</h3>
-                <p>8200 Stockdale Hwy, Suite B2<br>Bakersfield, CA 93311</p>
-            </div>
-
-            <div class="contact-card">
-                <div class="icon">🕐</div>
-                <h3>Hours</h3>
-                <p>Mon – Fri<br>8:00 AM – 6:00 PM</p>
-            </div>
-
-        </div>
+    <aside style="display:grid;gap:22px">
+      <div><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3285.12!2d-119.09561!3d35.35721!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80ea43fd0a3a3a2d%3A0xd59ec9a5bcf611f7!2sARI%20Physical%20Therapy!5e0!3m2!1sen!2sus!4v1681234567890" width="100%" height="320" style="border:0;border-radius:10px" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="ARI Physical Therapy on Google Maps"></iframe></div>
+      <div class="side-list"><h4>Office Hours</h4><div style="padding-bottom:14px">
+      <div class="hours-row"><b>Monday</b><span>8:00 AM &ndash; 6:00 PM</span></div><div class="hours-row"><b>Tuesday</b><span>8:00 AM &ndash; 6:00 PM</span></div><div class="hours-row"><b>Wednesday</b><span>8:00 AM &ndash; 6:00 PM</span></div><div class="hours-row"><b>Thursday</b><span>8:00 AM &ndash; 6:00 PM</span></div><div class="hours-row"><b>Friday</b><span>8:00 AM &ndash; 6:00 PM</span></div><div class="hours-row"><b>Saturday</b><span>Closed</span></div><div class="hours-row"><b>Sunday</b><span>Closed</span></div></div></div>
+    </aside>
+  </div></div></section>
+<footer>
+  <div class="foot-inner">
+    <div>
+      <img src="assets/logo-white.png" alt="ARI Physical Therapy" width="160" height="46">
+      <p class="foot-desc">Compassionate, personalized physical therapy in Bakersfield, CA. We're here to help you move better, feel better, and live better.</p>
+      <p class="foot-tag">Empowering Every Move</p>
     </div>
-
-    <!-- ===== MAIN CONTACT SECTION ===== -->
-    <div class="contact-main">
-
-        <!-- Message Form -->
-        <div class="message-form-wrap reveal">
-            <h2>Send Us a <span class="hl">Message</span></h2>
-            <p>Have a question about our services, insurance, or what to expect? Fill out the form and we'll get back to you within one business day.</p>
-
-            <form id="contact-form" action="https://formspree.io/f/mwvaldnw" method="POST">
-
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="name">Your Name *</label>
-                        <input type="text" id="name" name="name" placeholder="Jane Smith" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="phone">Phone Number</label>
-                        <input type="tel" id="phone" name="phone" placeholder="(661) 555-0100">
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label for="email">Email Address *</label>
-                    <input type="email" id="email" name="email" placeholder="jane@example.com" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="subject">Subject</label>
-                    <select id="subject" name="subject">
-                        <option value="" disabled selected>What's this about?</option>
-                        <option>General Question</option>
-                        <option>Services & Specialties</option>
-                        <option>Appointment Request</option>
-                        <option>Insurance Question</option>
-                        <option>Physician Referral</option>
-                        <option>Other</option>
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label for="message">Message *</label>
-                    <textarea id="message" name="message" placeholder="How can we help you?" required></textarea>
-                </div>
-
-                <div class="form-group sms-consent">
-                    <label class="sms-check">
-                        <input type="checkbox" id="sms_consent" name="sms_consent" value="Yes, agreed to receive SMS text messages">
-                        <span>Yes, text me about my care. I agree to receive SMS text messages from ARI Physical Therapy at the phone number provided: appointment reminders, confirmations, scheduling, and patient-care notifications.</span>
-                    </label>
-                    <p class="sms-disclosure">Consent is not a condition of any purchase or of receiving care. Message frequency varies. Message &amp; data rates may apply. Reply <strong>STOP</strong> to opt out at any time, or <strong>HELP</strong> for help. See our <a href="privacy-policy.html">Privacy Policy</a> and <a href="sms-terms.html">SMS Terms</a>.</p>
-                </div>
-
-                <button type="submit" class="btn-submit">Send Message →</button>
-
-            </form>
-
-            <div class="form-success-msg" id="form-success">
-                <div class="icon">✅</div>
-                <h3>Message Sent!</h3>
-                <p>Thank you for reaching out. We'll be in touch within one business day.</p>
-            </div>
-        </div>
-
-        <!-- Map & Hours -->
-        <div class="map-side reveal">
-            <div class="map-wrap">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3285.12!2d-119.09561!3d35.35721!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80ea43fd0a3a3a2d%3A0xd59ec9a5bcf611f7!2sARI%20Physical%20Therapy!5e0!3m2!1sen!2sus!4v1681234567890"
-                    allowfullscreen=""
-                    loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"
-                    title="ARI Physical Therapy location map">
-                </iframe>
-            </div>
-
-            <div class="hours-card">
-                <h3>📅 Office Hours</h3>
-                <div class="hours-row">
-                    <span class="day">Monday</span>
-                    <span class="time">8:00 AM – 6:00 PM</span>
-                </div>
-                <div class="hours-row">
-                    <span class="day">Tuesday</span>
-                    <span class="time">8:00 AM – 6:00 PM</span>
-                </div>
-                <div class="hours-row">
-                    <span class="day">Wednesday</span>
-                    <span class="time">8:00 AM – 6:00 PM</span>
-                </div>
-                <div class="hours-row">
-                    <span class="day">Thursday</span>
-                    <span class="time">8:00 AM – 6:00 PM</span>
-                </div>
-                <div class="hours-row">
-                    <span class="day">Friday</span>
-                    <span class="time">8:00 AM – 6:00 PM</span>
-                </div>
-                <div class="hours-row">
-                    <span class="day">Saturday</span>
-                    <span class="closed">Closed</span>
-                </div>
-                <div class="hours-row">
-                    <span class="day">Sunday</span>
-                    <span class="closed">Closed</span>
-                </div>
-            </div>
-        </div>
-
-    </div>
-
-    <!-- ===== FOOTER ===== -->
-    <footer>
-        <div class="footer-inner">
-            <div class="footer-top">
-                <div class="footer-about">
-                    <img src="assets/logo-white.png" alt="ARI Physical Therapy" style="height:48px; margin-bottom:18px; display:block;">
-                    <p>Compassionate, personalized physical therapy in Bakersfield, CA. We're here to help you move better, feel better, and live better.</p>
-                    <div class="footer-tagline">Empowering Every Move</div>
-                    <div class="footer-social">
-                        <a href="https://www.instagram.com/ariptcare" target="_blank" rel="noopener" class="social-btn" aria-label="Instagram"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
-                        <a href="https://www.linkedin.com/company/ariphysicaltherapy/" target="_blank" rel="noopener" class="social-btn" aria-label="LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
-                    </div>
-                </div>
-                <div class="footer-col">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="appointment.html">Book an Appointment</a></li>
-                        <li><a href="careers.html">Careers</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><a href="physicians.html">For Physicians</a></li>
-                        <li><a href="employees.html">Employees</a></li>
-                        <li><a href="faq.html">FAQ</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Contact</h4>
-                    <ul>
-                        <li><a href="tel:6612828584">(661) 282-8584</a></li>
-                        <li><a href="mailto:contactus@ariptcare.com">contactus@ariptcare.com</a></li>
-                        <li style="color:rgba(255,255,255,0.6); font-size:14px;">📠 Fax: (661) 727-0005</li>
-                        <li><a href="contact.html">8200 Stockdale Hwy, Suite B2<br>Bakersfield, CA 93311</a></li>
-                        <li style="color:rgba(255,255,255,0.5); font-size:14px;">Mon–Fri · 8:00 AM – 6:00 PM</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <span>© 2026 ARI Physical Therapy. All rights reserved.</span>
-                <span><a href="privacy-policy.html" style="color:rgba(255,255,255,0.7);text-decoration:none;">Privacy Policy</a> &nbsp;&middot;&nbsp; <a href="sms-terms.html" style="color:rgba(255,255,255,0.7);text-decoration:none;">SMS Terms</a> &nbsp;&middot;&nbsp; 8200 Stockdale Hwy Suite B2, Bakersfield, CA 93311</span>
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        const navbar = document.querySelector('.navbar');
-        window.addEventListener('scroll', () => {
-            navbar.classList.toggle('scrolled', window.scrollY > 10);
-        });
-        const reveals = document.querySelectorAll('.reveal');
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.08 });
-        reveals.forEach(el => observer.observe(el));
-    </script>
-
-
-    <script>
-    /* Shared mobile-nav toggle - identical on every page. */
-    (function () {
-        const toggle = document.querySelector('.nav-toggle');
-        const navLinks = document.querySelector('.nav-links');
-        if (toggle && navLinks) {
-            toggle.addEventListener('click', function () {
-                const open = navLinks.classList.toggle('open');
-                toggle.setAttribute('aria-expanded', open);
-            });
-        }
-        const navbar = document.querySelector('.navbar');
-        if (navbar) {
-            window.addEventListener('scroll', function () {
-                navbar.classList.toggle('scrolled', window.scrollY > 20);
-            });
-        }
-    })();
-    </script>
+    <div><div class="foot-h">Quick Links</div><div class="foot-links">
+      <a href="index.html">Home</a><a href="careers.html">Careers</a>
+      <a href="about.html">About</a><a href="contact.html">Contact</a>
+      <a href="services.html">Services</a><a href="physicians.html">For Physicians</a>
+      <a href="appointment.html">Book an Appointment</a><a href="employees.html">Employees</a>
+      <a href="faq.html">FAQ</a><a href="privacy-policy.html">Privacy Policy</a>
+    </div></div>
+    <div><div class="foot-h">Contact</div><div class="foot-c">
+      <a href="tel:6612828584">(661) 282-8584</a><br><a href="mailto:contactus@ariptcare.com">contactus@ariptcare.com</a><br>Fax: (661) 727-0005<br>
+      8200 Stockdale Hwy, Suite B2<br>Bakersfield, CA 93311<br>Mon&ndash;Fri &middot; 8:00 AM &ndash; 6:00 PM
+    </div></div>
+  </div>
+  <div class="foot-bot"><span>&copy; 2026 ARI Physical Therapy. All rights reserved.</span>
+  <span><a href="privacy-policy.html">Privacy Policy</a> &middot; <a href="sms-terms.html">SMS Terms</a> &middot; 8200 Stockdale Hwy Suite B2, Bakersfield, CA 93311</span></div>
+</footer>
+<script>
+(function(){
+  var b=document.querySelector('.hamburger'), n=document.querySelector('.nav-links');
+  if(b&&n){b.addEventListener('click',function(){
+    var open=n.classList.toggle('open');
+    b.setAttribute('aria-expanded',open?'true':'false');
+  });}
+  document.querySelectorAll('.acc-q').forEach(function(q){
+    q.addEventListener('click',function(){
+      var open=q.getAttribute('aria-expanded')==='true', root=q.closest('.acc');
+      root.querySelectorAll('.acc-q').forEach(function(o){
+        o.setAttribute('aria-expanded','false'); o.querySelector('.acc-t').textContent='+';
+      });
+      if(!open){q.setAttribute('aria-expanded','true'); q.querySelector('.acc-t').textContent='\u2212';}
+    });
+  });
+})();
+</script>
 </body>
 </html>
