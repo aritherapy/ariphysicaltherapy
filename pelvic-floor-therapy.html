@@ -234,6 +234,26 @@
     }, 3000);
   }
 
+  /* ---- hero background parallax (background layer only, never text) ---- */
+  (function(){
+    var layer = document.querySelector('[data-parallax]');
+    if(!layer || reduce) return;
+    var host = layer.parentElement, ticking = false;
+    function apply(){
+      ticking = false;
+      var r = host.getBoundingClientRect();
+      if(r.bottom < 0 || r.top > innerHeight) return;      /* off-screen: skip */
+      var p = (innerHeight - r.top) / (innerHeight + r.height);   /* 0..1 */
+      p = Math.max(0, Math.min(1, p));
+      layer.style.transform = 'translate3d(0,' + ((p - 0.5) * 7).toFixed(2) + '%,0)';
+    }
+    addEventListener('scroll', function(){
+      if(!ticking){ ticking = true; requestAnimationFrame(apply); }
+    }, { passive: true });
+    addEventListener('resize', apply, { passive: true });
+    apply();
+  })();
+
   /* ---- hero stat count-up ---- */
   (function(){
     var row = document.querySelector('.stats-inner');
@@ -241,8 +261,10 @@
     var targets = [].slice.call(row.querySelectorAll('.stat-num')).map(function(el){
       var tn = el.firstChild;
       if(!tn || tn.nodeType !== 3) return null;
-      var m = tn.nodeValue.trim().match(/^([0-9]+(?:\.[0-9]+)?)$/);
-      if(!m) return null;                       /* "1:1" and "Most" are left alone */
+      /* Integers only. A counting "5.0" briefly renders as "1.1 stars Google Rating",
+         which is a false claim on screen, so the rating fades in instead. */
+      var m = tn.nodeValue.trim().match(/^([0-9]+)$/);
+      if(!m) return null;                       /* "5.0", "1:1" and "Most" are left alone */
       return { tn: tn, raw: tn.nodeValue, end: parseFloat(m[1]), dec: (m[1].split('.')[1] || '').length };
     }).filter(Boolean);
     if(!targets.length) return;

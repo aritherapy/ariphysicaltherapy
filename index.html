@@ -188,14 +188,16 @@
     </div></div>
   <button class="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
 </nav>
-<section class="hero"><div class="hero-inner">
-  <div class="hero-text"><p class="eyebrow">Physical Therapy &middot; Bakersfield</p>
+<section class="hero-full">
+  <div class="hero-full-bg" data-parallax><img src="assets/IMG_8165.jpg" alt="Treatment gym at ARI Physical Therapy in Bakersfield" fetchpriority="high" decoding="async" loading="lazy" decoding="async" width="1050" height="1400"></div>
+  <div class="hero-full-inner">
+    <p class="eyebrow eyebrow-type"><span>Physical Therapy &middot; Bakersfield</span></p>
     <h1 class="hero-title"><span class="line"><span>Move Better.</span></span><span class="line"><span>Feel Better.</span></span><span class="line"><span>Live Better.</span></span></h1>
     <p class="lead">Specialist-led physical therapy in Bakersfield for orthopedic, sports, pelvic, and post-surgical recovery.</p>
     <div class="hero-cta"><a href="appointment.html" class="btn btn-primary">Book Consultation</a>
-      <a href="services.html" class="btn btn-ghost">Our Services</a></div></div>
-  <div class="hero-photo"><img src="assets/IMG_8165.jpg" alt="ARI Physical Therapy treatment gym in Bakersfield" fetchpriority="high" decoding="async" width="1050" height="1400"></div>
- </div></section>
+      <a href="services.html" class="btn btn-ghost">Our Services</a></div>
+  </div>
+</section>
 <div class="stats"><div class="stats-inner">
   <div class="stat"><div class="stat-num">5.0 <span class="stat-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span></div><div class="stat-label">Google Rating</div></div>
   <div class="stat"><div class="stat-num">8</div><div class="stat-bar"></div><div class="stat-label">Specialties</div></div>
@@ -289,6 +291,26 @@
     }, 3000);
   }
 
+  /* ---- hero background parallax (background layer only, never text) ---- */
+  (function(){
+    var layer = document.querySelector('[data-parallax]');
+    if(!layer || reduce) return;
+    var host = layer.parentElement, ticking = false;
+    function apply(){
+      ticking = false;
+      var r = host.getBoundingClientRect();
+      if(r.bottom < 0 || r.top > innerHeight) return;      /* off-screen: skip */
+      var p = (innerHeight - r.top) / (innerHeight + r.height);   /* 0..1 */
+      p = Math.max(0, Math.min(1, p));
+      layer.style.transform = 'translate3d(0,' + ((p - 0.5) * 7).toFixed(2) + '%,0)';
+    }
+    addEventListener('scroll', function(){
+      if(!ticking){ ticking = true; requestAnimationFrame(apply); }
+    }, { passive: true });
+    addEventListener('resize', apply, { passive: true });
+    apply();
+  })();
+
   /* ---- hero stat count-up ---- */
   (function(){
     var row = document.querySelector('.stats-inner');
@@ -296,8 +318,10 @@
     var targets = [].slice.call(row.querySelectorAll('.stat-num')).map(function(el){
       var tn = el.firstChild;
       if(!tn || tn.nodeType !== 3) return null;
-      var m = tn.nodeValue.trim().match(/^([0-9]+(?:\.[0-9]+)?)$/);
-      if(!m) return null;                       /* "1:1" and "Most" are left alone */
+      /* Integers only. A counting "5.0" briefly renders as "1.1 stars Google Rating",
+         which is a false claim on screen, so the rating fades in instead. */
+      var m = tn.nodeValue.trim().match(/^([0-9]+)$/);
+      if(!m) return null;                       /* "5.0", "1:1" and "Most" are left alone */
       return { tn: tn, raw: tn.nodeValue, end: parseFloat(m[1]), dec: (m[1].split('.')[1] || '').length };
     }).filter(Boolean);
     if(!targets.length) return;

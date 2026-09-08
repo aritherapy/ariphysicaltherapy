@@ -247,8 +247,8 @@ h1,h2,h3,h4{font-family:'Montserrat',sans-serif;color:var(--charcoal)}
 .hero .lead{font-size:17px;line-height:1.65;max-width:440px;margin-bottom:32px}
 .hero-cta{display:flex;gap:14px;flex-wrap:wrap}
 .hero-photo{border-radius:10px;overflow:hidden;box-shadow:0 14px 40px rgba(0,0,0,.13);aspect-ratio:5/4}
-.hero-photo img{width:100%;height:112%;margin-top:-6%;object-fit:cover;filter:saturate(1.05) sepia(.06);animation:breathe 22s ease-in-out infinite}
-@keyframes breathe{0%,100%{scale:1}50%{scale:1.07}}
+.hero-photo img{width:100%;height:112%;margin-top:-6%;object-fit:cover;filter:saturate(1.05) sepia(.06)}
+50%{scale:1.07}}
 @media(prefers-reduced-motion:reduce){.hero-photo img{animation:none}}
 .stats{max-width:1200px;margin:0 auto;padding:44px 0 72px}
 .stats-inner{border-top:1px solid var(--line);padding-top:26px;display:grid;grid-template-columns:repeat(4,1fr)}
@@ -467,7 +467,7 @@ footer img{height:46px;margin-bottom:18px}
    ========================================================= */
 @keyframes fadeSlideUp{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
 @keyframes heroPhotoIn{from{opacity:0;transform:translateY(20px) scale(.975)}to{opacity:1;transform:none}}
-@keyframes breathe{0%,100%{scale:1}50%{scale:1.06}}
+50%{scale:1.06}}
 
 /* Homepage hero: staggered entrance, same rhythm as the old site */
 .hero .eyebrow{animation:fadeSlideUp .7s var(--ease) backwards .15s}
@@ -476,7 +476,6 @@ footer img{height:46px;margin-bottom:18px}
 .hero-cta{animation:fadeSlideUp .7s var(--ease) backwards .60s}
 .stats-inner{animation:fadeSlideUp .7s var(--ease) backwards .75s}
 .hero-photo{animation:heroPhotoIn .9s var(--ease) backwards .1s}
-.hero-photo img{animation:breathe 22s ease-in-out 1s infinite}
 
 /* Interior page headers get the same entrance */
 .page-hero .eyebrow{animation:fadeSlideUp .7s var(--ease) backwards .1s}
@@ -519,15 +518,15 @@ footer img{height:46px;width:auto}
 @keyframes lineUp{from{transform:translateY(105%)}to{transform:translateY(0)}}
 
 /* Cards rise further and settle, so scrolling feels alive rather than static */
-.js .reveal{opacity:0;transform:translateY(38px)}
+.js .reveal{opacity:0;transform:translateY(24px)}
 .js .reveal.visible{opacity:1;transform:none}
 .js .card.reveal,.js .svc.reveal,.js .rev.reveal,.js .portal.reveal,.js .info.reveal,.js .pos-row.reveal{
-  transform:translateY(44px) scale(.985);
+  transform:translateY(26px) scale(.99);
   transition:opacity .6s var(--ease),transform .7s cubic-bezier(.22,.9,.28,1)}
 .js .card.reveal.visible,.js .svc.reveal.visible,.js .rev.reveal.visible,
 .js .portal.reveal.visible,.js .info.reveal.visible,.js .pos-row.reveal.visible{transform:none}
 /* Section headings lead their group in */
-.js .section-head.reveal{transform:translateY(26px)}
+.js .section-head.reveal{transform:translateY(18px)}
 
 @media(prefers-reduced-motion:reduce){
   .hero-title .line > span{animation:none;transform:none}
@@ -536,3 +535,48 @@ footer img{height:46px;width:auto}
 /* An intrinsic height="" attribute beats aspect-ratio unless height is auto.
    Without this, a stale height attribute stretches the box (careers mural bug). */
 .media img,.svc-row-img img,.dir-portrait img{height:auto}
+
+/* =========================================================
+   FULL-BLEED HERO
+   Pattern: Hero-Centric (full-bleed hero -> value strip -> proof).
+   Motion follows the Subtle/Standard tiers: parallax on the
+   background layer only, never on text.
+   ========================================================= */
+.hero-full{position:relative;min-height:min(82vh,660px);display:flex;align-items:center;overflow:hidden;background:var(--charcoal)}
+.hero-full-bg{position:absolute;inset:-6% 0;will-change:transform}
+.hero-full-bg img{width:100%;height:100%;object-fit:cover;filter:saturate(1.05) sepia(.06)}
+/* Gradient carries the text; the old hero failed contrast without one. */
+.hero-full-bg::after{content:'';position:absolute;inset:0;
+  background:linear-gradient(100deg,rgba(18,18,18,.92) 0%,rgba(18,18,18,.80) 38%,rgba(18,18,18,.40) 68%,rgba(18,18,18,.24) 100%)}
+.hero-full-inner{position:relative;z-index:1;max-width:1200px;margin:0 auto;padding:0 48px;width:100%}
+.hero-full-inner .eyebrow{color:var(--orange-light);animation:fadeSlideUp .6s var(--ease) backwards .15s}
+.hero-full-inner .eyebrow::before{background:var(--orange)}
+.hero-full-inner h1{color:#fff;font-size:clamp(38px,4.6vw,62px);font-weight:800;line-height:1.05;letter-spacing:-1px;margin-bottom:22px}
+.hero-full-inner .lead{color:rgba(255,255,255,.85);font-size:17px;line-height:1.65;max-width:470px;margin-bottom:32px;
+  animation:fadeSlideUp .6s var(--ease) backwards .78s}
+.hero-full-inner .hero-cta{animation:fadeSlideUp .6s var(--ease) backwards .92s}
+.hero-full-inner .btn-ghost{border-color:rgba(255,255,255,.42);color:#fff}
+.hero-full-inner .btn-ghost:hover{border-color:var(--orange);color:var(--orange)}
+
+/* Typewriter on the eyebrow only. clip-path is compositor-friendly;
+   animating width would force layout on every frame. */
+.eyebrow-type > span{position:relative;display:inline-block;white-space:nowrap;
+  clip-path:inset(0 0 0 0);animation:typeIn 1s steps(28) backwards .3s}
+.eyebrow-type > span::after{content:'';position:absolute;right:-6px;top:8%;width:2px;height:84%;
+  background:var(--orange);animation:caret .55s steps(1) 6 .3s backwards}
+@keyframes typeIn{from{clip-path:inset(0 100% 0 0)}to{clip-path:inset(0 0 0 0)}}
+@keyframes caret{0%,49%{opacity:1}50%,100%{opacity:0}}
+
+@media(max-width:900px){
+  .hero-full{min-height:auto;padding:52px 0 58px}
+  .hero-full-inner{padding:0 24px}
+  .hero-full-bg{inset:0}
+  .hero-full-bg::after{background:linear-gradient(180deg,rgba(18,18,18,.74) 0%,rgba(18,18,18,.88) 100%)}
+  .hero-full-inner .lead{font-size:15px}
+}
+@media(prefers-reduced-motion:reduce){
+  .hero-full-inner .eyebrow,.hero-full-inner .lead,.hero-full-inner .hero-cta{animation:none}
+  .eyebrow-type > span{animation:none;clip-path:none}
+  .eyebrow-type > span::after{display:none}
+  .hero-full-bg{transform:none!important}
+}
