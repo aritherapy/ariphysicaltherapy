@@ -459,3 +459,41 @@ footer img{height:46px;margin-bottom:18px}
 .form-success p{font-size:15px;color:var(--text-mid);line-height:1.7}
 .upload input[type=file]{display:none}
 .upload .file-name{display:block;margin-top:8px;font-size:13px;color:var(--orange);font-weight:600}
+
+/* =========================================================
+   MOTION
+   Reveal styles are scoped to .js so that if scripting is
+   unavailable the content is simply visible, never hidden.
+   ========================================================= */
+@keyframes fadeSlideUp{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+@keyframes heroPhotoIn{from{opacity:0;transform:translateY(20px) scale(.975)}to{opacity:1;transform:none}}
+@keyframes breathe{0%,100%{scale:1}50%{scale:1.06}}
+
+/* Homepage hero: staggered entrance, same rhythm as the old site */
+.hero .eyebrow{animation:fadeSlideUp .7s var(--ease) both .15s}
+.hero h1{animation:fadeSlideUp .7s var(--ease) both .30s}
+.hero .lead{animation:fadeSlideUp .7s var(--ease) both .45s}
+.hero-cta{animation:fadeSlideUp .7s var(--ease) both .60s}
+.stats-inner{animation:fadeSlideUp .7s var(--ease) both .75s}
+.hero-photo{animation:heroPhotoIn .9s var(--ease) both .1s}
+.hero-photo img{animation:breathe 22s ease-in-out 1s infinite}
+
+/* Interior page headers get the same entrance */
+.page-hero .eyebrow{animation:fadeSlideUp .7s var(--ease) both .1s}
+.page-hero h1{animation:fadeSlideUp .7s var(--ease) both .22s}
+.page-hero .lead{animation:fadeSlideUp .7s var(--ease) both .34s}
+.page-hero .btn,.page-hero .side-card{animation:fadeSlideUp .7s var(--ease) both .46s}
+.breadcrumb{animation:fadeSlideUp .6s var(--ease) both .05s}
+
+/* Scroll reveal */
+.js .reveal{opacity:0;transform:translateY(28px);transition:opacity .65s var(--ease),transform .65s var(--ease)}
+.js .reveal.visible{opacity:1;transform:none}
+
+/* Stat count-up: reserve width so numbers don't reflow while counting */
+.stat-num{font-variant-numeric:tabular-nums}
+
+@media(prefers-reduced-motion:reduce){
+  .hero .eyebrow,.hero h1,.hero .lead,.hero-cta,.stats-inner,.hero-photo,.hero-photo img,
+  .page-hero .eyebrow,.page-hero h1,.page-hero .lead,.page-hero .btn,.page-hero .side-card,.breadcrumb{animation:none}
+  .js .reveal{opacity:1;transform:none;transition:none}
+}

@@ -78,6 +78,7 @@
 <link rel="stylesheet" href="assets/ari.css">
 </head>
 <body>
+<script>document.documentElement.classList.add('js');</script>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
 <g id="i-award"><circle cx="12" cy="8.5" r="6.2"/><path d="M8.3 13.7 7 22l5-2.8L17 22l-1.3-8.3"/></g>
 <g id="i-plan"><path d="M15.5 4H18a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2.5"/><rect x="8.5" y="2.2" width="7" height="4" rx="1.2"/><path d="M8.6 12.2h6.8M8.6 16.2h4.6"/></g>
@@ -232,6 +233,75 @@
 </footer>
 <script>
 (function(){
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ---- scroll reveal ---- */
+  if(!reduce && 'IntersectionObserver' in window){
+    var sel = '.section-head, .card, .svc, .rev, .svc-row, .pos-row, .portal, .info, .director,'
+            + '.form-card, .media, .map, .side-card, .side-list, .acc-item, .quote-card,'
+            + '.cta-band > *, .band-inner > *, .find-rows, .legal-toc, .perks, .hours-row';
+    var els = [].slice.call(document.querySelectorAll(sel)).filter(function(el){
+      return !el.closest('.page-hero') && !el.closest('.hero');
+    });
+    els.forEach(function(el){ el.classList.add('reveal'); });
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){
+          var sibs = e.target.parentNode ? [].slice.call(e.target.parentNode.children) : [];
+          var i = Math.min(sibs.indexOf(e.target), 7);
+          e.target.style.transitionDelay = (i > 0 ? i * 0.08 : 0) + 's';
+          e.target.classList.add('visible');
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    els.forEach(function(el){ io.observe(el); });
+    /* failsafe: never leave content invisible if the observer misfires */
+    setTimeout(function(){
+      document.querySelectorAll('.reveal:not(.visible)').forEach(function(el){ el.classList.add('visible'); });
+    }, 3000);
+  }
+
+  /* ---- hero stat count-up ---- */
+  (function(){
+    var row = document.querySelector('.stats-inner');
+    if(!row || reduce) return;
+    var targets = [].slice.call(row.querySelectorAll('.stat-num')).map(function(el){
+      var tn = el.firstChild;
+      if(!tn || tn.nodeType !== 3) return null;
+      var m = tn.nodeValue.trim().match(/^([0-9]+(?:\.[0-9]+)?)$/);
+      if(!m) return null;                       /* "1:1" and "Most" are left alone */
+      return { tn: tn, raw: tn.nodeValue, end: parseFloat(m[1]), dec: (m[1].split('.')[1] || '').length };
+    }).filter(Boolean);
+    if(!targets.length) return;
+
+    function run(){
+      var t0 = null, done = false;
+      function finish(){                        /* the real number ALWAYS lands */
+        if(done) return; done = true;
+        targets.forEach(function(t){ t.tn.nodeValue = t.raw; });
+      }
+      setTimeout(finish, 2200);                 /* guard: rAF throttled in a background tab */
+      function step(now){
+        if(done) return;
+        if(t0 === null) t0 = now;
+        var p = Math.min((now - t0) / 1400, 1);
+        var e = 1 - Math.pow(1 - p, 3);
+        targets.forEach(function(t){ t.tn.nodeValue = (e * t.end).toFixed(t.dec) + ' '; });
+        if(p < 1) requestAnimationFrame(step); else finish();
+      }
+      targets.forEach(function(t){ t.tn.nodeValue = (0).toFixed(t.dec) + ' '; });
+      requestAnimationFrame(step);
+    }
+
+    if('IntersectionObserver' in window){       /* count when it is actually on screen */
+      var so = new IntersectionObserver(function(en){
+        en.forEach(function(e){ if(e.isIntersecting){ so.unobserve(e.target); run(); } });
+      }, { threshold: 0.4 });
+      so.observe(row);
+    } else { run(); }
+  })();
+
   var b=document.querySelector('.hamburger'), n=document.querySelector('.nav-links');
   if(b&&n){b.addEventListener('click',function(){
     var open=n.classList.toggle('open');
