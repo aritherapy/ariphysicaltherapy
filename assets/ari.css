@@ -668,7 +668,7 @@ footer img{height:46px;width:auto}
 .cond-or{color:var(--text-light)}
 .cond-or a{color:var(--text-mid);font-weight:600}
 .prose .cond-note{font-size:14px;color:var(--text-light);margin:16px 0 0}
-@media(max-width:640px){
-  .cond-tabs.is-ready .cond-tablist{display:flex;overflow-x:auto;scroll-snap-type:x proximity;padding-bottom:6px;-webkit-overflow-scrolling:touch}
-  .cond-tab{flex:none;scroll-snap-align:start}
+@media(max-width:640px){ /* phones: 2 columns x 3 rows, every tab visible, no sideways scrolling */
+  .cond-tabs.is-ready .cond-tablist{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .cond-tab{white-space:normal;padding:12px 8px;line-height:1.25}
 }
