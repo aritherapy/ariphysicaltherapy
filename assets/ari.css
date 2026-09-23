@@ -643,3 +643,32 @@ footer img{height:46px;width:auto}
 }
 .checks a{color:var(--charcoal);font-weight:600;text-decoration:underline;text-decoration-color:var(--orange);text-underline-offset:3px}
 .checks a:hover{color:var(--orange-text)}
+
+/* ---- conditions hub: tabs by body area (all panels show if JS is off) ---- */
+.cond-tabs{margin-top:30px}
+.detail > .prose{min-width:0} /* let the tab row scroll inside the column instead of widening the page */
+.cond-tablist{display:none}
+.cond-tabs.is-ready .cond-tablist{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:6px}
+.cond-tab{font-family:'Inter',sans-serif;font-size:14px;font-weight:600;line-height:1;padding:12px 16px;border-radius:4px;border:1px solid rgba(0,0,0,.14);background:var(--white);color:var(--charcoal);cursor:pointer;transition:background .2s,border-color .2s,color .2s;white-space:nowrap}
+.cond-tab:hover{border-color:var(--orange)}
+.cond-tab[aria-selected="true"]{background:var(--charcoal);border-color:var(--charcoal);color:#fff}
+.cond-tab:focus-visible{outline:2px solid var(--orange);outline-offset:2px}
+.cond-panel{padding-top:8px}
+.cond-panel + .cond-panel{margin-top:18px}
+.prose .cond-panel-h{font-size:22px;margin:22px 0 4px}
+.cond-tabs.is-ready .cond-panel-h{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.cond-item{padding:22px 0;border-top:1px solid rgba(0,0,0,.09);scroll-margin-top:150px}
+.cond-panel-h + .cond-item,.cond-note + .cond-item{border-top:none}
+.cond-tabs.is-ready .cond-item:first-of-type{border-top:none}
+.prose .cond-item h3{font-size:19px;font-weight:700;margin:0 0 8px;letter-spacing:-.2px}
+.prose .cond-item p{margin-bottom:10px}
+.cond-actions{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 14px;font-size:14.5px}
+.prose .cond-link{font-weight:600;color:var(--orange-text)}
+.prose .cond-link:hover{text-decoration:underline}
+.cond-or{color:var(--text-light)}
+.cond-or a{color:var(--text-mid);font-weight:600}
+.prose .cond-note{font-size:14px;color:var(--text-light);margin:16px 0 0}
+@media(max-width:640px){
+  .cond-tabs.is-ready .cond-tablist{display:flex;overflow-x:auto;scroll-snap-type:x proximity;padding-bottom:6px;-webkit-overflow-scrolling:touch}
+  .cond-tab{flex:none;scroll-snap-align:start}
+}
