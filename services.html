@@ -121,9 +121,8 @@
       ]
     }
     </script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preload" href="assets/fonts/montserrat-latin-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/inter-latin-var.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/ari.css">
 <!-- Google Analytics 4 -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-30S49569Y9"></script>
@@ -201,7 +200,7 @@
  <div class="svc-row">
   <div class="svc-row-img"><img src="assets/stock-ortho.jpg" alt="Orthopedic Rehabilitation" loading="lazy" decoding="async" width="1200" height="800"></div>
   <div>
-    <div class="svc-number">01</div>
+    <div class="svc-number" aria-hidden="true" data-n="01"></div>
     <span class="svc-tag">Orthopedic</span>
     <h2>Orthopedic <span>Rehabilitation</span></h2><p>Musculoskeletal injuries, from fractures and ligament tears to arthritis and joint pain, require precise, targeted therapy to heal correctly and fully. Our orthopedic rehab program combines hands-on manual therapy with progressive exercise to restore strength, range of motion, and function.</p><div class="checks"><div class="check"><span class="check-tick">&#10003;</span><span>Joint pain and stiffness</span></div><div class="check"><span class="check-tick">&#10003;</span><span>Fracture and ligament recovery</span></div><div class="check"><span class="check-tick">&#10003;</span><span>Hip, knee, shoulder, and spine conditions</span></div><div class="check"><span class="check-tick">&#10003;</span><span>Arthritis management</span></div></div>
     <div class="svc-row-cta"><a href="appointment.html" class="btn btn-primary btn-sm">Book a Consultation</a>
@@ -209,7 +208,7 @@
   </div></div><div class="svc-row">
   <div class="svc-row-img"><img src="assets/stock-sports.jpg" alt="Sports Injury Recovery" loading="lazy" decoding="async" width="1200" height="826"></div>
   <div>
-    <div class="svc-number">02</div>
+    <div class="svc-number" aria-hidden="true" data-n="02"></div>
     <span class="svc-tag">Sports</span>
     <h2>Sports Injury <span>Recovery</span></h2><p>Whether you're a weekend warrior or a competitive athlete, a sports injury can sideline you fast. We specialize in getting athletes back to peak performance safely, combining sport-specific rehab with injury prevention strategies to keep you in the game long-term.</p><div class="checks"><div class="check"><span class="check-tick">&#10003;</span><span>ACL, MCL, and rotator cuff injuries</span></div><div class="check"><span class="check-tick">&#10003;</span><span>Sprains, strains, and tendinopathies</span></div><div class="check"><span class="check-tick">&#10003;</span><span>Return-to-sport programs</span></div><div class="check"><span class="check-tick">&#10003;</span><span>Performance optimization</span></div></div>
     <div class="svc-row-cta"><a href="appointment.html" class="btn btn-primary btn-sm">Book a Consultation</a>
@@ -217,7 +216,7 @@
   </div></div><div class="svc-row">
   <div class="svc-row-img"><img src="assets/stock-postop.jpg" alt="Post-Operative Care" loading="lazy" decoding="async" width="1000" height="666"></div>
   <div>
-    <div class="svc-number">03</div>
+    <div class="svc-number" aria-hidden="true" data-n="03"></div>
     <span class="svc-tag">Post-Surgery</span>
     <h2>Post-Operative <span>Care</span></h2><p>Surgery is only the first step. What happens during recovery determines your outcome. Our post-operative rehab programs are designed in close coordination with your surgeon's protocol to minimize scar tissue, restore mobility, and rebuild strength in a safe, structured progression.</p><div class="checks"><div class="check"><span class="check-tick">&#10003;</span><span>Total joint replacement recovery</span></div><div class="check"><span class="check-tick">&#10003;</span><span>Spinal surgery rehabilitation</span></div><div class="check"><span class="check-tick">&#10003;</span><span>Surgical wound and scar management</span></div><div class="check"><span class="check-tick">&#10003;</span><span>Coordinated care with your surgical team</span></div></div>
     <div class="svc-row-cta"><a href="appointment.html" class="btn btn-primary btn-sm">Book a Consultation</a>
@@ -225,7 +224,7 @@
   </div></div><div class="svc-row">
   <div class="svc-row-img"><img src="assets/stock-pain.jpg" alt="Chronic Pain Rehab" loading="lazy" decoding="async" width="1200" height="800"></div>
   <div>
-    <div class="svc-number">04</div>
+    <div class="svc-number" aria-hidden="true" data-n="04"></div>
     <span class="svc-tag">Chronic Pain</span>
     <h2>Chronic Pain <span>Rehab</span></h2><p>Living with chronic pain is exhausting, and you deserve more than just "managing" it. Our approach addresses the root causes of persistent pain through movement therapy, manual techniques, and patient education, helping you build long-term strategies for a more comfortable, active life.</p><div class="checks"><div class="check"><span class="check-tick">&#10003;</span><span>Low back and neck pain</span></div><div class="check"><span class="check-tick">&#10003;</span><span>Fibromyalgia and widespread pain</span></div><div class="check"><span class="check-tick">&#10003;</span><span>Headaches and TMJ dysfunction</span></div><div class="check"><span class="check-tick">&#10003;</span><span>Pain education and self-management tools</span></div></div>
     <div class="svc-row-cta"><a href="appointment.html" class="btn btn-primary btn-sm">Book a Consultation</a>
@@ -233,7 +232,7 @@
   </div></div><div class="svc-row">
   <div class="svc-row-img"><img src="assets/stock-pelvic.jpg" alt="Pelvic Pain" loading="lazy" decoding="async" width="1000" height="666"></div>
   <div>
-    <div class="svc-number">05</div>
+    <div class="svc-number" aria-hidden="true" data-n="05"></div>
     <span class="svc-tag">Pelvic Health</span>
     <h2>Pelvic <span>Pain</span></h2><p>Pelvic floor dysfunction is far more common than most people realize, and far more treatable. Our certified pelvic health therapists provide discreet, evidence-based care for a range of pelvic conditions in women, restoring comfort and confidence.</p><div class="checks"><div class="check"><span class="check-tick">&#10003;</span><span>Pelvic floor muscle dysfunction</span></div><div class="check"><span class="check-tick">&#10003;</span><span>Urinary and bowel incontinence</span></div><div class="check"><span class="check-tick">&#10003;</span><span>Pelvic organ prolapse</span></div><div class="check"><span class="check-tick">&#10003;</span><span>Pelvic pain and interstitial cystitis</span></div></div>
     <div class="svc-row-cta"><a href="appointment.html" class="btn btn-primary btn-sm">Book a Consultation</a>
@@ -241,7 +240,7 @@
   </div></div><div class="svc-row">
   <div class="svc-row-img"><img src="assets/stock-pediatric.jpg" alt="Pediatric Rehabilitation" loading="lazy" decoding="async" width="1200" height="801"></div>
   <div>
-    <div class="svc-number">06</div>
+    <div class="svc-number" aria-hidden="true" data-n="06"></div>
     <span class="svc-tag">Pediatric</span>
     <h2>Pediatric <span>Rehabilitation</span></h2><p>Children have unique physical and developmental needs. Our pediatric therapists create a fun, encouraging environment where kids can heal, grow, and reach their milestones. We work closely with families to ensure progress continues at home as well as in the clinic.</p><div class="checks"><div class="check"><span class="check-tick">&#10003;</span><span>Developmental delays and coordination</span></div><div class="check"><span class="check-tick">&#10003;</span><span>Sports injuries in young athletes</span></div><div class="check"><span class="check-tick">&#10003;</span><span>Post-surgical pediatric rehab</span></div><div class="check"><span class="check-tick">&#10003;</span><span>Torticollis and musculoskeletal conditions</span></div></div>
     <div class="svc-row-cta"><a href="appointment.html" class="btn btn-primary btn-sm">Book a Consultation</a>
@@ -249,7 +248,7 @@
   </div></div><div class="svc-row">
   <div class="svc-row-img"><img src="assets/stock-partum.jpg" alt="Pre / Post Partum Rehab" loading="lazy" decoding="async" width="1200" height="900"></div>
   <div>
-    <div class="svc-number">07</div>
+    <div class="svc-number" aria-hidden="true" data-n="07"></div>
     <span class="svc-tag">Women's Health</span>
     <h2>Pre / Post <span>Partum Rehab</span></h2><p>Pregnancy and childbirth put enormous demands on the body; those demands don't disappear once baby arrives. We support women through every stage, from prenatal body changes to postpartum recovery, with a focus on pelvic health, core strength, and return to activity.</p><div class="checks"><div class="check"><span class="check-tick">&#10003;</span><span>Prenatal back and pelvic pain</span></div><div class="check"><span class="check-tick">&#10003;</span><span>Diastasis recti (abdominal separation)</span></div><div class="check"><span class="check-tick">&#10003;</span><span>C-section and birth recovery</span></div><div class="check"><span class="check-tick">&#10003;</span><span>Postpartum return-to-exercise guidance</span></div></div>
     <div class="svc-row-cta"><a href="appointment.html" class="btn btn-primary btn-sm">Book a Consultation</a>
@@ -257,7 +256,7 @@
   </div></div><div class="svc-row">
   <div class="svc-row-img"><img src="assets/stock-wellness.jpg" alt="Health Programs" loading="lazy" decoding="async" width="666" height="1000"></div>
   <div>
-    <div class="svc-number">08</div>
+    <div class="svc-number" aria-hidden="true" data-n="08"></div>
     <span class="svc-tag">Wellness</span>
     <h2>Health <span>Programs</span></h2><p>Great health doesn't stop when your formal therapy ends. Our wellness programs are designed to keep you moving, strong, and injury-free for the long term. Whether you're focused on fall prevention, general fitness, or maintaining the gains from therapy, we have a program for you.</p><div class="checks"><div class="check"><span class="check-tick">&#10003;</span><span>Fall prevention for older adults</span></div><div class="check"><span class="check-tick">&#10003;</span><span>Injury prevention and movement screening</span></div><div class="check"><span class="check-tick">&#10003;</span><span>Strength and conditioning programs</span></div><div class="check"><span class="check-tick">&#10003;</span><span>Post-discharge wellness maintenance</span></div></div>
     <div class="svc-row-cta"><a href="appointment.html" class="btn btn-primary btn-sm">Book a Consultation</a>
@@ -329,12 +328,23 @@
       p = Math.max(0, Math.min(1, p));
       layer.style.transform = 'translate3d(0,' + ((p - 0.5) * 7).toFixed(2) + '%,0)';
     }
-    addEventListener('scroll', function(){
-      if(!ticking){ ticking = true; requestAnimationFrame(apply); }
-    }, { passive: true });
-    addEventListener('resize', apply, { passive: true });
-    apply();
+    function queue(){ if(!ticking){ ticking = true; requestAnimationFrame(apply); } }
+    addEventListener('scroll', queue, { passive: true });
+    addEventListener('resize', queue, { passive: true });
+    queue();                       /* first read waits for a frame: no forced layout at load */
   })();
+
+  /* ---- GA4: phone / fax / email taps (the site's most common way to reach the clinic) ---- */
+  document.addEventListener('click', function(e){
+    var a = e.target.closest && e.target.closest('a[href^="tel:"], a[href^="mailto:"]');
+    if(!a || typeof gtag !== 'function') return;
+    var href = a.getAttribute('href');
+    var name = href.indexOf('mailto:') === 0 ? 'email_click'
+             : (href.replace(/\D/g,'').slice(-10) === '6617270005' ? 'fax_number_click' : 'phone_call_click');
+    gtag('event', name, { link_location: a.closest('.top-bar') ? 'top_bar'
+                        : a.closest('.nav-contact') ? 'mobile_menu'
+                        : a.closest('footer') ? 'footer' : 'page_body' });
+  });
 
   /* ---- hero stat count-up ---- */
   (function(){

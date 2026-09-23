@@ -186,9 +186,8 @@
       "about": { "@id": "https://ariphysicaltherapy.com/about.html#deepa" }
     }
     </script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preload" href="assets/fonts/montserrat-latin-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/inter-latin-var.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/ari.css">
 <!-- Google Analytics 4 -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-30S49569Y9"></script>
@@ -287,8 +286,8 @@
   <div class="media"><img src="assets/IMG_8167.jpg" alt="ARI Physical Therapy treatment area" loading="lazy" decoding="async" width="1050" height="1400"></div>
   <div><h2 style="margin-bottom:18px">The clinic</h2>
     <p>ARI Physical Therapy is located at <strong>8200 Stockdale Highway, Suite B2</strong>, in the Town &amp; Country Village shopping center, right next door to Trader Joe's, with free parking directly in front. Care is provided in person; we do not offer telehealth visits.</p>
-    <p>Our team speaks <strong>English, Spanish, and Hindi</strong>. We accept most private insurance plans and Medicare, and under California's direct access law you may be able to begin physical therapy without a physician referral for up to 12 visits or 45 days, whichever comes first. If you are not sure what your plan requires, <a href="contact.html" style="color:var(--orange);font-weight:600">call us</a> and we will help you find out.</p>
-    <p>Have a question before you book? Our <a href="faq.html" style="color:var(--orange);font-weight:600">frequently asked questions</a> page covers what to expect at your first visit, insurance and referrals, cancellations, and parking. You can also review <a href="services.html" style="color:var(--orange);font-weight:600">everything we treat</a>.</p></div>
+    <p>Our team speaks <strong>English, Spanish, and Hindi</strong>. We accept most private insurance plans and Medicare, and under California's direct access law you may be able to begin physical therapy without a physician referral for up to 12 visits or 45 days, whichever comes first. If you are not sure what your plan requires, <a href="contact.html" style="color:var(--orange-text);font-weight:600">call us</a> and we will help you find out.</p>
+    <p>Have a question before you book? Our <a href="faq.html" style="color:var(--orange-text);font-weight:600">frequently asked questions</a> page covers what to expect at your first visit, insurance and referrals, cancellations, and parking. You can also review <a href="services.html" style="color:var(--orange-text);font-weight:600">everything we treat</a>.</p></div>
 </div></section><section class="cta-band"><h2>Ready to get started?</h2><p>Request a consultation and we will help you take the first step.</p><a href="appointment.html" class="btn btn-primary">Request a Consultation</a></section>
 <footer>
   <div class="foot-inner">
@@ -356,12 +355,23 @@
       p = Math.max(0, Math.min(1, p));
       layer.style.transform = 'translate3d(0,' + ((p - 0.5) * 7).toFixed(2) + '%,0)';
     }
-    addEventListener('scroll', function(){
-      if(!ticking){ ticking = true; requestAnimationFrame(apply); }
-    }, { passive: true });
-    addEventListener('resize', apply, { passive: true });
-    apply();
+    function queue(){ if(!ticking){ ticking = true; requestAnimationFrame(apply); } }
+    addEventListener('scroll', queue, { passive: true });
+    addEventListener('resize', queue, { passive: true });
+    queue();                       /* first read waits for a frame: no forced layout at load */
   })();
+
+  /* ---- GA4: phone / fax / email taps (the site's most common way to reach the clinic) ---- */
+  document.addEventListener('click', function(e){
+    var a = e.target.closest && e.target.closest('a[href^="tel:"], a[href^="mailto:"]');
+    if(!a || typeof gtag !== 'function') return;
+    var href = a.getAttribute('href');
+    var name = href.indexOf('mailto:') === 0 ? 'email_click'
+             : (href.replace(/\D/g,'').slice(-10) === '6617270005' ? 'fax_number_click' : 'phone_call_click');
+    gtag('event', name, { link_location: a.closest('.top-bar') ? 'top_bar'
+                        : a.closest('.nav-contact') ? 'mobile_menu'
+                        : a.closest('footer') ? 'footer' : 'page_body' });
+  });
 
   /* ---- hero stat count-up ---- */
   (function(){

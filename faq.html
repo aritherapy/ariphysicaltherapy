@@ -200,9 +200,8 @@
   ]
 }
     </script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preload" href="assets/fonts/montserrat-latin-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/inter-latin-var.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/ari.css">
 <!-- Google Analytics 4 -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-30S49569Y9"></script>
@@ -277,7 +276,7 @@
   <p class="eyebrow">Patient Resources</p><h1>Frequently Asked Questions</h1><p class="lead">Physical therapy in Bakersfield, CA: referrals, insurance, what to expect, and more.</p>
 </div></section><section class="section"><div class="section-inner faq-grid">
   <div class="faq-side">
-    <p>Answers to the questions we hear most from new and prospective patients. Don't see yours? <a href="contact.html" style="color:var(--orange);font-weight:600">Get in touch</a>. We're happy to help.</p>
+    <p>Answers to the questions we hear most from new and prospective patients. Don't see yours? <a href="contact.html" style="color:var(--orange-text);font-weight:600">Get in touch</a>. We're happy to help.</p>
     <div class="side-card"><h3>Still have a question?</h3><p>Call the clinic and a member of our team will talk it through with you.</p>
       <a href="tel:6612828584" class="btn btn-primary">(661) 282-8584</a>
       <span class="or">or <a href="contact.html">send us a message</a></span></div>
@@ -350,12 +349,23 @@
       p = Math.max(0, Math.min(1, p));
       layer.style.transform = 'translate3d(0,' + ((p - 0.5) * 7).toFixed(2) + '%,0)';
     }
-    addEventListener('scroll', function(){
-      if(!ticking){ ticking = true; requestAnimationFrame(apply); }
-    }, { passive: true });
-    addEventListener('resize', apply, { passive: true });
-    apply();
+    function queue(){ if(!ticking){ ticking = true; requestAnimationFrame(apply); } }
+    addEventListener('scroll', queue, { passive: true });
+    addEventListener('resize', queue, { passive: true });
+    queue();                       /* first read waits for a frame: no forced layout at load */
   })();
+
+  /* ---- GA4: phone / fax / email taps (the site's most common way to reach the clinic) ---- */
+  document.addEventListener('click', function(e){
+    var a = e.target.closest && e.target.closest('a[href^="tel:"], a[href^="mailto:"]');
+    if(!a || typeof gtag !== 'function') return;
+    var href = a.getAttribute('href');
+    var name = href.indexOf('mailto:') === 0 ? 'email_click'
+             : (href.replace(/\D/g,'').slice(-10) === '6617270005' ? 'fax_number_click' : 'phone_call_click');
+    gtag('event', name, { link_location: a.closest('.top-bar') ? 'top_bar'
+                        : a.closest('.nav-contact') ? 'mobile_menu'
+                        : a.closest('footer') ? 'footer' : 'page_body' });
+  });
 
   /* ---- hero stat count-up ---- */
   (function(){

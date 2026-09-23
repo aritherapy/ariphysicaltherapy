@@ -75,9 +75,8 @@
       ]
     }
     </script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preload" href="assets/fonts/montserrat-latin-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/inter-latin-var.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/ari.css">
 <!-- Google Analytics 4 -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-30S49569Y9"></script>
@@ -185,7 +184,7 @@
   </div></div></section>
 <section class="section"><div class="section-inner">
   <div class="section-head"><p class="eyebrow">What We Treat</p><h2>Our Specialties</h2>
-    <p class="lead">We accept referrals across a wide range of conditions. <a href="services.html" style="color:var(--orange);font-weight:600">View full service descriptions &rarr;</a></p></div>
+    <p class="lead">We accept referrals across a wide range of conditions. <a href="services.html" style="color:var(--orange-text);font-weight:600">View full service descriptions &rarr;</a></p></div>
   <div class="info-cards"><div class="info"><svg class="ico" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-spine"/></svg><b>Orthopedic Rehabilitation</b></div><div class="info"><svg class="ico" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-sports"/></svg><b>Sports Injury Recovery</b></div><div class="info"><svg class="ico" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-postop"/></svg><b>Post-Operative Care</b></div><div class="info"><svg class="ico" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-pain"/></svg><b>Chronic Pain Rehab</b></div><div class="info"><svg class="ico" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-pelvic"/></svg><b>Pelvic Pain</b></div><div class="info"><svg class="ico" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-child"/></svg><b>Pediatric Rehabilitation</b></div><div class="info"><svg class="ico" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-prenatal"/></svg><b>Pre / Post Partum Rehab</b></div><div class="info"><svg class="ico" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-wellness"/></svg><b>Health Programs</b></div></div>
 </div></section>
 <footer>
@@ -254,12 +253,23 @@
       p = Math.max(0, Math.min(1, p));
       layer.style.transform = 'translate3d(0,' + ((p - 0.5) * 7).toFixed(2) + '%,0)';
     }
-    addEventListener('scroll', function(){
-      if(!ticking){ ticking = true; requestAnimationFrame(apply); }
-    }, { passive: true });
-    addEventListener('resize', apply, { passive: true });
-    apply();
+    function queue(){ if(!ticking){ ticking = true; requestAnimationFrame(apply); } }
+    addEventListener('scroll', queue, { passive: true });
+    addEventListener('resize', queue, { passive: true });
+    queue();                       /* first read waits for a frame: no forced layout at load */
   })();
+
+  /* ---- GA4: phone / fax / email taps (the site's most common way to reach the clinic) ---- */
+  document.addEventListener('click', function(e){
+    var a = e.target.closest && e.target.closest('a[href^="tel:"], a[href^="mailto:"]');
+    if(!a || typeof gtag !== 'function') return;
+    var href = a.getAttribute('href');
+    var name = href.indexOf('mailto:') === 0 ? 'email_click'
+             : (href.replace(/\D/g,'').slice(-10) === '6617270005' ? 'fax_number_click' : 'phone_call_click');
+    gtag('event', name, { link_location: a.closest('.top-bar') ? 'top_bar'
+                        : a.closest('.nav-contact') ? 'mobile_menu'
+                        : a.closest('footer') ? 'footer' : 'page_body' });
+  });
 
   /* ---- hero stat count-up ---- */
   (function(){
