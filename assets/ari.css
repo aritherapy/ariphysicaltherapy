@@ -621,3 +621,25 @@ footer img{height:46px;width:auto}
 /* Watermark numerals are pure decoration (WCAG exempts them from contrast).
    Rendered from CSS so assistive tech and contrast checkers treat them that way. */
 .svc-number::before{content:attr(data-n)}
+
+/* ---- condition pages ---- */
+.prose .plain-list{margin:0 0 16px;padding-left:20px;font-size:15px;line-height:1.8}
+.prose .plain-list li{margin-bottom:4px}
+.prose .med-disclaimer{font-size:13px;color:var(--text-light);margin-top:28px;margin-bottom:6px}
+.prose .reviewed-by{font-size:13px;color:var(--text-light);margin-bottom:0}
+.prose .reviewed-by a{color:var(--orange-text);font-weight:600}
+
+@media(max-width:1024px){ /* nav: 8 menu items no longer fit beside the logo below ~1000px, so tablets get the phone menu */
+  .navbar{flex-wrap:wrap}
+  .nav-links{display:none}
+  .hamburger{display:flex}
+  .nav-links.open{display:block;width:100%;order:3;margin-top:12px;border-top:1px solid var(--line);padding-top:6px}
+  .nav-links.open a{display:block;padding:15px 0;font-size:16px;border-bottom:1px solid var(--line)}
+  .nav-links.open a::after{display:none}
+  .nav-links.open .nav-contact{display:block;border-top:none;margin-top:4px;padding:16px 0 6px}
+  .nav-contact a{display:flex;align-items:center;gap:9px;padding:9px 0;font-size:15px;font-weight:500;color:var(--charcoal)}
+  .nav-contact a svg{color:var(--orange);flex:none}
+  .nav-contact .btn{width:100%;margin-top:12px}
+}
+.checks a{color:var(--charcoal);font-weight:600;text-decoration:underline;text-decoration-color:var(--orange);text-underline-offset:3px}
+.checks a:hover{color:var(--orange-text)}
