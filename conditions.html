@@ -335,6 +335,9 @@
       t.tabIndex = on ? 0 : -1;
       panels[j].hidden = !on;
     });
+    /* on phones the tab row scrolls sideways: keep the selected tab in view */
+    var row = tabs[i].parentNode, tr = tabs[i].getBoundingClientRect(), rr = row.getBoundingClientRect();
+    if(tr.left < rr.left || tr.right > rr.right) row.scrollLeft += tr.left - rr.left - 8;
     if(focus) tabs[i].focus();
     if(remember && history.replaceState) history.replaceState(null, '', '#' + panels[i].id);
   }
