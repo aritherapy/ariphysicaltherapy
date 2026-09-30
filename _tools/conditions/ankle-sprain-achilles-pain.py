@@ -1,0 +1,47 @@
+PAGE = {
+    'reviewed': None,   # DRAFT until Deepa reviews
+    'title': 'Ankle Sprain & Achilles Pain PT in Bakersfield | ARI PT',
+    'description': 'Sprained ankle that won\'t settle, or Achilles pain with walking or running? Physical therapy in Bakersfield, CA to heal and prevent re-injury.',
+    'crumb': 'Ankle Sprain &amp; Achilles Pain',
+    'eyebrow': 'Foot &amp; Ankle',
+    'h1': 'Ankle Sprain and Achilles Pain Treatment in',
+    'lead': 'A rolled ankle that keeps giving way, or an Achilles that aches every morning and after every run. The right rehab heals it properly and helps stop it coming back.',
+    'answer': '<strong>Yes, physical therapy helps ankle sprains and Achilles pain.</strong> After a sprain, early guided movement and balance training help you recover and lower the chance of spraining it again. For Achilles tendon pain, a progressive strengthening program is the first-line treatment in clinical guidelines. At ARI Physical Therapy in Bakersfield, every visit is one-on-one with a licensed physical therapist.',
+    'signs': [
+        'You rolled your ankle and it is still swollen, stiff or weak',
+        'Your ankle feels loose or gives way on uneven ground',
+        'You have sprained the same ankle more than once',
+        'Pain or stiffness at the back of the heel, worst with your first steps in the morning',
+        'Achilles pain that warms up during a walk or run, then is worse afterward',
+        'A thickened, tender spot on the Achilles tendon',
+    ],
+    'why': [
+        ('Ankle sprains',
+         '<p>Most sprains happen when the foot rolls inward and stretches the ligaments on the outside of the ankle. Swelling and pain settle over days to weeks, but <strong>strength and balance often don\'t come back on their own</strong>. That is one reason many people who sprain an ankle sprain it again, and some go on to have an ankle that keeps giving way. Balance and strength training after a sprain lowers the risk of re-injury.</p>'),
+        ('Achilles tendon pain',
+         '<p>Achilles pain usually builds up gradually when the tendon is asked to do more than it is ready for: a new running plan, more walking or standing, a change in shoes, or tight, weak calves. Rest alone rarely fixes it for long. <strong>Progressive loading exercises</strong> that build calf and tendon strength are the most effective treatment, adjusted so the tendon improves without flaring up.</p>'),
+    ],
+    'steps': [
+        ('A one-on-one evaluation', 'Your first visit takes about 45 to 60 minutes. We check your ankle, foot and calf, your strength, balance and walking or running, and ask what you need to get back to.'),
+        ('Heal and strengthen', 'Hands-on care and exercises to restore motion, calf and ankle strengthening, balance training, and for the Achilles, a loading program progressed week by week.'),
+        ('Back to activity', 'A step-by-step return to walking, running, work or sport, advice on shoes, bracing or taping if helpful, and a home program to prevent it coming back.'),
+    ],
+    'red_flags': [
+        'You can\'t take four steps on the injured foot, or there is tenderness right on the ankle or foot bones, which may need an X-ray',
+        'A sudden pop or feeling of being kicked in the back of the heel, with trouble pushing off, which can be an Achilles rupture',
+        'Pain, swelling or warmth in the calf, which needs urgent attention to rule out a blood clot',
+        'A foot that is numb, cold or pale, or swelling with fever or redness',
+    ],
+    'faq_title': 'Ankle sprain and Achilles FAQs',
+    'faqs': [
+        ('Should I rest a sprained ankle completely?', 'Usually not for long. After the first few days, gentle movement and walking as pain allows help a sprain heal. A physical therapist can guide you on when to add balance and strengthening work.'),
+        ('Why does my ankle keep rolling?', 'After a sprain, the ankle\'s strength and balance reactions often don\'t fully recover on their own, which makes another sprain more likely. Balance and strength training can reduce that risk.'),
+        ('Should I stop running with Achilles pain?', 'Not always. Many people can keep some running or walking while the tendon gets stronger, as long as pain stays mild and settles by the next day. Your therapist will help you adjust your training.'),
+        ('How long does Achilles tendon pain take to get better?', 'Tendons improve slowly. Many people notice progress within several weeks of consistent loading exercise, with full recovery taking a few months. Sticking with the program is what makes the difference.'),
+    ],
+    'side': 'Ankle and Achilles care at ARI is one-on-one with a licensed physical therapist.',
+    'related': [('Sports Injury Therapy', 'sports-injury-therapy.html'), ('Plantar Fasciitis &amp; Heel Pain', 'plantar-fasciitis-heel-pain.html'), ('Balance &amp; Fall Prevention', 'balance-fall-prevention.html')],
+    'condition': 'Ankle sprain and Achilles tendinopathy',
+    'alt_names': ['Sprained ankle', 'Lateral ankle sprain', 'Chronic ankle instability', 'Achilles tendinopathy', 'Achilles tendinitis', 'Achilles tendon pain'],
+    'therapy': 'Physical therapy: balance training, progressive tendon loading and return-to-activity planning',
+}
