@@ -6,7 +6,7 @@ PAGE = {
     'eyebrow': 'Women&rsquo;s Health',
     'h1': 'Back and Pelvic Pain During Pregnancy in',
     'lead': 'Pain at the back of your pelvis, in the pubic bone or low back is very common in pregnancy. Common doesn\'t mean you just have to put up with it. Gentle physical therapy can help.',
-    'answer': '<strong>Yes, physical therapy can help back and pelvic pain during pregnancy.</strong> Low back and pelvic girdle pain affect many pregnant women, and exercise and physical therapy are safe, recommended ways to ease pain and stay active. At ARI Physical Therapy in Bakersfield, prenatal care is one-on-one with a licensed physical therapist in a private room, and we coordinate with your OB or midwife when needed.',
+    'answer': '<strong>Yes, physical therapy can help back and pelvic pain during pregnancy.</strong> Low back and pelvic girdle pain affect many pregnant women, and exercise and physical therapy are safe, recommended ways to ease pain and stay active. At ARI Physical Therapy in Bakersfield, prenatal care is one-on-one with a licensed physical therapist in a private room, and we coordinate with your OB when needed.',
     'signs': [
         'Pain in the low back, or at the back of the pelvis near the dimples',
         'Pain at the front of the pelvis or pubic bone',
@@ -26,7 +26,7 @@ PAGE = {
         ('Gentle treatment', 'Exercises to support the pelvis, back and hips, hands-on care, positions for sleep and daily tasks, and pelvic floor care if you need it, all adjusted as your pregnancy progresses.'),
         ('A plan through birth and after', 'A home program that changes with each trimester, tips for staying active safely, and a plan for recovery after your baby arrives.'),
     ],
-    'red_flags_intro': 'Call your OB or midwife, or get emergency care, if you have:',
+    'red_flags_intro': 'Call your OB, or get emergency care, if you have:',
     'red_flags': [
         'Vaginal bleeding or leaking fluid',
         'Regular tightening or cramping in your belly, or back pain that comes and goes in waves before 37 weeks',
@@ -37,7 +37,7 @@ PAGE = {
     ],
     'faq_title': 'Pregnancy back and pelvic pain FAQs',
     'faqs': [
-        ('Is physical therapy safe during pregnancy?', 'Yes. Physical therapy during pregnancy is gentle and adjusted to how far along you are. We avoid positions and treatments that aren\'t appropriate in pregnancy, and we coordinate with your OB or midwife when needed.'),
+        ('Is physical therapy safe during pregnancy?', 'Yes. Physical therapy during pregnancy is gentle and adjusted to how far along you are. We avoid positions and treatments that aren\'t appropriate in pregnancy, and we coordinate with your OB when needed.'),
         ('Will the pain go away after I give birth?', 'For many women, pregnancy back and pelvic pain improves in the weeks after birth, but for some it lingers. Treating it during pregnancy can make you more comfortable now, and we can keep helping after your baby arrives.'),
         ('Does pelvic floor therapy happen during pregnancy?', 'It can. Pelvic floor care during pregnancy can help with leaking and heaviness, and help you learn to relax and coordinate the pelvic floor for birth. We explain everything first, and you decide what you\'re comfortable with.'),
         ('Should I wear a pregnancy support belt?', 'A support belt helps some women with pelvic girdle pain, especially for walking and standing. Your therapist can tell you whether one is likely to help you and how to wear it.'),
