@@ -19,6 +19,7 @@ CONTENT = os.path.join(ROOT, '_tools', 'conditions')
 SHELL = 'knee-pain-arthritis.html'
 SITE = 'https://ariphysicaltherapy.com/'
 REVIEWER = 'Deepa Konnur, PT, MPT, OCS'
+PAGE_CTA = open(os.path.join(ROOT, '_tools', 'page_cta.html'), encoding='utf-8').read().strip()   # shared end-of-page next step
 MONTHS = 'January February March April May June July August September October November December'.split()
 
 CLINIC_LINE = ('<h2>Why patients choose ARI</h2><p>Care at ARI is always <strong>one-on-one and in person</strong> with a '
@@ -79,7 +80,7 @@ def body(p):
 <p>{p.get('red_flags_intro', 'See a doctor promptly if you have:')}</p>
 <ul class="plain-list">{flags}</ul>
 {CLINIC_LINE}
-<h2>{p['faq_title']}</h2><div class="acc">{acc}</div><p class="med-disclaimer">This page is general information, not a diagnosis. If you have symptoms, a licensed clinician should evaluate you.</p>{reviewed}
+<h2>{p['faq_title']}</h2><div class="acc">{acc}</div>{PAGE_CTA}<p class="med-disclaimer">This page is general information, not a diagnosis. If you have symptoms, a licensed clinician should evaluate you.</p>{reviewed}
   </div>
   <aside class="detail-side">
     <div class="side-card"><h3>Start with an evaluation</h3><p>{p['side']} Request an evaluation and we will help you take the first step, usually within one business day.</p>

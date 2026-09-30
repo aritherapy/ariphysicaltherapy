@@ -283,6 +283,8 @@
              : (href.replace(/\D/g,'').slice(-10) === '6617270005' ? 'fax_number_click' : 'phone_call_click');
     gtag('event', name, { link_location: a.closest('.top-bar') ? 'top_bar'
                         : a.closest('.nav-contact') ? 'mobile_menu'
+                        : a.closest('.cta-bar') ? 'sticky_bar'
+                        : a.closest('.page-cta') ? 'page_end'
                         : a.closest('footer') ? 'footer' : 'page_body' });
   });
 

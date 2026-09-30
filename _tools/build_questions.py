@@ -21,6 +21,7 @@ SHELL = 'knee-pain-arthritis.html'
 SITE = 'https://ariphysicaltherapy.com/'
 INDEX = 'ask-ari.html'
 REVIEWER = 'Deepa Konnur, PT, MPT, OCS'
+PAGE_CTA = open(os.path.join(ROOT, '_tools', 'page_cta.html'), encoding='utf-8').read().strip()   # shared end-of-page next step
 MONTHS = 'January February March April May June July August September October November December'.split()
 ORDER = ['back', 'neck', 'shoulder-hand', 'knee', 'hip', 'foot-ankle', 'pelvic', 'balance', 'bone-surgery', 'starting']
 
@@ -116,7 +117,7 @@ def build_page(p, label, siblings):
 <h2>How physical therapy at ARI can help</h2>{p['pt']}<p>{ARI_LINE}</p>{guide}
 {callout}
 {related}
-<p class="med-disclaimer">This page is general information, not a diagnosis. If you have symptoms, a licensed clinician should evaluate you.</p>{reviewed}
+{PAGE_CTA}<p class="med-disclaimer">This page is general information, not a diagnosis. If you have symptoms, a licensed clinician should evaluate you.</p>{reviewed}
   </div>
 {side(([p['guide']] if p.get('guide') else []) + [('All patient questions', INDEX), ('Conditions we treat', 'conditions.html')])}
 </div></section>

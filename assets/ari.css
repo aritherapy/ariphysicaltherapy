@@ -715,3 +715,27 @@ footer img{height:46px;width:auto}
 .notrack-toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);z-index:2100;background:var(--charcoal);color:#fff;font:500 14px 'Inter',sans-serif;padding:12px 18px;border-radius:8px;box-shadow:0 10px 30px rgba(0,0,0,.25);max-width:calc(100% - 32px);text-align:center;transition:opacity .4s}
 .notrack-toast.out{opacity:0;pointer-events:none}
 .home-search .eyebrow{justify-content:center}
+
+/* ---------- phones: Call / Book bar pinned to the bottom (added by assets/ari.js) ---------- */
+.cta-bar{display:none}
+@media(max-width:768px){
+  .cta-bar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:1500;gap:10px;padding:10px 12px calc(10px + env(safe-area-inset-bottom,0px));background:rgba(255,255,255,.97);box-shadow:0 -4px 18px rgba(0,0,0,.12);transform:translateY(110%);transition:transform .25s var(--ease)}
+  .cta-bar.show{transform:none}
+  .cta-bar a{flex:1;white-space:nowrap;display:inline-flex;align-items:center;justify-content:center;gap:8px;height:48px;border-radius:6px;font:600 15px 'Inter',sans-serif;text-decoration:none}
+  .cta-bar .cta-call{background:var(--charcoal);color:#fff}
+  .cta-bar .cta-book{background:var(--orange-btn);color:#fff}
+  .cta-bar .cta-book:active{background:var(--orange-btn-hover)}
+  .cta-bar svg{flex:none}
+  body.has-cta-bar{padding-bottom:calc(68px + env(safe-area-inset-bottom,0px))}
+  body.has-cta-bar .notrack-toast{bottom:calc(84px + env(safe-area-inset-bottom,0px))}
+}
+@media(prefers-reduced-motion:reduce){.cta-bar{transition:none}}
+
+/* ---------- end-of-page next step on condition and question pages ---------- */
+.page-cta{background:var(--charcoal);color:#fff;border-radius:10px;padding:28px 28px 30px;margin:44px 0 8px}
+.page-cta .page-cta-h{font-family:'Montserrat',sans-serif;font-weight:700;font-size:22px;line-height:1.3;color:#fff;margin:0 0 8px}
+.page-cta p{color:rgba(255,255,255,.82);margin:0 0 20px;font-size:15.5px;line-height:1.65}
+.page-cta-btns{display:flex;flex-wrap:wrap;gap:12px}
+.prose .page-cta a.btn{text-decoration:none}
+.page-cta .btn-on-dark{color:#fff}
+@media(max-width:768px){.page-cta{padding:24px 20px 24px}.page-cta-btns .btn{width:100%}}

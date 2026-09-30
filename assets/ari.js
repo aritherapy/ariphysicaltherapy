@@ -16,6 +16,8 @@
          : el.closest('.page-hero, .hero-full') ? 'hero'
          : el.closest('.side-card') ? 'sidebar'
          : el.closest('.site-search') ? 'search'
+         : el.closest('.cta-bar') ? 'sticky_bar'
+         : el.closest('.page-cta') ? 'page_end'
          : el.closest('.cond-actions') ? 'condition_list'
          : el.closest('footer') ? 'footer' : 'page_body';
   }
@@ -36,6 +38,28 @@
     else if(a.classList.contains('cond-link')) track('condition_guide_click', { condition_page: href.split('?')[0] });
     else if(/ReferralPadForm\.pdf/.test(href)) track('referral_form_download', { link_location: where(a) });
   });
+
+  /* ---------- phones: Call / Book bar pinned to the bottom ----------
+     Slides in once the top bar (with its own call and book buttons) has scrolled away. Hidden while
+     typing in a form so it never covers a field, and not shown on the appointment form itself. */
+  (function(){
+    if(!window.matchMedia || /(^|\/)(appointment|employees)\.html$/.test(location.pathname)) return;
+    var bar = document.createElement('div');
+    bar.className = 'cta-bar'; bar.setAttribute('role', 'region'); bar.setAttribute('aria-label', 'Call or book');
+    bar.innerHTML =
+      '<a class="cta-call" href="tel:6612828584"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21.5 16.9v2.9a2 2 0 0 1-2.2 2 19.6 19.6 0 0 1-8.5-3 19.3 19.3 0 0 1-5.9-5.9 19.6 19.6 0 0 1-3-8.6 2 2 0 0 1 2-2.2h2.9a2 2 0 0 1 2 1.7c.13.96.36 1.9.7 2.8a2 2 0 0 1-.45 2.1L8.1 9.8a15.8 15.8 0 0 0 5.9 5.9l1.1-1.1a2 2 0 0 1 2.1-.45c.9.34 1.84.57 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>Call</a>' +
+      '<a class="cta-book" href="appointment.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.2" y="4.8" width="17.6" height="16" rx="2"/><path d="M3.2 9.6h17.6M8.3 2.8v4M15.7 2.8v4"/></svg>Book Now</a>';
+    document.body.appendChild(bar);
+    document.body.classList.add('has-cta-bar');
+    var past = false, typing = false;
+    function paint(){ bar.classList.toggle('show', past && !typing); }
+    var top = document.querySelector('.top-bar');
+    if(top && 'IntersectionObserver' in window){
+      new IntersectionObserver(function(en){ past = !en[0].isIntersecting; paint(); }).observe(top);
+    } else { past = true; paint(); }
+    document.addEventListener('focusin', function(e){ if(e.target.matches && e.target.matches('input, textarea, select')){ typing = true; paint(); } });
+    document.addEventListener('focusout', function(){ typing = false; paint(); });
+  })();
 
   /* ---------- analytics opt-out notice (?notrack=1 / ?notrack=0, handled in <head>) ---------- */
   (function(){
