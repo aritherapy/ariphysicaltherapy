@@ -45,6 +45,8 @@ PAGE = {
     'referral_faq': False,
     'side': 'Joint replacement rehab at ARI is one-on-one with a licensed physical therapist.',
     'related': [('Post-Surgical Rehab', 'post-surgery-rehab.html'), ('Prehab Before Surgery', 'prehab-before-surgery.html'), ('Knee Arthritis &amp; Knee Pain', 'knee-pain-arthritis.html')],
+    # checklist phrases on service pages that link here once this page is live (release.py)
+    'links_from': [('services.html', 'Total joint replacement recovery', 'Total joint replacement recovery'), ('post-surgery-rehab.html', 'Total joint replacement (knee, hip, shoulder)', 'Total joint replacement')],
     'condition': 'Rehabilitation after total knee or hip replacement',
     'alt_names': ['Total knee replacement rehab', 'Total hip replacement rehab', 'Knee arthroplasty', 'Hip arthroplasty', 'TKA', 'THA'],
     'therapy': 'Physical therapy: range of motion, strengthening and gait training after joint replacement',

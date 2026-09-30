@@ -10,9 +10,10 @@ For each slug (a condition page in _tools/conditions/ or a question in _tools/qu
      Deepa's "Clinically reviewed by" line),
   2. rebuilds the page(s) and the ask-ari.html index,
   3. adds the page to sitemap.xml and llms.txt, and condition pages to the conditions.html schema,
-  4. once any question is live: adds "Patient Questions" to every page's footer, and a
+  4. links the matching checklist phrases on service pages (each content file's 'links_from'),
+  5. once any question is live: adds "Patient Questions" to every page's footer, and a
      "Common questions" list (live questions only) to the matching condition pages,
-  5. refreshes the site search index.
+  6. refreshes the site search index.
 It never commits or pushes. Review `git diff`, then commit, push, and request indexing in Search Console.
 Only release pages Deepa has actually reviewed.
 """
@@ -159,6 +160,48 @@ def sync_links(qs):
     return footer, pages
 
 
+CHECK_ITEM = re.compile(r'(<div class="check"><span class="check-tick">&#10003;</span><span>)(.*?)(</span></div>)', re.S)
+
+
+def link_phrase(inner, slug, phrase):
+    """Wrap the first unlinked occurrence of phrase in a checklist line's HTML; existing links are left alone."""
+    parts = re.split(r'(<a\b.*?</a>)', inner, flags=re.S)
+    for i, part in enumerate(parts):
+        if not part.startswith('<a') and phrase in part:
+            parts[i] = part.replace(phrase, f'<a href="{slug}.html">{phrase}</a>', 1)
+            return ''.join(parts)
+    return inner
+
+
+def link_mentions(cs):
+    """Link checklist phrases on service pages to live condition pages (each content file's 'links_from').
+    A line is matched on its visible text (links stripped), so it still matches after other words are linked."""
+    todo = {}
+    for slug, (_, pg) in cs.items():
+        if pg.get('reviewed'):
+            for page, ctx, phrase in pg.get('links_from', []):
+                todo.setdefault(page, []).append((slug, ctx, phrase))
+    n = 0
+    for page, rows in todo.items():
+        path = p(page)
+        s = open(path, encoding='utf-8').read()
+        def fix(m):
+            nonlocal n
+            inner = m.group(2)
+            visible = re.sub(r'<[^>]+>', '', inner)
+            for slug, ctx, phrase in rows:
+                if ctx in visible and f'href="{slug}.html"' not in inner:
+                    new_inner = link_phrase(inner, slug, phrase)
+                    if new_inner != inner:
+                        inner = new_inner
+                        n += 1
+            return m.group(1) + inner + m.group(3)
+        s2 = CHECK_ITEM.sub(fix, s)
+        if s2 != s:
+            open(path, 'w', encoding='utf-8').write(s2)
+    return n
+
+
 def run(*cmd):
     r = subprocess.run([sys.executable, *cmd], cwd=ROOT, capture_output=True, text=True)
     if r.returncode:
@@ -211,6 +254,7 @@ def main():
     if rel_c:
         hub_schema_add([(s, plain(cs[s][1]['crumb']), cs[s][1]['condition']) for s in rel_c])
     footer, pages = sync_links(qs)
+    mentions = link_mentions(cs)
     print(run('_tools/build_search_index.py'))
 
     if rel_c or rel_q:
@@ -219,6 +263,8 @@ def main():
         print(f'Added the "Patient Questions" footer link to {footer} pages.')
     if pages:
         print(f'Updated "Common questions" lists on {pages} condition pages.')
+    if mentions:
+        print(f'Linked {mentions} checklist mentions on service pages to live condition pages.')
     print('Next: check `git diff`, commit, push, then request indexing for the new URLs in Search Console.')
 
 

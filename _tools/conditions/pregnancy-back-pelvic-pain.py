@@ -44,6 +44,8 @@ PAGE = {
     ],
     'side': 'Prenatal care at ARI is one-on-one with a licensed physical therapist, in a private room.',
     'related': [('Pelvic Floor Therapy for Women', 'pelvic-floor-therapy.html'), ('Postpartum Therapy', 'postpartum-therapy.html'), ('Bladder Leaks', 'bladder-leaks-incontinence.html'), ('Diastasis Recti', 'diastasis-recti.html')],
+    # checklist phrases on service pages that link here once this page is live (release.py)
+    'links_from': [('services.html', 'Prenatal back and pelvic pain', 'Prenatal back and pelvic pain'), ('postpartum-therapy.html', 'Prenatal back &amp; pelvic pain', 'Prenatal back &amp; pelvic pain')],
     'condition': 'Pregnancy-related low back and pelvic girdle pain',
     'alt_names': ['Pelvic girdle pain', 'Pregnancy back pain', 'Symphysis pubis dysfunction', 'SI joint pain in pregnancy', 'Prenatal back pain'],
     'therapy': 'Prenatal physical therapy: exercise, manual therapy, pelvic floor care and movement guidance',

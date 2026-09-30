@@ -1,0 +1,51 @@
+PAGE = {
+    'reviewed': None,   # DRAFT until Deepa reviews
+    'title': 'C-Section Recovery Physical Therapy in Bakersfield | ARI PT',
+    'description': 'Physical therapy after a C-section in Bakersfield, CA: scar care, rebuilding your core, lifting your baby comfortably and returning to exercise.',
+    'crumb': 'C-Section Recovery',
+    'eyebrow': 'Women&rsquo;s Health',
+    'h1': 'C-Section Recovery Physical Therapy in',
+    'lead': 'A C-section is major abdominal surgery, and you\'re recovering while caring for a newborn. Physical therapy helps you heal, rebuild your core and get back to feeling like yourself.',
+    'answer': '<strong>Yes, physical therapy can help you recover after a C-section.</strong> It can ease scar tightness and numbness, rebuild your deep core and pelvic floor, and guide a safe return to lifting and exercise. At ARI Physical Therapy in Bakersfield, postpartum care is one-on-one with a licensed physical therapist in a private room, and we coordinate with your OB when needed.',
+    'signs': [
+        'Your scar feels tight, pulls, or is numb or oversensitive',
+        'Your belly feels weak, or you have a bulge or gap down the middle',
+        'Getting out of bed, lifting your baby or the car seat is hard',
+        'Low back pain since your delivery',
+        'Leaking urine, or pain with sex',
+        'You\'re not sure when or how to start exercising again',
+    ],
+    'why': [
+        ('What recovery involves',
+         '<p>During a C-section, the surgeon opens several layers of tissue, including the skin, the connective tissue in front of the abdominal muscles, and the uterus. The abdominal muscles are separated, not cut, but they are stretched from pregnancy. It\'s common to have <strong>scar tightness or numbness, a weak core and back pain</strong> for a while, and pregnancy itself can affect the pelvic floor even without a vaginal birth.</p>'),
+        ('How physical therapy helps',
+         '<p>Once your provider says the incision has healed, gentle scar massage and movement can improve comfort and mobility. We rebuild the deep core and pelvic floor step by step, teach easier ways to get out of bed and lift your baby, and plan a gradual return to exercise. Many women also have <a href="diastasis-recti.html">diastasis recti</a>, which we treat too.</p>'),
+    ],
+    'steps': [
+        ('A one-on-one evaluation', 'Your first visit takes about 45 to 60 minutes, in a private room. We ask about your birth and recovery, check your scar, core, posture and movement, and explain what we find. Nothing is done without your consent.'),
+        ('Heal and rebuild', 'Scar care once healed, breathing and deep core exercises, pelvic floor work if needed, and easier ways to lift, carry and feed your baby.'),
+        ('Back to your life', 'A step-by-step return to exercise, lifting and the activities you enjoy, with a home program that fits around a newborn.'),
+    ],
+    'red_flags_intro': 'Call your OB, or get emergency care, if you have:',
+    'red_flags': [
+        'Redness, warmth, swelling, drainage or opening at the incision, or fever',
+        'Heavy bleeding, or bleeding that gets heavier again',
+        'Pain, swelling or warmth in one calf, chest pain or shortness of breath',
+        'Severe or worsening belly pain',
+        'Feeling hopeless, very anxious, or having thoughts of harming yourself or your baby. You can also call or text the National Maternal Mental Health Hotline at 1-833-852-6262',
+    ],
+    'faq_title': 'C-section recovery FAQs',
+    'faqs': [
+        ('When can I start physical therapy after a C-section?', 'Gentle breathing, walking and posture work can often start in the early weeks as you feel ready. Many women begin physical therapy after their postpartum check, once their provider has checked the incision.'),
+        ('Is numbness around my C-section scar normal?', 'Yes, numbness or oversensitivity around the scar is common and often improves over months. Gentle scar work, once the incision has healed, can help with comfort and tightness.'),
+        ('Do I need pelvic floor therapy if I had a C-section?', 'Possibly. Pregnancy itself puts load on the pelvic floor, so leaking, heaviness or pain with sex can happen after a C-section too. Your therapist can check and treat it if needed.'),
+        ('When can I lift heavier things or exercise again?', 'Your surgeon will give you early lifting limits. After that, a gradual return guided by how your core and pelvic floor are working is safest. Your therapist will build that plan with you.'),
+    ],
+    'side': 'Postpartum care at ARI is one-on-one with a licensed physical therapist, in a private room.',
+    'related': [('Prenatal &amp; Postpartum Therapy', 'postpartum-therapy.html'), ('Diastasis Recti', 'diastasis-recti.html'), ('Pelvic Floor Therapy for Women', 'pelvic-floor-therapy.html')],
+    # checklist phrases on service pages that link here once this page is live (release.py)
+    'links_from': [('services.html', 'C-section and birth recovery', 'C-section'), ('postpartum-therapy.html', 'C-section &amp; birth recovery', 'C-section')],
+    'condition': 'Recovery after cesarean section',
+    'alt_names': ['C-section recovery', 'Cesarean recovery', 'C-section scar', 'Postpartum core recovery after C-section'],
+    'therapy': 'Postpartum physical therapy: scar mobility, core and pelvic floor rehabilitation',
+}

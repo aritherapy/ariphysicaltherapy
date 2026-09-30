@@ -44,6 +44,8 @@ PAGE = {
     ],
     'side': 'Balance care at ARI is one-on-one with a licensed physical therapist.',
     'related': [('Vertigo &amp; Dizziness', 'vertigo-dizziness-bppv.html'), ('Osteoporosis &amp; Bone Health', 'osteoporosis-bone-health.html'), ('Wellness &amp; Fitness Programs', 'wellness-programs.html')],
+    # checklist phrases on service pages that link here once this page is live (release.py)
+    'links_from': [('services.html', 'Fall prevention for older adults', 'Fall prevention for older adults'), ('wellness-programs.html', 'Fall prevention for older adults', 'Fall prevention for older adults'), ('wellness-programs.html', 'Balance &amp; mobility training', 'Balance &amp; mobility training')],
     'condition': 'Balance impairment and fall risk',
     'alt_names': ['Balance problems', 'Fall prevention', 'Fear of falling', 'Unsteady gait', 'Falls in older adults'],
     'therapy': 'Physical therapy: balance, strength and gait training',
