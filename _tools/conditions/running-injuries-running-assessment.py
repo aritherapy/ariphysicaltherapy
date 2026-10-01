@@ -1,5 +1,5 @@
 PAGE = {
-    'reviewed': None,
+    'reviewed': '2026-10-01',
     'title': 'Running Injury PT & Running Assessment in Bakersfield | ARI PT',
     'description': 'Physical therapy in Bakersfield, CA for runner\'s knee, IT band pain, shin splints and Achilles pain, plus a running assessment to plan a safe return.',
     'crumb': 'Running Injuries',

@@ -1,5 +1,5 @@
 PAGE = {
-    'reviewed': None,
+    'reviewed': '2026-10-01',
     'title': 'Hand & Wrist Pain Physical Therapy in Bakersfield | ARI PT',
     'description': 'Physical therapy in Bakersfield, CA for trigger finger, thumb-side wrist pain, thumb arthritis, wrist sprains and stiffness after a hand or wrist fracture.',
     'crumb': 'Hand &amp; Wrist Therapy',

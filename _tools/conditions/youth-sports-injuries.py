@@ -1,5 +1,5 @@
 PAGE = {
-    'reviewed': None,
+    'reviewed': '2026-10-01',
     'title': 'Youth Sports Injury Physical Therapy in Bakersfield | ARI PT',
     'description': 'Physical therapy in Bakersfield, CA for young athletes: sprains, Osgood-Schlatter, Sever\'s heel pain, throwing injuries, ACL rehab and safe return to sport.',
     'crumb': 'Youth Sports Injuries',
@@ -51,4 +51,5 @@ PAGE = {
     'condition': 'Youth sports injuries',
     'alt_names': ['Youth sports injury', 'Kids sports injuries', 'Teen athlete injury', 'Osgood-Schlatter disease', 'Sever\'s disease', 'Calcaneal apophysitis', 'Little League shoulder', 'Little League elbow', 'ACL injury prevention', 'Pediatric sports physical therapy'],
     'therapy': 'Physical therapy: youth sports rehabilitation, injury prevention and return-to-sport training',
+    'links_from': [('services.html', 'Sports injuries in young athletes', 'Sports injuries in young athletes'), ('pediatric-therapy.html', 'Sports injuries in young athletes', 'Sports injuries in young athletes')],
 }

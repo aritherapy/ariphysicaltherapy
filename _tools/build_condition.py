@@ -92,6 +92,9 @@ def body(p):
         y, m, _ = p['reviewed'].split('-')
         reviewed = L['reviewed'](REVIEWER, y, m)
     sections = ''.join(f'<h2>{h}</h2>{c}' for h, c in p['why'])
+    # service-style pages may have no warning-signs list ('red_flags': [])
+    red = (f"<h2>{L['red_h']}</h2>\n<p>{p.get('red_flags_intro', L['red_intro'])}</p>\n<ul class=\"plain-list\">{flags}</ul>\n"
+           if p['red_flags'] else '')
     return f'''</nav>
 <section class="page-hero"><div class="page-hero-inner">
   <p class="breadcrumb"><a href="{L['hub']}">{L['hub_name']}</a> &nbsp;/&nbsp; {p['crumb']}</p>
@@ -101,14 +104,11 @@ def body(p):
 <section class="section"><div class="section-inner detail">
   <div class="prose">
     <p class="svc-lead" style="font-size:17px;line-height:1.75;margin-bottom:8px">{p['answer']}</p>
-<h2>{L['signs_h']}</h2><div class="checks">{checks}</div>
+<h2>{p.get('signs_h', L['signs_h'])}</h2><div class="checks">{checks}</div>
 {sections}
 <h2>{L['steps_h']}</h2><div class="steps">{steps}</div>
 {L['direct_access'] if p.get('callout', True) else p.get('callout_html', '')}
-<h2>{L['red_h']}</h2>
-<p>{p.get('red_flags_intro', L['red_intro'])}</p>
-<ul class="plain-list">{flags}</ul>
-{L['clinic_line']}
+{red}{L['clinic_line']}
 <h2>{p['faq_title']}</h2><div class="acc">{acc}</div>{L['page_cta']}<p class="med-disclaimer">{L['disclaimer']}</p>{reviewed}
   </div>
   <aside class="detail-side">

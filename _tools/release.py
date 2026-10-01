@@ -30,7 +30,7 @@ import spanish
 SITE = 'https://ariphysicaltherapy.com/'
 TOOLS = os.path.join(ROOT, '_tools')
 REL_START, REL_END = '<!-- ask-ari:related -->', '<!-- /ask-ari:related -->'
-FOOT_LINK = '<a href="ask-ari.html">Patient Questions</a><a href="appointment.html">'   # (question pages also say "Patient Questions" in their breadcrumb)
+FOOT_LINK = '<a href="ask-ari.html">Patient Questions</a><a href="'   # footer: directly followed by another link (the breadcrumb on question pages is followed by a slash)
 
 
 def p(*parts):
