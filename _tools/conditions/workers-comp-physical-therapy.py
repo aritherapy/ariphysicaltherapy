@@ -2,19 +2,18 @@ PAGE = {
     'reviewed': '2026-09-30',   # owner-approved 2026-09-30 (process wording); released without the clinical-review line
     'clinical_review': False,
     'title': "Workers' Comp Physical Therapy in Bakersfield | ARI PT",
-    'description': "Hurt at work? One-on-one workers' comp physical therapy in Bakersfield, CA: work injury rehab, work conditioning, FCE and pre-employment testing.",
+    'description': "Hurt at work? One-on-one workers' comp physical therapy in Bakersfield, CA: work injury rehab and work conditioning to get you back to full duty.",
     'crumb': "Workers' Comp",
     'eyebrow': 'Work Injuries',
     'h1': "Workers' Comp and Work Injury Physical Therapy in",
     'lead': "Injured on the job? Get one-on-one rehab that gets you back to work safely, with progress your doctor and claims adjuster can follow.",
-    'answer': "<strong>Yes, ARI Physical Therapy treats workers' compensation patients.</strong> We help people recover from back, neck, shoulder, knee and other injuries that happen at work, and we offer work conditioning, functional capacity testing and pre-employment testing. Every visit is one-on-one with a licensed physical therapist at our Bakersfield clinic, and our clinic director is a board-certified Orthopedic Certified Specialist.",
+    'answer': "<strong>Yes, ARI Physical Therapy treats workers' compensation patients.</strong> We help people recover from back, neck, shoulder, knee and other injuries that happen at work, and offer work conditioning to prepare you for full duty. Every visit is one-on-one with a licensed physical therapist at our Bakersfield clinic, and our clinic director is a board-certified Orthopedic Certified Specialist.",
     'signs': [
         'You were hurt lifting, carrying, pushing, pulling or in a fall at work',
         'You have back, neck, shoulder, wrist or knee pain from repetitive work tasks',
         'Your treating doctor has prescribed physical therapy for a work injury',
         'You need to rebuild strength and stamina before returning to full duty',
-        'Your employer, adjuster or doctor needs a functional capacity evaluation',
-        'You\'re an employer looking for pre-employment physical testing',
+        'You were injured at work and want to get back to your job safely',
     ],
     'why': [
         ('How workers\' comp physical therapy works in California',
@@ -27,8 +26,7 @@ PAGE = {
          '<ul class="plain-list">'
          '<li><strong>Work injury rehabilitation:</strong> one-on-one treatment for back, neck, shoulder, elbow, wrist, hip, knee and ankle injuries, including after surgery.</li>'
          '<li><strong>Work conditioning:</strong> progressive strengthening and endurance training that mirrors the physical demands of your job, to prepare you for full duty.</li>'
-         '<li><strong>Functional capacity evaluations (FCE):</strong> standardized testing of what you can safely lift, carry, push, pull and tolerate, to guide return-to-work decisions.</li>'
-         '<li><strong>Pre-employment physical testing:</strong> job-specific testing for employers, to match new hires to the physical demands of the role.</li></ul>'),
+         '<li><strong>Help with modified duty:</strong> a program built around your work restrictions while you\'re back at work on light duty.</li></ul>'),
         ('For employers, adjusters and case managers',
          '<p>Fax referrals and prescriptions to <strong>(661) 727-0005</strong>. Questions? Call <a href="tel:6612828584">(661) 282-8584</a>. We see patients one-on-one, send progress notes on request, and focus on a safe, durable return to work.</p>'),
     ],
@@ -49,13 +47,13 @@ PAGE = {
     'faqs': [
         ("Do I need a referral for workers' comp physical therapy?", "Yes. In California, workers' comp physical therapy is prescribed by your treating doctor and authorized by the claims administrator. Call us and we'll help you with the next steps."),
         ("Does workers' comp pay for my physical therapy?", "When physical therapy is authorized for an accepted workers' comp claim, the claims administrator pays for it. Bring your claim number and adjuster's contact details, and we'll coordinate with them."),
-        ('What is a functional capacity evaluation?', 'A functional capacity evaluation (FCE) is a set of standardized physical tests, such as lifting, carrying, pushing, pulling, standing and walking, that measures what you can safely do. It helps your doctor, employer and adjuster plan your return to work.'),
+        ('What is work conditioning?', 'Work conditioning is a progressive exercise program that rebuilds the strength, endurance and movement your job demands, such as lifting, carrying, reaching or standing, so you can return to full duty safely.'),
         ('Can I keep working while I do physical therapy?', 'Often, yes. Many people work modified duty during treatment. We tailor your program to your work restrictions and help you progress toward full duty.'),
     ],
     'referral_faq': False,
     'side': "Workers' comp care at ARI is one-on-one with a licensed physical therapist.",
     'related': [('Orthopedic Rehabilitation', 'orthopedic-rehab.html'), ('Sciatica &amp; Back Pain', 'sciatica-back-pain.html'), ('Post-Surgical Rehab', 'post-surgery-rehab.html'), ('For Physicians', 'physicians.html')],
     'condition': 'Work-related injuries',
-    'alt_names': ["Workers' compensation physical therapy", 'Work injury rehabilitation', 'Work conditioning', 'Work hardening', 'Functional capacity evaluation', 'FCE', 'Pre-employment testing'],
-    'therapy': "Physical therapy: work injury rehabilitation, work conditioning and functional capacity testing",
+    'alt_names': ["Workers' compensation physical therapy", 'Work injury rehabilitation', 'Work conditioning', 'Work injury'],
+    'therapy': "Physical therapy: work injury rehabilitation and work conditioning",
 }
