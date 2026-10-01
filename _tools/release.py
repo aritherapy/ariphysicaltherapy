@@ -4,6 +4,7 @@
     python3 _tools/release.py hip-pain leaking-urine-when-sneezing    # release these, reviewed today
     python3 _tools/release.py --date 2026-10-05 hip-pain ...          # with a specific review date
     python3 _tools/release.py --sync                                  # redo the cross-links only
+    python3 _tools/release.py --batch 3 --date 2026-10-05             # release every draft question tagged 'batch': 3
 
 For each slug (a condition page in _tools/conditions/ or a question in _tools/questions/) it:
   1. sets the page's 'reviewed' date in its content file (the page becomes indexable and gets
@@ -215,6 +216,7 @@ def main():
     ap.add_argument('--date', default=datetime.date.today().isoformat())
     ap.add_argument('--list', action='store_true')
     ap.add_argument('--sync', action='store_true')
+    ap.add_argument('--batch', type=int, help="release every still-draft question page whose content has 'batch': N")
     a = ap.parse_args()
     cs, qs = conditions(), questions()
 
@@ -222,8 +224,14 @@ def main():
         for label, items in (('Condition pages', cs), ('Question pages', qs)):
             print(f'{label}:')
             for slug, (_, pg) in items.items():
-                print(f"  {'LIVE ' + pg['reviewed'] if pg.get('reviewed') else 'draft':16s} {slug}")
+                tag = f" (batch {pg['batch']})" if pg.get('batch') else ''
+                print(f"  {'LIVE ' + pg['reviewed'] if pg.get('reviewed') else 'draft':16s} {slug}{tag}")
         return
+    if a.batch is not None:
+        picked = [slug for slug, (_, q) in qs.items() if q.get('batch') == a.batch and not q.get('reviewed')]
+        if not picked:
+            sys.exit(f'No draft question pages tagged batch {a.batch}.')
+        a.slugs = list(a.slugs) + picked
     if not a.slugs and not a.sync:
         sys.exit(__doc__)
     unknown = [s for s in a.slugs if s not in cs and s not in qs]

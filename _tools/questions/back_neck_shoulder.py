@@ -1,4 +1,4 @@
-GROUPS = [('back', 'Back'), ('neck', 'Neck'), ('shoulder-hand', 'Shoulder, Elbow &amp; Hand')]
+GROUPS = [('back', 'Back'), ('neck', 'Neck, Jaw &amp; Headaches'), ('shoulder-hand', 'Shoulder, Elbow &amp; Hand')]
 
 PAGES = [
 {
