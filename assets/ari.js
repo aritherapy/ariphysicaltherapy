@@ -33,7 +33,8 @@
     if(!a) return;
     if(a.classList.contains('cond-tab')){ track('condition_tab_select', { tab: a.getAttribute('aria-controls') }); return; }
     var href = a.getAttribute('href') || '';
-    if(/appointment\.html/.test(href)) track('book_click', { link_location: where(a), link_text: (a.textContent || '').trim().slice(0, 40) });
+    if(a.classList.contains('top-bar-lang')) track('language_switch', { to: a.getAttribute('lang') || '' });
+    else if(/(appointment|solicitar-cita)\.html/.test(href)) track('book_click', { link_location: where(a), link_text: (a.textContent || '').trim().slice(0, 40) });
     else if(/google\.[a-z.]+\/maps|maps\.apple\.com|maps\.google/.test(href)) track('directions_click', { link_location: where(a) });
     else if(a.classList.contains('cond-link')) track('condition_guide_click', { condition_page: href.split('?')[0] });
     else if(/ReferralPadForm\.pdf/.test(href)) track('referral_form_download', { link_location: where(a) });

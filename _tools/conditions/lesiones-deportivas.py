@@ -1,0 +1,43 @@
+PAGE = {
+    'lang': 'es', 'en': 'sports-injury-therapy',
+    'reviewed': None,   # draft until a Spanish speaker reviews it
+    'title': "Terapia para lesiones deportivas en Bakersfield | ARI PT",
+    'description': "Terapia física individual para lesiones deportivas en Bakersfield, CA: rehabilitación y regreso al deporte (LCA, LCM, manguito rotador, esguinces).",
+    'crumb': "Lesiones deportivas",
+    'eyebrow': "Lesiones deportivas",
+    'h1': "Terapia física para lesiones deportivas en",
+    'lead': "Rehabilitación individual y atención para volver a su deporte. Recupere su mejor rendimiento de forma segura y siga en el juego.",
+    'answer': "<strong>Ya sea que haga deporte solo los fines de semana o que sea un atleta competitivo, una lesión deportiva le puede dejar fuera del juego muy rápido.</strong> En ARI Physical Therapy nos especializamos en ayudar a los atletas a recuperar su mejor rendimiento de forma segura. Combinamos rehabilitación individual y específica para su deporte con estrategias de prevención de lesiones, para que siga en el juego a largo plazo.",
+    'signs_h': "Qué tratamos",
+    'signs': [
+        "Lesiones del LCA y del LCM (ligamentos de la rodilla) y del <a href=\"hombro-congelado-manguito-rotador.html\">manguito rotador</a>",
+        "Esguinces, distensiones musculares y tendinopatías",
+        "Lesiones de rodilla, hombro y tobillo",
+        "Lesiones por uso excesivo y por movimientos repetitivos",
+        "Programas para volver al deporte",
+        "Rendimiento y prevención de lesiones",
+    ],
+    'why': [],
+    'steps': [
+        ("Una evaluación completa del movimiento", "Su primera visita (de 45 a 60 minutos aproximadamente) incluye una evaluación práctica de su fuerza, su movilidad y la mecánica que está detrás de su lesión."),
+        ("Un plan de rehabilitación específico para su deporte", "Tratamiento manual más ejercicios específicos y progresivos, diseñados según su deporte y sus metas, en lugar de un protocolo genérico."),
+        ("Un regreso al deporte con confianza", "Usamos pruebas de regreso al deporte para que vuelva cuando de verdad esté listo, más fuerte y con menos probabilidad de volver a lesionarse."),
+    ],
+    'red_flags': [],
+    'faq_title': "Preguntas frecuentes sobre la terapia para lesiones deportivas",
+    'faqs': [
+        ("¿Cuándo puedo volver a mi deporte?", "Depende de su lesión, su deporte y sus metas. Después de su evaluación, su fisioterapeuta le dará un plan de tiempo realista y usará pruebas de regreso al deporte para confirmar que está listo antes de volver, para que regrese fuerte y reduzca el riesgo de volver a lesionarse."),
+        ("¿Tratan mi deporte o mi lesión?", "Trabajamos con personas que hacen deporte los fines de semana y con atletas competitivos de todos los deportes, y tratamos desde lesiones agudas hasta problemas por uso excesivo. Llámenos al (661) 282-8584 y le diremos cómo podemos ayudarle."),
+        ("¿Qué pasa en la primera visita?", "Su evaluación inicial dura de 45 a 60 minutos aproximadamente. Hablamos de su historial y sus metas, evaluamos su movimiento y empezamos su plan de rehabilitación personalizado."),
+    ],
+    'side': "La terapia para lesiones deportivas en ARI es individual con un fisioterapeuta con licencia.",
+    'related': [
+        ("Hombro congelado y manguito rotador", "hombro-congelado-manguito-rotador.html"),
+        ("Rehabilitación después de una cirugía", "rehabilitacion-despues-de-cirugia.html"),
+        ("Terapia física pediátrica", "terapia-fisica-pediatrica.html"),
+        ("Lesiones de LCA y LCM (en inglés)", "acl-mcl-knee-ligament-injuries.html"),
+    ],
+    'condition': "Lesiones deportivas",
+    'alt_names': ["Lesión deportiva", "Rehabilitación deportiva", "Fisioterapia deportiva", "Terapia física deportiva", "Lesión del ligamento cruzado anterior", "Lesión del LCA", "Lesión del ligamento colateral medial", "Lesión del manguito rotador", "Esguince", "Distensión muscular", "Tendinopatía", "Lesiones por uso excesivo", "Regreso al deporte"],
+    'therapy': "Terapia física: rehabilitación deportiva, pruebas de regreso al deporte y prevención de lesiones",
+}

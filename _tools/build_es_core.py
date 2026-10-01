@@ -90,15 +90,19 @@ def check(inner):
 
 def build_home(pages):
     by_en = {p.get('en'): slug for slug, p in pages}
-    link = lambda en, label: f'<a href="{by_en[en]}.html">{label}</a>' if en in by_en else label
+    def link(en, label):   # en: the English page (or pages, first match wins) whose released Spanish version to link
+        for e in ([en] if isinstance(en, str) else en):
+            if e in by_en:
+                return f'<a href="{by_en[e]}.html">{label}</a>'
+        return label
     services = [
         'Rehabilitación ortopédica: espalda, cuello, hombro, rodilla y cadera',
-        'Lesiones deportivas y regreso seguro al deporte',
-        'Rehabilitación después de una cirugía',
+        link('sports-injury-therapy', 'Lesiones deportivas y regreso seguro al deporte'),
+        link('post-surgery-rehab', 'Rehabilitación después de una cirugía'),
         'Dolor crónico',
-        'Terapia del piso pélvico para mujeres',
-        'Fisioterapia pediátrica',
-        link('pregnancy-back-pelvic-pain', 'Embarazo y posparto'),
+        link('pelvic-floor-therapy', 'Terapia del piso pélvico para mujeres'),
+        link('pediatric-therapy', 'Fisioterapia pediátrica'),
+        link(['postpartum-therapy', 'pregnancy-back-pelvic-pain'], 'Embarazo y posparto'),
         link('workers-comp-physical-therapy', 'Lesiones del trabajo y compensación de trabajadores'),
         link('car-accident-whiplash', 'Lesiones por accidentes de auto'),
         link('balance-fall-prevention', 'Equilibrio y prevención de caídas'),

@@ -1,0 +1,42 @@
+PAGE = {
+    'lang': 'es', 'en': 'pediatric-therapy',
+    'reviewed': None,   # draft until a Spanish speaker reviews it
+    'title': "Terapia física pediátrica en Bakersfield | ARI PT",
+    'description': "Terapia física pediátrica individual en Bakersfield, CA: retrasos del desarrollo, coordinación, lesiones de jóvenes atletas y rehabilitación tras cirugía.",
+    'crumb': "Terapia pediátrica",
+    'eyebrow': "Pediatría",
+    'h1': "Terapia física pediátrica en",
+    'lead': "Un ambiente divertido y alentador donde los niños sanan, crecen y alcanzan sus etapas de desarrollo, con la familia involucrada en cada paso.",
+    'answer': "<strong>Los niños tienen necesidades físicas y de desarrollo únicas.</strong> En ARI Physical Therapy, nuestros terapeutas pediátricos crean un ambiente divertido, alentador e individual donde los niños pueden sanar, crecer y alcanzar sus etapas de desarrollo. También trabajamos de cerca con las familias, para que el progreso continúe tanto en casa como en la clínica.",
+    'signs_h': "En qué ayudamos",
+    'signs': [
+        "Retrasos del desarrollo y problemas de coordinación",
+        "Lesiones deportivas en atletas jóvenes",
+        "Rehabilitación pediátrica después de una cirugía",
+        "Tortícolis y afecciones musculoesqueléticas",
+        "Retrasos en la motricidad gruesa",
+        "Dificultades de equilibrio y coordinación",
+    ],
+    'why': [],
+    'steps': [
+        ("Una evaluación completa", "Su primera visita (de 45 a 60 minutos aproximadamente) incluye una evaluación práctica y una conversación sobre su historial y sus metas."),
+        ("Un plan personalizado", "Atención manual más ejercicios específicos y progresivos, diseñados para usted, nunca un programa igual para todos."),
+        ("Progreso real y duradero", "Medimos su mejoría y le guiamos de vuelta a las actividades que más le importan, con estrategias para mantener lo que ha logrado."),
+    ],
+    'red_flags': [],
+    'faq_title': "Preguntas frecuentes sobre la terapia física pediátrica",
+    'faqs': [
+        ("¿Qué edades y afecciones tratan?", "Trabajamos con niños de todas las edades en necesidades del desarrollo, de coordinación, después de una lesión y después de una cirugía. Llámenos al (661) 282-8584 y le diremos cómo podemos ayudar a su hijo o hija."),
+        ("¿Los padres participan en las sesiones?", "Sí. Trabajamos de cerca con las familias y les damos un programa para hacer en casa, para que el progreso que su hijo o hija logra en la clínica continúe en casa."),
+        ("¿Qué pasa en la primera visita?", "La evaluación inicial dura de 45 a 60 minutos aproximadamente. Conocemos a su hijo o hija, hablamos de sus preocupaciones y sus metas, evaluamos su movimiento y su desarrollo, y empezamos un plan divertido y personalizado."),
+    ],
+    'side': "La terapia pediátrica en ARI es individual con un fisioterapeuta con licencia.",
+    'related': [
+        ("Lesiones deportivas", "lesiones-deportivas.html"),
+        ("Rehabilitación después de una cirugía", "rehabilitacion-despues-de-cirugia.html"),
+        ("Lesiones deportivas en jóvenes (en inglés)", "youth-sports-injuries.html"),
+    ],
+    'condition': "Afecciones del desarrollo y del movimiento en niños",
+    'alt_names': ["Terapia física pediátrica", "Fisioterapia pediátrica", "Fisioterapia infantil", "Terapia física para niños", "Retraso del desarrollo motor", "Retraso en la motricidad gruesa", "Tortícolis", "Problemas de coordinación en niños", "Problemas de equilibrio en niños", "Lesiones deportivas en niños"],
+    'therapy': "Terapia física pediátrica: atención individual, ejercicio progresivo y programa en casa con la familia",
+}

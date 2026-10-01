@@ -1,0 +1,41 @@
+PAGE = {
+    'lang': 'es', 'en': 'pelvic-floor-therapy',
+    'reviewed': None,   # borrador hasta que lo revise una persona hispanohablante
+    'title': "Terapia del piso pélvico para mujeres en Bakersfield | ARI PT",
+    'description': "Terapia física del piso pélvico para mujeres en Bakersfield, CA. Atención individual y discreta para pérdidas de orina, dolor pélvico, prolapso y posparto.",
+    'crumb': "Terapia del piso pélvico",
+    'eyebrow': "Salud pélvica de la mujer",
+    'h1': "Terapia física del piso pélvico en",
+    'lead': "Atención discreta e individual para mujeres, para aliviar el dolor, recuperar el control y volver a sentirse segura.",
+    'answer': "Los problemas del piso pélvico son mucho más comunes de lo que la mayoría de las personas cree, y mucho más tratables. En ARI Physical Therapy, nuestros fisioterapeutas con licencia ofrecen atención de salud pélvica para mujeres, discreta y basada en la evidencia, de forma individual y en privado, para ayudarle a recuperar la comodidad, la función y la confianza.",
+    'signs_h': "Qué tratamos",
+    'signs': [
+        "Problemas de los músculos del piso pélvico",
+        "<a href=\"perdidas-de-orina-incontinencia.html\">Incontinencia urinaria</a> (pérdidas de orina) e incontinencia intestinal",
+        "Prolapso de órganos pélvicos",
+        "Dolor pélvico y cistitis intersticial",
+        "Recuperación durante el embarazo y después del parto",
+        "Debilidad del abdomen (core) y regreso a la actividad",
+    ],
+    'why': [],
+    'steps': [
+        ("Una evaluación privada e individual", "Su primera visita (de 45 a 60 minutos, aproximadamente) es una conversación tranquila y confidencial sobre su historia y sus metas, seguida de una evaluación suave."),
+        ("Un plan de tratamiento personalizado", "Terapia manual, ejercicios específicos y educación. Todo se basa en su cuerpo y en sus metas, nunca en un programa igual para todas."),
+        ("Avance a su propio ritmo", "Atención discreta y respetuosa en cada paso, con un fisioterapeuta que la escucha y ajusta el tratamiento a medida que usted mejora."),
+    ],
+    'red_flags': [],
+    'faq_title': "Preguntas frecuentes sobre la terapia del piso pélvico",
+    'faqs': [
+        ("¿La terapia del piso pélvico es privada y discreta?", "Sí. En ARI, la terapia del piso pélvico es individual, con un fisioterapeuta con licencia, en un cuarto de tratamiento privado. Su comodidad y su dignidad son lo primero en cada visita."),
+        ("¿Qué pasa en la primera visita?", "Su evaluación inicial dura de 45 a 60 minutos, aproximadamente. Hablamos de su historia y sus metas, hacemos una evaluación y empezamos su plan de tratamiento personalizado."),
+    ],
+    'side': "La terapia del piso pélvico en ARI es para mujeres, individual con un fisioterapeuta con licencia y en un cuarto privado.",
+    'related': [
+        ("Pérdidas de orina", "perdidas-de-orina-incontinencia.html"),
+        ("Terapia prenatal y posparto", "terapia-prenatal-y-posparto.html"),
+        ("Dolor de espalda y pelvis en el embarazo", "dolor-de-espalda-y-pelvis-en-el-embarazo.html"),
+    ],
+    'condition': "Disfunción del piso pélvico",
+    'alt_names': ["Problemas del piso pélvico", "Terapia del piso pélvico", "Fisioterapia del piso pélvico", "Rehabilitación del piso pélvico", "Incontinencia urinaria", "Prolapso de órganos pélvicos", "Dolor pélvico", "Salud pélvica de la mujer"],
+    'therapy': "Terapia física del piso pélvico para mujeres",
+}
