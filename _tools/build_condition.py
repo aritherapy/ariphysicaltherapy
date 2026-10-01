@@ -9,6 +9,7 @@ header/footer changes made across the site carry over. Each content file defines
 
   PAGE['reviewed'] = None           -> DRAFT: robots noindex, no "Clinically reviewed by" line.
   PAGE['reviewed'] = '2026-10-02'   -> LIVE: indexable, reviewedBy/lastReviewed in schema.
+  PAGE['callout'] = False           -> no "No referral needed" box (e.g. workers' comp); optional PAGE['callout_html'].
 Clinical content goes live only after Deepa has reviewed it. After going live, also add the page
 to sitemap.xml and llms.txt.
 """
@@ -75,7 +76,7 @@ def body(p):
 <h2>Does this sound like you?</h2><div class="checks">{checks}</div>
 {sections}
 <h2>What treatment at ARI looks like</h2><div class="steps">{steps}</div>
-{DIRECT_ACCESS}
+{DIRECT_ACCESS if p.get('callout', True) else p.get('callout_html', '')}
 <h2>When to see a doctor first</h2>
 <p>{p.get('red_flags_intro', 'See a doctor promptly if you have:')}</p>
 <ul class="plain-list">{flags}</ul>
