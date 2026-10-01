@@ -9,6 +9,7 @@ header/footer changes made across the site carry over. Each content file defines
 
   PAGE['reviewed'] = None           -> DRAFT: robots noindex, no "Clinically reviewed by" line.
   PAGE['reviewed'] = '2026-10-02'   -> LIVE: indexable, reviewedBy/lastReviewed in schema.
+  PAGE['clinical_review'] = False   -> live without the "Clinically reviewed by" line (owner-approved, non-clinical pages).
   PAGE['callout'] = False           -> no "No referral needed" box (e.g. workers' comp); optional PAGE['callout_html'].
 Clinical content goes live only after Deepa has reviewed it. After going live, also add the page
 to sitemap.xml and llms.txt.
@@ -59,7 +60,7 @@ def body(p):
         for i, (q, a) in enumerate(faqs))
     related = ''.join(f'<a href="{u}">{t} <span>&rarr;</span></a>' for t, u in p['related'])
     reviewed = ''
-    if p.get('reviewed'):
+    if p.get('reviewed') and p.get('clinical_review', True):
         y, m, _ = p['reviewed'].split('-')
         reviewed = (f'<p class="reviewed-by">Clinically reviewed by <a href="about.html">{REVIEWER}</a>, board-certified '
                     f'Orthopedic Certified Specialist &middot; Reviewed {MONTHS[int(m) - 1]} {y}</p>')
@@ -120,7 +121,7 @@ def build(slug):
             {'@type': 'ListItem', 'position': 1, 'name': 'Conditions We Treat', 'item': SITE + 'conditions.html'},
             {'@type': 'ListItem', 'position': 2, 'name': html.unescape(p['crumb']), 'item': url}]},
     }
-    if p.get('reviewed'):
+    if p.get('reviewed') and p.get('clinical_review', True):
         page['lastReviewed'] = p['reviewed']
         page['reviewedBy'] = {'@id': SITE + 'about.html#deepa'}
     faqs = p['faqs'] + ([REFERRAL_FAQ] if p.get('referral_faq', True) else [])

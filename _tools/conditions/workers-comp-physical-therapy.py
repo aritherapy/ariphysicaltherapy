@@ -1,5 +1,6 @@
 PAGE = {
-    'reviewed': None,   # DRAFT until the owner and Deepa review (process facts marked CONFIRM in the review list)
+    'reviewed': '2026-09-30',   # owner-approved 2026-09-30 (process wording); released without the clinical-review line
+    'clinical_review': False,
     'title': "Workers' Comp Physical Therapy in Bakersfield | ARI PT",
     'description': "Hurt at work? One-on-one workers' comp physical therapy in Bakersfield, CA: work injury rehab, work conditioning, FCE and pre-employment testing.",
     'crumb': "Workers' Comp",
@@ -29,12 +30,12 @@ PAGE = {
          '<li><strong>Functional capacity evaluations (FCE):</strong> standardized testing of what you can safely lift, carry, push, pull and tolerate, to guide return-to-work decisions.</li>'
          '<li><strong>Pre-employment physical testing:</strong> job-specific testing for employers, to match new hires to the physical demands of the role.</li></ul>'),
         ('For employers, adjusters and case managers',
-         '<p>Send referrals and prescriptions by fax to <strong>(661) 727-0005</strong>, or call <a href="tel:6612828584">(661) 282-8584</a>. You can also use our <a href="assets/ReferralPadForm.pdf">referral form (PDF)</a>. We see patients one-on-one, provide progress documentation, and focus on a safe, durable return to work.</p>'),
+         '<p>Fax referrals and prescriptions to <strong>(661) 727-0005</strong>. Questions? Call <a href="tel:6612828584">(661) 282-8584</a>. We see patients one-on-one, send progress notes on request, and focus on a safe, durable return to work.</p>'),
     ],
     'steps': [
         ('A one-on-one evaluation', 'Your first visit takes about 45 to 60 minutes. We review your injury, your job\'s physical demands and your doctor\'s prescription, and test strength, motion and function.'),
         ('Treatment built around your job', 'Hands-on care and progressive exercise, then job-specific training such as lifting, carrying, reaching or standing tolerance, adjusted to your work restrictions.'),
-        ('A safe return to work', 'Progress updates for your doctor and adjuster, a plan to move from modified to full duty, and a home program to help prevent re-injury.'),
+        ('A safe return to work', 'Progress notes for your doctor or adjuster on request, a plan to move from modified to full duty, and a home program to help prevent re-injury.'),
     ],
     'callout': False,
     'callout_html': '<div class="callout"><strong>Workers\' comp patients:</strong> please bring your claim number, your adjuster\'s name and contact information, and your treating doctor\'s prescription. Questions about your claim or our network status? Call us at <a href="tel:6612828584">(661) 282-8584</a> and we\'ll help.</div>',
