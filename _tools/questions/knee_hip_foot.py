@@ -2,7 +2,7 @@ GROUPS = [('knee', 'Knee'), ('hip', 'Hip'), ('foot-ankle', 'Foot &amp; Ankle')]
 
 PAGES = [
 {
-    'slug': 'knee-pain-going-down-stairs', 'group': 'knee', 'reviewed': None, 'about': 'Knee pain',
+    'slug': 'knee-pain-going-down-stairs', 'group': 'knee', 'reviewed': '2026-09-30', 'about': 'Knee pain',
     'q': 'Why Does My Knee Hurt Going Down Stairs?',
     'crumb': 'Knee pain going down stairs',
     'title': 'Knee Pain Going Down Stairs: Causes & Help | ARI PT',
@@ -30,7 +30,7 @@ PAGES = [
     'guide': ('Knee arthritis and knee pain', 'knee-pain-arthritis.html'),
 },
 {
-    'slug': 'runners-knee-front-of-knee-pain', 'group': 'knee', 'reviewed': None, 'about': 'Patellofemoral pain syndrome',
+    'slug': 'runners-knee-front-of-knee-pain', 'group': 'knee', 'reviewed': '2026-09-30', 'about': 'Patellofemoral pain syndrome',
     'q': 'Why Does the Front of My Knee Hurt When I Squat or Run?',
     'crumb': 'Front of knee pain (runner\'s knee)',
     'title': 'Front of Knee Pain (Runner\'s Knee): Causes & Help | ARI PT',
@@ -56,7 +56,7 @@ PAGES = [
     'guide': ('Sports injury therapy', 'sports-injury-therapy.html'),
 },
 {
-    'slug': 'torn-meniscus-surgery-or-therapy', 'group': 'knee', 'reviewed': None, 'about': 'Meniscus tear',
+    'slug': 'torn-meniscus-surgery-or-therapy', 'group': 'knee', 'reviewed': '2026-09-30', 'about': 'Meniscus tear',
     'q': 'Does a Torn Meniscus Always Need Surgery?',
     'crumb': 'Torn meniscus: surgery or therapy?',
     'title': 'Torn Meniscus: Do You Need Surgery? | ARI Physical Therapy',
@@ -82,7 +82,7 @@ PAGES = [
     'guide': ('Knee arthritis and knee pain', 'knee-pain-arthritis.html'),
 },
 {
-    'slug': 'is-walking-good-for-hip-arthritis', 'group': 'hip', 'reviewed': None, 'about': 'Hip osteoarthritis',
+    'slug': 'is-walking-good-for-hip-arthritis', 'group': 'hip', 'reviewed': '2026-09-30', 'about': 'Hip osteoarthritis',
     'q': 'Is Walking Good or Bad for Hip Arthritis?',
     'crumb': 'Walking with hip arthritis',
     'title': 'Is Walking Good for Hip Arthritis? | ARI Physical Therapy',
@@ -107,7 +107,7 @@ PAGES = [
     'guide': ('Hip pain and hip arthritis', 'hip-pain.html'),
 },
 {
-    'slug': 'hip-stiff-after-sitting', 'group': 'hip', 'reviewed': None, 'about': 'Hip pain',
+    'slug': 'hip-stiff-after-sitting', 'group': 'hip', 'reviewed': '2026-09-30', 'about': 'Hip pain',
     'q': 'Why Is My Hip Stiff After Sitting, Then Loosens Up When I Walk?',
     'crumb': 'Hip stiff after sitting',
     'title': 'Hip Stiff After Sitting? Causes & What Helps | ARI PT',
@@ -132,7 +132,7 @@ PAGES = [
     'guide': ('Hip pain and hip arthritis', 'hip-pain.html'),
 },
 {
-    'slug': 'walking-on-a-sprained-ankle', 'group': 'foot-ankle', 'reviewed': None, 'about': 'Ankle sprain',
+    'slug': 'walking-on-a-sprained-ankle', 'group': 'foot-ankle', 'reviewed': '2026-09-30', 'about': 'Ankle sprain',
     'q': 'Is It OK to Walk on a Sprained Ankle?',
     'crumb': 'Walking on a sprained ankle',
     'title': 'Is It OK to Walk on a Sprained Ankle? | ARI Physical Therapy',
@@ -159,7 +159,7 @@ PAGES = [
     'guide': ('Ankle sprains and Achilles pain', 'ankle-sprain-achilles-pain.html'),
 },
 {
-    'slug': 'best-shoes-for-heel-pain', 'group': 'foot-ankle', 'reviewed': None, 'about': 'Plantar fasciitis',
+    'slug': 'best-shoes-for-heel-pain', 'group': 'foot-ankle', 'reviewed': '2026-09-30', 'about': 'Plantar fasciitis',
     'q': 'What Kind of Shoes Help Heel Pain?',
     'crumb': 'Shoes for heel pain',
     'title': 'What Shoes Help Heel Pain & Plantar Fasciitis? | ARI PT',

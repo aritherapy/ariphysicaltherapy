@@ -2,7 +2,7 @@ GROUPS = [('bone-surgery', 'Bone Health &amp; Surgery'), ('starting', 'Starting 
 
 PAGES = [
 {
-    'slug': 'safe-exercises-for-osteoporosis', 'group': 'bone-surgery', 'reviewed': None, 'about': 'Osteoporosis',
+    'slug': 'safe-exercises-for-osteoporosis', 'group': 'bone-surgery', 'reviewed': '2026-09-30', 'about': 'Osteoporosis',
     'q': 'What Exercises Are Safe If I Have Osteoporosis?',
     'crumb': 'Safe exercise with osteoporosis',
     'title': 'Safe Exercises for Osteoporosis: What to Do & Avoid | ARI PT',
@@ -30,7 +30,7 @@ PAGES = [
     'guide': ('Osteoporosis and bone health', 'osteoporosis-bone-health.html'),
 },
 {
-    'slug': 'knee-replacement-recovery-time', 'group': 'bone-surgery', 'reviewed': None, 'about': 'Knee replacement recovery',
+    'slug': 'knee-replacement-recovery-time', 'group': 'bone-surgery', 'reviewed': '2026-09-30', 'about': 'Knee replacement recovery',
     'q': 'How Long Does Recovery Take After a Knee Replacement?',
     'crumb': 'Knee replacement recovery time',
     'title': 'Knee Replacement Recovery Time: What to Expect | ARI PT',
@@ -60,7 +60,7 @@ PAGES = [
     'guide': ('Knee and hip replacement rehab', 'knee-hip-replacement-rehab.html'),
 },
 {
-    'slug': 'physical-therapy-before-surgery', 'group': 'bone-surgery', 'reviewed': None, 'about': 'Preoperative rehabilitation',
+    'slug': 'physical-therapy-before-surgery', 'group': 'bone-surgery', 'reviewed': '2026-09-30', 'about': 'Preoperative rehabilitation',
     'q': 'Is It Worth Doing Physical Therapy Before Surgery?',
     'crumb': 'Physical therapy before surgery',
     'title': 'Is Physical Therapy Before Surgery Worth It? (Prehab) | ARI PT',
@@ -79,7 +79,7 @@ PAGES = [
     'guide': ('Getting stronger before surgery (prehab)', 'prehab-before-surgery.html'),
 },
 {
-    'slug': 'physical-therapy-without-referral-california', 'group': 'starting', 'reviewed': None, 'callout': False,
+    'slug': 'physical-therapy-without-referral-california', 'group': 'starting', 'reviewed': '2026-09-30', 'callout': False,
     'q': 'Do I Need a Doctor\'s Referral to See a Physical Therapist in California?',
     'crumb': 'Do I need a referral?',
     'title': 'Physical Therapy Without a Referral in California | ARI PT',
@@ -99,7 +99,7 @@ PAGES = [
     'guide': None,
 },
 {
-    'slug': 'what-happens-at-first-physical-therapy-visit', 'group': 'starting', 'reviewed': None,
+    'slug': 'what-happens-at-first-physical-therapy-visit', 'group': 'starting', 'reviewed': '2026-09-30',
     'q': 'What Happens at the First Physical Therapy Visit?',
     'crumb': 'Your first visit',
     'title': 'What Happens at Your First Physical Therapy Visit? | ARI PT',
@@ -123,7 +123,7 @@ PAGES = [
     'guide': None,
 },
 {
-    'slug': 'how-many-physical-therapy-visits', 'group': 'starting', 'reviewed': None,
+    'slug': 'how-many-physical-therapy-visits', 'group': 'starting', 'reviewed': '2026-09-30',
     'q': 'How Many Physical Therapy Visits Will I Need?',
     'crumb': 'How many visits?',
     'title': 'How Many Physical Therapy Visits Will I Need? | ARI PT',
@@ -143,7 +143,7 @@ PAGES = [
     'guide': None,
 },
 {
-    'slug': 'does-medicare-cover-physical-therapy', 'group': 'starting', 'reviewed': None, 'callout': False,
+    'slug': 'does-medicare-cover-physical-therapy', 'group': 'starting', 'reviewed': '2026-09-30', 'callout': False,
     'q': 'Does Medicare Cover Physical Therapy?',
     'crumb': 'Medicare and physical therapy',
     'title': 'Does Medicare Cover Physical Therapy? | ARI Physical Therapy',
@@ -162,7 +162,7 @@ PAGES = [
     'guide': ('Balance problems and fall prevention', 'balance-fall-prevention.html'),
 },
 {
-    'slug': 'physical-therapist-vs-chiropractor', 'group': 'starting', 'reviewed': None,
+    'slug': 'physical-therapist-vs-chiropractor', 'group': 'starting', 'reviewed': '2026-09-30',
     'q': 'What\'s the Difference Between a Physical Therapist and a Chiropractor?',
     'crumb': 'Physical therapist or chiropractor?',
     'title': 'Physical Therapist vs Chiropractor: The Difference | ARI PT',

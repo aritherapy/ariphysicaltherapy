@@ -2,7 +2,7 @@ GROUPS = [('back', 'Back'), ('neck', 'Neck'), ('shoulder-hand', 'Shoulder, Elbow
 
 PAGES = [
 {
-    'slug': 'lower-back-pain-when-sitting', 'group': 'back', 'reviewed': None, 'about': 'Low back pain',
+    'slug': 'lower-back-pain-when-sitting', 'group': 'back', 'reviewed': '2026-09-30', 'about': 'Low back pain',
     'q': 'Why Does My Lower Back Hurt When I Sit for a Long Time?',
     'crumb': 'Back pain when sitting',
     'title': 'Lower Back Pain When Sitting: Causes & Relief | ARI PT',
@@ -28,7 +28,7 @@ PAGES = [
     'guide': ('Sciatica and back pain', 'sciatica-back-pain.html'),
 },
 {
-    'slug': 'back-pain-rest-or-keep-moving', 'group': 'back', 'reviewed': None, 'about': 'Low back pain',
+    'slug': 'back-pain-rest-or-keep-moving', 'group': 'back', 'reviewed': '2026-09-30', 'about': 'Low back pain',
     'q': 'Should I Rest or Keep Moving When My Back Hurts?',
     'crumb': 'Rest or keep moving?',
     'title': 'Back Pain: Should I Rest or Keep Moving? | ARI PT',
@@ -56,7 +56,7 @@ PAGES = [
     'guide': ('Sciatica and back pain', 'sciatica-back-pain.html'),
 },
 {
-    'slug': 'do-i-need-an-mri-for-back-pain', 'group': 'back', 'reviewed': None, 'about': 'Low back pain',
+    'slug': 'do-i-need-an-mri-for-back-pain', 'group': 'back', 'reviewed': '2026-09-30', 'about': 'Low back pain',
     'q': 'Do I Need an MRI for Back Pain?',
     'crumb': 'MRI for back pain',
     'title': 'Do I Need an MRI for Back Pain? | ARI Physical Therapy',
@@ -81,7 +81,7 @@ PAGES = [
     'guide': ('Sciatica and back pain', 'sciatica-back-pain.html'),
 },
 {
-    'slug': 'stiff-neck-in-the-morning', 'group': 'neck', 'reviewed': None, 'about': 'Neck pain',
+    'slug': 'stiff-neck-in-the-morning', 'group': 'neck', 'reviewed': '2026-09-30', 'about': 'Neck pain',
     'q': 'Why Do I Wake Up With a Stiff Neck?',
     'crumb': 'Stiff neck in the morning',
     'title': 'Waking Up With a Stiff Neck: Causes & Relief | ARI PT',
@@ -110,7 +110,7 @@ PAGES = [
     'guide': ('Neck pain and headaches', 'neck-pain-headaches.html'),
 },
 {
-    'slug': 'desk-work-neck-pain-headaches', 'group': 'neck', 'reviewed': None, 'about': 'Cervicogenic headache',
+    'slug': 'desk-work-neck-pain-headaches', 'group': 'neck', 'reviewed': '2026-09-30', 'about': 'Cervicogenic headache',
     'q': 'Can Working at a Desk Cause Neck Pain and Headaches?',
     'crumb': 'Desk work, neck pain and headaches',
     'title': 'Desk Work Neck Pain & Headaches: Causes & Help | ARI PT',
@@ -137,7 +137,7 @@ PAGES = [
     'guide': ('Neck pain and headaches', 'neck-pain-headaches.html'),
 },
 {
-    'slug': 'shoulder-pain-reaching-overhead', 'group': 'shoulder-hand', 'reviewed': None, 'about': 'Rotator cuff related shoulder pain',
+    'slug': 'shoulder-pain-reaching-overhead', 'group': 'shoulder-hand', 'reviewed': '2026-09-30', 'about': 'Rotator cuff related shoulder pain',
     'q': 'Why Does My Shoulder Hurt When I Reach Overhead or Behind My Back?',
     'crumb': 'Shoulder pain reaching overhead',
     'title': 'Shoulder Pain Reaching Overhead: Causes & Help | ARI PT',
@@ -162,7 +162,7 @@ PAGES = [
     'guide': ('Frozen shoulder and rotator cuff pain', 'frozen-shoulder-rotator-cuff.html'),
 },
 {
-    'slug': 'shoulder-pain-at-night', 'group': 'shoulder-hand', 'reviewed': None, 'about': 'Shoulder pain',
+    'slug': 'shoulder-pain-at-night', 'group': 'shoulder-hand', 'reviewed': '2026-09-30', 'about': 'Shoulder pain',
     'q': 'Why Does My Shoulder Hurt at Night When I Lie on It?',
     'crumb': 'Shoulder pain at night',
     'title': 'Shoulder Pain at Night: Why It Happens & Help | ARI PT',
@@ -188,7 +188,7 @@ PAGES = [
     'guide': ('Frozen shoulder and rotator cuff pain', 'frozen-shoulder-rotator-cuff.html'),
 },
 {
-    'slug': 'hands-numb-at-night', 'group': 'shoulder-hand', 'reviewed': None, 'about': 'Carpal tunnel syndrome',
+    'slug': 'hands-numb-at-night', 'group': 'shoulder-hand', 'reviewed': '2026-09-30', 'about': 'Carpal tunnel syndrome',
     'q': 'Why Do My Hands Go Numb or Tingle at Night?',
     'crumb': 'Hands numb at night',
     'title': 'Hands Numb or Tingling at Night: Causes & Help | ARI PT',

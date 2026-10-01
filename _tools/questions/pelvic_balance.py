@@ -82,7 +82,7 @@ PAGES = [
     'guide': ('Pelvic pain and painful sex', 'pelvic-pain-painful-sex.html'),
 },
 {
-    'slug': 'room-spins-when-rolling-over-in-bed', 'group': 'balance', 'reviewed': None, 'about': 'Benign paroxysmal positional vertigo',
+    'slug': 'room-spins-when-rolling-over-in-bed', 'group': 'balance', 'reviewed': '2026-09-30', 'about': 'Benign paroxysmal positional vertigo',
     'q': 'Why Does the Room Spin When I Roll Over in Bed?',
     'crumb': 'Room spins when rolling over',
     'title': 'Room Spins When You Roll Over in Bed? BPPV Explained | ARI PT',
@@ -108,7 +108,7 @@ PAGES = [
     'guide': ('Vertigo and dizziness (BPPV)', 'vertigo-dizziness-bppv.html'),
 },
 {
-    'slug': 'unsteady-on-feet-getting-older', 'group': 'balance', 'reviewed': None, 'about': 'Balance impairment',
+    'slug': 'unsteady-on-feet-getting-older', 'group': 'balance', 'reviewed': '2026-09-30', 'about': 'Balance impairment',
     'q': 'Is Feeling Unsteady Just Part of Getting Older?',
     'crumb': 'Feeling unsteady as you age',
     'title': 'Is Feeling Unsteady Part of Getting Older? | ARI PT',
@@ -136,7 +136,7 @@ PAGES = [
     'guide': ('Balance problems and fall prevention', 'balance-fall-prevention.html'),
 },
 {
-    'slug': 'how-to-prevent-falls', 'group': 'balance', 'reviewed': None, 'about': 'Falls in older adults',
+    'slug': 'how-to-prevent-falls', 'group': 'balance', 'reviewed': '2026-09-30', 'about': 'Falls in older adults',
     'q': 'How Can I Lower My Risk of Falling?',
     'crumb': 'Lowering your risk of falling',
     'title': 'How to Lower Your Risk of Falling: 6 Steps | ARI PT',
