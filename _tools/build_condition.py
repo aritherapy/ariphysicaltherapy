@@ -128,6 +128,8 @@ def build(slug):
     s = open(os.path.join(ROOT, SHELL), encoding='utf-8').read()
     if L is spanish.ES:
         s = spanish.es_shell(s, url, SITE + p['en'] + '.html' if p.get('en') else None)
+    else:
+        s = spanish.strip_lang(s)   # release.py adds this page's own language link and hreflang
     title, desc = html.escape(p['title']), html.escape(p['description'])
     assert len(p['description']) <= 160, f'{slug}: description is {len(p["description"])} chars (max 160)'
     s = re.sub(r'<link rel="canonical" href="[^"]*">', f'<link rel="canonical" href="{url}">', s)

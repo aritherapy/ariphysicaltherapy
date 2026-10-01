@@ -1,6 +1,6 @@
 PAGE = {
     'lang': 'es', 'en': 'car-accident-whiplash',
-    'reviewed': None, 'referral_faq': False,   # borrador hasta que lo revise una persona hispanohablante
+    'reviewed': '2026-10-01', 'referral_faq': False,   # borrador hasta que lo revise una persona hispanohablante
     'title': "Accidente de auto y latigazo cervical en Bakersfield | ARI PT",
     'description': "¿Dolor de cuello, rigidez o dolor de cabeza después de un accidente de auto? Terapia física para el latigazo cervical en Bakersfield, CA. Atención individual.",
     'crumb': "Accidente de auto",

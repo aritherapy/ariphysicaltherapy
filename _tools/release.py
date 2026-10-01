@@ -14,13 +14,19 @@ For each slug (a condition page in _tools/conditions/ or a question in _tools/qu
   4. links the matching checklist phrases on service pages (each content file's 'links_from'),
   5. once any question is live: adds "Patient Questions" to every page's footer, and a
      "Common questions" list (live questions only) to the matching condition pages,
-  6. refreshes the site search index.
+  6. Spanish pages ('lang': 'es'): go into the sitemap and the llms.txt "En español" section instead of the English
+     conditions list; releasing the first one also puts the Spanish homepage, hub and form live. Once any is live,
+     every English page gets an "Español" link in the top bar (to its own Spanish version when there is one), the
+     footer gets "En español", and paired pages get hreflang links to each other,
+  7. refreshes the site search index.
 It never commits or pushes. Review `git diff`, then commit, push, and request indexing in Search Console.
 Only release pages Deepa has actually reviewed.
 """
 import argparse, datetime, glob, html, importlib.util, json, os, re, subprocess, sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, os.path.join(ROOT, '_tools'))
+import spanish
 SITE = 'https://ariphysicaltherapy.com/'
 TOOLS = os.path.join(ROOT, '_tools')
 REL_START, REL_END = '<!-- ask-ari:related -->', '<!-- /ask-ari:related -->'
@@ -105,6 +111,58 @@ def llms_add(cond_items, live_questions):
         else:
             s = s.replace('\n\n## More', '\n\n' + section + '\n\n## More', 1)
     open(path, 'w', encoding='utf-8').write(s)
+
+
+FOOT_ES = f'<a href="{spanish.ES_HOME}" lang="es" hreflang="es">En español</a>'
+ES_CORE = {'index.html': spanish.ES_HOME, 'conditions.html': spanish.ES_HUB, 'appointment.html': spanish.ES_FORM}
+
+
+def llms_spanish(cs):
+    """Rebuild the "En español" section of llms.txt from the live Spanish pages."""
+    live = [(slug, plain(pg['crumb'])) for slug, (_, pg) in cs.items() if pg.get('lang') == 'es' and pg.get('reviewed')]
+    if not live:
+        return
+    path = p('llms.txt')
+    s = open(path, encoding='utf-8').read()
+    head = '## En español'
+    section = (f'{head}\n\nSpanish-language pages for Spanish-speaking patients (ARI has Spanish-speaking staff).\n\n'
+               f'- [Terapia física en Bakersfield (inicio)]({SITE}{spanish.ES_HOME})\n'
+               f'- [Afecciones que tratamos]({SITE}{spanish.ES_HUB})\n'
+               f'- [Solicitar una cita]({SITE}{spanish.ES_FORM})\n'
+               + '\n'.join(f'- [{name}]({SITE}{slug}.html)' for slug, name in live))
+    if head in s:
+        i = s.index(head)
+        j = s.find('\n\n## ', i + 1)
+        s = s[:i] + section + (s[j:] if j != -1 else '\n')
+    else:
+        s = s.replace('\n\n## More', '\n\n' + section + '\n\n## More', 1)
+    open(path, 'w', encoding='utf-8').write(s)
+
+
+def sync_spanish(cs):
+    """Language switch + hreflang on English pages, once any Spanish page is live. Idempotent."""
+    pairs = {pg['en'] + '.html': slug + '.html' for slug, (_, pg) in cs.items()
+             if pg.get('lang') == 'es' and pg.get('reviewed') and pg.get('en')}
+    if not pairs:
+        return 0
+    pairs.update(ES_CORE)
+    n = 0
+    for f in glob.glob(p('*.html')):
+        name = os.path.basename(f)
+        s = open(f, encoding='utf-8').read()
+        if '<html lang="en">' not in s or 'class="top-bar-left"' not in s:
+            continue
+        s2 = spanish.add_lang_link(s, pairs.get(name, spanish.ES_HOME), 'es')
+        if name in pairs:
+            canon = re.search(r'<link rel="canonical" href="([^"]*)">', s2).group(1)
+            s2 = spanish.en_alternate(s2, canon, SITE + pairs[name])
+        if 'class="foot-links"' in s2 and FOOT_ES not in s2:
+            s2 = s2.replace('<a href="appointment.html">Book an Appointment</a>\n    </div></div>',
+                            FOOT_ES + '<a href="appointment.html">Book an Appointment</a>\n    </div></div>', 1)
+        if s2 != s:
+            open(f, 'w', encoding='utf-8').write(s2)
+            n += 1
+    return n
 
 
 def hub_schema_add(cond_items):
@@ -225,6 +283,7 @@ def main():
             print(f'{label}:')
             for slug, (_, pg) in items.items():
                 tag = f" (batch {pg['batch']})" if pg.get('batch') else ''
+                tag += ' (es)' if pg.get('lang') == 'es' else ''
                 print(f"  {'LIVE ' + pg['reviewed'] if pg.get('reviewed') else 'draft':16s} {slug}{tag}")
         return
     if a.batch is not None:
@@ -239,6 +298,8 @@ def main():
         sys.exit('Unknown page(s): ' + ', '.join(unknown) + '  (see --list)')
 
     rel_c = [s for s in a.slugs if s in cs]
+    rel_es = [s for s in rel_c if cs[s][1].get('lang') == 'es']
+    rel_en = [s for s in rel_c if s not in rel_es]
     rel_q = [s for s in a.slugs if s in qs]
     for s in rel_c:
         set_reviewed(cs[s][0], s, a.date, False)
@@ -248,20 +309,26 @@ def main():
 
     if rel_c:
         print(run('_tools/build_condition.py', *rel_c))
+    if rel_es:
+        print(run('_tools/build_es_core.py'))
     print(run('_tools/build_questions.py').splitlines()[-1])
 
     urls = [s + '.html' for s in rel_c + rel_q]
-    if rel_c:
+    if rel_en:
         urls.append('conditions.html')
+    if rel_es:
+        urls += [spanish.ES_HOME, spanish.ES_HUB, spanish.ES_FORM]
     if rel_q:
         urls.append('ask-ari.html')
     if urls:
         sitemap_add(urls, a.date)
-        llms_add([(s, plain(cs[s][1]['crumb'])) for s in rel_c],
+        llms_add([(s, plain(cs[s][1]['crumb'])) for s in rel_en],
                  [(s, plain(q['q'])) for s, (_, q) in qs.items() if q.get('reviewed')])
-    if rel_c:
-        hub_schema_add([(s, plain(cs[s][1]['crumb']), cs[s][1]['condition']) for s in rel_c])
+    if rel_en:
+        hub_schema_add([(s, plain(cs[s][1]['crumb']), cs[s][1]['condition']) for s in rel_en])
+    llms_spanish(cs)
     footer, pages = sync_links(qs)
+    es_pages = sync_spanish(cs)
     mentions = link_mentions(cs)
     print(run('_tools/build_search_index.py'))
 
@@ -271,6 +338,8 @@ def main():
         print(f'Added the "Patient Questions" footer link to {footer} pages.')
     if pages:
         print(f'Updated "Common questions" lists on {pages} condition pages.')
+    if es_pages:
+        print(f'Updated the Español link / hreflang on {es_pages} English pages.')
     if mentions:
         print(f'Linked {mentions} checklist mentions on service pages to live condition pages.')
     print('Next: check `git diff`, commit, push, then request indexing for the new URLs in Search Console.')

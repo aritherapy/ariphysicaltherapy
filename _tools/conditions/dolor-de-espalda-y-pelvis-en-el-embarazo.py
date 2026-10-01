@@ -1,6 +1,6 @@
 PAGE = {
     'lang': 'es', 'en': 'pregnancy-back-pelvic-pain',
-    'reviewed': None,   # draft until a Spanish speaker reviews it
+    'reviewed': '2026-10-01',   # draft until a Spanish speaker reviews it
     'title': "Dolor de espalda y pelvis en el embarazo, Bakersfield | ARI PT",
     'description': "¿Dolor de espalda, cadera o pelvis en el embarazo? Terapia física prenatal suave e individual para mujeres en Bakersfield, CA. Sin referencia médica.",
     'crumb': "Dolor de espalda y pelvis en el embarazo",

@@ -1,6 +1,6 @@
 PAGE = {
     'lang': 'es', 'en': 'balance-fall-prevention',
-    'reviewed': None,   # draft until a Spanish speaker reviews it
+    'reviewed': '2026-10-01',   # draft until a Spanish speaker reviews it
     'title': "Equilibrio y prevención de caídas en Bakersfield | ARI PT",
     'description': "¿Se siente inestable o tiene miedo de caerse? Terapia física de equilibrio y prevención de caídas en Bakersfield, CA. Aceptamos Medicare. Sin referencia.",
     'crumb': "Equilibrio y prevención de caídas",

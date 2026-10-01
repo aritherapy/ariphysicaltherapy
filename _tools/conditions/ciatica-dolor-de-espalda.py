@@ -1,6 +1,6 @@
 PAGE = {
     'lang': 'es', 'en': 'sciatica-back-pain',
-    'reviewed': None,   # borrador hasta que lo revise una persona de habla hispana
+    'reviewed': '2026-10-01',   # borrador hasta que lo revise una persona de habla hispana
     'title': 'Ciática y dolor de espalda: terapia en Bakersfield | ARI PT',
     'description': '¿Dolor que baja de la espalda a la pierna? Terapia física para ciática, problemas de disco y dolor de espalda en Bakersfield, CA. Sin referencia médica.',
     'crumb': 'Ciática y dolor de espalda',

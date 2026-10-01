@@ -1,6 +1,6 @@
 PAGE = {
     'lang': 'es', 'en': 'knee-pain-arthritis',
-    'reviewed': None,   # borrador hasta que lo revise una persona de habla hispana
+    'reviewed': '2026-10-01',   # borrador hasta que lo revise una persona de habla hispana
     'title': 'Artritis de rodilla: terapia física en Bakersfield | ARI PT',
     'description': '¿Le duele la rodilla en las escaleras o al levantarse de una silla? Terapia física para la artritis de rodilla en Bakersfield, CA. Sin referencia médica.',
     'crumb': 'Artritis de rodilla',

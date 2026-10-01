@@ -31,6 +31,7 @@ h1,h2,h3,h4{font-family:'Montserrat',sans-serif;color:var(--charcoal)}
 .top-bar a svg{flex:none;opacity:.9}
 .top-bar .btn-book-topbar{background:var(--orange);color:#fff!important;padding:7px 18px;border-radius:4px;font-weight:600;font-size:13px;letter-spacing:.3px;line-height:1.4;white-space:nowrap;display:inline-flex;align-items:center;transition:background .2s!important}
 .top-bar .btn-book-topbar:hover{background:var(--orange-dark)}
+.top-bar a.top-bar-lang{color:#fff;font-weight:600}
 .navbar{background:#fff;padding:16px 48px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:52px;z-index:999;box-shadow:0 2px 12px rgba(0,0,0,.07)}
 .nav-logo img{height:56px;width:auto}
 .nav-links{display:flex;gap:32px;align-items:center}
@@ -739,3 +740,5 @@ footer img{height:46px;width:auto}
 .prose .page-cta a.btn{text-decoration:none}
 .page-cta .btn-on-dark{color:#fff}
 @media(max-width:768px){.page-cta{padding:24px 20px 24px}.page-cta-btns .btn{width:100%}}
+/* compact top bar on phones (after the 768px rules so it wins) */
+@media(max-width:480px){.top-bar{padding:9px 14px}.top-bar-left{gap:14px}.top-bar a{white-space:nowrap}.top-bar .btn-book-topbar{padding:7px 12px;font-size:12px;letter-spacing:0}}

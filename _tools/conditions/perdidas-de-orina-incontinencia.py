@@ -1,6 +1,6 @@
 PAGE = {
     'lang': 'es', 'en': 'bladder-leaks-incontinence',
-    'reviewed': None,   # borrador hasta que lo revise una persona hispanohablante
+    'reviewed': '2026-10-01',   # borrador hasta que lo revise una persona hispanohablante
     'title': "Pérdidas de orina e incontinencia en Bakersfield | ARI PT",
     'description': "¿Pérdidas de orina al estornudar, reír o levantar cosas? Terapia física del piso pélvico para mujeres en Bakersfield, CA. Individual, privada, sin referencia.",
     'crumb': "Pérdidas de orina",

@@ -54,13 +54,14 @@ for f in sorted(os.listdir(ROOT)):
             keywords += [about.get('name', '')] + list(about.get('alternateName', []) or [])
     page = 'home' if f == 'index.html' else f
     url = '/' if f == 'index.html' else f
+    lang = {'l': 'es'} if '<html lang="es">' in s else {}   # Spanish pages; the search ranks the page's own language first
     entries.append({
         't': 'page', 'u': url, 'title': h1 or title.split('|')[0].strip(),
         'd': desc, 'k': ' '.join(k for k in keywords if k), 'h': ' · '.join(h for h in h2s if h)[:500],
-        'x': text(body)[:BODY_CHARS],
+        'x': text(body)[:BODY_CHARS], **lang,
     })
     for q, a in faqs:
-        entries.append({'t': 'faq', 'u': url, 'title': q, 'd': a, 'k': '', 'h': '', 'x': ''})
+        entries.append({'t': 'faq', 'u': url, 'title': q, 'd': a, 'k': '', 'h': '', 'x': '', **lang})
 
 # condition write-ups on the Conditions page, one entry per #anchor
 hub = open(os.path.join(ROOT, 'conditions.html'), encoding='utf-8').read()

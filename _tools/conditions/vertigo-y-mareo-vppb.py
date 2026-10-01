@@ -1,6 +1,6 @@
 PAGE = {
     'lang': 'es', 'en': 'vertigo-dizziness-bppv',
-    'reviewed': None,   # borrador hasta que lo revise una persona hispanohablante
+    'reviewed': '2026-10-01',   # borrador hasta que lo revise una persona hispanohablante
     'title': "Terapia para vértigo y mareo (VPPB) en Bakersfield | ARI PT",
     'description': "¿El cuarto le da vueltas al voltearse en la cama o mirar hacia arriba? Terapia física para el vértigo y el VPPB en Bakersfield, CA. Sin referencia médica.",
     'crumb': "Vértigo y mareo",

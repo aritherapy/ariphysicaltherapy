@@ -1,6 +1,6 @@
 PAGE = {
     'lang': 'es', 'en': 'neck-pain-headaches',
-    'reviewed': None,   # borrador hasta que lo revise una persona de habla hispana
+    'reviewed': '2026-10-01',   # borrador hasta que lo revise una persona de habla hispana
     'title': 'Dolor de cuello y de cabeza: terapia en Bakersfield | ARI PT',
     'description': '¿Dolor de cuello o dolores de cabeza que empiezan en la base del cráneo? Terapia física individual en Bakersfield, CA, sin referencia médica.',
     'crumb': 'Dolor de cuello y dolores de cabeza',

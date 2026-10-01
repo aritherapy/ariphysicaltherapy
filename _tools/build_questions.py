@@ -13,7 +13,10 @@ While no page is reviewed, ask-ari.html is itself a noindex draft listing every 
 index). Once any page is live, it becomes indexable and lists only the live pages.
 Release a few reviewed pages a week rather than all at once.
 """
-import html, importlib.util, json, os, re
+import html, importlib.util, json, os, re, sys
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import spanish
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CONTENT = os.path.join(ROOT, '_tools', 'questions')
@@ -57,7 +60,7 @@ def jsonld(obj):
 
 
 def shell_with(url, title, desc, robots, blocks, body):
-    s = open(os.path.join(ROOT, SHELL), encoding='utf-8').read()
+    s = spanish.strip_lang(open(os.path.join(ROOT, SHELL), encoding='utf-8').read())   # release.py adds the language link
     t, d = html.escape(title), html.escape(desc)
     s = re.sub(r'<link rel="canonical" href="[^"]*">', f'<link rel="canonical" href="{url}">', s)
     s = re.sub(r'<meta property="og:url" content="[^"]*">', f'<meta property="og:url" content="{url}">', s)

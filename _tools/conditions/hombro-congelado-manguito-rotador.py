@@ -1,6 +1,6 @@
 PAGE = {
     'lang': 'es', 'en': 'frozen-shoulder-rotator-cuff',
-    'reviewed': None,   # borrador hasta que lo revise una persona de habla hispana
+    'reviewed': '2026-10-01',   # borrador hasta que lo revise una persona de habla hispana
     'title': 'Hombro congelado y manguito rotador en Bakersfield | ARI PT',
     'description': '¿Dolor de hombro al levantar el brazo o de noche, o un hombro congelado y rígido? Terapia física individual en Bakersfield, CA, sin referencia médica.',
     'crumb': 'Hombro congelado y manguito rotador',

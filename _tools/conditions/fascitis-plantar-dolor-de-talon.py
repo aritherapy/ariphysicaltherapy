@@ -1,6 +1,6 @@
 PAGE = {
     'lang': 'es', 'en': 'plantar-fasciitis-heel-pain',
-    'reviewed': None,   # borrador hasta que lo revise una persona hispanohablante
+    'reviewed': '2026-10-01',   # borrador hasta que lo revise una persona hispanohablante
     'title': "Fascitis plantar y dolor de talón en Bakersfield | ARI PT",
     'description': "¿Dolor de talón con los primeros pasos de la mañana? Terapia física para la fascitis plantar en Bakersfield, CA. Atención individual, sin referencia médica.",
     'crumb': "Fascitis plantar",

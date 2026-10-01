@@ -1,6 +1,6 @@
 PAGE = {
     'lang': 'es', 'en': 'hip-pain',
-    'reviewed': None,   # draft until a Spanish speaker reviews it
+    'reviewed': '2026-10-01',   # draft until a Spanish speaker reviews it
     'title': "Dolor de cadera y artritis de cadera en Bakersfield | ARI PT",
     'description': "¿Dolor de cadera al caminar, en escaleras o al acostarse de lado? Terapia física para artritis, bursitis y tendones en Bakersfield, CA. Sin referencia.",
     'crumb': "Dolor de cadera",

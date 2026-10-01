@@ -1,11 +1,11 @@
 """Build the Spanish core pages: homepage, conditions hub and appointment-request form.
 
-    python3 _tools/build_es_core.py          # drafts (noindex) while LIVE below is False
+    python3 _tools/build_es_core.py
     python3 _tools/build_search_index.py
 
 Spanish condition pages are content files in _tools/conditions/ with PAGE['lang'] = 'es' (built by
-build_condition.py). The hub lists them automatically. Set LIVE = True once a Spanish-speaking staff member
-has reviewed these three pages; release the condition pages with release.py as usual.
+build_condition.py). The hub lists the released ones (all of them while none is released). The three core
+pages stay noindex until the first Spanish condition page is released; release.py rebuilds them.
 """
 import html, importlib.util, json, os, re, sys
 
@@ -13,7 +13,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import spanish
 from spanish import ES_HOME, ES_HUB, ES_FORM, SITE
 
-LIVE = False
+LIVE = None   # set by __main__: live once any Spanish condition page has been released (release.py does that)
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 MAP = 'https://www.google.com/maps/search/?api=1&amp;query=ARI+Physical+Therapy+8200+Stockdale+Hwy+Suite+B2+Bakersfield+CA+93311'
 
@@ -37,7 +37,8 @@ def jsonld(obj):
 def page(shell_file, slug, en_slug, title, desc, blocks, body, robots=None):
     url = SITE + slug
     s = open(os.path.join(ROOT, shell_file), encoding='utf-8').read()
-    s = spanish.es_shell(s, url, SITE + en_slug if en_slug else None)
+    en_url = SITE if en_slug == 'index.html' else SITE + en_slug if en_slug else None   # the homepage's canonical is the bare domain
+    s = spanish.es_shell(s, url, en_url)
     t, d = html.escape(title), html.escape(desc)
     s = re.sub(r'<link rel="canonical" href="[^"]*">', f'<link rel="canonical" href="{url}">', s)
     s = re.sub(r'<meta property="og:url" content="[^"]*">', f'<meta property="og:url" content="{url}">', s)
@@ -62,7 +63,7 @@ def page(shell_file, slug, en_slug, title, desc, blocks, body, robots=None):
 
 
 SIDE = f'''  <aside class="detail-side">
-    <div class="side-card"><h3>Hablamos español</h3><p>Llámenos o solicite una cita en línea. Le responderemos, normalmente en un día hábil.</p>
+    <div class="side-card"><h3>Se habla español</h3><p>Llámenos o solicite una cita en línea. Le responderemos, normalmente en un día hábil.</p>
       <a href="{ES_FORM}" class="btn btn-primary">Solicitar una cita</a>
       <span class="or">o llame al <a href="tel:6612828584">(661) 282-8584</a></span></div>
     <div class="side-list"><h4>Más información</h4><a href="{ES_HUB}">Afecciones que tratamos <span>&rarr;</span></a><a href="{ES_HOME}#contacto">Dirección y horario <span>&rarr;</span></a><a href="index.html" lang="en">English website <span>&rarr;</span></a></div>
@@ -71,7 +72,7 @@ SIDE = f'''  <aside class="detail-side">
 FAQS = [
     ('¿Necesito una referencia del médico?', 'No, en la mayoría de los casos. En California puede ver a un fisioterapeuta directamente hasta por 12 visitas o 45 días, lo que ocurra primero. Algunos seguros todavía piden una referencia; llámenos y le ayudamos a verificarlo. Para casos de compensación de trabajadores, el tratamiento lo receta su médico tratante.'),
     ('¿Aceptan mi seguro?', 'Aceptamos la mayoría de los seguros médicos privados y Medicare. Llámenos al (661) 282-8584 y verificamos sus beneficios antes de su primera visita.'),
-    ('¿Hablan español?', 'Sí. Nuestro equipo habla español, inglés e hindi, para que pueda explicar sus síntomas y hacer preguntas con comodidad.'),
+    ('¿Hablan español?', 'Sí. Tenemos personal que habla español. Cuando pida su cita, díganos que prefiere español y haremos lo posible para atenderle en su idioma.'),
     ('¿Cuánto dura la primera visita?', 'La evaluación inicial dura de 45 a 60 minutos. Las visitas de seguimiento suelen durar de 30 a 45 minutos. Todas las visitas son individuales con un fisioterapeuta con licencia.'),
     ('¿Ofrecen terapia por video?', 'No. Toda nuestra atención es en persona en nuestra clínica de Bakersfield.'),
 ]
@@ -105,16 +106,16 @@ def build_home(pages):
     conds = ''.join(f'<li><a href="{slug}.html">{html.unescape(re.sub(r"<[^>]+>", "", p["crumb"]))}</a></li>' for slug, p in pages)
     body = f'''</nav>
 <section class="page-hero"><div class="page-hero-inner">
-  <p class="eyebrow">Hablamos español</p><h1>Terapia física individual en <span style="color:var(--orange)">Bakersfield</span></h1>
+  <p class="eyebrow">Se habla español</p><h1>Terapia física individual en <span style="color:var(--orange)">Bakersfield</span></h1>
   <p class="lead">Atención uno a uno con un fisioterapeuta con licencia para el dolor de espalda y cuello, lesiones, rehabilitación después de una cirugía, la salud pélvica de la mujer y mucho más.</p>
   <div style="margin-top:30px;display:flex;gap:12px;flex-wrap:wrap"><a href="{ES_FORM}" class="btn btn-primary">Solicitar una cita</a><a href="tel:6612828584" class="btn btn-on-dark">Llamar al (661) 282-8584</a></div>
 </div></section>
 <section class="section"><div class="section-inner detail">
   <div class="prose">
-    <p class="svc-lead" style="font-size:17px;line-height:1.75;margin-bottom:8px"><strong>ARI Physical Therapy es una clínica independiente de terapia física en Bakersfield.</strong> Cada visita es individual y en persona con un fisioterapeuta con licencia. Nuestra directora clínica, Deepa Konnur, PT, MPT, OCS, es especialista certificada en ortopedia (Orthopedic Certified Specialist). Aceptamos la mayoría de los seguros médicos privados y Medicare, y hablamos español.</p>
+    <p class="svc-lead" style="font-size:17px;line-height:1.75;margin-bottom:8px"><strong>ARI Physical Therapy es una clínica independiente de terapia física en Bakersfield.</strong> Cada visita es individual y en persona con un fisioterapeuta con licencia. Nuestra directora clínica, Deepa Konnur, PT, MPT, OCS, es especialista certificada en ortopedia (Orthopedic Certified Specialist). Aceptamos la mayoría de los seguros médicos privados y Medicare, y contamos con personal que habla español.</p>
 <h2>Cómo le podemos ayudar</h2><div class="checks">{''.join(check(x) for x in services)}</div>
 <h2>Afecciones que tratamos</h2><p>Información en español sobre algunas de las afecciones más comunes que tratamos:</p><ul class="plain-list">{conds}</ul><p><a href="{ES_HUB}">Ver todas las afecciones &rarr;</a></p>
-<h2>Por qué los pacientes eligen ARI</h2><ul class="plain-list"><li><strong>Atención individual:</strong> todo el tiempo de su visita con un fisioterapeuta con licencia.</li><li><strong>Experiencia especializada:</strong> nuestra directora clínica es especialista certificada en ortopedia.</li><li><strong>Hablamos español</strong>, inglés e hindi.</li><li><strong>Seguros:</strong> aceptamos la mayoría de los seguros privados y Medicare.</li><li><strong>Estacionamiento gratis</strong> en Town &amp; Country Village, junto a Trader Joe's.</li></ul>
+<h2>Por qué los pacientes eligen ARI</h2><ul class="plain-list"><li><strong>Atención individual:</strong> todo el tiempo de su visita con un fisioterapeuta con licencia.</li><li><strong>Experiencia especializada:</strong> nuestra directora clínica es especialista certificada en ortopedia.</li><li><strong>Personal que habla español</strong>, para que pueda explicar sus síntomas con comodidad.</li><li><strong>Seguros:</strong> aceptamos la mayoría de los seguros privados y Medicare.</li><li><strong>Estacionamiento gratis</strong> en Town &amp; Country Village, junto a Trader Joe's.</li></ul>
 {spanish.ES['direct_access']}
 <h2>Su primera visita</h2><div class="steps"><div class="step"><span class="step-num">1</span><div><b>Una evaluación individual</b><p>Su primera visita dura de 45 a 60 minutos. Hablamos de sus síntomas y sus metas, y revisamos cómo se mueve.</p></div></div><div class="step"><span class="step-num">2</span><div><b>Un plan hecho para usted</b><p>Tratamiento práctico y ejercicios que avanzan poco a poco, adaptados a su cuerpo y a su vida diaria.</p></div></div><div class="step"><span class="step-num">3</span><div><b>Progreso que dura</b><p>Medimos su avance y le enseñamos un programa en casa para mantener los resultados.</p></div></div></div>
 <h2 id="contacto">Dirección y horario</h2><p><strong>ARI Physical Therapy</strong><br>8200 Stockdale Hwy, Suite B2<br>Bakersfield, CA 93311<br>En Town &amp; Country Village, junto a Trader Joe's<br><a href="{MAP}">Cómo llegar &rarr;</a></p><p><strong>Horario:</strong> lunes a viernes, 8:00 AM a 6:00 PM<br><strong>Teléfono:</strong> <a href="tel:6612828584">(661) 282-8584</a><br><strong>Fax (referencias):</strong> (661) 727-0005<br><strong>Correo:</strong> <a href="mailto:contactus@ariptcare.com">contactus@ariptcare.com</a></p>
@@ -128,9 +129,9 @@ def build_home(pages):
            'isPartOf': {'@type': 'WebSite', 'name': 'ARI Physical Therapy', 'url': SITE}, 'about': {'@id': SITE + '#clinic'}}
     faq = {'@context': 'https://schema.org', '@type': 'FAQPage', 'inLanguage': 'es-US', 'mainEntity': [
         {'@type': 'Question', 'name': q, 'acceptedAnswer': {'@type': 'Answer', 'text': a}} for q, a in FAQS]}
-    page('knee-pain-arthritis.html', ES_HOME, 'index.html' if False else '',
+    page('knee-pain-arthritis.html', ES_HOME, 'index.html',
          'Terapia física en Bakersfield en español | ARI PT',
-         'Terapia física individual en Bakersfield, CA. Hablamos español. Dolor de espalda, lesiones, cirugía y salud pélvica de la mujer. Medicare aceptado.',
+         'Terapia física individual en Bakersfield, CA. Se habla español. Dolor de espalda, lesiones, cirugía y salud pélvica de la mujer. Medicare aceptado.',
          [web, faq], body)
 
 
@@ -142,13 +143,13 @@ def build_hub(pages):
     body = f'''</nav>
 <section class="page-hero"><div class="page-hero-inner">
   <p class="breadcrumb"><a href="{ES_HOME}">Inicio</a> &nbsp;/&nbsp; Afecciones que tratamos</p>
-  <p class="eyebrow">Hablamos español</p><h1>Afecciones que tratamos</h1>
+  <p class="eyebrow">Se habla español</p><h1>Afecciones que tratamos</h1>
   <p class="lead">Información clara, en español, sobre problemas comunes que la terapia física puede ayudar. Cada página explica las señales, el tratamiento y cuándo ver a un médico.</p>
 </div></section>
 <section class="section"><div class="section-inner detail">
   <div class="prose">
 {items}
-<p>Tratamos muchas otras afecciones. Vea la <a href="conditions.html" lang="en">lista completa en inglés</a> o llámenos al <a href="tel:6612828584">(661) 282-8584</a>; hablamos español.</p>
+<p>Tratamos muchas otras afecciones. Vea la <a href="conditions.html" lang="en">lista completa en inglés</a> o llámenos al <a href="tel:6612828584">(661) 282-8584</a>; tenemos personal que habla español.</p>
 {spanish.ES['page_cta']}<p class="med-disclaimer">{spanish.ES['disclaimer']}</p>
   </div>
 {SIDE}
@@ -159,15 +160,15 @@ def build_hub(pages):
             'hasPart': [{'@type': 'MedicalWebPage', 'name': html.unescape(re.sub(r'<[^>]+>', '', p['crumb'])), 'url': SITE + slug + '.html'}
                         for slug, p in shown]}
     page('knee-pain-arthritis.html', ES_HUB, 'conditions.html', 'Afecciones que tratamos en Bakersfield | ARI PT',
-         'Terapia física en Bakersfield para dolor de espalda, rodilla, hombro, cuello, vértigo, embarazo y más. Información en español. Hablamos español.',
+         'Terapia física en Bakersfield para dolor de espalda, rodilla, hombro, cuello, vértigo, embarazo y más. Información en español. Se habla español.',
          [coll], body)
 
 
 FORM_TEXT = [
     ('<p class="eyebrow">Get Started</p><h1>Book Your Appointment</h1><p class="lead">Request an appointment online and we\'ll confirm within one business day. Prefer to talk? Call us directly.</p>',
-     '<p class="eyebrow">Hablamos español</p><h1>Solicite una cita</h1><p class="lead">Envíe su solicitud en línea y le confirmaremos, normalmente en un día hábil. ¿Prefiere hablar con alguien? Llámenos; hablamos español.</p>'),
+     '<p class="eyebrow">Se habla español</p><h1>Solicite una cita</h1><p class="lead">Envíe su solicitud en línea y le confirmaremos, normalmente en un día hábil. ¿Prefiere hablar con alguien? Llámenos; tenemos personal que habla español.</p>'),
     ('<h3>Request an Appointment</h3><p>Fill out the form below and our team will confirm your appointment within one business day.</p>',
-     '<h3>Solicitud de cita</h3><p>Llene este formulario y nuestro equipo le contactará para confirmar su cita, normalmente en un día hábil. Le atenderemos en español.</p>'),
+     '<h3>Solicitud de cita</h3><p>Llene este formulario y nuestro equipo le contactará para confirmar su cita, normalmente en un día hábil. Si prefiere español, se lo pasamos a nuestro personal que habla español.</p>'),
     ("I'm booking this for my child", 'Estoy pidiendo esta cita para mi hijo o hija'),
     ('>Patient information</div>', '>Información del paciente</div>'),
     ('>First Name *<', '>Nombre *<'), ('>Last Name *<', '>Apellido *<'), ('>Age<', '>Edad<'), ('>Sex<', '>Sexo<'),
@@ -206,7 +207,7 @@ FORM_TEXT = [
     ('<h3>Request Received!</h3><p>Thank you! Our team will review your request and reach out to confirm your appointment within one business day. If you need immediate assistance, please call us at (661) 282-8584.</p>',
      '<h3>¡Recibimos su solicitud!</h3><p>¡Gracias! Nuestro equipo revisará su solicitud y le contactará para confirmar su cita, normalmente en un día hábil. Si necesita ayuda de inmediato, llámenos al (661) 282-8584.</p>'),
     ('<h3>Prefer to Call?</h3><p>Our front desk team is ready to help you schedule and answer any questions.</p>',
-     '<h3>¿Prefiere llamar?</h3><p>Nuestro equipo de recepción le ayuda a programar su cita y responde sus preguntas. Hablamos español.</p>'),
+     '<h3>¿Prefiere llamar?</h3><p>Nuestro equipo de recepción le ayuda a programar su cita y responde sus preguntas. Tenemos personal que habla español.</p>'),
     ('<h4>Clinic Information</h4>', '<h4>Información de la clínica</h4>'), ('</svg>Address</div>', '</svg>Dirección</div>'),
     ('</svg>Hours</div>', '</svg>Horario</div>'), ('Monday &ndash; Friday', 'Lunes a viernes'),
     ('</svg>Fax (Referrals)</div>', '</svg>Fax (referencias)</div>'), ('</svg>Email</div>', '</svg>Correo</div>'),
@@ -236,7 +237,7 @@ def build_form():
     s = re.sub(r'<link rel="canonical" href="[^"]*">', f'<link rel="canonical" href="{url}">', s)
     s = re.sub(r'<meta property="og:url" content="[^"]*">', f'<meta property="og:url" content="{url}">', s)
     title = 'Solicite una cita de terapia física | ARI PT Bakersfield'
-    desc = 'Solicite su cita de terapia física en Bakersfield en línea. Le confirmamos, normalmente en un día hábil. Hablamos español. (661) 282-8584.'
+    desc = 'Solicite su cita de terapia física en Bakersfield en línea. Le confirmamos, normalmente en un día hábil. Se habla español. (661) 282-8584.'
     s = re.sub(r'<title>.*?</title>', f'<title>{html.escape(title)}</title>', s, flags=re.S)
     s = re.sub(r'<meta property="og:title" content="[^"]*">', f'<meta property="og:title" content="{html.escape(title)}">', s)
     s = re.sub(r'<meta name="description" content="[^"]*">', f'<meta name="description" content="{html.escape(desc)}">', s)
@@ -251,6 +252,7 @@ def build_form():
 
 if __name__ == '__main__':
     pages = es_pages()
-    build_home(pages)
+    LIVE = any(p.get('reviewed') for _, p in pages)
+    build_home([x for x in pages if x[1].get('reviewed')] or pages)
     build_hub(pages)
     build_form()

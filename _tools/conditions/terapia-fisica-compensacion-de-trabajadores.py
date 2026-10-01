@@ -1,6 +1,6 @@
 PAGE = {
     'lang': 'es', 'en': 'workers-comp-physical-therapy',
-    'reviewed': None,   # draft until a Spanish speaker reviews it
+    'reviewed': '2026-10-01',   # draft until a Spanish speaker reviews it
     'clinical_review': False,
     'title': "Terapia física: compensación de trabajadores | ARI PT",
     'description': "¿Se lastimó en el trabajo? Terapia física individual de compensación de trabajadores en Bakersfield, CA: rehabilitación y acondicionamiento laboral.",

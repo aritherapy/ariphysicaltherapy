@@ -159,11 +159,13 @@
     var terms = base.map(function(w){ return { w: w, weight: 1 }; });
     base.forEach(function(w){ (SYN[w] ? words(SYN[w]) : []).forEach(function(s){ terms.push({ w: s, weight: 0.6 }); }); });
     /* who/what the visitor is asking about: a child, or a sport */
+    var pageLang = document.documentElement.lang === 'es' ? 'es' : 'en';
     var kid = /\b(kid|kids|child|children|son|daughter|toddler|teen|teenager|baby|infant)\b/.test(norm(q));
     var sporty = /\b(soccer|football|basketball|baseball|softball|volleyball|running|runner|sport|sports|athlete|golf|tennis)\b/.test(norm(q));
     function boost(e){
       return (kid && /pediatric/.test(e.u) ? 1.8 : 1) * (sporty && /sports-injury/.test(e.u) ? 1.5 : 1)
-           * (e.t === 'faq' && e.u === 'faq.html' ? 1.15 : 1);   /* prefer the general FAQ's wording */
+           * (e.t === 'faq' && e.u === 'faq.html' ? 1.15 : 1)   /* prefer the general FAQ's wording */
+           * ((e.l || 'en') === pageLang ? 1 : 0.5);   /* the page's own language first (Spanish pages carry l:'es') */
     }
     var ranked = index.map(function(e){ var sc = score(e, terms); return { e: e, s: sc * (sc ? boost(e) : 1) }; })
       .filter(function(r){ return r.s > 0; })
