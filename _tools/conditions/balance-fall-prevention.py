@@ -1,5 +1,5 @@
 PAGE = {
-    'reviewed': None,   # DRAFT until Deepa reviews
+    'reviewed': '2026-09-30',   # clinically reviewed by Deepa
     'title': 'Balance & Fall Prevention PT in Bakersfield | ARI PT',
     'description': 'Unsteady on your feet, or worried about falling? Balance and fall prevention physical therapy in Bakersfield, CA. Medicare accepted. No referral needed.',
     'crumb': 'Balance &amp; Fall Prevention',

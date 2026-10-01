@@ -2,7 +2,7 @@ GROUPS = [('pelvic', 'Women&rsquo;s Pelvic Health'), ('balance', 'Dizziness &amp
 
 PAGES = [
 {
-    'slug': 'leaking-urine-when-sneezing', 'group': 'pelvic', 'reviewed': None, 'about': 'Stress urinary incontinence',
+    'slug': 'leaking-urine-when-sneezing', 'group': 'pelvic', 'reviewed': '2026-09-30', 'about': 'Stress urinary incontinence',
     'q': 'Is It Normal to Leak Urine When I Sneeze, Laugh or Jump?',
     'crumb': 'Leaking when you sneeze',
     'title': 'Leaking Urine When You Sneeze or Laugh? | ARI PT',
@@ -28,7 +28,7 @@ PAGES = [
     'guide': ('Bladder leaks (urinary incontinence)', 'bladder-leaks-incontinence.html'),
 },
 {
-    'slug': 'exercise-after-having-a-baby', 'group': 'pelvic', 'reviewed': None, 'about': 'Postpartum recovery',
+    'slug': 'exercise-after-having-a-baby', 'group': 'pelvic', 'reviewed': '2026-09-30', 'about': 'Postpartum recovery',
     'q': 'When Can I Start Exercising Again After Having a Baby?',
     'crumb': 'Exercise after having a baby',
     'title': 'When Can I Exercise After Having a Baby? | ARI PT',
@@ -55,7 +55,7 @@ PAGES = [
     'guide': ('Postpartum therapy', 'postpartum-therapy.html'),
 },
 {
-    'slug': 'painful-sex-after-childbirth', 'group': 'pelvic', 'reviewed': None, 'about': 'Dyspareunia',
+    'slug': 'painful-sex-after-childbirth', 'group': 'pelvic', 'reviewed': '2026-09-30', 'about': 'Dyspareunia',
     'q': 'Is Sex Supposed to Hurt After Childbirth?',
     'crumb': 'Painful sex after childbirth',
     'title': 'Painful Sex After Childbirth: Causes & Help | ARI PT',

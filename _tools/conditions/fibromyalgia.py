@@ -1,5 +1,5 @@
 PAGE = {
-    'reviewed': None,   # DRAFT until Deepa reviews
+    'reviewed': '2026-09-30',   # clinically reviewed by Deepa
     'title': 'Fibromyalgia Physical Therapy in Bakersfield | ARI PT',
     'description': 'Gentle, one-on-one physical therapy for fibromyalgia and widespread pain in Bakersfield, CA. Exercise at your pace, pain education and better days.',
     'crumb': 'Fibromyalgia',

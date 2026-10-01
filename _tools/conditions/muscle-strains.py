@@ -1,5 +1,5 @@
 PAGE = {
-    'reviewed': None,   # DRAFT until Deepa reviews
+    'reviewed': '2026-09-30',   # clinically reviewed by Deepa
     'title': 'Pulled Muscle & Muscle Strain Treatment in Bakersfield | ARI PT',
     'description': 'Pulled a hamstring, calf, groin or back muscle? Physical therapy in Bakersfield, CA to heal muscle strains and stop them coming back.',
     'crumb': 'Muscle Strains',

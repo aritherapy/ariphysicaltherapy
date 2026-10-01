@@ -1,5 +1,5 @@
 PAGE = {
-    'reviewed': None,   # DRAFT until Deepa reviews
+    'reviewed': '2026-09-30',   # clinically reviewed by Deepa
     'title': 'Knee & Hip Replacement Rehab in Bakersfield | ARI PT',
     'description': 'Physical therapy after a total knee or hip replacement in Bakersfield, CA. One-on-one rehab that follows your surgeon\'s plan. Medicare accepted.',
     'crumb': 'Knee &amp; Hip Replacement Rehab',

@@ -1,5 +1,5 @@
 PAGE = {
-    'reviewed': None,   # DRAFT until Deepa reviews
+    'reviewed': '2026-09-30',   # clinically reviewed by Deepa
     'title': 'Bowel Leakage Treatment for Women in Bakersfield | ARI PT',
     'description': 'Accidental bowel leakage or urgency? Private, one-on-one pelvic floor physical therapy for women in Bakersfield, CA. Common, and treatable.',
     'crumb': 'Bowel Leakage',

@@ -1,5 +1,5 @@
 PAGE = {
-    'reviewed': None,   # DRAFT until Deepa reviews
+    'reviewed': '2026-09-30',   # clinically reviewed by Deepa
     'title': 'Ankle Sprain & Achilles Pain PT in Bakersfield | ARI PT',
     'description': 'Sprained ankle that won\'t settle, or Achilles pain with walking or running? Physical therapy in Bakersfield, CA to heal and prevent re-injury.',
     'crumb': 'Ankle Sprain &amp; Achilles Pain',

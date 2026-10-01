@@ -1,5 +1,5 @@
 PAGE = {
-    'reviewed': None,   # DRAFT until Deepa reviews; then e.g. '2026-10-05'
+    'reviewed': '2026-09-30',   # clinically reviewed by Deepa
     'title': 'Hip Pain & Hip Arthritis PT in Bakersfield | ARI PT',
     'description': 'Hip pain walking, on stairs or lying on your side? Physical therapy for hip arthritis, bursitis and tendon pain in Bakersfield, CA. No referral needed.',
     'crumb': 'Hip Pain',

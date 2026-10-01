@@ -1,5 +1,5 @@
 PAGE = {
-    'reviewed': None,   # DRAFT until Deepa reviews
+    'reviewed': '2026-09-30',   # clinically reviewed by Deepa
     'title': 'Interstitial Cystitis & Bladder Pain PT in Bakersfield | ARI PT',
     'description': 'Bladder pain, pressure and frequent urges that aren\'t an infection? Pelvic floor physical therapy for women with interstitial cystitis in Bakersfield, CA.',
     'crumb': 'Interstitial Cystitis &amp; Bladder Pain',

@@ -1,5 +1,5 @@
 PAGE = {
-    'reviewed': None,   # DRAFT until Deepa reviews
+    'reviewed': '2026-09-30',   # clinically reviewed by Deepa
     'title': 'C-Section Recovery Physical Therapy in Bakersfield | ARI PT',
     'description': 'Physical therapy after a C-section in Bakersfield, CA: scar care, rebuilding your core, lifting your baby comfortably and returning to exercise.',
     'crumb': 'C-Section Recovery',

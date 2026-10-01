@@ -1,5 +1,5 @@
 PAGE = {
-    'reviewed': None,   # DRAFT until Deepa reviews
+    'reviewed': '2026-09-30',   # clinically reviewed by Deepa
     'title': 'Shoulder Surgery Rehab in Bakersfield | ARI Physical Therapy',
     'description': 'Physical therapy after rotator cuff repair, shoulder replacement and other shoulder surgery in Bakersfield, CA. One-on-one rehab that follows your surgeon.',
     'crumb': 'Shoulder Surgery Rehab',

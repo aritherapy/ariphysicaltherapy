@@ -1,5 +1,5 @@
 PAGE = {
-    'reviewed': None,   # DRAFT until Deepa reviews
+    'reviewed': '2026-09-30',   # clinically reviewed by Deepa
     'title': 'Fracture Recovery Physical Therapy in Bakersfield | ARI PT',
     'description': 'Stiff and weak after a cast, boot or fracture surgery? Physical therapy in Bakersfield, CA to restore motion, strength and confidence after a broken bone.',
     'crumb': 'Fracture Recovery',

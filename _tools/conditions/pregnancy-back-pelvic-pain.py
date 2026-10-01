@@ -1,5 +1,5 @@
 PAGE = {
-    'reviewed': None,   # DRAFT until Deepa reviews
+    'reviewed': '2026-09-30',   # clinically reviewed by Deepa
     'title': 'Pregnancy Back & Pelvic Pain PT in Bakersfield | ARI PT',
     'description': 'Back, hip or pelvic pain during pregnancy? Gentle, one-on-one prenatal physical therapy for women in Bakersfield, CA. No referral needed.',
     'crumb': 'Pregnancy Back &amp; Pelvic Pain',

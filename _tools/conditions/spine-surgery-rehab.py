@@ -1,5 +1,5 @@
 PAGE = {
-    'reviewed': None,   # DRAFT until Deepa reviews
+    'reviewed': '2026-09-30',   # clinically reviewed by Deepa
     'title': 'Spine Surgery Rehab in Bakersfield | ARI Physical Therapy',
     'description': 'Physical therapy after back or neck surgery in Bakersfield, CA: discectomy, laminectomy and fusion rehab that follows your surgeon\'s precautions.',
     'crumb': 'Spine Surgery Rehab',

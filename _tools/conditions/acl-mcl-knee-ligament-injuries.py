@@ -1,5 +1,5 @@
 PAGE = {
-    'reviewed': None,   # DRAFT until Deepa reviews
+    'reviewed': '2026-09-30',   # clinically reviewed by Deepa
     'title': 'ACL & MCL Knee Ligament Injury Rehab in Bakersfield | ARI PT',
     'description': 'Physical therapy for ACL and MCL tears in Bakersfield, CA: rehab with or without surgery, ACL reconstruction recovery and a safe return to sport.',
     'crumb': 'ACL &amp; MCL Injuries',

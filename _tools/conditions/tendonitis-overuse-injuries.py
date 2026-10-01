@@ -1,5 +1,5 @@
 PAGE = {
-    'reviewed': None,   # DRAFT until Deepa reviews
+    'reviewed': '2026-09-30',   # clinically reviewed by Deepa
     'title': 'Tendonitis & Overuse Injury Treatment in Bakersfield | ARI PT',
     'description': 'Tendon pain from running, lifting, work or sport? Physical therapy for tendonitis and overuse injuries in Bakersfield, CA. No referral needed.',
     'crumb': 'Tendonitis &amp; Overuse Injuries',
