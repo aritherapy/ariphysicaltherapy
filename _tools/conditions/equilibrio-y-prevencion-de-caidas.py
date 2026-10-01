@@ -1,0 +1,56 @@
+PAGE = {
+    'lang': 'es', 'en': 'balance-fall-prevention',
+    'reviewed': None,   # draft until a Spanish speaker reviews it
+    'title': "Equilibrio y prevención de caídas en Bakersfield | ARI PT",
+    'description': "¿Se siente inestable o tiene miedo de caerse? Terapia física de equilibrio y prevención de caídas en Bakersfield, CA. Aceptamos Medicare. Sin referencia.",
+    'crumb': "Equilibrio y prevención de caídas",
+    'eyebrow': "Equilibrio",
+    'h1': "Problemas de equilibrio y prevención de caídas en",
+    'lead': "¿Se siente inestable, se agarra de los muebles o tiene miedo de volver a caerse? El equilibrio se puede entrenar a cualquier edad, y el programa de ejercicio adecuado reduce la probabilidad de una caída.",
+    'answer': "<strong>Sí, la terapia física puede mejorar el equilibrio y reducir su riesgo de caerse.</strong> Alrededor de uno de cada cuatro adultos de 65 años o más se cae cada año, según los CDC, y una caída no es una parte normal del envejecimiento. Los programas de ejercicio que entrenan el equilibrio y la fuerza reducen el número de caídas en los adultos mayores que viven en su casa. En ARI Physical Therapy en Bakersfield, cada visita es individual con un fisioterapeuta con licencia.",
+    'signs': [
+        "Se siente inestable al caminar, al dar la vuelta o en terreno disparejo",
+        "Se agarra de las paredes o de los muebles para moverse por la casa",
+        "Se ha caído, o casi se ha caído, en el último año",
+        "Para levantarse de una silla necesita usar los brazos o varios intentos",
+        "Ha dejado de salir a caminar, de ir a tiendas o de usar escaleras por miedo a caerse",
+        "Un familiar ha notado que usted está más lento o menos firme",
+    ],
+    'why': [
+        ("Por qué empeora el equilibrio",
+         "<p>El equilibrio depende de varios sistemas que trabajan juntos: la fuerza de las piernas y las caderas, la sensibilidad en los pies, el oído interno, la vista y qué tan rápido reacciona su cuerpo. Con la edad, la inactividad, una enfermedad o una cirugía, uno o más de estos sistemas puede debilitarse, a menudo tan despacio que usted no lo nota hasta que tropieza.</p>"
+         "<p>Otras cosas también aumentan el riesgo de caídas: algunos medicamentos, los mareos, el dolor de pies, la poca luz y los tapetes sueltos. El <strong>miedo a caerse</strong> también puede hacer que las personas se muevan menos, lo que debilita las piernas y empeora el equilibrio.</p>"),
+        ("Por qué ayuda el entrenamiento",
+         "<p>El equilibrio es una habilidad. Igual que la fuerza, mejora con práctica que sea un reto pero segura. Un programa que incluye <strong>equilibrio, fuerza de piernas y práctica de caminar</strong>, hecho con regularidad durante varias semanas, es lo que respalda la investigación. Si el mareo es parte del problema, un fisioterapeuta también puede revisar si hay causas del oído interno como el VPPB (BPPV en inglés), que es muy tratable. Vea nuestra <a href=\"vertigo-y-mareo-vppb.html\">guía de vértigo y mareo</a>.</p>"),
+    ],
+    'steps': [
+        ("Una evaluación individual", "Su primera visita dura de 45 a 60 minutos. Evaluamos su fuerza, su equilibrio, su forma de caminar y cómo se levanta de una silla, y hablamos de cualquier caída, de sus medicamentos y de lo que usted quiere poder hacer de forma segura."),
+        ("Entrenamiento de equilibrio y fuerza", "Ejercicios adaptados a su nivel y que avanzan cada semana: equilibrio de pie, pasos y vueltas, fuerza de piernas y caderas, y práctica de caminar, siempre con apoyo cerca."),
+        ("Una casa y una rutina más seguras", "Cómo levantarse de forma segura si se cae, consejos sobre zapatos, luz y tapetes, si un bastón o una andadera le ayudaría, y un programa en casa que pueda seguir haciendo."),
+    ],
+    'red_flags_intro': "Busque atención médica de inmediato si tiene:",
+    'red_flags': [
+        "Mareo o pérdida del equilibrio repentinos con habla arrastrada, la cara caída, o debilidad o adormecimiento de un lado del cuerpo: llame al 911, porque puede ser un derrame cerebral",
+        "Una caída con un golpe en la cabeza, sobre todo si toma un medicamento para diluir la sangre (anticoagulante)",
+        "Desmayarse o casi desmayarse, o latidos del corazón acelerados o irregulares",
+        "Una caída después de la cual no puede levantarse o no puede apoyar el peso en una pierna",
+        "Equilibrio que empeora rápidamente en cuestión de días o semanas",
+    ],
+    'faq_title': "Preguntas frecuentes sobre el equilibrio y la prevención de caídas",
+    'faqs': [
+        ("¿De verdad puede mejorar el equilibrio a mi edad?", "Sí. El equilibrio y la fuerza responden al entrenamiento a cualquier edad. Las investigaciones en adultos mayores que viven en su casa muestran que los programas de ejercicio regulares que incluyen entrenamiento de equilibrio y fuerza reducen las caídas."),
+        ("¿Medicare cubre la terapia física para el equilibrio?", "La Parte B de Medicare cubre la terapia física ambulatoria cuando es médicamente necesaria, lo que puede incluir problemas de equilibrio y riesgo de caídas. Aceptamos Medicare; llámenos y le ayudamos a entender su cobertura."),
+        ("Todavía no me he caído. ¿Es muy pronto?", "No, es el mejor momento para empezar. Si se siente inestable o casi se ha caído, fortalecer su equilibrio y su fuerza ahora puede ayudar a prevenir la primera caída."),
+        ("¿Puede venir un familiar a la cita?", "Sí. Los familiares son bienvenidos, y a menudo ayuda que alguien en casa también aprenda los ejercicios y los consejos de seguridad."),
+    ],
+    'side': "La atención del equilibrio en ARI es individual con un fisioterapeuta con licencia.",
+    'related': [
+        ("Vértigo y mareo (VPPB)", "vertigo-y-mareo-vppb.html"),
+        ("Dolor de cadera", "dolor-de-cadera.html"),
+        ("Artritis de rodilla", "artritis-de-rodilla.html"),
+        ("Osteoporosis y salud de los huesos (en inglés)", "osteoporosis-bone-health.html"),
+    ],
+    'condition': "Problemas de equilibrio y riesgo de caídas",
+    'alt_names': ["Problemas de equilibrio", "Prevención de caídas", "Miedo a caerse", "Marcha inestable", "Caídas en adultos mayores", "Inestabilidad al caminar", "Terapia de equilibrio"],
+    'therapy': "Terapia física: entrenamiento de equilibrio, fuerza y marcha",
+}

@@ -43,12 +43,13 @@
      Slides in once the top bar (with its own call and book buttons) has scrolled away. Hidden while
      typing in a form so it never covers a field, and not shown on the appointment form itself. */
   (function(){
-    if(!window.matchMedia || /(^|\/)(appointment|employees)\.html$/.test(location.pathname)) return;
+    if(!window.matchMedia || /(^|\/)(appointment|employees|solicitar-cita)\.html$/.test(location.pathname)) return;
+    var es = document.documentElement.lang === 'es';   /* Spanish pages get Spanish labels and the Spanish form */
     var bar = document.createElement('div');
-    bar.className = 'cta-bar'; bar.setAttribute('role', 'region'); bar.setAttribute('aria-label', 'Call or book');
+    bar.className = 'cta-bar'; bar.setAttribute('role', 'region'); bar.setAttribute('aria-label', es ? 'Llamar o pedir cita' : 'Call or book');
     bar.innerHTML =
-      '<a class="cta-call" href="tel:6612828584"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21.5 16.9v2.9a2 2 0 0 1-2.2 2 19.6 19.6 0 0 1-8.5-3 19.3 19.3 0 0 1-5.9-5.9 19.6 19.6 0 0 1-3-8.6 2 2 0 0 1 2-2.2h2.9a2 2 0 0 1 2 1.7c.13.96.36 1.9.7 2.8a2 2 0 0 1-.45 2.1L8.1 9.8a15.8 15.8 0 0 0 5.9 5.9l1.1-1.1a2 2 0 0 1 2.1-.45c.9.34 1.84.57 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>Call</a>' +
-      '<a class="cta-book" href="appointment.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.2" y="4.8" width="17.6" height="16" rx="2"/><path d="M3.2 9.6h17.6M8.3 2.8v4M15.7 2.8v4"/></svg>Book Now</a>';
+      '<a class="cta-call" href="tel:6612828584"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21.5 16.9v2.9a2 2 0 0 1-2.2 2 19.6 19.6 0 0 1-8.5-3 19.3 19.3 0 0 1-5.9-5.9 19.6 19.6 0 0 1-3-8.6 2 2 0 0 1 2-2.2h2.9a2 2 0 0 1 2 1.7c.13.96.36 1.9.7 2.8a2 2 0 0 1-.45 2.1L8.1 9.8a15.8 15.8 0 0 0 5.9 5.9l1.1-1.1a2 2 0 0 1 2.1-.45c.9.34 1.84.57 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>' + (es ? 'Llamar' : 'Call') + '</a>' +
+      '<a class="cta-book" href="' + (es ? 'solicitar-cita.html' : 'appointment.html') + '"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.2" y="4.8" width="17.6" height="16" rx="2"/><path d="M3.2 9.6h17.6M8.3 2.8v4M15.7 2.8v4"/></svg>' + (es ? 'Pedir cita' : 'Book Now') + '</a>';
     document.body.appendChild(bar);
     document.body.classList.add('has-cta-bar');
     var past = false, typing = false;
@@ -191,7 +192,9 @@
         var res = search(q);
         out.hidden = false;
         if(!res.length){
-          out.innerHTML = '<p class="site-search-empty">No matches. Call us at <a href="tel:6612828584">(661) 282-8584</a> and we&rsquo;ll answer your question.</p>';
+          out.innerHTML = document.documentElement.lang === 'es'
+            ? '<p class="site-search-empty">No encontramos resultados. Llámenos al <a href="tel:6612828584">(661) 282-8584</a> y le ayudamos; hablamos español.</p>'
+            : '<p class="site-search-empty">No matches. Call us at <a href="tel:6612828584">(661) 282-8584</a> and we&rsquo;ll answer your question.</p>';
         } else {
           out.innerHTML = '<ul>' + res.map(function(e, i){
             var snippet = e.t === 'faq' ? e.d : (e.d || e.x);
@@ -251,7 +254,9 @@
         + '<div class="search-dialog-panel" role="dialog" aria-modal="true" aria-label="Search ARI Physical Therapy">'
         + '<form class="site-search" role="search"><div class="ss-row">'
         + '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><use href="#i-search"/></svg>'
-        + '<input class="site-search-input" type="search" placeholder="Search conditions, services, questions…" aria-label="Search the site" autocomplete="off">'
+        + (document.documentElement.lang === 'es'
+          ? '<input class="site-search-input" type="search" placeholder="Busque afecciones, servicios, preguntas…" aria-label="Buscar en el sitio" autocomplete="off">'
+          : '<input class="site-search-input" type="search" placeholder="Search conditions, services, questions…" aria-label="Search the site" autocomplete="off">')
         + '<button type="button" class="ss-close" data-close aria-label="Close search">Esc</button></div>'
         + '<div class="site-search-results" hidden></div>' + chipsHtml() + '</form></div>';
       document.body.appendChild(dlg);
