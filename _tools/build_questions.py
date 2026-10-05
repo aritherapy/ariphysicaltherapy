@@ -30,7 +30,7 @@ ORDER = ['back', 'neck', 'shoulder-hand', 'knee', 'hip', 'foot-ankle', 'pelvic',
 
 ARI_LINE = ('At ARI Physical Therapy in Bakersfield, every visit is one-on-one and in person with a licensed physical '
             'therapist, and our clinic director, Deepa Konnur, PT, MPT, OCS, is a board-certified Orthopedic Certified '
-            'Specialist. We accept most private insurance plans and Medicare, and our team speaks English, Spanish, and Hindi.')
+            'Specialist. We accept most private insurance plans and Medicare, and we have staff who speak Spanish and Hindi.')
 DIRECT_ACCESS = ('<div class="callout"><strong>No referral needed to start.</strong> In California, you can see a physical '
                  'therapist directly for up to 12 visits or 45 days, whichever comes first. Some insurance plans still require a '
                  'referral for coverage; call us at <a href="tel:6612828584">(661) 282-8584</a> and we\'ll help you check.</div>')

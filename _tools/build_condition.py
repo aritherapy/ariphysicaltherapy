@@ -31,8 +31,8 @@ MONTHS = 'January February March April May June July August September October No
 CLINIC_LINE = ('<h2>Why patients choose ARI</h2><p>Care at ARI is always <strong>one-on-one and in person</strong> with a '
                'licensed physical therapist at our Bakersfield clinic: 8200 Stockdale Hwy, Suite B2, in the Town &amp; Country '
                'Village center next to Trader Joe\'s. Our clinic director, Deepa Konnur, PT, MPT, OCS, is a board-certified '
-               'Orthopedic Certified Specialist. We accept most private insurance plans and Medicare, and our team speaks '
-               'English, Spanish, and Hindi.</p>')
+               'Orthopedic Certified Specialist. We accept most private insurance plans and Medicare, and we have staff '
+               'who speak Spanish and Hindi.</p>')
 DIRECT_ACCESS = ('<div class="callout"><strong>No referral needed to start.</strong> In California, you can see a physical '
                  'therapist directly for up to 12 visits or 45 days, whichever comes first. Some insurance plans still require a '
                  'referral for coverage; call us at <a href="tel:6612828584">(661) 282-8584</a> and we\'ll help you check.</div>')
