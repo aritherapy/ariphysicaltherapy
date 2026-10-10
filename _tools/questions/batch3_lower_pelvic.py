@@ -3,7 +3,7 @@ GROUPS = [('knee', 'Knee'), ('hip', 'Hip'), ('foot-ankle', 'Foot &amp; Ankle'),
 
 PAGES = [
 {
-    'slug': 'should-i-wear-a-knee-brace', 'group': 'knee', 'reviewed': None, 'batch': 3, 'about': 'Knee pain',
+    'slug': 'should-i-wear-a-knee-brace', 'group': 'knee', 'reviewed': '2026-10-10', 'batch': 3, 'about': 'Knee pain',
     'q': 'Should I Wear a Knee Brace for Knee Pain?',
     'crumb': 'Wearing a knee brace',
     'title': 'Should I Wear a Knee Brace for Knee Pain? | ARI PT',
@@ -32,7 +32,7 @@ PAGES = [
     'guide': ('Knee pain and arthritis', 'knee-pain-arthritis.html'),
 },
 {
-    'slug': 'can-physical-therapy-help-avoid-knee-replacement', 'group': 'knee', 'reviewed': None, 'batch': 3, 'about': 'Knee osteoarthritis',
+    'slug': 'can-physical-therapy-help-avoid-knee-replacement', 'group': 'knee', 'reviewed': '2026-10-10', 'batch': 3, 'about': 'Knee osteoarthritis',
     'q': 'Can Physical Therapy Help Me Avoid a Knee Replacement?',
     'crumb': 'Avoiding a knee replacement',
     'title': 'Can PT Help You Avoid a Knee Replacement? | ARI PT',
@@ -61,7 +61,7 @@ PAGES = [
     'guide': ('Knee pain and arthritis', 'knee-pain-arthritis.html'),
 },
 {
-    'slug': 'outer-hip-pain-lying-on-side', 'group': 'hip', 'reviewed': None, 'batch': 3, 'about': 'Greater trochanteric pain syndrome',
+    'slug': 'outer-hip-pain-lying-on-side', 'group': 'hip', 'reviewed': '2026-10-10', 'batch': 3, 'about': 'Greater trochanteric pain syndrome',
     'q': 'Why Does the Outside of My Hip Hurt When I Lie on It?',
     'crumb': 'Outer hip pain lying on your side',
     'title': 'Outer Hip Pain When Lying on Your Side? | ARI PT',
@@ -88,7 +88,7 @@ PAGES = [
     'guide': ('Hip pain', 'hip-pain.html'),
 },
 {
-    'slug': 'how-long-does-plantar-fasciitis-last', 'group': 'foot-ankle', 'reviewed': None, 'batch': 3, 'about': 'Plantar fasciitis',
+    'slug': 'how-long-does-plantar-fasciitis-last', 'group': 'foot-ankle', 'reviewed': '2026-10-10', 'batch': 3, 'about': 'Plantar fasciitis',
     'q': 'How Long Does Plantar Fasciitis Take to Go Away?',
     'crumb': 'How long plantar fasciitis lasts',
     'title': 'How Long Does Plantar Fasciitis Last? | ARI PT',
@@ -119,7 +119,7 @@ PAGES = [
     'guide': ('Plantar fasciitis and heel pain', 'plantar-fasciitis-heel-pain.html'),
 },
 {
-    'slug': 'achilles-pain-in-the-morning', 'group': 'foot-ankle', 'reviewed': None, 'batch': 3, 'about': 'Achilles tendinopathy',
+    'slug': 'achilles-pain-in-the-morning', 'group': 'foot-ankle', 'reviewed': '2026-10-10', 'batch': 3, 'about': 'Achilles tendinopathy',
     'q': 'Why Is My Achilles Tendon Stiff and Sore in the Morning?',
     'crumb': 'Achilles pain in the morning',
     'title': 'Achilles Stiff and Sore in the Morning? | ARI PT',
@@ -146,7 +146,7 @@ PAGES = [
     'guide': ('Ankle sprains and Achilles pain', 'ankle-sprain-achilles-pain.html'),
 },
 {
-    'slug': 'are-kegels-enough-for-a-weak-pelvic-floor', 'group': 'pelvic', 'reviewed': None, 'batch': 3, 'about': 'Pelvic floor dysfunction',
+    'slug': 'are-kegels-enough-for-a-weak-pelvic-floor', 'group': 'pelvic', 'reviewed': '2026-10-10', 'batch': 3, 'about': 'Pelvic floor dysfunction',
     'q': 'Are Kegels Enough to Fix a Weak Pelvic Floor?',
     'crumb': 'Are Kegels enough?',
     'title': 'Are Kegels Enough for a Weak Pelvic Floor? | ARI PT',
@@ -175,7 +175,7 @@ PAGES = [
     'guide': ('Pelvic floor therapy', 'pelvic-floor-therapy.html'),
 },
 {
-    'slug': 'can-physical-therapy-help-prolapse', 'group': 'pelvic', 'reviewed': None, 'batch': 3, 'about': 'Pelvic organ prolapse',
+    'slug': 'can-physical-therapy-help-prolapse', 'group': 'pelvic', 'reviewed': '2026-10-10', 'batch': 3, 'about': 'Pelvic organ prolapse',
     'q': 'Can Physical Therapy Help Pelvic Organ Prolapse?',
     'crumb': 'Physical therapy for prolapse',
     'title': 'Can Physical Therapy Help Pelvic Prolapse? | ARI PT',
@@ -204,7 +204,7 @@ PAGES = [
     'guide': ('Pelvic organ prolapse', 'pelvic-organ-prolapse.html'),
 },
 {
-    'slug': 'how-do-i-know-if-i-have-diastasis-recti', 'group': 'pelvic', 'reviewed': None, 'batch': 3, 'about': 'Diastasis recti',
+    'slug': 'how-do-i-know-if-i-have-diastasis-recti', 'group': 'pelvic', 'reviewed': '2026-10-10', 'batch': 3, 'about': 'Diastasis recti',
     'q': 'How Do I Know If I Have Diastasis Recti?',
     'crumb': 'Checking for diastasis recti',
     'title': 'How Do I Know If I Have Diastasis Recti? | ARI PT',
@@ -232,7 +232,7 @@ PAGES = [
     'guide': ('Diastasis recti', 'diastasis-recti.html'),
 },
 {
-    'slug': 'vertigo-vs-dizziness-difference', 'group': 'balance', 'reviewed': None, 'batch': 3, 'about': 'Dizziness',
+    'slug': 'vertigo-vs-dizziness-difference', 'group': 'balance', 'reviewed': '2026-10-10', 'batch': 3, 'about': 'Dizziness',
     'q': 'What\'s the Difference Between Vertigo and Dizziness?',
     'crumb': 'Vertigo vs. dizziness',
     'title': 'Vertigo vs. Dizziness: What\'s the Difference? | ARI PT',
@@ -264,7 +264,7 @@ PAGES = [
     'guide': ('Vertigo and dizziness (BPPV)', 'vertigo-dizziness-bppv.html'),
 },
 {
-    'slug': 'what-is-the-epley-maneuver', 'group': 'balance', 'reviewed': None, 'batch': 3, 'about': 'Benign paroxysmal positional vertigo',
+    'slug': 'what-is-the-epley-maneuver', 'group': 'balance', 'reviewed': '2026-10-10', 'batch': 3, 'about': 'Benign paroxysmal positional vertigo',
     'q': 'What Is the Epley Maneuver, and Can I Do It at Home?',
     'crumb': 'The Epley maneuver',
     'title': 'What Is the Epley Maneuver? Can I Do It at Home? | ARI PT',

@@ -2,7 +2,7 @@ GROUPS = [('back', 'Back'), ('neck', 'Neck, Jaw &amp; Headaches'), ('shoulder-ha
 
 PAGES = [
 {
-    'slug': 'is-it-safe-to-exercise-with-a-herniated-disc', 'group': 'back', 'reviewed': None, 'batch': 3, 'about': 'Herniated disc',
+    'slug': 'is-it-safe-to-exercise-with-a-herniated-disc', 'group': 'back', 'reviewed': '2026-10-10', 'batch': 3, 'about': 'Herniated disc',
     'q': 'Is It Safe to Exercise With a Herniated Disc?',
     'crumb': 'Exercise with a herniated disc',
     'title': 'Exercising With a Herniated Disc: Is It Safe? | ARI PT',
@@ -29,7 +29,7 @@ PAGES = [
     'guide': ('Sciatica and back pain', 'sciatica-back-pain.html'),
 },
 {
-    'slug': 'why-does-my-back-hurt-in-the-morning', 'group': 'back', 'reviewed': None, 'batch': 3, 'about': 'Low back pain',
+    'slug': 'why-does-my-back-hurt-in-the-morning', 'group': 'back', 'reviewed': '2026-10-10', 'batch': 3, 'about': 'Low back pain',
     'q': 'Why Does My Back Hurt When I Wake Up?',
     'crumb': 'Back pain in the morning',
     'title': 'Back Pain When You Wake Up: Causes & Relief | ARI PT',
@@ -59,7 +59,7 @@ PAGES = [
     'guide': ('Sciatica and back pain', 'sciatica-back-pain.html'),
 },
 {
-    'slug': 'how-long-does-sciatica-last', 'group': 'back', 'reviewed': None, 'batch': 3, 'about': 'Sciatica',
+    'slug': 'how-long-does-sciatica-last', 'group': 'back', 'reviewed': '2026-10-10', 'batch': 3, 'about': 'Sciatica',
     'q': 'How Long Does Sciatica Last?',
     'crumb': 'How long sciatica lasts',
     'title': 'How Long Does Sciatica Last? Recovery Time | ARI PT',
@@ -88,7 +88,7 @@ PAGES = [
     'guide': ('Sciatica and back pain', 'sciatica-back-pain.html'),
 },
 {
-    'slug': 'can-physical-therapy-help-spinal-stenosis', 'group': 'back', 'reviewed': None, 'batch': 3, 'about': 'Lumbar spinal stenosis',
+    'slug': 'can-physical-therapy-help-spinal-stenosis', 'group': 'back', 'reviewed': '2026-10-10', 'batch': 3, 'about': 'Lumbar spinal stenosis',
     'q': 'Can Physical Therapy Help Spinal Stenosis?',
     'crumb': 'PT for spinal stenosis',
     'title': 'Can Physical Therapy Help Spinal Stenosis? | ARI PT',
@@ -120,7 +120,7 @@ PAGES = [
     'guide': ('Sciatica and back pain', 'sciatica-back-pain.html'),
 },
 {
-    'slug': 'heat-or-ice-for-back-pain', 'group': 'back', 'reviewed': None, 'batch': 3, 'about': 'Low back pain',
+    'slug': 'heat-or-ice-for-back-pain', 'group': 'back', 'reviewed': '2026-10-10', 'batch': 3, 'about': 'Low back pain',
     'q': 'Should I Use Heat or Ice for Back Pain?',
     'crumb': 'Heat or ice for back pain',
     'title': 'Heat or Ice for Back Pain? Which to Use | ARI PT',
@@ -151,7 +151,7 @@ PAGES = [
     'guide': ('Sciatica and back pain', 'sciatica-back-pain.html'),
 },
 {
-    'slug': 'why-does-my-neck-crack', 'group': 'neck', 'reviewed': None, 'batch': 3,
+    'slug': 'why-does-my-neck-crack', 'group': 'neck', 'reviewed': '2026-10-10', 'batch': 3,
     'q': 'Why Does My Neck Crack and Pop, and Is It Bad?',
     'crumb': 'Neck cracking and popping',
     'title': 'Why Does My Neck Crack and Pop? Is It Bad? | ARI PT',
@@ -177,7 +177,7 @@ PAGES = [
     'guide': ('Neck pain and headaches', 'neck-pain-headaches.html'),
 },
 {
-    'slug': 'how-long-does-frozen-shoulder-last', 'group': 'shoulder-hand', 'reviewed': None, 'batch': 3, 'about': 'Frozen shoulder (adhesive capsulitis)',
+    'slug': 'how-long-does-frozen-shoulder-last', 'group': 'shoulder-hand', 'reviewed': '2026-10-10', 'batch': 3, 'about': 'Frozen shoulder (adhesive capsulitis)',
     'q': 'How Long Does Frozen Shoulder Last?',
     'crumb': 'How long frozen shoulder lasts',
     'title': 'How Long Does Frozen Shoulder Last? | ARI PT',
@@ -207,7 +207,7 @@ PAGES = [
     'guide': ('Frozen shoulder and rotator cuff pain', 'frozen-shoulder-rotator-cuff.html'),
 },
 {
-    'slug': 'can-a-rotator-cuff-tear-heal-without-surgery', 'group': 'shoulder-hand', 'reviewed': None, 'batch': 3, 'about': 'Rotator cuff tear',
+    'slug': 'can-a-rotator-cuff-tear-heal-without-surgery', 'group': 'shoulder-hand', 'reviewed': '2026-10-10', 'batch': 3, 'about': 'Rotator cuff tear',
     'q': 'Can a Rotator Cuff Tear Get Better Without Surgery?',
     'crumb': 'Rotator cuff tear without surgery',
     'title': 'Rotator Cuff Tear: Can It Heal Without Surgery? | ARI PT',
@@ -235,7 +235,7 @@ PAGES = [
     'guide': ('Frozen shoulder and rotator cuff pain', 'frozen-shoulder-rotator-cuff.html'),
 },
 {
-    'slug': 'elbow-pain-when-gripping', 'group': 'shoulder-hand', 'reviewed': None, 'batch': 3, 'about': 'Lateral epicondylalgia (tennis elbow)',
+    'slug': 'elbow-pain-when-gripping', 'group': 'shoulder-hand', 'reviewed': '2026-10-10', 'batch': 3, 'about': 'Lateral epicondylalgia (tennis elbow)',
     'q': 'Why Does My Elbow Hurt When I Grip or Lift Things?',
     'crumb': 'Elbow pain when gripping',
     'title': 'Elbow Pain When Gripping or Lifting: Causes | ARI PT',
@@ -265,7 +265,7 @@ PAGES = [
     'guide': ('Tennis elbow and golfer\'s elbow', 'tennis-elbow-golfers-elbow.html'),
 },
 {
-    'slug': 'wrist-brace-for-carpal-tunnel', 'group': 'shoulder-hand', 'reviewed': None, 'batch': 3, 'about': 'Carpal tunnel syndrome',
+    'slug': 'wrist-brace-for-carpal-tunnel', 'group': 'shoulder-hand', 'reviewed': '2026-10-10', 'batch': 3, 'about': 'Carpal tunnel syndrome',
     'q': 'Should I Wear a Wrist Brace for Carpal Tunnel?',
     'crumb': 'Wrist brace for carpal tunnel',
     'title': 'Wrist Brace for Carpal Tunnel: When & How | ARI PT',
