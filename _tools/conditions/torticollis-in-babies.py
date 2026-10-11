@@ -50,7 +50,7 @@ PAGE = {
         ('How much tummy time does my baby need?', 'Short sessions a few times a day are a good start, while your baby is awake and someone is watching. Many babies build up from there as they get stronger. Your therapist can suggest ways to make tummy time easier for a baby who does not like it.'),
         ('Can torticollis cause a flat head?', 'Yes, they often happen together. A baby who always turns one way rests on the same part of the head, and that spot can flatten. Treating the neck tightness and changing positions helps both problems.'),
     ],
-    'side': 'Torticollis care at ARI is one-on-one with a licensed physical therapist, with parents part of every visit.',
+    'side': 'Torticollis care at ARI is one-on-one with a licensed physical therapist, with parents part of every visit. We can usually see new pediatric patients within 1–2 weeks.',
     'related': [('Pediatric Therapy', 'pediatric-therapy.html'), ('Flat Head (Plagiocephaly)', 'flat-head-plagiocephaly.html'), ('Gross Motor Delays', 'gross-motor-delays.html')],
     'condition': 'Congenital muscular torticollis',
     'alt_names': ['Infant torticollis', 'Baby torticollis', 'Wry neck in babies', 'Baby head tilt', 'Baby always turns head one way', 'Baby only looks one way', 'Tight neck muscle in baby', 'Baby tilts head to one side', 'Sternocleidomastoid tightness', 'Pediatric physical therapy for torticollis'],

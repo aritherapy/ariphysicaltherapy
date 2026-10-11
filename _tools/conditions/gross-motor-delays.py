@@ -51,7 +51,7 @@ PAGE = {
         ('Will my child catch up?', 'Many children make good progress with practice and support, but every child is different. Your therapist will tell you what they see, set clear goals with you, and track progress over time. We cannot promise a timeline.'),
         ('What does a therapy session for a baby look like?', 'It looks like play. Your therapist works on the floor with your child, using toys and games to practice skills like rolling, sitting, crawling or standing. You stay with your child and learn the activities to do at home.'),
     ],
-    'side': 'Gross motor care at ARI is one-on-one with a licensed physical therapist, with parents part of every visit.',
+    'side': 'Gross motor care at ARI is one-on-one with a licensed physical therapist, with parents part of every visit. We can usually see new pediatric patients within 1–2 weeks.',
     'related': [('Pediatric Therapy', 'pediatric-therapy.html'), ('Torticollis in Babies', 'torticollis-in-babies.html'), ('Toe Walking in Kids', 'toe-walking-in-kids.html'), ('Coordination Problems in Kids', 'coordination-problems-in-kids.html')],
     'condition': 'Gross motor delay',
     'alt_names': ['Gross motor delay', 'Motor delay in babies', 'Baby not crawling', 'Baby not sitting up', 'Baby not rolling over', 'Toddler not walking', 'Late walker', 'Delayed motor milestones', 'Baby behind on milestones', 'Pediatric physical therapy for motor delays'],

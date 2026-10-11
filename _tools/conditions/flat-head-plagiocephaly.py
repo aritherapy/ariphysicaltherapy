@@ -49,7 +49,7 @@ PAGE = {
         ('Does my baby need a helmet?', 'Not every baby with a flat spot needs one. Whether a helmet makes sense is a decision for your child\'s doctor or a specialist. ARI does not fit helmets, but we can help with positioning, tummy time and neck tightness either way.'),
         ('My baby hates tummy time. What can I do?', 'Start with short sessions a few times a day. Try tummy time on your chest, across your lap, or with a rolled towel under the chest, and get down at eye level with toys or your face. Your therapist can show you more ways to make it easier.'),
     ],
-    'side': 'Flat head care at ARI is one-on-one with a licensed physical therapist, with parents part of every visit.',
+    'side': 'Flat head care at ARI is one-on-one with a licensed physical therapist, with parents part of every visit. We can usually see new pediatric patients within 1–2 weeks.',
     'related': [('Pediatric Therapy', 'pediatric-therapy.html'), ('Torticollis in Babies', 'torticollis-in-babies.html'), ('Gross Motor Delays', 'gross-motor-delays.html')],
     'condition': 'Positional plagiocephaly',
     'alt_names': ['Plagiocephaly', 'Flat head syndrome', 'Baby flat head', 'Flat spot on baby\'s head', 'Baby head flat on one side', 'Flat back of baby\'s head', 'Brachycephaly', 'Deformational plagiocephaly', 'Positional head flattening'],

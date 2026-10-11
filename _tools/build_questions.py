@@ -28,6 +28,7 @@ PAGE_CTA = open(os.path.join(ROOT, '_tools', 'page_cta.html'), encoding='utf-8')
 MONTHS = 'January February March April May June July August September October November December'.split()
 ORDER = ['back', 'neck', 'shoulder-hand', 'knee', 'hip', 'foot-ankle', 'pelvic', 'balance', 'bone-surgery', 'kids', 'starting']
 
+KIDS_LINE = ' We can usually see new pediatric patients within 1–2 weeks.'  # owner-verified 2026-10-11
 ARI_LINE = ('At ARI Physical Therapy in Bakersfield, every visit is one-on-one and in person with a licensed physical '
             'therapist, and our clinic director, Deepa Konnur, PT, MPT, OCS, is a board-certified Orthopedic Certified '
             'Specialist. We accept most private insurance plans and Medicare, and we have staff who speak Spanish and Hindi.')
@@ -117,7 +118,7 @@ def build_page(p, label, siblings):
   <div class="prose">
 {sections}
 {flags}
-<h2>How physical therapy at ARI can help</h2>{p['pt']}<p>{ARI_LINE}</p>{guide}
+<h2>How physical therapy at ARI can help</h2>{p['pt']}<p>{ARI_LINE}{KIDS_LINE if p['group'] == 'kids' else ''}</p>{guide}
 {callout}
 {related}
 {PAGE_CTA}<p class="med-disclaimer">This page is general information, not a diagnosis. If you have symptoms, a licensed clinician should evaluate you.</p>{reviewed}

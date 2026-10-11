@@ -46,7 +46,7 @@ PAGE = {
         ('Can ACL injuries be prevented?', 'The risk can be lowered. Warm-up programs that train strength, balance, landing and cutting have been shown to reduce ACL injuries in young athletes, especially girls. Your therapist can teach exercises that fit your child\'s sport.'),
         ('Is it OK for my child to play one sport all year?', 'Playing one sport year-round with little rest is linked to more overuse injuries and burnout. Many sports medicine groups recommend regular rest days each week, a break from the main sport for part of the year, and trying other sports, especially for younger athletes.'),
     ],
-    'side': 'Youth sports injury care at ARI is one-on-one with a licensed physical therapist.',
+    'side': 'Youth sports injury care at ARI is one-on-one with a licensed physical therapist. We can usually see new pediatric patients within 1–2 weeks.',
     'related': [('Sports Injury Therapy', 'sports-injury-therapy.html'), ('Pediatric Therapy', 'pediatric-therapy.html'), ('ACL &amp; MCL Injuries', 'acl-mcl-knee-ligament-injuries.html')],
     'condition': 'Youth sports injuries',
     'alt_names': ['Youth sports injury', 'Kids sports injuries', 'Teen athlete injury', 'Osgood-Schlatter disease', 'Sever\'s disease', 'Calcaneal apophysitis', 'Little League shoulder', 'Little League elbow', 'ACL injury prevention', 'Pediatric sports physical therapy'],

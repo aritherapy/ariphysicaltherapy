@@ -49,7 +49,7 @@ PAGE = {
         ('Can physical therapy help my child ride a bike?', 'Often, yes. Riding a bike uses balance, leg strength and timing. Your therapist can break it into smaller steps and practice each one, and give you ideas to keep practicing at home.'),
         ('Should my child keep playing sports?', 'Usually, yes. Being active is good for kids, and many children feel more confident as their skills grow. Your therapist can suggest activities that fit your child\'s level and help them build up safely.'),
     ],
-    'side': 'Coordination care at ARI is one-on-one with a licensed physical therapist, with parents part of visits.',
+    'side': 'Coordination care at ARI is one-on-one with a licensed physical therapist, with parents part of visits. We can usually see new pediatric patients within 1–2 weeks.',
     'related': [('Pediatric Therapy', 'pediatric-therapy.html'), ('Gross Motor Delays', 'gross-motor-delays.html'), ('Toe Walking in Kids', 'toe-walking-in-kids.html'), ('Youth Sports Injuries', 'youth-sports-injuries.html')],
     'condition': 'Coordination difficulties in children',
     'alt_names': ['Developmental coordination difficulties', 'Clumsy child', 'Clumsy kid', 'Child keeps falling', 'Kid has poor balance', 'Child can\'t catch a ball', 'Child can\'t ride a bike', 'Poor coordination in children', 'Motor skills problems in kids', 'Pediatric balance and coordination therapy'],

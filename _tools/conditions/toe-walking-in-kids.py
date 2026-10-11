@@ -48,7 +48,7 @@ PAGE = {
         ('Can toe walking cause problems later?', 'Over time, toe walking can lead to tight calf muscles and a stiff ankle. Some children also trip more or tire faster. Stretching, strengthening and walking practice can help, and your therapist will set goals that fit your child.'),
         ('What can I do at home?', 'Your therapist will give you a home program, which may include calf stretches, heel walking games and balance activities. Short, regular practice is easier to keep up than long sessions. Make it a game, and praise flat-foot walking when you see it.'),
     ],
-    'side': 'Toe walking care at ARI is one-on-one with a licensed physical therapist, with parents part of visits.',
+    'side': 'Toe walking care at ARI is one-on-one with a licensed physical therapist, with parents part of visits. We can usually see new pediatric patients within 1–2 weeks.',
     'related': [('Pediatric Therapy', 'pediatric-therapy.html'), ('Gross Motor Delays', 'gross-motor-delays.html'), ('Coordination Problems in Kids', 'coordination-problems-in-kids.html'), ('Youth Sports Injuries', 'youth-sports-injuries.html')],
     'condition': 'Toe walking in children',
     'alt_names': ['Toe walking', 'Idiopathic toe walking', 'Toddler walking on toes', 'Child walks on tiptoes', 'Kid walking on tippy toes', 'Tight calves in children', 'Tiptoe walking', 'Toe walking physical therapy'],
