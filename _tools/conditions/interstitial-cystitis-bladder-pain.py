@@ -22,7 +22,7 @@ PAGE = {
          '<p>The goal is to help the pelvic floor <strong>relax and lengthen</strong>, not tighten further. Treatment can include gentle hands-on techniques, breathing and relaxation training, bladder habit strategies and help with flares, alongside your doctor\'s care. Everything is explained first and done at your pace, with your consent. See also <a href="pelvic-pain-painful-sex.html">pelvic pain and painful sex</a>.</p>'),
     ],
     'steps': [
-        ('A private, one-on-one evaluation', 'Your first visit takes about 45 to 60 minutes. We talk through your symptoms, triggers and history, and explain any assessment before we do it. You decide what you\'re comfortable with.'),
+        ('A one-on-one evaluation', 'Your first visit takes about 45 to 60 minutes. We talk through your symptoms, triggers and history, and explain any assessment before we do it. You decide what you\'re comfortable with.'),
         ('Calm the pelvic floor', 'Gentle hands-on care to release tight, tender muscles, breathing and relaxation training, and movement that doesn\'t aggravate symptoms.'),
         ('Tools for daily life', 'Bladder habit strategies, a plan for flares, and a home program, coordinated with your doctor\'s treatment.'),
     ],

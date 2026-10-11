@@ -1,7 +1,7 @@
 PAGE = {
     'reviewed': '2026-09-30',   # clinically reviewed by Deepa
     'title': 'Bowel Leakage Treatment for Women in Bakersfield | ARI PT',
-    'description': 'Accidental bowel leakage or urgency? Private, one-on-one pelvic floor physical therapy for women in Bakersfield, CA. Common, and treatable.',
+    'description': 'Accidental bowel leakage or urgency? One-on-one pelvic floor physical therapy for women in Bakersfield, CA. Common, and treatable.',
     'crumb': 'Bowel Leakage',
     'eyebrow': 'Women&rsquo;s Health',
     'h1': 'Accidental Bowel Leakage Treatment for Women in',
@@ -22,7 +22,7 @@ PAGE = {
          '<p>Treatment includes pelvic floor and sphincter strengthening and coordination, urge-control techniques, and practical changes to diet, fluids, toilet position and habits so stools are easier to control and pass. Treatment is always explained first and done at your pace, with your consent.</p>'),
     ],
     'steps': [
-        ('A private, one-on-one evaluation', 'Your first visit takes about 45 to 60 minutes. We talk through your symptoms, bowel habits and history, and explain any assessment before we do it. You decide what you\'re comfortable with.'),
+        ('A one-on-one evaluation', 'Your first visit takes about 45 to 60 minutes. We talk through your symptoms, bowel habits and history, and explain any assessment before we do it. You decide what you\'re comfortable with.'),
         ('Muscle training and habits', 'Pelvic floor and sphincter exercises matched to what your muscles need, urge-control strategies, and bowel habit changes.'),
         ('Confidence to get back out', 'A home program and plan for the situations that worry you most, like exercise, travel and work.'),
     ],
