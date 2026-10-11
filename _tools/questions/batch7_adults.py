@@ -11,7 +11,7 @@ GROUPS = [
 PAGES = [
 # ---------------------------------------------------------------- back
 {
-    'slug': 'why-does-my-back-hurt-after-golf', 'group': 'back', 'reviewed': None, 'batch': 7, 'about': 'Low back pain',
+    'slug': 'why-does-my-back-hurt-after-golf', 'group': 'back', 'reviewed': '2026-10-11', 'batch': 7, 'about': 'Low back pain',
     'q': 'Why Does My Back Hurt After Golf?',
     'crumb': 'Back pain after golf',
     'title': 'Why Does My Back Hurt After Golf? | ARI PT',
@@ -44,7 +44,7 @@ PAGES = [
     'guide': ('Sciatica and back pain', 'sciatica-back-pain.html'),
 },
 {
-    'slug': 'is-it-safe-to-lift-weights-with-back-pain', 'group': 'back', 'reviewed': None, 'batch': 7, 'about': 'Low back pain',
+    'slug': 'is-it-safe-to-lift-weights-with-back-pain', 'group': 'back', 'reviewed': '2026-10-11', 'batch': 7, 'about': 'Low back pain',
     'q': 'Is It Safe to Lift Weights With Back Pain?',
     'crumb': 'Lifting weights with back pain',
     'title': 'Is It Safe to Lift Weights With Back Pain? | ARI PT',
@@ -72,7 +72,7 @@ PAGES = [
     'guide': ('Herniated and bulging discs', 'herniated-disc-bulging-disc.html'),
 },
 {
-    'slug': 'why-does-my-tailbone-hurt-when-i-sit', 'group': 'back', 'reviewed': None, 'batch': 7, 'about': 'Tailbone pain (coccydynia)',
+    'slug': 'why-does-my-tailbone-hurt-when-i-sit', 'group': 'back', 'reviewed': '2026-10-11', 'batch': 7, 'about': 'Tailbone pain (coccydynia)',
     'q': 'Why Does My Tailbone Hurt When I Sit?',
     'crumb': 'Tailbone pain when sitting',
     'title': 'Why Does My Tailbone Hurt When I Sit? | ARI PT',
@@ -105,7 +105,7 @@ PAGES = [
 },
 # ---------------------------------------------------------------- neck
 {
-    'slug': 'can-physical-therapy-help-migraines', 'group': 'neck', 'reviewed': None, 'batch': 7, 'about': 'Migraine',
+    'slug': 'can-physical-therapy-help-migraines', 'group': 'neck', 'reviewed': '2026-10-11', 'batch': 7, 'about': 'Migraine',
     'q': 'Can Physical Therapy Help Migraines?',
     'crumb': 'PT for migraines',
     'title': 'Can Physical Therapy Help Migraines? | ARI PT',
@@ -137,7 +137,7 @@ PAGES = [
 },
 # ---------------------------------------------------------------- shoulder-hand
 {
-    'slug': 'how-can-i-prevent-pickleball-injuries', 'group': 'shoulder-hand', 'reviewed': None, 'batch': 7, 'about': 'Pickleball injuries',
+    'slug': 'how-can-i-prevent-pickleball-injuries', 'group': 'shoulder-hand', 'reviewed': '2026-10-11', 'batch': 7, 'about': 'Pickleball injuries',
     'q': 'How Can I Prevent Pickleball Injuries?',
     'crumb': 'Preventing pickleball injuries',
     'title': 'How Can I Prevent Pickleball Injuries? | ARI PT',
@@ -172,7 +172,7 @@ PAGES = [
 },
 # ---------------------------------------------------------------- knee
 {
-    'slug': 'when-can-i-return-to-sports-after-acl-surgery', 'group': 'knee', 'reviewed': None, 'batch': 7, 'about': 'ACL reconstruction',
+    'slug': 'when-can-i-return-to-sports-after-acl-surgery', 'group': 'knee', 'reviewed': '2026-10-11', 'batch': 7, 'about': 'ACL reconstruction',
     'q': 'When Can I Return to Sports After ACL Surgery?',
     'crumb': 'Return to sports after ACL surgery',
     'title': 'When Can I Return to Sports After ACL Surgery? | ARI PT',
@@ -206,7 +206,7 @@ PAGES = [
 },
 # ---------------------------------------------------------------- foot-ankle
 {
-    'slug': 'what-is-physical-therapy-like-after-bunion-surgery', 'group': 'foot-ankle', 'reviewed': None, 'batch': 7, 'about': 'Bunion surgery rehab',
+    'slug': 'what-is-physical-therapy-like-after-bunion-surgery', 'group': 'foot-ankle', 'reviewed': '2026-10-11', 'batch': 7, 'about': 'Bunion surgery rehab',
     'q': 'What Is Physical Therapy Like After Bunion Surgery?',
     'crumb': 'PT after bunion surgery',
     'title': 'What Is Physical Therapy Like After Bunion Surgery? | ARI PT',
@@ -238,7 +238,7 @@ PAGES = [
 },
 # ---------------------------------------------------------------- pelvic (women)
 {
-    'slug': 'can-pelvic-floor-therapy-help-constipation', 'group': 'pelvic', 'reviewed': None, 'batch': 7, 'about': 'Constipation',
+    'slug': 'can-pelvic-floor-therapy-help-constipation', 'group': 'pelvic', 'reviewed': '2026-10-11', 'batch': 7, 'about': 'Constipation',
     'q': 'Can Pelvic Floor Therapy Help Constipation?',
     'crumb': 'Pelvic floor therapy for constipation',
     'title': 'Can Pelvic Floor Therapy Help Constipation? | ARI PT',
@@ -271,7 +271,7 @@ PAGES = [
 },
 # ---------------------------------------------------------------- starting
 {
-    'slug': 'can-i-choose-my-own-physical-therapist-on-workers-comp', 'group': 'starting', 'reviewed': None, 'batch': 7, 'about': 'Work injury', 'callout': False,
+    'slug': 'can-i-choose-my-own-physical-therapist-on-workers-comp', 'group': 'starting', 'reviewed': '2026-10-11', 'batch': 7, 'about': 'Work injury', 'callout': False,
     'q': 'Can I Choose My Own Physical Therapist on Workers\' Comp?',
     'crumb': 'Choosing a PT on workers\' comp',
     'title': 'Choosing a Physical Therapist on Workers\' Comp | ARI PT',
@@ -301,7 +301,7 @@ PAGES = [
     'guide': ('Workers\' comp physical therapy', 'workers-comp-physical-therapy.html'),
 },
 {
-    'slug': 'how-much-does-physical-therapy-cost-with-insurance', 'group': 'starting', 'reviewed': None, 'batch': 7, 'about': 'Insurance and physical therapy',
+    'slug': 'how-much-does-physical-therapy-cost-with-insurance', 'group': 'starting', 'reviewed': '2026-10-11', 'batch': 7, 'about': 'Insurance and physical therapy',
     'q': 'How Much Does Physical Therapy Cost With Insurance?',
     'crumb': 'Cost of PT with insurance',
     'title': 'How Much Does Physical Therapy Cost With Insurance? | ARI PT',
@@ -333,7 +333,7 @@ PAGES = [
     'guide': None,
 },
 {
-    'slug': 'what-should-i-wear-to-physical-therapy', 'group': 'starting', 'reviewed': None, 'batch': 7, 'about': 'Preparing for physical therapy',
+    'slug': 'what-should-i-wear-to-physical-therapy', 'group': 'starting', 'reviewed': '2026-10-11', 'batch': 7, 'about': 'Preparing for physical therapy',
     'q': 'What Should I Wear to Physical Therapy?',
     'crumb': 'What to wear to PT',
     'title': 'What Should I Wear to Physical Therapy? | ARI PT',
@@ -367,7 +367,7 @@ PAGES = [
     'guide': None,
 },
 {
-    'slug': 'what-should-i-bring-to-my-first-physical-therapy-visit', 'group': 'starting', 'reviewed': None, 'batch': 7, 'about': 'Preparing for physical therapy',
+    'slug': 'what-should-i-bring-to-my-first-physical-therapy-visit', 'group': 'starting', 'reviewed': '2026-10-11', 'batch': 7, 'about': 'Preparing for physical therapy',
     'q': 'What Should I Bring to My First Physical Therapy Visit?',
     'crumb': 'What to bring to your first visit',
     'title': 'What to Bring to Your First Physical Therapy Visit | ARI PT',

@@ -1,5 +1,5 @@
 PAGE = {
-    'reviewed': None,   # DRAFT: needs clinical review by Deepa before release
+    'reviewed': '2026-10-11',   # DRAFT: needs clinical review by Deepa before release
     'title': 'Tailbone Pain (Coccyx) PT in Bakersfield | ARI PT',
     'description': 'Tailbone pain when you sit? Physical therapy in Bakersfield, CA for coccyx pain after a fall, after childbirth or from long hours of sitting.',
     'crumb': 'Tailbone Pain',

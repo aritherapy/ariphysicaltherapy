@@ -1,5 +1,5 @@
 PAGE = {
-    'reviewed': None,   # DRAFT: needs clinical review by Deepa before release
+    'reviewed': '2026-10-11',   # DRAFT: needs clinical review by Deepa before release
     'title': 'Foot & Ankle Surgery Rehab in Bakersfield | ARI PT',
     'description': "Physical therapy after ankle fracture repair, Achilles repair, ankle ligament or bunion surgery in Bakersfield, CA, following your surgeon's plan.",
     'crumb': 'Foot &amp; Ankle Surgery Rehab',

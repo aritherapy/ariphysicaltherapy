@@ -1,5 +1,5 @@
 PAGE = {
-    'reviewed': None,   # DRAFT: needs clinical review by Deepa before release
+    'reviewed': '2026-10-11',   # DRAFT: needs clinical review by Deepa before release
     'title': 'Headache & Migraine Physical Therapy in Bakersfield | ARI PT',
     'description': "Tension headaches, neck headaches or migraines? Physical therapy in Bakersfield, CA can be part of your care, working alongside your doctor's treatment.",
     'crumb': 'Headaches &amp; Migraines',
