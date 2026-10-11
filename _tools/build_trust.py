@@ -79,7 +79,7 @@ EP_SECTIONS = [
         </div>'''),
     ('updates', 'Keeping content up to date', '''<p>Each reviewed page shows when it was last reviewed. We re-review our pages at least once a year, and sooner when clinical guidance changes or a reader points out something we should fix.</p>'''),
     ('not', 'What our content is not', '''<p>Our pages are general information, not a diagnosis or a treatment plan for you. Everyone&rsquo;s situation is different, so please see a licensed clinician about your symptoms. <strong>If you think you have a medical emergency, call 911.</strong></p>'''),
-    ('independence', 'Independence and transparency', '''<p>This website belongs to ARI Physical Therapy, an outpatient physical therapy clinic, and our pages invite you to contact us if you would like help. We are upfront about that. We do not run ads, publish sponsored content, or get paid to recommend products. Our articles do not include information that could identify any patient.</p>'''),
+    ('independence', 'Independence and transparency', '''<p>This website belongs to ARI Physical Therapy, an outpatient physical therapy clinic, and our pages invite you to contact us if you would like help. We are upfront about that. We don&rsquo;t show ads on this website, publish sponsored content, or get paid to recommend products. Our articles do not include information that could identify any patient.</p>'''),
     ('feedback', 'Corrections and feedback', '''<p>If you think something on our site is wrong or out of date, please tell us. Email <a href="mailto:contactus@ariptcare.com">contactus@ariptcare.com</a> or call <a href="tel:6612828584">(661) 282-8584</a>. We review every report, and we correct the page when it needs it.</p>'''),
 ]
 
