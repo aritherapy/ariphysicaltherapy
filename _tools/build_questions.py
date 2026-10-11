@@ -26,7 +26,7 @@ INDEX = 'ask-ari.html'
 REVIEWER = 'Deepa Konnur, PT, MPT, OCS'
 PAGE_CTA = open(os.path.join(ROOT, '_tools', 'page_cta.html'), encoding='utf-8').read().strip()   # shared end-of-page next step
 MONTHS = 'January February March April May June July August September October November December'.split()
-ORDER = ['back', 'neck', 'shoulder-hand', 'knee', 'hip', 'foot-ankle', 'pelvic', 'balance', 'bone-surgery', 'starting']
+ORDER = ['back', 'neck', 'shoulder-hand', 'knee', 'hip', 'foot-ankle', 'pelvic', 'balance', 'bone-surgery', 'kids', 'starting']
 
 ARI_LINE = ('At ARI Physical Therapy in Bakersfield, every visit is one-on-one and in person with a licensed physical '
             'therapist, and our clinic director, Deepa Konnur, PT, MPT, OCS, is a board-certified Orthopedic Certified '
