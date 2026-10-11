@@ -1,5 +1,5 @@
 PAGE = {
-    'reviewed': None,   # draft: waiting for Deepa's clinical review
+    'reviewed': '2026-10-11',   # draft: waiting for Deepa's clinical review
     'title': 'Baby Flat Head (Plagiocephaly) PT in Bakersfield | ARI PT',
     'description': 'Flat spot on your baby\'s head? Physical therapy in Bakersfield, CA for positional plagiocephaly: positioning, tummy time and help for a tight neck.',
     'crumb': 'Flat Head (Plagiocephaly)',

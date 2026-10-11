@@ -1,5 +1,5 @@
 PAGE = {
-    'reviewed': None,   # draft: waiting for Deepa's clinical review
+    'reviewed': '2026-10-11',   # draft: waiting for Deepa's clinical review
     'title': 'Coordination Problems in Kids: PT in Bakersfield | ARI PT',
     'description': 'Is your child clumsy, falls often or struggles to run, jump, catch or ride a bike? Physical therapy in Bakersfield, CA for balance, strength and confidence.',
     'crumb': 'Coordination Problems in Kids',

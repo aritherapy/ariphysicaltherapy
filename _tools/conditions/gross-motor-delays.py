@@ -1,5 +1,5 @@
 PAGE = {
-    'reviewed': None,   # draft: waiting for Deepa's clinical review
+    'reviewed': '2026-10-11',   # draft: waiting for Deepa's clinical review
     'title': 'Baby & Toddler Gross Motor Delay PT, Bakersfield | ARI PT',
     'description': 'Baby late to roll, sit, crawl or walk? Physical therapy in Bakersfield, CA for gross motor delays, with play-based care and a home program for parents.',
     'crumb': 'Gross Motor Delays',

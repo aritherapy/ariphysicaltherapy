@@ -5,7 +5,7 @@ GROUPS = [
 PAGES = [
 # ---------------------------------------------------------------- milestones
 {
-    'slug': 'when-should-my-baby-roll-over', 'group': 'kids', 'reviewed': None, 'batch': 6, 'about': 'Gross motor delay',
+    'slug': 'when-should-my-baby-roll-over', 'group': 'kids', 'reviewed': '2026-10-11', 'batch': 6, 'about': 'Gross motor delay',
     'q': 'When Should My Baby Roll Over?',
     'crumb': 'When babies roll over',
     'title': 'When Should My Baby Roll Over? Typical Ages | ARI PT',
@@ -37,7 +37,7 @@ PAGES = [
     'guide': ('Gross motor delays', 'gross-motor-delays.html'),
 },
 {
-    'slug': 'when-should-a-baby-sit-up-on-their-own', 'group': 'kids', 'reviewed': None, 'batch': 6, 'about': 'Gross motor delay',
+    'slug': 'when-should-a-baby-sit-up-on-their-own', 'group': 'kids', 'reviewed': '2026-10-11', 'batch': 6, 'about': 'Gross motor delay',
     'q': 'When Should a Baby Sit Up on Their Own?',
     'crumb': 'When babies sit up',
     'title': 'When Should a Baby Sit Up on Their Own? | ARI PT',
@@ -69,7 +69,7 @@ PAGES = [
     'guide': ('Gross motor delays', 'gross-motor-delays.html'),
 },
 {
-    'slug': 'when-should-a-baby-start-crawling', 'group': 'kids', 'reviewed': None, 'batch': 6, 'about': 'Gross motor delay',
+    'slug': 'when-should-a-baby-start-crawling', 'group': 'kids', 'reviewed': '2026-10-11', 'batch': 6, 'about': 'Gross motor delay',
     'q': 'When Should a Baby Start Crawling?',
     'crumb': 'When babies crawl',
     'title': 'When Should a Baby Start Crawling? | ARI PT',
@@ -98,7 +98,7 @@ PAGES = [
     'guide': ('Gross motor delays', 'gross-motor-delays.html'),
 },
 {
-    'slug': 'is-it-ok-if-my-baby-skips-crawling', 'group': 'kids', 'reviewed': None, 'batch': 6, 'about': 'Gross motor delay',
+    'slug': 'is-it-ok-if-my-baby-skips-crawling', 'group': 'kids', 'reviewed': '2026-10-11', 'batch': 6, 'about': 'Gross motor delay',
     'q': 'Is It OK If My Baby Skips Crawling?',
     'crumb': 'Babies who skip crawling',
     'title': 'Is It OK If My Baby Skips Crawling? | ARI PT',
@@ -131,7 +131,7 @@ PAGES = [
     'guide': ('Gross motor delays', 'gross-motor-delays.html'),
 },
 {
-    'slug': 'when-should-a-baby-start-walking', 'group': 'kids', 'reviewed': None, 'batch': 6, 'about': 'Gross motor delay',
+    'slug': 'when-should-a-baby-start-walking', 'group': 'kids', 'reviewed': '2026-10-11', 'batch': 6, 'about': 'Gross motor delay',
     'q': 'When Should a Baby Start Walking?',
     'crumb': 'When babies start walking',
     'title': 'When Should a Baby Start Walking? | ARI PT',
@@ -164,7 +164,7 @@ PAGES = [
 },
 # ---------------------------------------------------------------- tummy time
 {
-    'slug': 'how-much-tummy-time-does-a-baby-need', 'group': 'kids', 'reviewed': None, 'batch': 6, 'about': 'Infant motor development',
+    'slug': 'how-much-tummy-time-does-a-baby-need', 'group': 'kids', 'reviewed': '2026-10-11', 'batch': 6, 'about': 'Infant motor development',
     'q': 'How Much Tummy Time Does a Baby Need?',
     'crumb': 'How much tummy time',
     'title': 'How Much Tummy Time Does a Baby Need? | ARI PT',
@@ -196,7 +196,7 @@ PAGES = [
     'guide': ('Pediatric physical therapy', 'pediatric-therapy.html'),
 },
 {
-    'slug': 'my-baby-hates-tummy-time-what-can-i-do', 'group': 'kids', 'reviewed': None, 'batch': 6, 'about': 'Infant motor development',
+    'slug': 'my-baby-hates-tummy-time-what-can-i-do', 'group': 'kids', 'reviewed': '2026-10-11', 'batch': 6, 'about': 'Infant motor development',
     'q': 'My Baby Hates Tummy Time. What Can I Do?',
     'crumb': 'Baby hates tummy time',
     'title': 'My Baby Hates Tummy Time. What Can I Do? | ARI PT',
@@ -228,7 +228,7 @@ PAGES = [
 },
 # ---------------------------------------------------------------- torticollis
 {
-    'slug': 'why-does-my-baby-always-turn-their-head-one-way', 'group': 'kids', 'reviewed': None, 'batch': 6, 'about': 'Torticollis',
+    'slug': 'why-does-my-baby-always-turn-their-head-one-way', 'group': 'kids', 'reviewed': '2026-10-11', 'batch': 6, 'about': 'Torticollis',
     'q': 'Why Does My Baby Always Turn Their Head One Way?',
     'crumb': 'Baby turns head one way',
     'title': 'Why Does My Baby Always Turn Their Head One Way? | ARI PT',
@@ -259,7 +259,7 @@ PAGES = [
     'guide': ('Torticollis in babies', 'torticollis-in-babies.html'),
 },
 {
-    'slug': 'will-torticollis-go-away-on-its-own', 'group': 'kids', 'reviewed': None, 'batch': 6, 'about': 'Torticollis',
+    'slug': 'will-torticollis-go-away-on-its-own', 'group': 'kids', 'reviewed': '2026-10-11', 'batch': 6, 'about': 'Torticollis',
     'q': 'Will My Baby\'s Torticollis Go Away on Its Own?',
     'crumb': 'Will torticollis go away on its own',
     'title': 'Will Torticollis Go Away on Its Own? | ARI PT',
@@ -292,7 +292,7 @@ PAGES = [
     'guide': ('Torticollis in babies', 'torticollis-in-babies.html'),
 },
 {
-    'slug': 'how-long-does-torticollis-take-to-get-better', 'group': 'kids', 'reviewed': None, 'batch': 6, 'about': 'Torticollis',
+    'slug': 'how-long-does-torticollis-take-to-get-better', 'group': 'kids', 'reviewed': '2026-10-11', 'batch': 6, 'about': 'Torticollis',
     'q': 'How Long Does Torticollis Take to Get Better?',
     'crumb': 'How long torticollis takes',
     'title': 'How Long Does Torticollis Take to Get Better? | ARI PT',
@@ -325,7 +325,7 @@ PAGES = [
 },
 # ---------------------------------------------------------------- flat head
 {
-    'slug': 'what-causes-a-flat-spot-on-my-babys-head', 'group': 'kids', 'reviewed': None, 'batch': 6, 'about': 'Plagiocephaly',
+    'slug': 'what-causes-a-flat-spot-on-my-babys-head', 'group': 'kids', 'reviewed': '2026-10-11', 'batch': 6, 'about': 'Plagiocephaly',
     'q': 'What Causes a Flat Spot on My Baby\'s Head?',
     'crumb': 'Flat spot on baby\'s head',
     'title': 'What Causes a Flat Spot on My Baby\'s Head? | ARI PT',
@@ -356,7 +356,7 @@ PAGES = [
     'guide': ('Flat head (plagiocephaly)', 'flat-head-plagiocephaly.html'),
 },
 {
-    'slug': 'does-my-baby-need-a-helmet-for-a-flat-head', 'group': 'kids', 'reviewed': None, 'batch': 6, 'about': 'Plagiocephaly',
+    'slug': 'does-my-baby-need-a-helmet-for-a-flat-head', 'group': 'kids', 'reviewed': '2026-10-11', 'batch': 6, 'about': 'Plagiocephaly',
     'q': 'Does My Baby Need a Helmet for a Flat Head?',
     'crumb': 'Helmets for flat head',
     'title': 'Does My Baby Need a Helmet for a Flat Head? | ARI PT',
@@ -386,7 +386,7 @@ PAGES = [
 },
 # ---------------------------------------------------------------- baby gear
 {
-    'slug': 'are-baby-walkers-safe', 'group': 'kids', 'reviewed': None, 'batch': 6, 'about': 'Infant motor development',
+    'slug': 'are-baby-walkers-safe', 'group': 'kids', 'reviewed': '2026-10-11', 'batch': 6, 'about': 'Infant motor development',
     'q': 'Are Baby Walkers Safe?',
     'crumb': 'Are baby walkers safe',
     'title': 'Are Baby Walkers Safe? What Parents Should Know | ARI PT',
@@ -416,7 +416,7 @@ PAGES = [
     'guide': ('Pediatric physical therapy', 'pediatric-therapy.html'),
 },
 {
-    'slug': 'are-baby-jumpers-and-bouncers-bad-for-development', 'group': 'kids', 'reviewed': None, 'batch': 6, 'about': 'Infant motor development',
+    'slug': 'are-baby-jumpers-and-bouncers-bad-for-development', 'group': 'kids', 'reviewed': '2026-10-11', 'batch': 6, 'about': 'Infant motor development',
     'q': 'Are Baby Jumpers and Bouncers Bad for Development?',
     'crumb': 'Baby jumpers and bouncers',
     'title': 'Are Baby Jumpers and Bouncers Bad for Development? | ARI PT',
@@ -447,7 +447,7 @@ PAGES = [
 },
 # ---------------------------------------------------------------- pediatric PT
 {
-    'slug': 'what-does-a-pediatric-physical-therapist-do', 'group': 'kids', 'reviewed': None, 'batch': 6, 'about': 'Pediatric physical therapy',
+    'slug': 'what-does-a-pediatric-physical-therapist-do', 'group': 'kids', 'reviewed': '2026-10-11', 'batch': 6, 'about': 'Pediatric physical therapy',
     'q': 'What Does a Pediatric Physical Therapist Do?',
     'crumb': 'What a pediatric PT does',
     'title': 'What Does a Pediatric Physical Therapist Do? | ARI PT',
@@ -476,7 +476,7 @@ PAGES = [
     'guide': ('Pediatric physical therapy', 'pediatric-therapy.html'),
 },
 {
-    'slug': 'what-happens-at-my-babys-first-physical-therapy-visit', 'group': 'kids', 'reviewed': None, 'batch': 6, 'about': 'Pediatric physical therapy',
+    'slug': 'what-happens-at-my-babys-first-physical-therapy-visit', 'group': 'kids', 'reviewed': '2026-10-11', 'batch': 6, 'about': 'Pediatric physical therapy',
     'q': 'What Happens at My Baby\'s First Physical Therapy Visit?',
     'crumb': 'Baby\'s first PT visit',
     'title': 'What Happens at My Baby\'s First PT Visit? | ARI PT',
@@ -508,7 +508,7 @@ PAGES = [
     'guide': ('Pediatric physical therapy', 'pediatric-therapy.html'),
 },
 {
-    'slug': 'how-can-i-help-my-baby-reach-milestones-at-home', 'group': 'kids', 'reviewed': None, 'batch': 6, 'about': 'Gross motor delay',
+    'slug': 'how-can-i-help-my-baby-reach-milestones-at-home', 'group': 'kids', 'reviewed': '2026-10-11', 'batch': 6, 'about': 'Gross motor delay',
     'q': 'How Can I Help My Baby Reach Milestones at Home?',
     'crumb': 'Helping baby reach milestones',
     'title': 'How Can I Help My Baby Reach Milestones at Home? | ARI PT',

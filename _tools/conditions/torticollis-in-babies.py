@@ -1,5 +1,5 @@
 PAGE = {
-    'reviewed': None,   # draft: waiting for Deepa's clinical review
+    'reviewed': '2026-10-11',   # draft: waiting for Deepa's clinical review
     'title': 'Torticollis in Babies: Physical Therapy Bakersfield | ARI PT',
     'description': 'Baby\'s head tilts or always turns one way? Gentle physical therapy for infant torticollis in Bakersfield, CA, with stretches and a home program for parents.',
     'crumb': 'Torticollis in Babies',

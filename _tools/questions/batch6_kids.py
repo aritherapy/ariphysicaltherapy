@@ -7,7 +7,7 @@ KIDS_RED = "See your child's pediatrician promptly if:"
 PAGES = [
 # ---------------------------------------------------------------- babies and toddlers
 {
-    'slug': 'why-does-my-toddler-walk-on-tiptoes', 'group': 'kids', 'reviewed': None, 'batch': 6, 'about': 'Toe walking',
+    'slug': 'why-does-my-toddler-walk-on-tiptoes', 'group': 'kids', 'reviewed': '2026-10-11', 'batch': 6, 'about': 'Toe walking',
     'q': 'Why Does My Toddler Walk on Tiptoes?',
     'crumb': 'Toddler walking on tiptoes',
     'title': 'Why Does My Toddler Walk on Tiptoes? | ARI PT',
@@ -38,7 +38,7 @@ PAGES = [
     'guide': ('Toe walking in kids', 'toe-walking-in-kids.html'),
 },
 {
-    'slug': 'is-w-sitting-bad-for-kids', 'group': 'kids', 'reviewed': None, 'batch': 6, 'about': 'W-sitting',
+    'slug': 'is-w-sitting-bad-for-kids', 'group': 'kids', 'reviewed': '2026-10-11', 'batch': 6, 'about': 'W-sitting',
     'q': 'Is W-Sitting Bad for Kids?',
     'crumb': 'W-sitting in kids',
     'title': 'Is W-Sitting Bad for Kids? | ARI PT',
@@ -67,7 +67,7 @@ PAGES = [
     'guide': ('Pediatric physical therapy', 'pediatric-therapy.html'),
 },
 {
-    'slug': 'my-toddler-falls-a-lot-is-that-normal', 'group': 'kids', 'reviewed': None, 'batch': 6, 'about': 'Gross motor development',
+    'slug': 'my-toddler-falls-a-lot-is-that-normal', 'group': 'kids', 'reviewed': '2026-10-11', 'batch': 6, 'about': 'Gross motor development',
     'q': 'My Toddler Falls a Lot. Is That Normal?',
     'crumb': 'Toddler falling a lot',
     'title': 'My Toddler Falls a Lot. Is That Normal? | ARI PT',
@@ -97,7 +97,7 @@ PAGES = [
     'guide': ('Coordination problems in kids', 'coordination-problems-in-kids.html'),
 },
 {
-    'slug': 'are-flat-feet-normal-in-kids', 'group': 'kids', 'reviewed': None, 'batch': 6, 'about': 'Flexible flat feet',
+    'slug': 'are-flat-feet-normal-in-kids', 'group': 'kids', 'reviewed': '2026-10-11', 'batch': 6, 'about': 'Flexible flat feet',
     'q': 'Are Flat Feet Normal in Kids?',
     'crumb': 'Flat feet in kids',
     'title': 'Are Flat Feet Normal in Kids? | ARI PT',
@@ -126,7 +126,7 @@ PAGES = [
     'guide': ('Pediatric physical therapy', 'pediatric-therapy.html'),
 },
 {
-    'slug': 'why-do-my-toddlers-feet-turn-in', 'group': 'kids', 'reviewed': None, 'batch': 6, 'about': 'In-toeing',
+    'slug': 'why-do-my-toddlers-feet-turn-in', 'group': 'kids', 'reviewed': '2026-10-11', 'batch': 6, 'about': 'In-toeing',
     'q': "Why Do My Toddler's Feet Turn In?",
     'crumb': 'Toddler feet turning in',
     'title': "Why Do My Toddler's Feet Turn In? | ARI PT",
@@ -153,7 +153,7 @@ PAGES = [
     'guide': ('Pediatric physical therapy', 'pediatric-therapy.html'),
 },
 {
-    'slug': 'are-bow-legs-normal-in-toddlers', 'group': 'kids', 'reviewed': None, 'batch': 6, 'about': 'Bow legs (genu varum)',
+    'slug': 'are-bow-legs-normal-in-toddlers', 'group': 'kids', 'reviewed': '2026-10-11', 'batch': 6, 'about': 'Bow legs (genu varum)',
     'q': 'Are Bow Legs Normal in Toddlers?',
     'crumb': 'Bow legs in toddlers',
     'title': 'Are Bow Legs Normal in Toddlers? | ARI PT',
@@ -182,7 +182,7 @@ PAGES = [
     'guide': ('Pediatric physical therapy', 'pediatric-therapy.html'),
 },
 {
-    'slug': 'my-child-seems-clumsy-should-i-worry', 'group': 'kids', 'reviewed': None, 'batch': 6, 'about': 'Coordination difficulties',
+    'slug': 'my-child-seems-clumsy-should-i-worry', 'group': 'kids', 'reviewed': '2026-10-11', 'batch': 6, 'about': 'Coordination difficulties',
     'q': 'My Child Seems Clumsy. Should I Worry?',
     'crumb': 'Clumsy child',
     'title': 'My Child Seems Clumsy. Should I Worry? | ARI PT',
@@ -212,7 +212,7 @@ PAGES = [
     'guide': ('Coordination problems in kids', 'coordination-problems-in-kids.html'),
 },
 {
-    'slug': 'growing-pains-or-something-more', 'group': 'kids', 'reviewed': None, 'batch': 6, 'about': 'Growing pains',
+    'slug': 'growing-pains-or-something-more', 'group': 'kids', 'reviewed': '2026-10-11', 'batch': 6, 'about': 'Growing pains',
     'q': 'Are My Child\'s Leg Pains Growing Pains or Something More?',
     'crumb': 'Growing pains or something more',
     'title': 'Growing Pains or Something More? | ARI PT',
@@ -242,7 +242,7 @@ PAGES = [
 },
 # ---------------------------------------------------------------- young athletes
 {
-    'slug': 'why-does-my-teens-knee-hurt-below-the-kneecap', 'group': 'kids', 'reviewed': None, 'batch': 6, 'about': 'Osgood-Schlatter disease',
+    'slug': 'why-does-my-teens-knee-hurt-below-the-kneecap', 'group': 'kids', 'reviewed': '2026-10-11', 'batch': 6, 'about': 'Osgood-Schlatter disease',
     'q': "Why Does My Teen's Knee Hurt Below the Kneecap?",
     'crumb': 'Teen knee pain below the kneecap',
     'title': "Why Does My Teen's Knee Hurt Below the Kneecap? | ARI PT",
@@ -270,7 +270,7 @@ PAGES = [
     'guide': ('Youth sports injuries', 'youth-sports-injuries.html'),
 },
 {
-    'slug': 'why-does-my-childs-heel-hurt-after-sports', 'group': 'kids', 'reviewed': None, 'batch': 6, 'about': "Sever's disease",
+    'slug': 'why-does-my-childs-heel-hurt-after-sports', 'group': 'kids', 'reviewed': '2026-10-11', 'batch': 6, 'about': "Sever's disease",
     'q': "Why Does My Child's Heel Hurt After Sports?",
     'crumb': 'Child heel pain after sports',
     'title': "Why Does My Child's Heel Hurt After Sports? | ARI PT",
@@ -299,7 +299,7 @@ PAGES = [
     'guide': ('Youth sports injuries', 'youth-sports-injuries.html'),
 },
 {
-    'slug': 'how-to-prevent-acl-injuries-in-young-athletes', 'group': 'kids', 'reviewed': None, 'batch': 6, 'about': 'ACL injury prevention',
+    'slug': 'how-to-prevent-acl-injuries-in-young-athletes', 'group': 'kids', 'reviewed': '2026-10-11', 'batch': 6, 'about': 'ACL injury prevention',
     'q': 'How Can Young Athletes Lower Their Risk of an ACL Injury?',
     'crumb': 'Preventing ACL injuries in young athletes',
     'title': 'How to Prevent ACL Injuries in Young Athletes | ARI PT',
@@ -328,7 +328,7 @@ PAGES = [
     'guide': ('ACL and knee ligament injuries', 'acl-mcl-knee-ligament-injuries.html'),
 },
 {
-    'slug': 'when-can-my-child-return-to-sports-after-an-injury', 'group': 'kids', 'reviewed': None, 'batch': 6, 'about': 'Return to sport',
+    'slug': 'when-can-my-child-return-to-sports-after-an-injury', 'group': 'kids', 'reviewed': '2026-10-11', 'batch': 6, 'about': 'Return to sport',
     'q': 'When Can My Child Return to Sports After an Injury?',
     'crumb': 'Returning to sports after an injury',
     'title': 'When Can My Child Return to Sports After Injury? | ARI PT',
@@ -359,7 +359,7 @@ PAGES = [
     'guide': ('Youth sports injuries', 'youth-sports-injuries.html'),
 },
 {
-    'slug': 'is-strength-training-safe-for-kids', 'group': 'kids', 'reviewed': None, 'batch': 6, 'about': 'Youth strength training',
+    'slug': 'is-strength-training-safe-for-kids', 'group': 'kids', 'reviewed': '2026-10-11', 'batch': 6, 'about': 'Youth strength training',
     'q': 'Is Strength Training Safe for Kids?',
     'crumb': 'Strength training for kids',
     'title': 'Is Strength Training Safe for Kids? | ARI PT',
@@ -388,7 +388,7 @@ PAGES = [
     'guide': ('Youth sports injuries', 'youth-sports-injuries.html'),
 },
 {
-    'slug': 'why-does-my-young-pitchers-elbow-hurt', 'group': 'kids', 'reviewed': None, 'batch': 6, 'about': 'Little League elbow',
+    'slug': 'why-does-my-young-pitchers-elbow-hurt', 'group': 'kids', 'reviewed': '2026-10-11', 'batch': 6, 'about': 'Little League elbow',
     'q': "Why Does My Young Pitcher's Elbow Hurt?",
     'crumb': "Young pitcher's elbow pain",
     'title': "Why Does My Young Pitcher's Elbow Hurt? | ARI PT",
@@ -416,7 +416,7 @@ PAGES = [
     'guide': ('Youth sports injuries', 'youth-sports-injuries.html'),
 },
 {
-    'slug': 'can-a-heavy-backpack-cause-back-pain-in-kids', 'group': 'kids', 'reviewed': None, 'batch': 6, 'about': 'Back pain in children',
+    'slug': 'can-a-heavy-backpack-cause-back-pain-in-kids', 'group': 'kids', 'reviewed': '2026-10-11', 'batch': 6, 'about': 'Back pain in children',
     'q': 'Can a Heavy Backpack Cause Back Pain in Kids?',
     'crumb': 'Backpacks and back pain in kids',
     'title': 'Can a Heavy Backpack Cause Back Pain in Kids? | ARI PT',

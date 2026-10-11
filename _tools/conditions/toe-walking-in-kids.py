@@ -1,5 +1,5 @@
 PAGE = {
-    'reviewed': None,   # draft: waiting for Deepa's clinical review
+    'reviewed': '2026-10-11',   # draft: waiting for Deepa's clinical review
     'title': 'Toe Walking in Kids: Physical Therapy Bakersfield | ARI PT',
     'description': 'Toddler or child walking on tiptoes? When toe walking is common, when to get it checked, and how PT in Bakersfield, CA helps calf flexibility and walking.',
     'crumb': 'Toe Walking in Kids',
