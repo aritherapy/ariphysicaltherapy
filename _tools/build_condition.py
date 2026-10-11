@@ -54,7 +54,7 @@ EN = {
     'or_call': 'or call',
     'related_h': 'Related',
     'all_conditions': 'All conditions we treat',
-    'reviewed': lambda reviewer, y, m: (f'<p class="reviewed-by">Clinically reviewed by <a href="about.html">{reviewer}</a>, board-certified '
+    'reviewed': lambda reviewer, y, m: (f'<p class="reviewed-by">Clinically reviewed by <a href="deepa-konnur.html">{reviewer}</a>, board-certified '
                                         f'Orthopedic Certified Specialist &middot; Reviewed {MONTHS[int(m) - 1]} {y}</p>'),
     'clinic_line': CLINIC_LINE, 'direct_access': DIRECT_ACCESS, 'referral_faq': REFERRAL_FAQ, 'page_cta': PAGE_CTA,
 }

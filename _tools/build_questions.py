@@ -105,7 +105,7 @@ def build_page(p, label, siblings):
     reviewed = ''
     if p.get('reviewed'):
         y, m, _ = p['reviewed'].split('-')
-        reviewed = (f'<p class="reviewed-by">Clinically reviewed by <a href="about.html">{REVIEWER}</a>, board-certified '
+        reviewed = (f'<p class="reviewed-by">Clinically reviewed by <a href="deepa-konnur.html">{REVIEWER}</a>, board-certified '
                     f'Orthopedic Certified Specialist &middot; Reviewed {MONTHS[int(m) - 1]} {y}</p>')
     callout = DIRECT_ACCESS if p.get('callout', True) else ''
     body = f'''</nav>

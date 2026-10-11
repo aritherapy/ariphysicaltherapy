@@ -13,7 +13,7 @@ import json, os, re
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SITE = 'https://ariphysicaltherapy.com/'
-DRAFT = True
+DRAFT = False
 UPDATED = 'October 2026'
 DEEPA = SITE + 'about.html#deepa'
 
@@ -66,8 +66,7 @@ REVIEWER_BODY = f'''<section class="section"><div class="section-inner">
 
 EP_SECTIONS = [
     ('goal', 'Our goal', '''<p>Our health library answers the questions patients in Bakersfield ask us every day about pain, injuries, recovery after surgery, pelvic health and children&rsquo;s development. We want you to understand what may be going on, what usually helps, and when you should see a doctor, in plain language you can use.</p>'''),
-    ('who', 'Who writes and reviews our content', f'''<p>Our pages are written by the ARI team. We use writing tools, including AI, to help draft and edit, and a person on our team checks every draft.</p>
-        <p><strong>Nothing medical is published until a licensed physical therapist has reviewed it.</strong> Every condition guide and patient question is clinically reviewed by <a href="deepa-konnur.html">Deepa Konnur, PT, MPT, OCS</a>, our founder and a board-certified Orthopedic Certified Specialist. Reviewed pages show her name and the month of the review near the top.</p>'''),
+    ('who', 'Who writes and reviews our content', f'''<p><strong>Nothing medical is published until a licensed physical therapist has reviewed it.</strong> Every condition guide and patient question is clinically reviewed by <a href="deepa-konnur.html">Deepa Konnur, PT, MPT, OCS</a>, our founder and a board-certified Orthopedic Certified Specialist. Reviewed pages show her name and the month of the review near the top.</p>'''),
     ('based', 'What our content is based on', '''<p>We base our content on current clinical practice guidelines, such as those published by the American Physical Therapy Association (APTA) and its specialty academies, on trusted public health sources such as MedlinePlus from the National Institutes of Health and the Centers for Disease Control and Prevention, and on the clinical experience of our physical therapists.</p>'''),
     ('standards', 'Our review standards', f'''<p>Every page we publish must:</p>
         <div class="checks" style="grid-template-columns:1fr;margin:14px 0 18px">
@@ -77,7 +76,7 @@ EP_SECTIONS = [
           <div class="check">{TICK}<span>Describe only care we actually provide at ARI.</span></div>
           <div class="check">{TICK}<span>Use plain language and explain any medical terms.</span></div>
         </div>'''),
-    ('updates', 'Keeping content up to date', '''<p>Each reviewed page shows when it was last reviewed. We re-review our pages at least once a year, and sooner when clinical guidance changes or a reader points out something we should fix.</p>'''),
+    ('updates', 'Keeping content up to date', '''<p>Each reviewed page shows when it was last reviewed. We re-review our pages at regular intervals, and sooner when clinical guidance changes or a reader points out something we should fix.</p>'''),
     ('not', 'What our content is not', '''<p>Our pages are general information, not a diagnosis or a treatment plan for you. Everyone&rsquo;s situation is different, so please see a licensed clinician about your symptoms. <strong>If you think you have a medical emergency, call 911.</strong></p>'''),
     ('independence', 'Independence and transparency', '''<p>This website belongs to ARI Physical Therapy, an outpatient physical therapy clinic, and our pages invite you to contact us if you would like help. We are upfront about that. We don&rsquo;t show ads on this website, publish sponsored content, or get paid to recommend products. Our articles do not include information that could identify any patient.</p>'''),
     ('feedback', 'Corrections and feedback', '''<p>If you think something on our site is wrong or out of date, please tell us. Email <a href="mailto:contactus@ariptcare.com">contactus@ariptcare.com</a> or call <a href="tel:6612828584">(661) 282-8584</a>. We review every report, and we correct the page when it needs it.</p>'''),

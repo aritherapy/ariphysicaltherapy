@@ -18,7 +18,7 @@
 
 ## Clinic director
 
-- Deepa Konnur, PT, MPT, OCS, Founder & Clinic Director. Board-certified Orthopedic Certified Specialist (American Board of Physical Therapy Specialties). Orthopedic Physical Therapy Residency through Movement for Life in partnership with the University of Southern California (hybrid: clinical work plus USC coursework). Master of Physical Therapy, Loma Linda University. Former Spine Clinical Specialist PT at Kaiser Permanente. Postgraduate pelvic rehabilitation training, Herman & Wallace Pelvic Rehabilitation Institute. More than 15 years of outpatient experience.
+- Deepa Konnur, PT, MPT, OCS, Founder & Clinic Director. Board-certified Orthopedic Certified Specialist (American Board of Physical Therapy Specialties). Orthopedic Physical Therapy Residency through Movement for Life in partnership with the University of Southern California (hybrid: clinical work plus USC coursework). Master of Physical Therapy, Loma Linda University. Former Spine Clinical Specialist PT at Kaiser Permanente. Postgraduate pelvic rehabilitation training, Herman & Wallace Pelvic Rehabilitation Institute. More than 15 years of outpatient experience. Clinically reviews every condition guide and patient question on this site.
 
 ## Services
 
@@ -249,6 +249,8 @@ Spanish-language pages for Spanish-speaking patients (ARI has Spanish-speaking s
 
 - [Conditions we treat](https://ariphysicaltherapy.com/conditions.html)
 - [About ARI and our clinic director](https://ariphysicaltherapy.com/about.html)
+- [Deepa Konnur, PT, MPT, OCS: clinical reviewer of our health pages](https://ariphysicaltherapy.com/deepa-konnur.html)
+- [How we create our health content (editorial policy)](https://ariphysicaltherapy.com/editorial-policy.html)
 - [Frequently asked questions](https://ariphysicaltherapy.com/faq.html)
 - [Request an appointment](https://ariphysicaltherapy.com/appointment.html)
 - [For referring physicians](https://ariphysicaltherapy.com/physicians.html)
