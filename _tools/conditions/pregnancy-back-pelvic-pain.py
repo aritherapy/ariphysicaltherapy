@@ -6,7 +6,7 @@ PAGE = {
     'eyebrow': 'Women&rsquo;s Health',
     'h1': 'Back and Pelvic Pain During Pregnancy in',
     'lead': 'Pain at the back of your pelvis, in the pubic bone or low back is very common in pregnancy. Common doesn\'t mean you just have to put up with it. Gentle physical therapy can help.',
-    'answer': '<strong>Yes, physical therapy can help back and pelvic pain during pregnancy.</strong> Low back and pelvic girdle pain affect many pregnant women, and exercise and physical therapy are safe, recommended ways to ease pain and stay active. At ARI Physical Therapy in Bakersfield, prenatal care is one-on-one with a licensed physical therapist in a private room, and we coordinate with your OB when needed.',
+    'answer': '<strong>Yes, physical therapy can help back and pelvic pain during pregnancy.</strong> Low back and pelvic girdle pain affect many pregnant women, and exercise and physical therapy are safe, recommended ways to ease pain and stay active. At ARI Physical Therapy in Bakersfield, prenatal care is one-on-one with a licensed physical therapist, and we coordinate with your OB when needed.',
     'signs': [
         'Pain in the low back, or at the back of the pelvis near the dimples',
         'Pain at the front of the pelvis or pubic bone',
@@ -22,7 +22,7 @@ PAGE = {
          '<p>Treatment is gentle and adjusted to each stage of pregnancy. It can include exercises that support the pelvis and back, hands-on care, easier ways to move, sleep and get out of bed, and advice on a support belt if it would help. We can also work on the pelvic floor, to help with leaking and to prepare for birth and recovery afterward. After your baby arrives, see <a href="postpartum-therapy.html">postpartum therapy</a>.</p>'),
     ],
     'steps': [
-        ('A one-on-one evaluation', 'Your first visit takes about 45 to 60 minutes, in a private room. We ask about your pregnancy and your pain, check how you move, and explain what we find. Nothing is done without your consent.'),
+        ('A one-on-one evaluation', 'Your first visit takes about 45 to 60 minutes. We ask about your pregnancy and your pain, check how you move, and explain what we find. Nothing is done without your consent.'),
         ('Gentle treatment', 'Exercises to support the pelvis, back and hips, hands-on care, positions for sleep and daily tasks, and pelvic floor care if you need it, all adjusted as your pregnancy progresses.'),
         ('A plan through birth and after', 'A home program that changes with each trimester, tips for staying active safely, and a plan for recovery after your baby arrives.'),
     ],
@@ -42,7 +42,7 @@ PAGE = {
         ('Does pelvic floor therapy happen during pregnancy?', 'It can. Pelvic floor care during pregnancy can help with leaking and heaviness, and help you learn to relax and coordinate the pelvic floor for birth. We explain everything first, and you decide what you\'re comfortable with.'),
         ('Should I wear a pregnancy support belt?', 'A support belt helps some women with pelvic girdle pain, especially for walking and standing. Your therapist can tell you whether one is likely to help you and how to wear it.'),
     ],
-    'side': 'Prenatal care at ARI is one-on-one with a licensed physical therapist, in a private room.',
+    'side': 'Prenatal care at ARI is one-on-one with a licensed physical therapist.',
     'related': [('Pelvic Floor Therapy for Women', 'pelvic-floor-therapy.html'), ('Postpartum Therapy', 'postpartum-therapy.html'), ('Bladder Leaks', 'bladder-leaks-incontinence.html'), ('Diastasis Recti', 'diastasis-recti.html')],
     # checklist phrases on service pages that link here once this page is live (release.py)
     'links_from': [('services.html', 'Prenatal back and pelvic pain', 'Prenatal back and pelvic pain'), ('postpartum-therapy.html', 'Prenatal back &amp; pelvic pain', 'Prenatal back &amp; pelvic pain')],

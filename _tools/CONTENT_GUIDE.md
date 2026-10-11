@@ -12,6 +12,7 @@ Every new page starts as a hidden draft (`'reviewed': None` makes it noindex). D
 ## Clinic facts. Use only these and never invent others.
 - ARI Physical Therapy, 8200 Stockdale Hwy, Suite B2, Bakersfield, CA 93311 (Town & Country Village, next to Trader Joe's). Phone (661) 282-8584, fax (661) 727-0005.
 - Every visit is one-on-one and in person with a licensed physical therapist. First visit about 45–60 minutes, follow-ups about 30–45.
+- Never say visits happen "in a private room" (or "cuarto privado" / "en privado"). Not every visit is in one; some are exercise in the open gym area (owner, 2026-10-10).
 - Clinic director: Deepa Konnur, PT, MPT, OCS, a board-certified Orthopedic Certified Specialist. She has pelvic rehab training from Herman & Wallace.
 - Insurance: "most private insurance plans and Medicare". Never mention Medi-Cal.
 - California direct access: patients can see a PT without a referral for up to 12 visits or 45 days. Some plans still require a referral.

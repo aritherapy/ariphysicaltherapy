@@ -92,7 +92,7 @@ PAGES = [
         'You can\'t pee at all, or feel you can\'t empty your bladder: get urgent care',
         'New numbness in the groin or inner thighs, or new leg weakness, with bladder changes: get emergency care',
     ],
-    'pt': '<p>Pelvic floor therapy at ARI is for women, one-on-one in a private room. Your therapist explains everything first, checks how your pelvic floor works (with your consent), and teaches bladder training and urge control that fit your day.</p>',
+    'pt': '<p>Pelvic floor therapy at ARI is for women, always one-on-one. Your therapist explains everything first, checks how your pelvic floor works (with your consent), and teaches bladder training and urge control that fit your day.</p>',
     'guide': ('Bladder leaks (urinary incontinence)', 'bladder-leaks-incontinence.html'),
 },
 {
@@ -101,7 +101,7 @@ PAGES = [
     'crumb': 'Your pelvic floor therapy visit',
     'title': 'What Happens at a Pelvic Floor Therapy Visit? | ARI PT',
     'description': 'Nervous about pelvic floor therapy? What happens at the visit, how the assessment works, and why an internal exam is always your choice.',
-    'short': 'Your visit is one-on-one with a physical therapist in a private room. It starts with a conversation about your symptoms and goals. Your therapist explains everything before doing it, and any internal exam is optional and only done with your consent. You can say no or stop at any time.',
+    'short': 'Your visit is one-on-one with a physical therapist. It starts with a conversation about your symptoms and goals. Your therapist explains everything before doing it, and any internal exam is optional and only done with your consent. You can say no or stop at any time.',
     'sections': [
         ('What the visit usually includes',
          '<ul class="plain-list"><li><strong>Talking.</strong> Your symptoms, bladder and bowel habits, pregnancies and births, your health history, and what you want to get back to. Many women find this part a relief.</li>'
@@ -113,7 +113,7 @@ PAGES = [
          '<p>It\'s normal to feel nervous. Feel free to ask questions at any point, and let your therapist know what makes you comfortable.</p>'
          '<p>How many visits you need depends on your symptoms and goals. Your therapist will talk through a plan with you after the first visit.</p>'),
     ],
-    'pt': '<p>Pelvic floor therapy at ARI is for women. Every visit is one-on-one in a private room, everything is explained first, and you decide what is done.</p>',
+    'pt': '<p>Pelvic floor therapy at ARI is for women. Every visit is one-on-one, everything is explained first, and you decide what is done.</p>',
     'guide': ('Pelvic floor therapy', 'pelvic-floor-therapy.html'),
 },
 {

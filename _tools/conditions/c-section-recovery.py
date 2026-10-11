@@ -6,7 +6,7 @@ PAGE = {
     'eyebrow': 'Women&rsquo;s Health',
     'h1': 'C-Section Recovery Physical Therapy in',
     'lead': 'A C-section is major abdominal surgery, and you\'re recovering while caring for a newborn. Physical therapy helps you heal, rebuild your core and get back to feeling like yourself.',
-    'answer': '<strong>Yes, physical therapy can help you recover after a C-section.</strong> It can ease scar tightness and numbness, rebuild your deep core and pelvic floor, and guide a safe return to lifting and exercise. At ARI Physical Therapy in Bakersfield, postpartum care is one-on-one with a licensed physical therapist in a private room, and we coordinate with your OB when needed.',
+    'answer': '<strong>Yes, physical therapy can help you recover after a C-section.</strong> It can ease scar tightness and numbness, rebuild your deep core and pelvic floor, and guide a safe return to lifting and exercise. At ARI Physical Therapy in Bakersfield, postpartum care is one-on-one with a licensed physical therapist, and we coordinate with your OB when needed.',
     'signs': [
         'Your scar feels tight, pulls, or is numb or oversensitive',
         'Your belly feels weak, or you have a bulge or gap down the middle',
@@ -22,7 +22,7 @@ PAGE = {
          '<p>Once your provider says the incision has healed, gentle scar massage and movement can improve comfort and mobility. We rebuild the deep core and pelvic floor step by step, teach easier ways to get out of bed and lift your baby, and plan a gradual return to exercise. Many women also have <a href="diastasis-recti.html">diastasis recti</a>, which we treat too.</p>'),
     ],
     'steps': [
-        ('A one-on-one evaluation', 'Your first visit takes about 45 to 60 minutes, in a private room. We ask about your birth and recovery, check your scar, core, posture and movement, and explain what we find. Nothing is done without your consent.'),
+        ('A one-on-one evaluation', 'Your first visit takes about 45 to 60 minutes. We ask about your birth and recovery, check your scar, core, posture and movement, and explain what we find. Nothing is done without your consent.'),
         ('Heal and rebuild', 'Scar care once healed, breathing and deep core exercises, pelvic floor work if needed, and easier ways to lift, carry and feed your baby.'),
         ('Back to your life', 'A step-by-step return to exercise, lifting and the activities you enjoy, with a home program that fits around a newborn.'),
     ],
@@ -41,7 +41,7 @@ PAGE = {
         ('Do I need pelvic floor therapy if I had a C-section?', 'Possibly. Pregnancy itself puts load on the pelvic floor, so leaking, heaviness or pain with sex can happen after a C-section too. Your therapist can check and treat it if needed.'),
         ('When can I lift heavier things or exercise again?', 'Your surgeon will give you early lifting limits. After that, a gradual return guided by how your core and pelvic floor are working is safest. Your therapist will build that plan with you.'),
     ],
-    'side': 'Postpartum care at ARI is one-on-one with a licensed physical therapist, in a private room.',
+    'side': 'Postpartum care at ARI is one-on-one with a licensed physical therapist.',
     'related': [('Prenatal &amp; Postpartum Therapy', 'postpartum-therapy.html'), ('Diastasis Recti', 'diastasis-recti.html'), ('Pelvic Floor Therapy for Women', 'pelvic-floor-therapy.html')],
     # checklist phrases on service pages that link here once this page is live (release.py)
     'links_from': [('services.html', 'C-section and birth recovery', 'C-section'), ('postpartum-therapy.html', 'C-section &amp; birth recovery', 'C-section')],

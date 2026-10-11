@@ -24,7 +24,7 @@ PAGES = [
         'Sudden loss of bladder control with back pain, or numbness in the groin: get emergency care',
         'Leaking that started after pelvic surgery or radiation',
     ],
-    'pt': '<p>Pelvic floor therapy at ARI is for women, always one-on-one in a private room. Your therapist explains everything first, checks how your pelvic floor muscles work (with your consent), and builds a program to stop leaks during the activities that matter to you.</p>',
+    'pt': '<p>Pelvic floor therapy at ARI is for women, always one-on-one. Your therapist explains everything first, checks how your pelvic floor muscles work (with your consent), and builds a program to stop leaks during the activities that matter to you.</p>',
     'guide': ('Bladder leaks (urinary incontinence)', 'bladder-leaks-incontinence.html'),
 },
 {
@@ -51,7 +51,7 @@ PAGES = [
         'A severe headache or vision changes',
         'Feeling hopeless, very anxious, or having thoughts of harming yourself or your baby',
     ],
-    'pt': '<p>A pelvic floor physical therapist at ARI checks your pelvic floor and abdominal muscles, one-on-one in a private room, and builds a step-by-step plan back to the exercise you enjoy, whether that\'s walking, lifting or running.</p>',
+    'pt': '<p>A pelvic floor physical therapist at ARI checks your pelvic floor and abdominal muscles, one-on-one, and builds a step-by-step plan back to the exercise you enjoy, whether that\'s walking, lifting or running.</p>',
     'guide': ('Postpartum therapy', 'postpartum-therapy.html'),
 },
 {
@@ -78,7 +78,7 @@ PAGES = [
         'Bleeding after sex',
         'A lump or new pain that keeps getting worse',
     ],
-    'pt': '<p>Pelvic floor therapy at ARI is for women, always one-on-one in a private room. Treatment is gentle and at your pace: your therapist explains everything first, and you decide what you\'re comfortable with.</p>',
+    'pt': '<p>Pelvic floor therapy at ARI is for women, always one-on-one. Treatment is gentle and at your pace: your therapist explains everything first, and you decide what you\'re comfortable with.</p>',
     'guide': ('Pelvic pain and painful sex', 'pelvic-pain-painful-sex.html'),
 },
 {

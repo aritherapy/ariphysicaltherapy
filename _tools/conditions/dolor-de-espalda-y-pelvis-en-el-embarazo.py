@@ -7,7 +7,7 @@ PAGE = {
     'eyebrow': "Salud de la mujer",
     'h1': "Dolor de espalda y pelvis durante el embarazo en",
     'lead': "El dolor en la parte de atrás de la pelvis, en el hueso púbico o en la parte baja de la espalda es muy común en el embarazo. Que sea común no significa que tenga que aguantarlo. La terapia física suave puede ayudar.",
-    'answer': "<strong>Sí, la terapia física puede ayudar con el dolor de espalda y de pelvis durante el embarazo.</strong> El dolor en la parte baja de la espalda y en la cintura pélvica afecta a muchas mujeres embarazadas, y el ejercicio y la terapia física son formas seguras y recomendadas de aliviar el dolor y mantenerse activa. En ARI Physical Therapy en Bakersfield, la atención prenatal es individual con un fisioterapeuta con licencia en un cuarto privado, y coordinamos con su ginecólogo u obstetra cuando es necesario.",
+    'answer': "<strong>Sí, la terapia física puede ayudar con el dolor de espalda y de pelvis durante el embarazo.</strong> El dolor en la parte baja de la espalda y en la cintura pélvica afecta a muchas mujeres embarazadas, y el ejercicio y la terapia física son formas seguras y recomendadas de aliviar el dolor y mantenerse activa. En ARI Physical Therapy en Bakersfield, la atención prenatal es individual con un fisioterapeuta con licencia, y coordinamos con su ginecólogo u obstetra cuando es necesario.",
     'signs': [
         "Dolor en la parte baja de la espalda, o en la parte de atrás de la pelvis, cerca de los hoyuelos",
         "Dolor en la parte de adelante de la pelvis o en el hueso púbico",
@@ -23,7 +23,7 @@ PAGE = {
          "<p>El tratamiento es suave y se adapta a cada etapa del embarazo. Puede incluir ejercicios que dan soporte a la pelvis y la espalda, tratamiento manual, formas más fáciles de moverse, dormir y levantarse de la cama, y consejos sobre una faja de soporte si le puede ayudar. También podemos trabajar el piso pélvico, para ayudar con las pérdidas de orina y para prepararse para el parto y la recuperación después. Para después de que nazca su bebé, vea nuestra página de <a href=\"postpartum-therapy.html\">terapia posparto (en inglés)</a>.</p>"),
     ],
     'steps': [
-        ("Una evaluación individual", "Su primera visita dura de 45 a 60 minutos, en un cuarto privado. Le preguntamos sobre su embarazo y su dolor, revisamos cómo se mueve y le explicamos lo que encontramos. No se hace nada sin su consentimiento."),
+        ("Una evaluación individual", "Su primera visita dura de 45 a 60 minutos. Le preguntamos sobre su embarazo y su dolor, revisamos cómo se mueve y le explicamos lo que encontramos. No se hace nada sin su consentimiento."),
         ("Tratamiento suave", "Ejercicios para dar soporte a la pelvis, la espalda y las caderas, tratamiento manual, posiciones para dormir y para las tareas diarias, y atención del piso pélvico si la necesita, todo ajustado a medida que avanza su embarazo."),
         ("Un plan hasta el parto y después", "Un programa en casa que cambia en cada trimestre, consejos para mantenerse activa de forma segura y un plan para su recuperación después de que nazca su bebé."),
     ],
@@ -43,7 +43,7 @@ PAGE = {
         ("¿Se hace terapia del piso pélvico durante el embarazo?", "Puede hacerse. La atención del piso pélvico durante el embarazo puede ayudar con las pérdidas de orina y la sensación de pesadez, y ayudarle a aprender a relajar y coordinar el piso pélvico para el parto. Primero le explicamos todo, y usted decide con qué se siente cómoda."),
         ("¿Debo usar una faja de soporte para el embarazo?", "Una faja de soporte ayuda a algunas mujeres con dolor de la cintura pélvica, sobre todo al caminar y al estar de pie. Su fisioterapeuta le puede decir si es probable que le ayude y cómo usarla."),
     ],
-    'side': "La atención prenatal en ARI es individual con un fisioterapeuta con licencia, en un cuarto privado.",
+    'side': "La atención prenatal en ARI es individual con un fisioterapeuta con licencia.",
     'related': [
         ("Pérdidas de orina", "perdidas-de-orina-incontinencia.html"),
         ("Ciática y dolor de espalda", "ciatica-dolor-de-espalda.html"),

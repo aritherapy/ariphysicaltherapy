@@ -6,7 +6,7 @@ PAGE = {
     'eyebrow': 'Women&rsquo;s Health',
     'h1': 'Accidental Bowel Leakage Treatment for Women in',
     'lead': 'Leaking gas or stool, or not making it to the bathroom in time, is more common than most women realize, and very hard to talk about. Pelvic floor therapy can help.',
-    'answer': '<strong>Yes, pelvic floor physical therapy can help accidental bowel leakage.</strong> Strengthening and coordinating the pelvic floor and the muscles around the anus, along with better bowel habits, is a recommended first treatment for many women. At ARI Physical Therapy in Bakersfield, pelvic floor therapy is for women, always one-on-one in a private room.',
+    'answer': '<strong>Yes, pelvic floor physical therapy can help accidental bowel leakage.</strong> Strengthening and coordinating the pelvic floor and the muscles around the anus, along with better bowel habits, is a recommended first treatment for many women. At ARI Physical Therapy in Bakersfield, pelvic floor therapy is for women, always one-on-one.',
     'signs': [
         'Leaking gas or stool, or staining on your underwear',
         'A sudden urge to open your bowels that you can\'t hold',
@@ -40,7 +40,7 @@ PAGE = {
         ('Do I need to see a doctor first?', 'In California you can start physical therapy without a referral. If you have warning signs like bleeding or a lasting change in bowel habits, please see your doctor as well.'),
     ],
     'referral_faq': False,   # its own FAQ already covers starting without a referral
-    'side': 'Pelvic floor therapy at ARI is for women, one-on-one in a private room.',
+    'side': 'Pelvic floor therapy at ARI is for women, always one-on-one.',
     'related': [('Pelvic Floor Therapy for Women', 'pelvic-floor-therapy.html'), ('Bladder Leaks', 'bladder-leaks-incontinence.html'), ('Pelvic Organ Prolapse', 'pelvic-organ-prolapse.html')],
     # checklist phrases on service pages that link here once this page is live (release.py)
     'links_from': [('services.html', 'Urinary and bowel incontinence', 'bowel incontinence'), ('pelvic-floor-therapy.html', 'Urinary and bowel incontinence', 'bowel incontinence')],

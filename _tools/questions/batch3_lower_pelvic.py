@@ -171,7 +171,7 @@ PAGES = [
         'Sudden loss of bladder or bowel control with back pain or numbness in the groin: get emergency care',
         'Being unable to empty your bladder',
     ],
-    'pt': '<p>Pelvic floor therapy at ARI is for women, always one-on-one in a private room. Your therapist explains everything first, checks how your pelvic floor muscles squeeze and relax (with your consent), and builds a program that fits what your muscles actually need.</p>',
+    'pt': '<p>Pelvic floor therapy at ARI is for women, always one-on-one. Your therapist explains everything first, checks how your pelvic floor muscles squeeze and relax (with your consent), and builds a program that fits what your muscles actually need.</p>',
     'guide': ('Pelvic floor therapy', 'pelvic-floor-therapy.html'),
 },
 {
@@ -200,7 +200,7 @@ PAGES = [
         'Vaginal bleeding after menopause',
         'Fever with pelvic pain, or pain or burning when you urinate',
     ],
-    'pt': '<p>Pelvic floor therapy at ARI is for women, always one-on-one in a private room. Your therapist explains everything first, checks your pelvic floor (with your consent), and teaches you exercises and daily habits to ease symptoms and help you stay active.</p>',
+    'pt': '<p>Pelvic floor therapy at ARI is for women, always one-on-one. Your therapist explains everything first, checks your pelvic floor (with your consent), and teaches you exercises and daily habits to ease symptoms and help you stay active.</p>',
     'guide': ('Pelvic organ prolapse', 'pelvic-organ-prolapse.html'),
 },
 {
@@ -228,7 +228,7 @@ PAGES = [
         'A bulge that becomes hard, very painful or discolored, with nausea or vomiting: get emergency care',
         'A C-section incision that is red, hot, draining or more painful, or fever',
     ],
-    'pt': '<p>A pelvic floor physical therapist at ARI measures the gap, one-on-one in a private room, checks how your deep core and pelvic floor work together, and builds a step-by-step program to rebuild strength and get you back to the activities you enjoy.</p>',
+    'pt': '<p>A pelvic floor physical therapist at ARI measures the gap, one-on-one, checks how your deep core and pelvic floor work together, and builds a step-by-step program to rebuild strength and get you back to the activities you enjoy.</p>',
     'guide': ('Diastasis recti', 'diastasis-recti.html'),
 },
 {

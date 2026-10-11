@@ -7,7 +7,7 @@ PAGE = {
     'eyebrow': "Salud de la mujer",
     'h1': "Terapia física prenatal y posparto en",
     'lead': "Apoyo en cada etapa, desde los cambios del cuerpo durante el embarazo hasta la recuperación después del parto, con enfoque en la salud pélvica, la fuerza del abdomen (core) y en volver a hacer lo que le gusta.",
-    'answer': "<strong>Sí, la terapia física puede ayudar durante el embarazo y después del parto.</strong> El dolor de espalda y de pelvis en el embarazo, y las pérdidas de orina, la sensación de pesadez, la separación de los músculos del abdomen o el dolor durante las relaciones sexuales después del parto, son todos comunes y se pueden tratar, a menudo sin medicamentos ni cirugía. En ARI Physical Therapy en Bakersfield, la atención prenatal y posparto es individual con un fisioterapeuta con licencia en un cuarto privado, y coordinamos con su ginecólogo u obstetra cuando es necesario. Relacionado: <a href=\"terapia-del-piso-pelvico.html\">terapia del piso pélvico</a>.",
+    'answer': "<strong>Sí, la terapia física puede ayudar durante el embarazo y después del parto.</strong> El dolor de espalda y de pelvis en el embarazo, y las pérdidas de orina, la sensación de pesadez, la separación de los músculos del abdomen o el dolor durante las relaciones sexuales después del parto, son todos comunes y se pueden tratar, a menudo sin medicamentos ni cirugía. En ARI Physical Therapy en Bakersfield, la atención prenatal y posparto es individual con un fisioterapeuta con licencia, y coordinamos con su ginecólogo u obstetra cuando es necesario. Relacionado: <a href=\"terapia-del-piso-pelvico.html\">terapia del piso pélvico</a>.",
     'signs_h': "En qué le ayudamos",
     'signs': [
         "<a href=\"dolor-de-espalda-y-pelvis-en-el-embarazo.html\">Dolor de espalda y de pelvis en el embarazo</a>",
@@ -47,7 +47,7 @@ PAGE = {
          "</ul>"),
     ],
     'steps': [
-        ("Una evaluación completa", "Su primera visita (de 45 a 60 minutos, aproximadamente) es en un cuarto privado e incluye una conversación sobre su embarazo o su parto, sus síntomas y sus metas, y una evaluación con las manos. Si un examen del piso pélvico pudiera ayudar, primero le explicamos exactamente en qué consiste; siempre es su decisión, y hay otras formas de evaluarla si usted lo prefiere."),
+        ("Una evaluación completa", "Su primera visita (de 45 a 60 minutos, aproximadamente) incluye una conversación sobre su embarazo o su parto, sus síntomas y sus metas, y una evaluación con las manos. Si un examen del piso pélvico pudiera ayudar, primero le explicamos exactamente en qué consiste; siempre es su decisión, y hay otras formas de evaluarla si usted lo prefiere."),
         ("Un plan personalizado", "Tratamiento manual más ejercicio específico y progresivo, diseñado para usted, nunca un programa igual para todas."),
         ("Progreso real y duradero", "Medimos su mejoría y la guiamos de regreso a las actividades que le importan, con estrategias para mantener lo que ha logrado."),
     ],
@@ -63,13 +63,13 @@ PAGE = {
     'faq_title': "Preguntas frecuentes sobre la terapia prenatal y posparto",
     'faqs': [
         ("¿Cuándo debo empezar, durante el embarazo o después?", "En los dos momentos. Durante el embarazo le ayudamos con el dolor de espalda y de pelvis y con la forma de mover el cuerpo, y después del parto, con la recuperación del abdomen (core), la diástasis de rectos y un regreso seguro al ejercicio. Después del parto, muchas mujeres empiezan cuando su médico o proveedor de salud les da el visto bueno."),
-        ("¿Tratan la diástasis de rectos y los problemas del piso pélvico?", "Sí. Son una parte central de nuestra atención de salud de la mujer, siempre individual y en privado. Vea también nuestra página de terapia del piso pélvico."),
+        ("¿Tratan la diástasis de rectos y los problemas del piso pélvico?", "Sí. Son una parte central de nuestra atención de salud de la mujer, siempre individual. Vea también nuestra página de terapia del piso pélvico."),
         ("¿Qué pasa en la primera visita?", "Su evaluación inicial dura de 45 a 60 minutos, aproximadamente. Hablamos de su historia y sus metas, hacemos una evaluación cómoda y empezamos su plan personalizado."),
         ("¿Es demasiado tarde si mi bebé ya tiene uno o dos años?", "No. Las pérdidas de orina, la sensación de pesadez, la debilidad del abdomen y el dolor durante las relaciones sexuales pueden mejorar con terapia física mucho tiempo después del parto."),
         ("¿Necesito un examen del piso pélvico?", "No siempre. Puede dar la información más útil, pero es su decisión, y su fisioterapeuta también puede evaluarla y tratarla de otras formas."),
         ("¿El seguro cubre la terapia física prenatal y posparto?", "Muchos planes cubren la terapia física cuando es médicamente necesaria. Aceptamos la mayoría de los seguros médicos privados y Medicare, y le ayudamos a revisar sus beneficios: (661) 282-8584."),
     ],
-    'side': "La atención prenatal y posparto en ARI es individual con un fisioterapeuta con licencia, en un cuarto privado.",
+    'side': "La atención prenatal y posparto en ARI es individual con un fisioterapeuta con licencia.",
     'related': [
         ("Dolor de espalda y pelvis en el embarazo", "dolor-de-espalda-y-pelvis-en-el-embarazo.html"),
         ("Pérdidas de orina", "perdidas-de-orina-incontinencia.html"),

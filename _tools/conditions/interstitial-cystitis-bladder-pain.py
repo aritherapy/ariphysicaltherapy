@@ -6,7 +6,7 @@ PAGE = {
     'eyebrow': 'Women&rsquo;s Health',
     'h1': 'Interstitial Cystitis and Bladder Pain Treatment in',
     'lead': 'Bladder pain and pressure, and needing to go again and again, but the tests keep coming back clear. Tight pelvic floor muscles are often part of the picture, and they can be treated.',
-    'answer': '<strong>Yes, pelvic floor physical therapy can help interstitial cystitis and bladder pain.</strong> Many women with interstitial cystitis (bladder pain syndrome) have tight, tender pelvic floor muscles. Urology guidelines recommend gentle hands-on pelvic floor therapy to relax them, rather than strengthening exercises like Kegels. At ARI Physical Therapy in Bakersfield, pelvic floor therapy is for women, always one-on-one in a private room.',
+    'answer': '<strong>Yes, pelvic floor physical therapy can help interstitial cystitis and bladder pain.</strong> Many women with interstitial cystitis (bladder pain syndrome) have tight, tender pelvic floor muscles. Urology guidelines recommend gentle hands-on pelvic floor therapy to relax them, rather than strengthening exercises like Kegels. At ARI Physical Therapy in Bakersfield, pelvic floor therapy is for women, always one-on-one.',
     'signs': [
         'Pain, pressure or burning in the bladder or low belly, often easing after you urinate',
         'Needing to urinate often, including at night',
@@ -39,7 +39,7 @@ PAGE = {
         ('Will I need an internal exam?', 'Not necessarily. An exam can give useful information, but it\'s always explained first and it\'s your choice. Your therapist can also assess and treat in other ways.'),
         ('Does diet matter?', 'For some women, certain foods and drinks trigger flares. Your doctor may suggest tracking triggers, and your therapist can help with bladder habits alongside that.'),
     ],
-    'side': 'Pelvic floor therapy at ARI is for women, one-on-one in a private room.',
+    'side': 'Pelvic floor therapy at ARI is for women, always one-on-one.',
     'related': [('Pelvic Pain &amp; Painful Sex', 'pelvic-pain-painful-sex.html'), ('Pelvic Floor Therapy for Women', 'pelvic-floor-therapy.html'), ('Bladder Leaks', 'bladder-leaks-incontinence.html')],
     # checklist phrases on service pages that link here once this page is live (release.py)
     'links_from': [('services.html', 'Pelvic pain and interstitial cystitis', 'interstitial cystitis'), ('pelvic-floor-therapy.html', 'Pelvic pain &amp; interstitial cystitis', 'interstitial cystitis')],
