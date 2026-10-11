@@ -20,13 +20,14 @@ PAGE = {
     'why': [],
     'steps': [
         ("Una evaluación individual", "Su primera visita (de 45 a 60 minutos, aproximadamente) es una conversación tranquila y confidencial sobre su historia y sus metas, seguida de una evaluación suave."),
-        ("Un plan de tratamiento personalizado", "Terapia manual, ejercicios específicos y educación. Todo se basa en su cuerpo y en sus metas, nunca en un programa igual para todas."),
+        ("Un plan de tratamiento personalizado", "Terapia manual, ejercicios específicos y educación, además de entrenamiento con biorretroalimentación (biofeedback) cuando ayuda, para que pueda ver cómo trabajan los músculos de su piso pélvico. Todo se basa en su cuerpo y en sus metas, nunca en un programa igual para todas."),
         ("Avance a su propio ritmo", "Atención discreta y respetuosa en cada paso, con un fisioterapeuta que la escucha y ajusta el tratamiento a medida que usted mejora."),
     ],
     'red_flags': [],
     'faq_title': "Preguntas frecuentes sobre la terapia del piso pélvico",
     'faqs': [
         ("¿La terapia del piso pélvico es discreta?", "Sí. En ARI, la terapia del piso pélvico es individual, con un fisioterapeuta con licencia. Su comodidad y su dignidad son lo primero en cada visita."),
+        ("¿Ofrecen biorretroalimentación (biofeedback) para el piso pélvico?", "Sí. Cuando ayuda, su fisioterapeuta usa entrenamiento con biorretroalimentación (biofeedback) para que pueda ver cómo se contraen y se relajan los músculos de su piso pélvico. Así es más fácil aprender los ejercicios correctos, y siempre se lo explicamos antes."),
         ("¿Qué pasa en la primera visita?", "Su evaluación inicial dura de 45 a 60 minutos, aproximadamente. Hablamos de su historia y sus metas, hacemos una evaluación y empezamos su plan de tratamiento personalizado."),
     ],
     'side': "La terapia del piso pélvico en ARI es para mujeres, individual con un fisioterapeuta con licencia.",
