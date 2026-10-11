@@ -1,5 +1,5 @@
 PAGE = {
-    'reviewed': None,   # DRAFT: awaiting clinical review by Deepa
+    'reviewed': '2026-10-10',   # DRAFT: awaiting clinical review by Deepa
     'title': 'Spinal Stenosis Physical Therapy in Bakersfield | ARI PT',
     'description': 'Legs ache or feel heavy when you walk or stand, and sitting helps? Physical therapy for lumbar spinal stenosis in Bakersfield, CA. No referral needed.',
     'crumb': 'Spinal Stenosis',

@@ -8,7 +8,7 @@ GROUPS = [
 
 PAGES = [
 {
-    'slug': 'how-do-i-know-if-back-pain-is-serious', 'group': 'back', 'reviewed': None, 'batch': 4, 'about': 'Low back pain',
+    'slug': 'how-do-i-know-if-back-pain-is-serious', 'group': 'back', 'reviewed': '2026-10-10', 'batch': 4, 'about': 'Low back pain',
     'q': 'How Do I Know If My Back Pain Is Serious?',
     'crumb': 'Is my back pain serious?',
     'title': 'How Do I Know If My Back Pain Is Serious? | ARI PT',
@@ -38,7 +38,7 @@ PAGES = [
     'guide': ('Sciatica and back pain', 'sciatica-back-pain.html'),
 },
 {
-    'slug': 'should-i-stretch-with-sciatica', 'group': 'back', 'reviewed': None, 'batch': 4, 'about': 'Sciatica',
+    'slug': 'should-i-stretch-with-sciatica', 'group': 'back', 'reviewed': '2026-10-10', 'batch': 4, 'about': 'Sciatica',
     'q': 'Should I Stretch If I Have Sciatica?',
     'crumb': 'Stretching with sciatica',
     'title': 'Should I Stretch If I Have Sciatica? | ARI PT',
@@ -65,7 +65,7 @@ PAGES = [
     'guide': ('Sciatica and back pain', 'sciatica-back-pain.html'),
 },
 {
-    'slug': 'can-poor-posture-cause-back-pain', 'group': 'back', 'reviewed': None, 'batch': 4, 'about': 'Low back pain',
+    'slug': 'can-poor-posture-cause-back-pain', 'group': 'back', 'reviewed': '2026-10-10', 'batch': 4, 'about': 'Low back pain',
     'q': 'Can Bad Posture Really Cause Back Pain?',
     'crumb': 'Does posture cause back pain?',
     'title': 'Can Bad Posture Really Cause Back Pain? | ARI PT',
@@ -93,7 +93,7 @@ PAGES = [
     'guide': ('Sciatica and back pain', 'sciatica-back-pain.html'),
 },
 {
-    'slug': 'can-physical-therapy-help-tension-headaches', 'group': 'neck', 'reviewed': None, 'batch': 4, 'about': 'Tension-type headache',
+    'slug': 'can-physical-therapy-help-tension-headaches', 'group': 'neck', 'reviewed': '2026-10-10', 'batch': 4, 'about': 'Tension-type headache',
     'q': 'Can Physical Therapy Help Tension Headaches?',
     'crumb': 'PT for tension headaches',
     'title': 'Can Physical Therapy Help Tension Headaches? | ARI PT',
@@ -122,7 +122,7 @@ PAGES = [
     'guide': ('Neck pain and headaches', 'neck-pain-headaches.html'),
 },
 {
-    'slug': 'neck-pain-after-car-accident-delayed', 'group': 'neck', 'reviewed': None, 'batch': 4, 'about': 'Whiplash',
+    'slug': 'neck-pain-after-car-accident-delayed', 'group': 'neck', 'reviewed': '2026-10-10', 'batch': 4, 'about': 'Whiplash',
     'q': 'Why Did My Neck Start Hurting Days After a Car Accident?',
     'crumb': 'Delayed neck pain after an accident',
     'title': 'Neck Pain Days After a Car Accident: Why? | ARI PT',
@@ -151,7 +151,7 @@ PAGES = [
     'guide': ('Car accident and whiplash', 'car-accident-whiplash.html'),
 },
 {
-    'slug': 'why-does-my-jaw-click', 'group': 'neck', 'reviewed': None, 'batch': 4, 'about': 'Temporomandibular disorder',
+    'slug': 'why-does-my-jaw-click', 'group': 'neck', 'reviewed': '2026-10-10', 'batch': 4, 'about': 'Temporomandibular disorder',
     'q': 'Why Does My Jaw Click or Pop When I Open My Mouth?',
     'crumb': 'Jaw clicking or popping',
     'title': 'Why Does My Jaw Click or Pop? | ARI Physical Therapy',
@@ -182,7 +182,7 @@ PAGES = [
     'guide': ('TMJ and jaw pain', 'tmj-jaw-pain.html'),
 },
 {
-    'slug': 'why-does-my-shoulder-click', 'group': 'shoulder-hand', 'reviewed': None, 'batch': 4, 'about': 'Shoulder pain',
+    'slug': 'why-does-my-shoulder-click', 'group': 'shoulder-hand', 'reviewed': '2026-10-10', 'batch': 4, 'about': 'Shoulder pain',
     'q': 'Why Does My Shoulder Click or Pop?',
     'crumb': 'Shoulder clicking or popping',
     'title': 'Why Does My Shoulder Click or Pop? | ARI PT',
@@ -210,7 +210,7 @@ PAGES = [
     'guide': ('Frozen shoulder and rotator cuff', 'frozen-shoulder-rotator-cuff.html'),
 },
 {
-    'slug': 'should-i-rest-tendonitis', 'group': 'shoulder-hand', 'reviewed': None, 'batch': 4, 'about': 'Tendinopathy',
+    'slug': 'should-i-rest-tendonitis', 'group': 'shoulder-hand', 'reviewed': '2026-10-10', 'batch': 4, 'about': 'Tendinopathy',
     'q': 'Should I Rest Tendonitis Until It Stops Hurting?',
     'crumb': 'Should I rest tendonitis?',
     'title': 'Should I Rest Tendonitis Until It Stops Hurting? | ARI PT',
@@ -237,7 +237,7 @@ PAGES = [
     'guide': ('Tendonitis and overuse injuries', 'tendonitis-overuse-injuries.html'),
 },
 {
-    'slug': 'how-long-does-a-sprained-ankle-take-to-heal', 'group': 'foot-ankle', 'reviewed': None, 'batch': 4, 'about': 'Ankle sprain',
+    'slug': 'how-long-does-a-sprained-ankle-take-to-heal', 'group': 'foot-ankle', 'reviewed': '2026-10-10', 'batch': 4, 'about': 'Ankle sprain',
     'q': 'How Long Does a Sprained Ankle Take to Heal?',
     'crumb': 'Sprained ankle healing time',
     'title': 'How Long Does a Sprained Ankle Take to Heal? | ARI PT',
@@ -264,7 +264,7 @@ PAGES = [
     'guide': ('Ankle sprains and Achilles pain', 'ankle-sprain-achilles-pain.html'),
 },
 {
-    'slug': 'why-does-my-knee-swell-after-exercise', 'group': 'knee', 'reviewed': None, 'batch': 4, 'about': 'Knee effusion',
+    'slug': 'why-does-my-knee-swell-after-exercise', 'group': 'knee', 'reviewed': '2026-10-10', 'batch': 4, 'about': 'Knee effusion',
     'q': 'Why Does My Knee Swell After Exercise?',
     'crumb': 'Knee swelling after exercise',
     'title': 'Why Does My Knee Swell After Exercise? | ARI PT',

@@ -1,5 +1,5 @@
 PAGE = {
-    'reviewed': None,   # DRAFT: awaiting clinical review by Deepa
+    'reviewed': '2026-10-10',   # DRAFT: awaiting clinical review by Deepa
     'title': 'Pinched Nerve in the Neck PT in Bakersfield | ARI PT',
     'description': 'Pain, tingling or numbness running from your neck down your arm? Physical therapy for a pinched nerve in the neck in Bakersfield, CA. No referral needed.',
     'crumb': 'Pinched Nerve in the Neck',

@@ -1,5 +1,5 @@
 PAGE = {
-    'reviewed': None,   # DRAFT: needs clinical review by Deepa before release
+    'reviewed': '2026-10-10',   # DRAFT: needs clinical review by Deepa before release
     'title': 'Torn Meniscus Physical Therapy in Bakersfield | ARI PT',
     'description': 'Knee catching, swelling or pain after a twist? Physical therapy for torn meniscus, from wear or from an injury, in Bakersfield, CA. No referral needed.',
     'crumb': 'Torn Meniscus',

@@ -1,5 +1,5 @@
 PAGE = {
-    'reviewed': None,   # DRAFT: awaiting clinical review by Deepa
+    'reviewed': '2026-10-10',   # DRAFT: awaiting clinical review by Deepa
     'title': 'Herniated & Bulging Disc PT in Bakersfield | ARI PT',
     'description': 'Told you have a herniated or bulging disc in your low back? Learn what your MRI means and how physical therapy helps, in Bakersfield, CA. No referral needed.',
     'crumb': 'Herniated &amp; Bulging Disc',

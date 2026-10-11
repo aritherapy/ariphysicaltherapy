@@ -1,5 +1,5 @@
 PAGE = {
-    'reviewed': None,   # DRAFT: needs clinical review by Deepa before release
+    'reviewed': '2026-10-10',   # DRAFT: needs clinical review by Deepa before release
     'title': 'Upper Back Pain Physical Therapy in Bakersfield | ARI PT',
     'description': 'Pain between your shoulder blades or a stiff upper back from desk or phone time? Physical therapy for upper and mid back pain in Bakersfield, CA.',
     'crumb': 'Upper Back Pain',

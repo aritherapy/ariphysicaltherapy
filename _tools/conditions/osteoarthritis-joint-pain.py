@@ -1,5 +1,5 @@
 PAGE = {
-    'reviewed': None,   # DRAFT: needs clinical review by Deepa before release
+    'reviewed': '2026-10-10',   # DRAFT: needs clinical review by Deepa before release
     'title': 'Osteoarthritis & Joint Pain PT in Bakersfield | ARI PT',
     'description': 'Stiff, achy joints in your hands, knees, hips or back? Physical therapy for osteoarthritis and joint pain in Bakersfield, CA. No referral needed to start.',
     'crumb': 'Osteoarthritis &amp; Joint Pain',

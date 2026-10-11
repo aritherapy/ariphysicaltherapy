@@ -12,7 +12,7 @@ GROUPS = [
 PAGES = [
 # ---------------------------------------------------------------- back
 {
-    'slug': 'why-does-my-lower-back-hurt-when-i-bend-over', 'group': 'back', 'reviewed': None, 'batch': 5, 'about': 'Low back pain',
+    'slug': 'why-does-my-lower-back-hurt-when-i-bend-over', 'group': 'back', 'reviewed': '2026-10-10', 'batch': 5, 'about': 'Low back pain',
     'q': 'Why Does My Lower Back Hurt When I Bend Over?',
     'crumb': 'Low back pain when bending',
     'title': 'Why Does My Lower Back Hurt When I Bend Over? | ARI PT',
@@ -43,7 +43,7 @@ PAGES = [
     'guide': ('Herniated and bulging discs', 'herniated-disc-bulging-disc.html'),
 },
 {
-    'slug': 'why-does-my-back-hurt-when-standing', 'group': 'back', 'reviewed': None, 'batch': 5, 'about': 'Low back pain',
+    'slug': 'why-does-my-back-hurt-when-standing', 'group': 'back', 'reviewed': '2026-10-10', 'batch': 5, 'about': 'Low back pain',
     'q': 'Why Does My Back Hurt After Standing for a Long Time?',
     'crumb': 'Back pain from standing',
     'title': 'Why Does My Back Hurt After Standing? | ARI PT',
@@ -75,7 +75,7 @@ PAGES = [
     'guide': ('Spinal stenosis', 'spinal-stenosis.html'),
 },
 {
-    'slug': 'what-causes-pain-between-shoulder-blades', 'group': 'back', 'reviewed': None, 'batch': 5, 'about': 'Upper back pain',
+    'slug': 'what-causes-pain-between-shoulder-blades', 'group': 'back', 'reviewed': '2026-10-10', 'batch': 5, 'about': 'Upper back pain',
     'q': 'What Causes Pain Between My Shoulder Blades?',
     'crumb': 'Pain between the shoulder blades',
     'title': 'What Causes Pain Between the Shoulder Blades? | ARI PT',
@@ -107,7 +107,7 @@ PAGES = [
     'guide': ('Upper back pain', 'upper-back-pain-posture.html'),
 },
 {
-    'slug': 'lower-back-pain-on-one-side', 'group': 'back', 'reviewed': None, 'batch': 5, 'about': 'Low back pain',
+    'slug': 'lower-back-pain-on-one-side', 'group': 'back', 'reviewed': '2026-10-10', 'batch': 5, 'about': 'Low back pain',
     'q': 'Why Does My Lower Back Hurt on One Side?',
     'crumb': 'Low back pain on one side',
     'title': 'Why Does My Lower Back Hurt on One Side? | ARI PT',
@@ -135,7 +135,7 @@ PAGES = [
     'guide': ('SI joint pain', 'si-joint-pain.html'),
 },
 {
-    'slug': 'best-sleeping-position-for-back-pain', 'group': 'back', 'reviewed': None, 'batch': 5, 'about': 'Low back pain',
+    'slug': 'best-sleeping-position-for-back-pain', 'group': 'back', 'reviewed': '2026-10-10', 'batch': 5, 'about': 'Low back pain',
     'q': 'What Is the Best Sleeping Position for Back Pain?',
     'crumb': 'Sleeping position for back pain',
     'title': 'Best Sleeping Position for Back Pain | ARI PT',
@@ -163,7 +163,7 @@ PAGES = [
 },
 # ---------------------------------------------------------------- neck
 {
-    'slug': 'what-does-a-pinched-nerve-feel-like', 'group': 'neck', 'reviewed': None, 'batch': 5, 'about': 'Radiculopathy',
+    'slug': 'what-does-a-pinched-nerve-feel-like', 'group': 'neck', 'reviewed': '2026-10-10', 'batch': 5, 'about': 'Radiculopathy',
     'q': 'What Does a Pinched Nerve Feel Like?',
     'crumb': 'What a pinched nerve feels like',
     'title': 'What Does a Pinched Nerve Feel Like? | ARI PT',
@@ -193,7 +193,7 @@ PAGES = [
     'guide': ('Pinched nerve in the neck', 'pinched-nerve-neck.html'),
 },
 {
-    'slug': 'can-stress-make-back-or-neck-pain-worse', 'group': 'neck', 'reviewed': None, 'batch': 5, 'about': 'Musculoskeletal pain',
+    'slug': 'can-stress-make-back-or-neck-pain-worse', 'group': 'neck', 'reviewed': '2026-10-10', 'batch': 5, 'about': 'Musculoskeletal pain',
     'q': 'Can Stress Make Back or Neck Pain Worse?',
     'crumb': 'Stress and back or neck pain',
     'title': 'Can Stress Make Back or Neck Pain Worse? | ARI PT',
@@ -226,7 +226,7 @@ PAGES = [
 },
 # ---------------------------------------------------------------- shoulder-hand
 {
-    'slug': 'why-does-my-arm-tingle', 'group': 'shoulder-hand', 'reviewed': None, 'batch': 5, 'about': 'Paresthesia',
+    'slug': 'why-does-my-arm-tingle', 'group': 'shoulder-hand', 'reviewed': '2026-10-10', 'batch': 5, 'about': 'Paresthesia',
     'q': 'Why Does My Arm Tingle or Go Numb?',
     'crumb': 'Arm tingling or numbness',
     'title': 'Why Does My Arm Tingle or Go Numb? | ARI PT',
@@ -257,7 +257,7 @@ PAGES = [
     'guide': ('Pinched nerve in the neck', 'pinched-nerve-neck.html'),
 },
 {
-    'slug': 'why-does-my-thumb-joint-hurt', 'group': 'shoulder-hand', 'reviewed': None, 'batch': 5, 'about': 'Thumb pain',
+    'slug': 'why-does-my-thumb-joint-hurt', 'group': 'shoulder-hand', 'reviewed': '2026-10-10', 'batch': 5, 'about': 'Thumb pain',
     'q': 'Why Does My Thumb Joint Hurt?',
     'crumb': 'Thumb joint pain',
     'title': 'Why Does My Thumb Joint Hurt? | ARI Physical Therapy',
@@ -287,7 +287,7 @@ PAGES = [
     'guide': ('Hand and wrist pain', 'hand-wrist-therapy.html'),
 },
 {
-    'slug': 'wrist-pain-when-doing-push-ups', 'group': 'shoulder-hand', 'reviewed': None, 'batch': 5, 'about': 'Wrist pain',
+    'slug': 'wrist-pain-when-doing-push-ups', 'group': 'shoulder-hand', 'reviewed': '2026-10-10', 'batch': 5, 'about': 'Wrist pain',
     'q': 'Why Does My Wrist Hurt When I Do Push-Ups or Push Up From a Chair?',
     'crumb': 'Wrist pain with push-ups',
     'title': 'Why Does My Wrist Hurt When I Push Up? | ARI PT',
@@ -318,7 +318,7 @@ PAGES = [
     'guide': ('Hand and wrist pain', 'hand-wrist-therapy.html'),
 },
 {
-    'slug': 'why-does-my-upper-arm-hurt', 'group': 'shoulder-hand', 'reviewed': None, 'batch': 5, 'about': 'Shoulder pain',
+    'slug': 'why-does-my-upper-arm-hurt', 'group': 'shoulder-hand', 'reviewed': '2026-10-10', 'batch': 5, 'about': 'Shoulder pain',
     'q': 'Why Does My Upper Arm Hurt Near My Shoulder?',
     'crumb': 'Upper arm pain near the shoulder',
     'title': 'Why Does My Upper Arm Hurt Near My Shoulder? | ARI PT',
@@ -349,7 +349,7 @@ PAGES = [
 },
 # ---------------------------------------------------------------- knee
 {
-    'slug': 'why-does-my-knee-hurt-when-i-kneel', 'group': 'knee', 'reviewed': None, 'batch': 5, 'about': 'Anterior knee pain',
+    'slug': 'why-does-my-knee-hurt-when-i-kneel', 'group': 'knee', 'reviewed': '2026-10-10', 'batch': 5, 'about': 'Anterior knee pain',
     'q': 'Why Does My Knee Hurt When I Kneel?',
     'crumb': 'Knee pain when kneeling',
     'title': 'Why Does My Knee Hurt When I Kneel? | ARI PT',
@@ -381,7 +381,7 @@ PAGES = [
     'guide': ('Knee pain and arthritis', 'knee-pain-arthritis.html'),
 },
 {
-    'slug': 'why-does-the-back-of-my-knee-hurt', 'group': 'knee', 'reviewed': None, 'batch': 5, 'about': 'Posterior knee pain',
+    'slug': 'why-does-the-back-of-my-knee-hurt', 'group': 'knee', 'reviewed': '2026-10-10', 'batch': 5, 'about': 'Posterior knee pain',
     'q': 'Why Does the Back of My Knee Hurt?',
     'crumb': 'Pain behind the knee',
     'title': 'Why Does the Back of My Knee Hurt? | ARI PT',
@@ -413,7 +413,7 @@ PAGES = [
 },
 # ---------------------------------------------------------------- hip
 {
-    'slug': 'is-my-hip-pain-coming-from-my-back', 'group': 'hip', 'reviewed': None, 'batch': 5, 'about': 'Hip pain',
+    'slug': 'is-my-hip-pain-coming-from-my-back', 'group': 'hip', 'reviewed': '2026-10-10', 'batch': 5, 'about': 'Hip pain',
     'q': 'Is My Hip Pain Actually Coming From My Back?',
     'crumb': 'Hip pain or back pain?',
     'title': 'Is My Hip Pain Coming From My Back? | ARI PT',
@@ -447,7 +447,7 @@ PAGES = [
 },
 # ---------------------------------------------------------------- foot-ankle
 {
-    'slug': 'why-does-the-ball-of-my-foot-hurt', 'group': 'foot-ankle', 'reviewed': None, 'batch': 5, 'about': 'Metatarsalgia',
+    'slug': 'why-does-the-ball-of-my-foot-hurt', 'group': 'foot-ankle', 'reviewed': '2026-10-10', 'batch': 5, 'about': 'Metatarsalgia',
     'q': 'Why Does the Ball of My Foot Hurt?',
     'crumb': 'Pain in the ball of the foot',
     'title': 'Why Does the Ball of My Foot Hurt? | ARI PT',
@@ -478,7 +478,7 @@ PAGES = [
 },
 # ---------------------------------------------------------------- bone-surgery (joint pain, general)
 {
-    'slug': 'is-it-arthritis-or-tendonitis', 'group': 'bone-surgery', 'reviewed': None, 'batch': 5, 'about': 'Joint pain',
+    'slug': 'is-it-arthritis-or-tendonitis', 'group': 'bone-surgery', 'reviewed': '2026-10-10', 'batch': 5, 'about': 'Joint pain',
     'q': 'Is My Joint Pain Arthritis or Tendonitis?',
     'crumb': 'Arthritis or tendonitis?',
     'title': 'Is It Arthritis or Tendonitis? | ARI Physical Therapy',
@@ -511,7 +511,7 @@ PAGES = [
     'guide': ('Osteoarthritis and joint pain', 'osteoarthritis-joint-pain.html'),
 },
 {
-    'slug': 'when-should-i-worry-about-joint-pain', 'group': 'bone-surgery', 'reviewed': None, 'batch': 5, 'about': 'Joint pain',
+    'slug': 'when-should-i-worry-about-joint-pain', 'group': 'bone-surgery', 'reviewed': '2026-10-10', 'batch': 5, 'about': 'Joint pain',
     'q': 'When Should I Worry About Joint Pain?',
     'crumb': 'When to worry about joint pain',
     'title': 'When Should I Worry About Joint Pain? | ARI PT',
@@ -542,7 +542,7 @@ PAGES = [
     'guide': ('Osteoarthritis and joint pain', 'osteoarthritis-joint-pain.html'),
 },
 {
-    'slug': 'do-pain-relief-creams-work', 'group': 'bone-surgery', 'reviewed': None, 'batch': 5, 'about': 'Topical pain relief',
+    'slug': 'do-pain-relief-creams-work', 'group': 'bone-surgery', 'reviewed': '2026-10-10', 'batch': 5, 'about': 'Topical pain relief',
     'q': 'Do Pain Relief Creams and Gels Actually Work?',
     'crumb': 'Do pain creams work?',
     'title': 'Do Pain Relief Creams and Gels Work? | ARI PT',
@@ -574,7 +574,7 @@ PAGES = [
 },
 # ---------------------------------------------------------------- starting (general pain)
 {
-    'slug': 'why-does-my-pain-keep-coming-back', 'group': 'starting', 'reviewed': None, 'batch': 5, 'about': 'Recurrent pain',
+    'slug': 'why-does-my-pain-keep-coming-back', 'group': 'starting', 'reviewed': '2026-10-10', 'batch': 5, 'about': 'Recurrent pain',
     'q': 'Why Does My Pain Keep Coming Back After It Went Away?',
     'crumb': 'Why pain keeps coming back',
     'title': 'Why Does My Pain Keep Coming Back? | ARI PT',
@@ -604,7 +604,7 @@ PAGES = [
     'guide': ('Chronic pain therapy', 'chronic-pain-therapy.html'),
 },
 {
-    'slug': 'is-it-ok-to-exercise-with-pain', 'group': 'starting', 'reviewed': None, 'batch': 5, 'about': 'Exercise and pain',
+    'slug': 'is-it-ok-to-exercise-with-pain', 'group': 'starting', 'reviewed': '2026-10-10', 'batch': 5, 'about': 'Exercise and pain',
     'q': 'Is It OK to Exercise If It Hurts a Little?',
     'crumb': 'Exercising with some pain',
     'title': 'Is It OK to Exercise If It Hurts a Little? | ARI PT',

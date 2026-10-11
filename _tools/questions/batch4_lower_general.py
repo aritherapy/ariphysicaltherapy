@@ -3,7 +3,7 @@ GROUPS = [('hip', 'Hip'), ('foot-ankle', 'Foot &amp; Ankle'), ('pelvic', 'Women&
 
 PAGES = [
 {
-    'slug': 'what-helps-shin-splints', 'group': 'foot-ankle', 'reviewed': None, 'batch': 4, 'about': 'Shin splints (medial tibial stress syndrome)',
+    'slug': 'what-helps-shin-splints', 'group': 'foot-ankle', 'reviewed': '2026-10-10', 'batch': 4, 'about': 'Shin splints (medial tibial stress syndrome)',
     'q': 'What Helps Shin Splints?',
     'crumb': 'What helps shin splints?',
     'title': 'What Helps Shin Splints? Causes and Recovery | ARI PT',
@@ -34,7 +34,7 @@ PAGES = [
     'guide': ('Tendonitis and overuse injuries', 'tendonitis-overuse-injuries.html'),
 },
 {
-    'slug': 'why-does-my-groin-hurt', 'group': 'hip', 'reviewed': None, 'batch': 4, 'about': 'Groin pain',
+    'slug': 'why-does-my-groin-hurt', 'group': 'hip', 'reviewed': '2026-10-10', 'batch': 4, 'about': 'Groin pain',
     'q': 'Why Does My Groin Hurt When I Walk or Run?',
     'crumb': 'Groin pain when walking or running',
     'title': 'Why Does My Groin Hurt When I Walk or Run? | ARI PT',
@@ -63,7 +63,7 @@ PAGES = [
     'guide': ('Hip pain', 'hip-pain.html'),
 },
 {
-    'slug': 'always-feel-like-i-need-to-pee', 'group': 'pelvic', 'reviewed': None, 'batch': 4, 'about': 'Overactive bladder',
+    'slug': 'always-feel-like-i-need-to-pee', 'group': 'pelvic', 'reviewed': '2026-10-10', 'batch': 4, 'about': 'Overactive bladder',
     'q': 'Why Do I Always Feel Like I Need to Pee?',
     'crumb': 'Always feeling like you need to pee',
     'title': 'Why Do I Always Feel Like I Need to Pee? | ARI PT',
@@ -96,7 +96,7 @@ PAGES = [
     'guide': ('Bladder leaks (urinary incontinence)', 'bladder-leaks-incontinence.html'),
 },
 {
-    'slug': 'what-happens-at-pelvic-floor-therapy', 'group': 'pelvic', 'reviewed': None, 'batch': 4,
+    'slug': 'what-happens-at-pelvic-floor-therapy', 'group': 'pelvic', 'reviewed': '2026-10-10', 'batch': 4,
     'q': 'What Happens at a Pelvic Floor Therapy Visit?',
     'crumb': 'Your pelvic floor therapy visit',
     'title': 'What Happens at a Pelvic Floor Therapy Visit? | ARI PT',
@@ -117,7 +117,7 @@ PAGES = [
     'guide': ('Pelvic floor therapy', 'pelvic-floor-therapy.html'),
 },
 {
-    'slug': 'will-physical-therapy-hurt', 'group': 'starting', 'reviewed': None, 'batch': 4,
+    'slug': 'will-physical-therapy-hurt', 'group': 'starting', 'reviewed': '2026-10-10', 'batch': 4,
     'q': 'Will Physical Therapy Hurt?',
     'crumb': 'Will physical therapy hurt?',
     'title': 'Will Physical Therapy Hurt? What\'s Normal | ARI PT',
@@ -148,7 +148,7 @@ PAGES = [
     'guide': None,
 },
 {
-    'slug': 'physical-therapist-vs-personal-trainer', 'group': 'starting', 'reviewed': None, 'batch': 4,
+    'slug': 'physical-therapist-vs-personal-trainer', 'group': 'starting', 'reviewed': '2026-10-10', 'batch': 4,
     'q': 'What\'s the Difference Between a Physical Therapist and a Personal Trainer?',
     'crumb': 'Physical therapist or personal trainer?',
     'title': 'Physical Therapist vs Personal Trainer | ARI PT',
@@ -167,7 +167,7 @@ PAGES = [
     'guide': None,
 },
 {
-    'slug': 'how-soon-to-start-physical-therapy-after-injury', 'group': 'starting', 'reviewed': None, 'batch': 4,
+    'slug': 'how-soon-to-start-physical-therapy-after-injury', 'group': 'starting', 'reviewed': '2026-10-10', 'batch': 4,
     'q': 'How Soon Should I Start Physical Therapy After an Injury?',
     'crumb': 'How soon to start after an injury',
     'title': 'How Soon to Start Physical Therapy After an Injury | ARI PT',
@@ -196,7 +196,7 @@ PAGES = [
     'guide': ('Muscle strains', 'muscle-strains.html'),
 },
 {
-    'slug': 'does-physical-therapy-help-arthritis', 'group': 'bone-surgery', 'reviewed': None, 'batch': 4, 'about': 'Osteoarthritis',
+    'slug': 'does-physical-therapy-help-arthritis', 'group': 'bone-surgery', 'reviewed': '2026-10-10', 'batch': 4, 'about': 'Osteoarthritis',
     'q': 'Does Physical Therapy Help Arthritis?',
     'crumb': 'Does physical therapy help arthritis?',
     'title': 'Does Physical Therapy Help Arthritis? | ARI PT',
@@ -226,7 +226,7 @@ PAGES = [
     'guide': ('Knee pain and arthritis', 'knee-pain-arthritis.html'),
 },
 {
-    'slug': 'is-walking-enough-for-osteoporosis', 'group': 'bone-surgery', 'reviewed': None, 'batch': 4, 'about': 'Osteoporosis',
+    'slug': 'is-walking-enough-for-osteoporosis', 'group': 'bone-surgery', 'reviewed': '2026-10-10', 'batch': 4, 'about': 'Osteoporosis',
     'q': 'Is Walking Enough Exercise for Osteoporosis?',
     'crumb': 'Is walking enough for osteoporosis?',
     'title': 'Is Walking Enough Exercise for Osteoporosis? | ARI PT',
@@ -254,7 +254,7 @@ PAGES = [
     'guide': ('Osteoporosis and bone health', 'osteoporosis-bone-health.html'),
 },
 {
-    'slug': 'when-can-i-drive-after-joint-replacement', 'group': 'bone-surgery', 'reviewed': None, 'batch': 4, 'about': 'Joint replacement recovery',
+    'slug': 'when-can-i-drive-after-joint-replacement', 'group': 'bone-surgery', 'reviewed': '2026-10-10', 'batch': 4, 'about': 'Joint replacement recovery',
     'q': 'When Can I Drive After a Knee or Hip Replacement?',
     'crumb': 'Driving after joint replacement',
     'title': 'When Can I Drive After Knee or Hip Replacement? | ARI PT',

@@ -1,5 +1,5 @@
 PAGE = {
-    'reviewed': None,   # DRAFT: needs clinical review by Deepa before release
+    'reviewed': '2026-10-10',   # DRAFT: needs clinical review by Deepa before release
     'title': 'Shoulder Impingement & Bursitis PT in Bakersfield | ARI PT',
     'description': 'Pain partway up as you lift your arm? Physical therapy for shoulder impingement, bursitis and rotator cuff tendon pain in Bakersfield, CA. No referral needed.',
     'crumb': 'Shoulder Impingement &amp; Bursitis',

@@ -1,5 +1,5 @@
 PAGE = {
-    'reviewed': None,   # DRAFT: awaiting clinical review by Deepa
+    'reviewed': '2026-10-10',   # DRAFT: awaiting clinical review by Deepa
     'title': 'SI Joint Pain Physical Therapy in Bakersfield | ARI PT',
     'description': 'One-sided low back or buttock pain near the dimple? Physical therapy for sacroiliac (SI) joint pain in Bakersfield, CA, including during pregnancy.',
     'crumb': 'SI Joint Pain',
