@@ -18,6 +18,7 @@ to sitemap.xml and llms.txt.
 import html, importlib.util, json, os, re, sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import sources   # key sources list + schema citations, per page
 import spanish   # Spanish phrases and shell; a content file with PAGE['lang'] = 'es' builds a Spanish page
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -168,6 +169,7 @@ def build(slug):
 
     a, z = s.index('</nav>\n'), s.index('<footer')
     s = s[:a] + body(p) + s[z:]
+    s = sources.apply(slug, s)
     open(os.path.join(ROOT, slug + '.html'), 'w', encoding='utf-8').write(s)
     print(f"{slug}.html  {'LIVE' if p.get('reviewed') else 'DRAFT (noindex)'}  title {len(p['title'])} / desc {len(p['description'])} chars")
 

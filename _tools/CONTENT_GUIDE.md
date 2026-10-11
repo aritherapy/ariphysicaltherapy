@@ -35,3 +35,8 @@ Length: about 300–450 words. A question must not duplicate an existing page; c
 
 ## Check before handing over
 `python3 -c` import the file. Then check: title ≤62, description ≤158, condition h1 ends " in", every linked .html exists in the repo root, and no banned claims (search for: book online, telehealth, Medi-Cal, midwife, neuro, aquatic, dry needling, FCE, concussion, "our team speaks").
+
+## Sources (added 2026-10-11)
+- Condition guides get a short "Sources" list (2-4 links) from `_tools/sources.py` (SOURCES dict). build_condition.py applies it on every build; for hand-edited pages run `python3 _tools/sources.py <slug>`.
+- Only cite pages you opened and checked. Preference: APTA/JOSPT clinical practice guidelines, other society guidelines, then NIH (MedlinePlus, NIAMS, NIDDK, NIDCR, NIA), CDC, AAOS OrthoInfo, ACOG, womenshealth.gov.
+- The page content must agree with what the sources say. If a source contradicts the page, flag it for Deepa instead of citing it.
