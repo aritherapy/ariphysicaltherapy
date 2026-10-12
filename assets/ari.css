@@ -626,9 +626,9 @@ footer img{height:46px;width:auto}
 /* ---- condition pages ---- */
 .prose .plain-list{margin:0 0 16px;padding-left:20px;font-size:15px;line-height:1.8}
 .prose .plain-list li{margin-bottom:4px}
-.prose .med-disclaimer{font-size:13px;color:var(--text-light);margin-top:28px;margin-bottom:6px}
-.prose .reviewed-by{font-size:13px;color:var(--text-light);margin-bottom:0}
-.prose .reviewed-by a{color:var(--orange-text);font-weight:600}
+.prose .med-disclaimer,#a-z .med-disclaimer{font-size:13px;color:var(--text-light);margin-top:28px;margin-bottom:6px}
+.prose .reviewed-by,#a-z .reviewed-by{font-size:13px;color:var(--text-light);margin-bottom:0}
+.prose .reviewed-by a,#a-z .reviewed-by a{color:var(--orange-text);font-weight:600}
 
 @media(max-width:1024px){ /* nav: 8 menu items no longer fit beside the logo below ~1000px, so tablets get the phone menu */
   .navbar{flex-wrap:wrap}

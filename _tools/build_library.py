@@ -97,7 +97,7 @@ def body(G, Q):
                      '</ul></div>' for L, items in letters.items())
     n_g, n_q = sum(map(len, G.values())), sum(map(len, Q.values()))
     return f'''<section class="section"><div class="section-inner">
-  <div class="lib-trust"><p><b>Condition guides and patient questions</b>, written for patients and clinically reviewed by <a href="deepa-konnur.html">Deepa Konnur, PT, MPT, OCS</a>. <a href="editorial-policy.html">How we create our content</a></p>
+  <div class="lib-trust">
     <div class="cond-search"><label class="cond-search-h" for="cond-q">Search the library</label><form class="site-search site-search-inline" role="search"><div class="ss-row"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><use href="#i-search"/></svg><input id="cond-q" class="site-search-input" type="search" placeholder="Try &ldquo;heel pain&rdquo;" aria-label="Search conditions and patient questions" autocomplete="off"></div><div class="site-search-results" hidden aria-live="polite"></div></form></div></div>
   <div class="section-head" id="topics"><p class="eyebrow">Browse by topic</p><h2>What can we help you with?</h2></div>
   <div class="lib-tiles">{tiles}</div>
@@ -127,7 +127,8 @@ def body(G, Q):
   }});
 }})();
 </script>
-  <p class="med-disclaimer" style="margin-top:30px">Our health library is general information, not a diagnosis. If you have symptoms, a licensed clinician should evaluate you. If you think you have a medical emergency, call 911.</p>
+  <p class="med-disclaimer" style="margin-top:40px">Our health library is general information, not a diagnosis. If you have symptoms, a licensed clinician should evaluate you. If you think you have a medical emergency, call 911.</p>
+  <p class="reviewed-by">Our condition guides and patient questions are written for patients and clinically reviewed by <a href="deepa-konnur.html">Deepa Konnur, PT, MPT, OCS</a> &middot; <a href="editorial-policy.html">How we create our content</a></p>
 </div></section>'''
 
 
