@@ -91,6 +91,7 @@
     shoulder:'rotator cuff frozen', rotator:'shoulder', elbow:'tennis golfers', wrist:'carpal tunnel', hand:'carpal tunnel numbness',
     knee:'arthritis', arthritis:'knee osteoarthritis', hip:'orthopedic',
     pregnant:'prenatal postpartum pregnancy', pregnancy:'prenatal postpartum', baby:'postpartum pediatric', postpartum:'diastasis pelvic',
+    belly:'diastasis postpartum core', tummy:'diastasis postpartum belly', pooch:'diastasis belly', mommy:'diastasis postpartum', mummy:'diastasis postpartum', abs:'diastasis core', hanging:'diastasis belly',
     prolapse:'pelvic organ', pelvic:'pelvic floor', sex:'pelvic pain painful',
     kid:'pediatric child', kids:'pediatric children', child:'pediatric', children:'pediatric', son:'pediatric', daughter:'pediatric',
     bone:'osteoporosis', bones:'osteoporosis', osteopenia:'osteoporosis', fall:'balance osteoporosis',
