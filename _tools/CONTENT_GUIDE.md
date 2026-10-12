@@ -43,3 +43,6 @@ Length: about 300–450 words. A question must not duplicate an existing page; c
 
 ## CSS / JS changes
 - After any change to assets/ari.css or assets/ari.js, run `python3 _tools/bump_assets.py` (adds a new ?v= to every page) so visitors never see new HTML with a stale stylesheet.
+
+## Postpartum belly (Deepa, 2026-10-12)
+- A belly that sticks out after pregnancy is not always diastasis recti. Often it is a weak deep stabilizer (no real gap) with postural change: flared ribs and a sway back. Say both whenever we write about postpartum bellies.
