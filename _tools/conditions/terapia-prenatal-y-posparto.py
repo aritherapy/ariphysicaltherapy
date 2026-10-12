@@ -1,6 +1,6 @@
 PAGE = {
     'lang': 'es', 'en': 'postpartum-therapy',
-    'reviewed': None,   # borrador hasta que lo revise una persona hispanohablante
+    'reviewed': '2026-10-11',   # borrador hasta que lo revise una persona hispanohablante
     'title': "Terapia física prenatal y posparto en Bakersfield | ARI PT",
     'description': "Terapia física prenatal y posparto individual para mujeres en Bakersfield, CA: dolor en el embarazo, pérdidas de orina, diástasis, cesárea y ejercicio.",
     'crumb': "Terapia prenatal y posparto",

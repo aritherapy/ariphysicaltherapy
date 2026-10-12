@@ -242,8 +242,13 @@ Spanish-language pages for Spanish-speaking patients (ARI has Spanish-speaking s
 - [Equilibrio y prevención de caídas](https://ariphysicaltherapy.com/equilibrio-y-prevencion-de-caidas.html)
 - [Fascitis plantar](https://ariphysicaltherapy.com/fascitis-plantar-dolor-de-talon.html)
 - [Hombro congelado y manguito rotador](https://ariphysicaltherapy.com/hombro-congelado-manguito-rotador.html)
+- [Lesiones deportivas](https://ariphysicaltherapy.com/lesiones-deportivas.html)
 - [Pérdidas de orina](https://ariphysicaltherapy.com/perdidas-de-orina-incontinencia.html)
+- [Después de una cirugía](https://ariphysicaltherapy.com/rehabilitacion-despues-de-cirugia.html)
+- [Terapia del piso pélvico](https://ariphysicaltherapy.com/terapia-del-piso-pelvico.html)
 - [Compensación de trabajadores](https://ariphysicaltherapy.com/terapia-fisica-compensacion-de-trabajadores.html)
+- [Terapia pediátrica](https://ariphysicaltherapy.com/terapia-fisica-pediatrica.html)
+- [Terapia prenatal y posparto](https://ariphysicaltherapy.com/terapia-prenatal-y-posparto.html)
 - [Vértigo y mareo](https://ariphysicaltherapy.com/vertigo-y-mareo-vppb.html)
 
 ## More

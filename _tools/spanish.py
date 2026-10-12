@@ -96,7 +96,7 @@ FOOTER_ES = f'''<footer>
     </div></div>
   </div>
   <div class="foot-bot"><span>&copy; 2026 ARI Physical Therapy. Todos los derechos reservados.</span>
-  <span><a href="privacy-policy.html">Privacidad</a> &middot; <a href="sms-terms.html">Términos de SMS</a> &middot; 8200 Stockdale Hwy Suite B2, Bakersfield, CA 93311</span></div>
+  <span><a href="privacy-policy.html">Privacidad</a> &middot; <a href="sms-terms.html">Términos de SMS</a> &middot; <a href="editorial-policy.html" hreflang="en">Cómo creamos nuestro contenido</a> &middot; 8200 Stockdale Hwy Suite B2, Bakersfield, CA 93311</span></div>
 </footer>'''
 
 

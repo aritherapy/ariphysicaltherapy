@@ -1,6 +1,6 @@
 PAGE = {
     'lang': 'es', 'en': 'sports-injury-therapy',
-    'reviewed': None,   # draft until a Spanish speaker reviews it
+    'reviewed': '2026-10-11',   # draft until a Spanish speaker reviews it
     'title': "Terapia para lesiones deportivas en Bakersfield | ARI PT",
     'description': "Terapia física individual para lesiones deportivas en Bakersfield, CA: rehabilitación y regreso al deporte (LCA, LCM, manguito rotador, esguinces).",
     'crumb': "Lesiones deportivas",

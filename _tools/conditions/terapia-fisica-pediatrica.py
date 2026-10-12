@@ -1,6 +1,6 @@
 PAGE = {
     'lang': 'es', 'en': 'pediatric-therapy',
-    'reviewed': None,   # draft until a Spanish speaker reviews it
+    'reviewed': '2026-10-11',   # draft until a Spanish speaker reviews it
     'title': "Terapia física pediátrica en Bakersfield | ARI PT",
     'description': "Terapia física pediátrica individual en Bakersfield, CA: retrasos del desarrollo, coordinación, lesiones de jóvenes atletas y rehabilitación tras cirugía.",
     'crumb': "Terapia pediátrica",

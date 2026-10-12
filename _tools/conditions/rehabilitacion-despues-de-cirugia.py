@@ -1,6 +1,6 @@
 PAGE = {
     'lang': 'es', 'en': 'post-surgery-rehab',
-    'reviewed': None,   # draft until a Spanish speaker reviews it
+    'reviewed': '2026-10-11',   # draft until a Spanish speaker reviews it
     'title': "Rehabilitación después de cirugía en Bakersfield | ARI PT",
     'description': "Terapia física individual después de cirugía en Bakersfield, CA, coordinada con su cirujano: reemplazo de articulación, columna, LCA y manguito rotador.",
     'crumb': "Después de una cirugía",

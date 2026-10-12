@@ -1,6 +1,6 @@
 PAGE = {
     'lang': 'es', 'en': 'pelvic-floor-therapy',
-    'reviewed': None,   # borrador hasta que lo revise una persona hispanohablante
+    'reviewed': '2026-10-11',   # borrador hasta que lo revise una persona hispanohablante
     'title': "Terapia del piso pélvico para mujeres en Bakersfield | ARI PT",
     'description': "Terapia física del piso pélvico para mujeres en Bakersfield, CA. Atención individual y discreta para pérdidas de orina, dolor pélvico, prolapso y posparto.",
     'crumb': "Terapia del piso pélvico",
