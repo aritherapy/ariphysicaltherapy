@@ -5,7 +5,7 @@ GROUPS = [
 # Batch 8: postpartum belly questions, in the words Deepa's patients use (Deepa, 2026-10-12).
 PAGES = [
 {
-    'slug': 'why-is-my-belly-still-sticking-out-after-having-a-baby', 'group': 'pelvic', 'reviewed': None, 'batch': 8, 'about': 'Diastasis recti',
+    'slug': 'why-is-my-belly-still-sticking-out-after-having-a-baby', 'group': 'pelvic', 'reviewed': '2026-10-12', 'batch': 8, 'about': 'Diastasis recti',
     'q': 'Why Is My Belly Still Sticking Out After Having a Baby?',
     'crumb': 'Belly still sticking out after a baby',
     'title': 'Why Is My Belly Still Sticking Out After a Baby? | ARI PT',
@@ -38,7 +38,7 @@ PAGES = [
     'guide': ('Diastasis recti', 'diastasis-recti.html'),
 },
 {
-    'slug': 'lost-the-baby-weight-but-belly-still-weak', 'group': 'pelvic', 'reviewed': None, 'batch': 8, 'about': 'Diastasis recti',
+    'slug': 'lost-the-baby-weight-but-belly-still-weak', 'group': 'pelvic', 'reviewed': '2026-10-12', 'batch': 8, 'about': 'Diastasis recti',
     'q': 'I&rsquo;ve Lost the Baby Weight. Why Is My Belly Still Weak and Hanging?',
     'crumb': 'Belly still weak after losing the baby weight',
     'title': 'Lost the Baby Weight but Belly Still Weak? | ARI PT',
