@@ -168,6 +168,7 @@ def build_index(groups):
 </div></section>
 <section class="section"><div class="section-inner detail">
   <div class="prose">
+<div class="cond-search"><label class="cond-search-h" for="cond-q">Search for your question</label><form class="site-search site-search-inline" role="search"><div class="ss-row"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><use href="#i-search"/></svg><input id="cond-q" class="site-search-input" type="search" placeholder="Type your question or symptom, like &ldquo;knee hurts on stairs&rdquo;" aria-label="Search patient questions and conditions" autocomplete="off"></div><div class="site-search-results" hidden aria-live="polite"></div></form></div>
 {blocks}
 <p class="med-disclaimer">These pages are general information, not a diagnosis. If you have symptoms, a licensed clinician should evaluate you.</p>
   </div>

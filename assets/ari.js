@@ -174,9 +174,11 @@
     /* drop weak tail matches (e.g. a page that only mentions a word in passing) */
     var cut = ranked.length ? ranked[0].s * 0.45 : 0;
     /* collapse near-duplicate questions ("Do I need a referral for X / for Y…") to the best one */
-    var seen = {};
+    var seen = {}, seenUrl = {};
     return ranked.filter(function(r){
       if(r.s < cut) return false;
+      if(seenUrl[r.e.u]) return false;   /* one result per page */
+      seenUrl[r.e.u] = true;
       if(r.e.t !== 'faq') return true;
       var key = words(r.e.title).slice(0, 5).join(' ');
       if(seen[key]) return false;
