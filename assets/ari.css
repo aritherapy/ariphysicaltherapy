@@ -779,7 +779,8 @@ footer img{height:46px;width:auto}
 .az-group li{font-size:14px}
 .az-group small{font-size:11px;font-weight:600;letter-spacing:.5px;text-transform:uppercase;color:var(--text-light)}
 @media(max-width:1000px){.lib-tiles{grid-template-columns:repeat(2,minmax(0,1fr))}.lib-cols{grid-template-columns:1fr}.az-cols{columns:2}}
-@media(max-width:600px){.lib-tiles{grid-template-columns:1fr}.lib-q{columns:1}.az-cols{columns:1}}
+.lib-more{display:none}
+@media(max-width:600px){.lib-tiles{grid-template-columns:1fr}.lib-q{columns:1}.az-cols{columns:1}.lib-q.collapsed li:nth-child(n+3){display:none}.lib-more{display:inline-flex;align-items:center;gap:6px;margin:4px 0 0;padding:10px 16px;border:1px solid var(--line);border-radius:999px;background:#fff;font:600 14px 'Inter',sans-serif;color:var(--orange-text);cursor:pointer}}
 
 /* "search for your condition" box (conditions.html, health-library.html); widget = ari.js .site-search-inline */
 .cond-search{margin:0 0 30px;background:var(--cream);border:1px solid #E6E2DA;border-radius:12px;padding:18px 20px 16px}

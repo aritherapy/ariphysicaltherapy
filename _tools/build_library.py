@@ -109,6 +109,24 @@ def body(G, Q):
   <div class="section-head"><p class="eyebrow">A&ndash;Z</p><h2>Everything in the library, A to Z</h2></div>
   <nav class="az-nav" aria-label="Jump to letter">{aznav}</nav>
   <div class="az-cols">{azsecs}</div>
+<script>
+/* Phones: show the first 2 questions per topic, with a button for the rest (desktop shows all; no-JS shows all) */
+(function(){{
+  document.querySelectorAll('.lib-q').forEach(function(ul){{
+    if(ul.children.length <= 2) return;
+    ul.classList.add('collapsed');
+    var b = document.createElement('button');
+    b.type = 'button'; b.className = 'lib-more'; b.setAttribute('aria-expanded', 'false');
+    b.textContent = 'Show all questions';
+    b.addEventListener('click', function(){{
+      var open = ul.classList.toggle('collapsed') === false;
+      b.setAttribute('aria-expanded', String(open));
+      b.textContent = open ? 'Show fewer' : 'Show all questions';
+    }});
+    ul.after(b);
+  }});
+}})();
+</script>
   <p class="med-disclaimer" style="margin-top:30px">Our health library is general information, not a diagnosis. If you have symptoms, a licensed clinician should evaluate you. If you think you have a medical emergency, call 911.</p>
 </div></section>'''
 
