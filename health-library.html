@@ -341,7 +341,7 @@
     </script>
 <link rel="preload" href="assets/fonts/montserrat-latin-var.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/inter-latin-var.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="assets/ari.css">
+<link rel="stylesheet" href="assets/ari.css?v=202610111756">
 <!-- Google Analytics 4 -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-30S49569Y9"></script>
 <script>
@@ -437,6 +437,7 @@
 <script>
 /* Phones: show the first 2 questions per topic, with a button for the rest (desktop shows all; no-JS shows all) */
 (function(){
+  var phone = window.matchMedia('(max-width: 600px)');
   document.querySelectorAll('.lib-q').forEach(function(ul){
     if(ul.children.length <= 2) return;
     ul.classList.add('collapsed');
@@ -449,6 +450,8 @@
       b.textContent = open ? 'Show fewer' : 'Show all questions';
     });
     ul.after(b);
+    function fit(){ b.hidden = !phone.matches; }
+    fit(); phone.addEventListener('change', fit);
   });
 })();
 </script>
@@ -600,6 +603,6 @@
   });
 })();
 </script>
-<script src="assets/ari.js" defer></script>
+<script src="assets/ari.js?v=202610111756" defer></script>
 </body>
 </html>

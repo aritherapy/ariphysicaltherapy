@@ -40,3 +40,6 @@ Length: about 300–450 words. A question must not duplicate an existing page; c
 - Condition guides get a short "Sources" list (2-4 links) from `_tools/sources.py` (SOURCES dict). build_condition.py applies it on every build; for hand-edited pages run `python3 _tools/sources.py <slug>`.
 - Only cite pages you opened and checked. Preference: APTA/JOSPT clinical practice guidelines, other society guidelines, then NIH (MedlinePlus, NIAMS, NIDDK, NIDCR, NIA), CDC, AAOS OrthoInfo, ACOG, womenshealth.gov.
 - The page content must agree with what the sources say. If a source contradicts the page, flag it for Deepa instead of citing it.
+
+## CSS / JS changes
+- After any change to assets/ari.css or assets/ari.js, run `python3 _tools/bump_assets.py` (adds a new ?v= to every page) so visitors never see new HTML with a stale stylesheet.

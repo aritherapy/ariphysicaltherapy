@@ -112,6 +112,7 @@ def body(G, Q):
 <script>
 /* Phones: show the first 2 questions per topic, with a button for the rest (desktop shows all; no-JS shows all) */
 (function(){{
+  var phone = window.matchMedia('(max-width: 600px)');
   document.querySelectorAll('.lib-q').forEach(function(ul){{
     if(ul.children.length <= 2) return;
     ul.classList.add('collapsed');
@@ -124,6 +125,8 @@ def body(G, Q):
       b.textContent = open ? 'Show fewer' : 'Show all questions';
     }});
     ul.after(b);
+    function fit(){{ b.hidden = !phone.matches; }}
+    fit(); phone.addEventListener('change', fit);
   }});
 }})();
 </script>
