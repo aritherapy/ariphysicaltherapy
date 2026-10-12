@@ -71,11 +71,9 @@ def questions():
 
 
 def body(G, Q):
-    def count(n, word):
-        return f'{n} {word}' + ('s' if n != 1 else '')
     tiles = ''.join(
         f'<a class="lib-tile" href="#{k}"><b>{label}</b><span>{blurb}</span>'
-        f'<em>{" &middot; ".join(c for c in (count(len(G[k]), "guide") if G[k] else "", count(len(Q[k]), "question") if Q[k] else "") if c)}</em></a>'
+        f'</a>'
         for k, label, blurb in TOPICS)
     secs = []
     for k, label, _ in TOPICS:
@@ -99,7 +97,7 @@ def body(G, Q):
                      '</ul></div>' for L, items in letters.items())
     n_g, n_q = sum(map(len, G.values())), sum(map(len, Q.values()))
     return f'''<section class="section"><div class="section-inner">
-  <div class="lib-trust"><p><b>{n_g} condition guides and {n_q} patient questions</b>, written for patients and clinically reviewed by <a href="deepa-konnur.html">Deepa Konnur, PT, MPT, OCS</a>. <a href="editorial-policy.html">How we create our content</a></p>
+  <div class="lib-trust"><p><b>Condition guides and patient questions</b>, written for patients and clinically reviewed by <a href="deepa-konnur.html">Deepa Konnur, PT, MPT, OCS</a>. <a href="editorial-policy.html">How we create our content</a></p>
     <div class="cond-search"><label class="cond-search-h" for="cond-q">Search the library</label><form class="site-search site-search-inline" role="search"><div class="ss-row"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><use href="#i-search"/></svg><input id="cond-q" class="site-search-input" type="search" placeholder="Try &ldquo;heel pain&rdquo;" aria-label="Search conditions and patient questions" autocomplete="off"></div><div class="site-search-results" hidden aria-live="polite"></div></form></div></div>
   <div class="section-head" id="topics"><p class="eyebrow">Browse by topic</p><h2>What can we help you with?</h2></div>
   <div class="lib-tiles">{tiles}</div>
@@ -119,7 +117,7 @@ def build():
     G, Q = guides(), questions()
     n_g, n_q = sum(map(len, G.values())), sum(map(len, Q.values()))
     page = dict(slug='health-library', title='Health Library: Condition Guides &amp; Patient Questions | ARI Physical Therapy',
-                desc=f'Browse {n_g} condition guides and {n_q} patient questions from ARI Physical Therapy, by topic or A to Z. Clinically reviewed by a licensed physical therapist.',
+                desc='Browse condition guides and patient questions from ARI Physical Therapy, by topic or A to Z. Clinically reviewed by a licensed physical therapist.',
                 eyebrow='Patient Education', h1='Health Library',
                 lead='Clear answers about pain, injuries, pelvic health and children&rsquo;s development, from the physical therapists at ARI Physical Therapy in Bakersfield.',
                 body=body(G, Q),
