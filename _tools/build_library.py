@@ -14,7 +14,7 @@ import build_trust, build_questions
 
 ROOT = build_trust.ROOT
 SITE = build_trust.SITE
-DRAFT = True
+DRAFT = False
 
 TOPICS = [  # (key, label, blurb); keys match the question groups in _tools/questions where they exist
     ('back', 'Back &amp; Spine', 'Low back pain, sciatica, discs, stenosis and tailbone pain'),
@@ -100,7 +100,7 @@ def body(G, Q):
     n_g, n_q = sum(map(len, G.values())), sum(map(len, Q.values()))
     return f'''<section class="section"><div class="section-inner">
   <div class="lib-trust"><p><b>{n_g} condition guides and {n_q} patient questions</b>, written for patients and clinically reviewed by <a href="deepa-konnur.html">Deepa Konnur, PT, MPT, OCS</a>. <a href="editorial-policy.html">How we create our content</a></p>
-    <div class="cond-search"><label class="cond-search-h" for="cond-q">Search the library</label><form class="site-search site-search-inline" role="search"><div class="ss-row"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><use href="#i-search"/></svg><input id="cond-q" class="site-search-input" type="search" placeholder="Type a symptom or condition, like &ldquo;heel pain&rdquo;" aria-label="Search conditions and patient questions" autocomplete="off"></div><div class="site-search-results" hidden aria-live="polite"></div></form></div></div>
+    <div class="cond-search"><label class="cond-search-h" for="cond-q">Search the library</label><form class="site-search site-search-inline" role="search"><div class="ss-row"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><use href="#i-search"/></svg><input id="cond-q" class="site-search-input" type="search" placeholder="Try &ldquo;heel pain&rdquo;" aria-label="Search conditions and patient questions" autocomplete="off"></div><div class="site-search-results" hidden aria-live="polite"></div></form></div></div>
   <div class="section-head" id="topics"><p class="eyebrow">Browse by topic</p><h2>What can we help you with?</h2></div>
   <div class="lib-tiles">{tiles}</div>
 </div></section>
@@ -129,6 +129,9 @@ def build():
     page['title'] = html.unescape(page['title'])
     build_trust.DRAFT = DRAFT
     build_trust.build(page)
+    f = os.path.join(ROOT, 'health-library.html')   # this page is the nav's "Health Library" item: mark it active
+    s = open(f, encoding='utf-8').read().replace('<a href="health-library.html">Health Library</a>', '<a href="health-library.html" class="active">Health Library</a>', 1)
+    open(f, 'w', encoding='utf-8').write(s)
     print(f'{n_g} guides, {n_q} questions')
 
 

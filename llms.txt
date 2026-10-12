@@ -247,6 +247,7 @@ Spanish-language pages for Spanish-speaking patients (ARI has Spanish-speaking s
 
 ## More
 
+- [Health Library: every condition guide and patient question, by topic and A to Z](https://ariphysicaltherapy.com/health-library.html)
 - [Conditions we treat](https://ariphysicaltherapy.com/conditions.html)
 - [About ARI and our clinic director](https://ariphysicaltherapy.com/about.html)
 - [Deepa Konnur, PT, MPT, OCS: clinical reviewer of our health pages](https://ariphysicaltherapy.com/deepa-konnur.html)
