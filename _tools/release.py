@@ -152,7 +152,7 @@ def sync_spanish(cs):
         s = open(f, encoding='utf-8').read()
         if '<html lang="en">' not in s or 'class="top-bar-left"' not in s:
             continue
-        s2 = spanish.add_lang_link(s, pairs.get(name, spanish.ES_HOME), 'es')
+        s2 = spanish.add_lang_link(s, pairs.get(name, spanish.ES_HOME + '#sin-traduccion'), 'es')   # no Spanish twin: home + 'not in Spanish yet' note
         if name in pairs:
             canon = re.search(r'<link rel="canonical" href="([^"]*)">', s2).group(1)
             s2 = spanish.en_alternate(s2, canon, SITE + pairs[name])

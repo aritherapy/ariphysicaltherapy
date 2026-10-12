@@ -787,3 +787,10 @@ footer img{height:46px;width:auto}
 .cond-search-h{display:block;font-family:'Montserrat',sans-serif;font-weight:700;font-size:16px;color:var(--charcoal);margin-bottom:10px}
 .cond-search .site-search-results{border:1px solid rgba(0,0,0,.08);border-radius:8px;padding:6px;background:var(--white)}
 .lib-trust .cond-search{flex:1 1 100%;margin:0;padding:0;border:none;background:none}
+
+/* Spanish home: "this page isn't in Spanish yet" note, shown when arriving from an untranslated English page */
+.es-notice{background:var(--orange-btn);color:#fff}
+.es-notice[hidden]{display:none}
+.es-notice-inner{max-width:1200px;margin:0 auto;padding:14px 24px}
+.es-notice p{margin:0;font-size:15px;line-height:1.55}
+.es-notice a{color:#fff;font-weight:700;text-decoration:underline}

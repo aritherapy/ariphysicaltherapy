@@ -109,6 +109,8 @@ def build_home(pages):
     ]
     conds = ''.join(f'<li><a href="{slug}.html">{html.unescape(re.sub(r"<[^>]+>", "", p["crumb"]))}</a></li>' for slug, p in pages)
     body = f'''</nav>
+<div class="es-notice" id="aviso-es" hidden><div class="es-notice-inner"><p><b>Esta página todavía no está disponible en español.</b> Aquí tiene nuestra información en español. Si tiene preguntas, llámenos al <a href="tel:6612828584">(661) 282-8584</a>; tenemos personal que habla español.</p></div></div>
+<script>if(location.hash==='#sin-traduccion'){{document.getElementById('aviso-es').hidden=false;history.replaceState(null,'',location.pathname+location.search);}}</script>
 <section class="page-hero"><div class="page-hero-inner">
   <p class="eyebrow">Se habla español</p><h1>Terapia física individual en <span style="color:var(--orange)">Bakersfield</span></h1>
   <p class="lead">Atención uno a uno con un fisioterapeuta con licencia para el dolor de espalda y cuello, lesiones, rehabilitación después de una cirugía, la salud pélvica de la mujer y mucho más.</p>
@@ -169,9 +171,9 @@ def build_hub(pages):
 
 
 FORM_TEXT = [
-    ('<p class="eyebrow">Get Started</p><h1>Book Your Appointment</h1><p class="lead">Request an appointment online and we\'ll confirm within one business day. Prefer to talk? Call us directly.</p>',
+    ('<p class="eyebrow">Get Started</p><h1>Book Your Appointment</h1><p class="lead">Request an appointment online and we\'ll confirm within one business day. We can usually see new patients within 1&ndash;2 weeks. Prefer to talk? Call us directly.</p>',
      '<p class="eyebrow">Se habla español</p><h1>Solicite una cita</h1><p class="lead">Envíe su solicitud en línea y le confirmaremos, normalmente en un día hábil. ¿Prefiere hablar con alguien? Llámenos; tenemos personal que habla español.</p>'),
-    ('<h3>Request an Appointment</h3><p>Fill out the form below and our team will confirm your appointment within one business day.</p>',
+    ('<h3>Request an Appointment</h3><p>Fill out the form below and our team will confirm your appointment within one business day. Most new patients are seen within 1&ndash;2 weeks.</p>',
      '<h3>Solicitud de cita</h3><p>Llene este formulario y nuestro equipo le contactará para confirmar su cita, normalmente en un día hábil. Si prefiere español, se lo pasamos a nuestro personal que habla español.</p>'),
     ("I'm booking this for my child", 'Estoy pidiendo esta cita para mi hijo o hija'),
     ('>Patient information</div>', '>Información del paciente</div>'),

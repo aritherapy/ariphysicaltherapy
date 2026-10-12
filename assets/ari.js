@@ -198,7 +198,7 @@
         out.hidden = false;
         if(!res.length){
           out.innerHTML = document.documentElement.lang === 'es'
-            ? '<p class="site-search-empty">No encontramos resultados. Llámenos al <a href="tel:6612828584">(661) 282-8584</a> y le ayudamos; hablamos español.</p>'
+            ? '<p class="site-search-empty">No encontramos resultados. Llámenos al <a href="tel:6612828584">(661) 282-8584</a> y le ayudamos; tenemos personal que habla español.</p>'
             : '<p class="site-search-empty">No matches. Call us at <a href="tel:6612828584">(661) 282-8584</a> and we&rsquo;ll answer your question.</p>';
         } else {
           out.innerHTML = '<ul>' + res.map(function(e, i){
