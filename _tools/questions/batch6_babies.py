@@ -487,7 +487,7 @@ PAGES = [
          '<ul class="plain-list"><li><strong>Talks with you</strong> about pregnancy and birth, your baby\'s health, feeding and sleep, the skills your baby has now, and what worries you.</li>'
          '<li><strong>Watches your baby play</strong> on their back and tummy, and sitting or standing if they are ready.</li>'
          '<li><strong>Gently checks</strong> how far the neck turns and tilts, head shape, strength, and how your baby uses both sides of the body.</li>'
-         '<li><strong>Explains what they found</strong> in plain language and talks through the plan with you.</li>'
+         '<li><strong>Explains what is most likely going on</strong> in plain language, and talks through a plan built around your baby, your family\'s routine and your goals.</li><li><strong>Sets clear expectations together:</strong> how often to come, what progress should look like, and how we work as a team with you and your pediatrician.</li>'
          '<li><strong>Starts your home program</strong> with a few simple activities.</li></ul>'),
         ('How to prepare',
          '<ul class="plain-list"><li><strong>Bring any notes</strong> from your pediatrician and a list of your questions.</li>'

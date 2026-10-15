@@ -104,20 +104,21 @@ PAGES = [
     'crumb': 'Your first visit',
     'title': 'What Happens at Your First Physical Therapy Visit? | ARI PT',
     'description': 'What to expect at your first physical therapy visit at ARI in Bakersfield: how long it takes, what we check, what to bring and what to wear.',
-    'short': 'Your first visit is an evaluation that takes about 45 to 60 minutes, one-on-one with a licensed physical therapist. We talk about your problem and goals, check how you move, explain what we find, and start treatment and a home program.',
+    'short': 'Your first visit is a thorough evaluation that takes about 45 to 60 minutes, one-on-one with a licensed physical therapist. We listen to your story, examine how you move, explain what is most likely causing your symptoms, and build a treatment plan around that, your lifestyle and your goals. We also set clear expectations together from the start.',
     'sections': [
         ('What we do',
-         '<ul class="plain-list"><li><strong>Talk.</strong> How the problem started, what makes it better or worse, your health history, and what you want to get back to.</li>'
-         '<li><strong>Examine.</strong> Movement, strength, flexibility, balance and, depending on the problem, nerves, walking or posture. We explain each step and stop anything that\'s too painful.</li>'
-         '<li><strong>Explain.</strong> What we think is going on, in plain language, and what to expect.</li>'
-         '<li><strong>Plan and start.</strong> A treatment plan with goals, often your first treatment, and a few exercises to do at home.</li></ul>'
+         '<ul class="plain-list"><li><strong>A thorough evaluation.</strong> First we talk: how the problem started, your symptoms, what makes them better or worse, your health history, and what you want to get back to. Then we examine movement, strength, flexibility, balance and, depending on the problem, nerves, walking or posture. We explain each step and stop anything that\'s too painful.</li>'
+         '<li><strong>What\'s likely causing it.</strong> We walk you through what is most likely going on in your body and why it causes your symptoms, in plain language.</li>'
+         '<li><strong>A plan for the most likely cause.</strong> Your treatment plan targets the most reasonable diagnosis we arrive at during the evaluation. Often your first treatment and a few home exercises start the same day.</li>'
+         '<li><strong>Built around your life.</strong> The plan fits your work, your routine and your goals, and works you toward them step by step.</li>'
+         '<li><strong>Clear expectations.</strong> We talk honestly about how often you\'ll come, roughly how long it may take and what progress should look like. We see your care as a partnership with you and your other care providers, including your doctor.</li></ul>'
          '<p>Follow-up visits usually take 30 to 45 minutes.</p>'),
         ('What to bring and wear',
          '<ul class="plain-list"><li>Photo ID and your insurance card.</li>'
          '<li>A referral or prescription if you have one (not required to start in California), and any imaging reports.</li>'
          '<li>A list of your medications.</li>'
          '<li>Comfortable clothes that let us see and move the area, for example shorts for a knee problem.</li></ul>'
-         '<p>Parking is free. Our clinic is at 8200 Stockdale Hwy, Suite B2, in the Town &amp; Country Village center next to Trader Joe\'s. If you need to reschedule, please let us know at least 24 hours ahead.</p>'),
+         '<p>Our clinic is at 8200 Stockdale Hwy, Suite B2, in the Town &amp; Country Village center next to Trader Joe\'s. If you need to reschedule, please let us know at least 24 hours ahead.</p>'),
     ],
     'pt': '<p>Every visit at ARI is one-on-one with a licensed physical therapist, from the first evaluation to your last visit.</p>',
     'guide': None,
