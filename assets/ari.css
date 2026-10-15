@@ -811,14 +811,18 @@ a.stat-link:hover .stat-go{text-decoration:underline}
 @media(max-width:768px){.stats .stat:first-child{border-left:1px solid var(--line);padding-left:12px}}
 /* ---- home hero: rotating highlights. All slides share one grid cell, so the
    hero is as tall as the longest slide and nothing below it jumps. ---- */
-.hero-rot{display:grid}
-.hslide{grid-area:1/1;transition:opacity .45s var(--ease),visibility 0s linear .45s;opacity:0;visibility:hidden}
-.hslide.is-on{opacity:1;visibility:visible;transition:opacity .45s var(--ease) .15s,visibility 0s}
+.hero-rot{display:grid;overflow:hidden;padding-bottom:4px}
+/* Carousel: waiting slides sit off to the right; the outgoing one slides left
+   while the next slides in from the right, in step, so they never overlap. */
+.hslide{grid-area:1/1;transform:translateX(105%);visibility:hidden}
+.hslide.is-on{transform:none;visibility:visible}
+.hslide.from-left{transform:translateX(-105%)}
+.hslide.out-left{transform:translateX(-105%);visibility:visible}
+.hslide.out-right{transform:translateX(105%);visibility:visible}
+.hslide.is-on,.hslide.out-left,.hslide.out-right{transition:transform .6s cubic-bezier(.65,0,.35,1)}
+@media(prefers-reduced-motion:reduce){.hslide.is-on,.hslide.out-left,.hslide.out-right{transition:none}}
 .hslide .hero-title{color:#fff;font-family:'Montserrat',sans-serif;font-size:clamp(38px,4.6vw,62px);font-weight:800;line-height:1.05;letter-spacing:-1px;margin-bottom:22px}
 .hslide:not(:first-child) .eyebrow,.hslide:not(:first-child) .lead{animation:none}
-.hslide.is-on:not(:first-child) .line > span{animation:lineUp .7s cubic-bezier(.22,.9,.28,1) backwards}
-.hslide.is-on:not(:first-child) .line:nth-child(2) > span{animation-delay:.08s}
-.hslide.is-on:not(:first-child) .line:nth-child(3) > span{animation-delay:.16s}
 .hslide:not(:first-child) .line > span{animation:none}
 .hslide .lead a{color:#fff;font-weight:600;text-decoration:underline;text-underline-offset:3px;text-decoration-color:var(--orange)}
 .hslide .lead a:hover{color:var(--orange-light)}
@@ -831,5 +835,4 @@ a.stat-link:hover .stat-go{text-decoration:underline}
 .hpause{color:rgba(255,255,255,.75);margin-left:6px;border:1px solid rgba(255,255,255,.35);border-radius:50%}
 .hpause:hover{color:#fff;border-color:#fff}
 .hdot:focus-visible,.hpause:focus-visible{outline:2px solid var(--orange-light);outline-offset:2px;border-radius:50%}
-@media(prefers-reduced-motion:reduce){.hslide,.hslide.is-on{transition:none}.hslide.is-on .line > span{animation:none!important}}
 .hero-rot{-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}  /* long-press pauses instead of selecting text */

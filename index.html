@@ -138,7 +138,7 @@
 <link rel="preload" as="image" type="image/webp" media="(max-width: 900px)" imagesrcset="assets/hero-m-600.webp 600w, assets/hero-m-750.webp 750w, assets/hero-m-900.webp 900w" imagesizes="100vw" fetchpriority="high">
 <link rel="preload" href="assets/fonts/montserrat-latin-var.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/inter-latin-var.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="assets/ari.css?v=202610151557">
+<link rel="stylesheet" href="assets/ari.css?v=202610151600">
 <!-- Google Analytics 4 -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-30S49569Y9"></script>
 <script>
@@ -371,15 +371,19 @@
       held ? stop() : start();
     });
     dotsBox.appendChild(pb);
-    function show(n){
+    function show(n, dir){
       if(n === cur) return;
       var a = slides[cur], b = slides[n];
-      a.classList.remove('is-on'); a.setAttribute('aria-hidden','true');
-      b.classList.add('is-on'); b.removeAttribute('aria-hidden');
+      var back = dir ? dir < 0 : n < cur;
+      slides.forEach(function(s){ if(s !== a && s !== b) s.classList.remove('out-left','out-right','from-left'); });
+      if(back){ b.classList.add('from-left'); void b.offsetWidth; b.classList.remove('from-left'); }
+      a.classList.remove('is-on'); a.classList.add(back ? 'out-right' : 'out-left'); a.setAttribute('aria-hidden','true');
+      b.classList.remove('out-left','out-right'); b.classList.add('is-on'); b.removeAttribute('aria-hidden');
+      setTimeout(function(){ a.classList.remove('out-left','out-right'); }, 650);
       dots[cur].classList.remove('on'); dots[n].classList.add('on');
       cur = n;
     }
-    function next(){ show((cur + 1) % slides.length); }
+    function next(){ show((cur + 1) % slides.length, 1); }
     function start(){ if(reduce || held || paused || timer) return; timer = setInterval(next, DELAY); }
     function stop(){ clearInterval(timer); timer = null; }
     var hero = rot.closest('.hero-full');
@@ -529,6 +533,6 @@
   });
 })();
 </script>
-<script src="assets/ari.js?v=202610151557" defer></script>
+<script src="assets/ari.js?v=202610151600" defer></script>
 </body>
 </html>
