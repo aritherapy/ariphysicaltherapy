@@ -794,3 +794,18 @@ footer img{height:46px;width:auto}
 .es-notice-inner{max-width:1200px;margin:0 auto;padding:14px 24px}
 .es-notice p{margin:0;font-size:15px;line-height:1.55}
 .es-notice a{color:#fff;font-weight:700;text-decoration:underline}
+/* ---- home: rating tile links to reviews; "Show more reviews" ---- */
+html{scroll-behavior:smooth}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+#reviews{scroll-margin-top:140px}
+a.stat-link{display:block;color:inherit;text-decoration:none;border-radius:8px;transition:transform .2s var(--ease)}
+a.stat-link:hover{transform:translateY(-2px)}
+a.stat-link:focus-visible{outline:2px solid var(--orange);outline-offset:6px}
+.stat-go{font-size:12px;font-weight:600;color:#B84D09;margin-top:3px}
+a.stat-link:hover .stat-go{text-decoration:underline}
+.rev-more-wrap{display:none;text-align:center;margin-top:28px}
+.js .rev-more-wrap{display:block}
+.revs.collapsed .rev-x{display:none}
+@media(max-width:900px){.revs.collapsed .rev-m{display:none}}
+.rev-foot a{white-space:nowrap}
+@media(max-width:768px){.stats .stat:first-child{border-left:1px solid var(--line);padding-left:12px}}
