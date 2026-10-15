@@ -839,3 +839,9 @@ a.stat-link:hover .stat-go{text-decoration:underline}
 /* owner 2026-10-15: one size smaller, more breathing room */
 .hero-full-inner h1,.hslide .hero-title{font-size:clamp(32px,3.9vw,52px);line-height:1.12;letter-spacing:-.6px;margin-bottom:26px}
 .hero-full-inner .eyebrow{margin-bottom:18px}
+@media(max-width:600px){ /* phones: smaller headline, more air */
+  .hero-full-inner h1,.hslide .hero-title{font-size:28px;line-height:1.18;letter-spacing:-.3px;margin-bottom:20px}
+  .hero-full-inner .eyebrow{font-size:11px;margin-bottom:16px}
+  .hero-full-inner .lead{font-size:15px;line-height:1.6;margin-bottom:30px}
+  .hero-dots{margin-top:22px}
+}
