@@ -811,14 +811,15 @@ a.stat-link:hover .stat-go{text-decoration:underline}
 @media(max-width:768px){.stats .stat:first-child{border-left:1px solid var(--line);padding-left:12px}}
 /* ---- home hero: rotating highlights. All slides share one grid cell, so the
    hero is as tall as the longest slide and nothing below it jumps. ---- */
-.hero-rot{display:grid;overflow:hidden;padding-bottom:4px}
-/* Carousel: waiting slides sit off to the right; the outgoing one slides left
-   while the next slides in from the right, in step, so they never overlap. */
-.hslide{grid-area:1/1;transform:translateX(105%);visibility:hidden}
+.hero-rot{display:grid}
+/* Carousel: waiting slides sit just off the right edge of the screen; the outgoing one
+   slides off the left edge while the next slides in from the right, in step.
+   Each slide is only as wide as its text, so hover-to-pause tracks the words. */
+.hslide{grid-area:1/1;justify-self:start;width:fit-content;max-width:100%;transform:translateX(110vw);visibility:hidden}
 .hslide.is-on{transform:none;visibility:visible}
-.hslide.from-left{transform:translateX(-105%)}
-.hslide.out-left{transform:translateX(-105%);visibility:visible}
-.hslide.out-right{transform:translateX(105%);visibility:visible}
+.hslide.from-left{transform:translateX(-110vw)}
+.hslide.out-left{transform:translateX(-110vw);visibility:visible}
+.hslide.out-right{transform:translateX(110vw);visibility:visible}
 .hslide.is-on,.hslide.out-left,.hslide.out-right{transition:transform .6s cubic-bezier(.65,0,.35,1)}
 @media(prefers-reduced-motion:reduce){.hslide.is-on,.hslide.out-left,.hslide.out-right{transition:none}}
 .hslide .hero-title{color:#fff;font-family:'Montserrat',sans-serif;font-size:clamp(38px,4.6vw,62px);font-weight:800;line-height:1.05;letter-spacing:-1px;margin-bottom:22px}
