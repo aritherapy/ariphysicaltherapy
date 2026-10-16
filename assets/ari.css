@@ -846,3 +846,8 @@ a.stat-link:hover .stat-go{text-decoration:underline}
   .hero-full-inner .lead{font-size:15px;line-height:1.6;margin-bottom:30px}
   .hero-dots{margin-top:22px}
 }
+/* Home: the H1 is the small "Physical Therapy in Bakersfield, CA" label (what Google reads as
+   the page's main heading); the big tagline is styled text. Undo the big-H1 rule for it. */
+.hero-full-inner h1.hero-h1{font-size:11px;font-weight:700;line-height:1.4;letter-spacing:3px;margin-bottom:22px;color:var(--orange-light)}
+@media(max-width:768px){.hero-full-inner h1.hero-h1{font-size:10.5px;letter-spacing:2px;margin-bottom:18px}}
+@media(max-width:600px){.hero-full-inner h1.hero-h1{margin-bottom:16px;letter-spacing:1.4px}}
