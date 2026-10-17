@@ -8,7 +8,7 @@
 Wait for the GitHub Pages build to finish first, so engines fetch the new version.
 The key file (506b8095d9bbe02966077e7956d742c2.txt) must stay at the site root.
 """
-import json, os, re, subprocess, sys, urllib.request
+import json, os, re, subprocess, sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SITE = 'https://ariphysicaltherapy.com/'
@@ -43,14 +43,13 @@ def main(argv):
     urls = sorted(set(urls))
     if not urls:
         print('IndexNow: nothing to send'); return
-    body = json.dumps({'host': 'ariphysicaltherapy.com', 'key': KEY, 'keyLocation': SITE + KEY + '.txt', 'urlList': urls[:10000]}).encode()
-    req = urllib.request.Request('https://api.indexnow.org/indexnow', data=body, headers={'Content-Type': 'application/json; charset=utf-8'})
-    try:
-        with urllib.request.urlopen(req, timeout=30) as r:
-            print(f'IndexNow: sent {len(urls)} URL(s), HTTP {r.status}')
-    except urllib.error.HTTPError as e:
-        print(f'IndexNow: HTTP {e.code} {e.reason} (202/200 = accepted; 403 = key file not live yet; 422 = URL/host mismatch)')
-
+    body = json.dumps({'host': 'ariphysicaltherapy.com', 'key': KEY, 'keyLocation': SITE + KEY + '.txt', 'urlList': urls[:10000]})
+    # curl uses the Mac's own certificates (python.org builds of Python often lack them)
+    r = subprocess.run(['curl', '-s', '-o', '/dev/null', '-w', '%{http_code}', '-X', 'POST', 'https://api.indexnow.org/indexnow',
+                        '-H', 'Content-Type: application/json; charset=utf-8', '--data-binary', body], capture_output=True, text=True)
+    code = r.stdout.strip()
+    note = {'200': 'accepted', '202': 'accepted (key being checked)', '403': 'key file not live yet', '422': 'URL/host mismatch', '429': 'too many requests, try later'}.get(code, 'see https://www.indexnow.org/documentation')
+    print(f'IndexNow: sent {len(urls)} URL(s), HTTP {code} ({note})')
 
 if __name__ == '__main__':
     main(sys.argv[1:])
