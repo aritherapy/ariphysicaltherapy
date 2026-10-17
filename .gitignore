@@ -1,1 +1,8 @@
 __pycache__/
+
+# Headless-Chrome profile from _tools/og/make.py (now written to a temp folder; never commit one)
+_tools/og/out/prof/
+
+# Windows thumbnail caches and macOS folder metadata
+Thumbs.db
+.DS_Store

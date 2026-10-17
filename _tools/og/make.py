@@ -1,10 +1,11 @@
 """Share-preview images (og:image, 1200x630) rendered from HTML with headless Chrome.
     python3 _tools/og/make.py            # writes _tools/og/out/<name>.png
 Keep text inside the middle ~1000x500: some apps crop the edges."""
-import os, subprocess, time
+import os, shutil, subprocess, tempfile, time
 D = os.path.dirname(os.path.abspath(__file__)); A = os.path.abspath(os.path.join(D, '..', '..', 'assets'))
 OUT = os.path.join(D, 'out'); os.makedirs(OUT, exist_ok=True)
 CHROME = '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'
+PROF = tempfile.mkdtemp(prefix='ari-og-chrome-')   # throwaway browser profile, kept OUT of the repo
 BASE = f'''<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="file://{A}/ari.css">
 <style>html,body{{margin:0;width:1200px;height:630px;overflow:hidden}}
 .c{{position:relative;width:1200px;height:630px;overflow:hidden;background:#2B2B2B;font-family:Inter,sans-serif;color:#fff}}
@@ -51,9 +52,10 @@ for name, html in OPTS.items():
     src = os.path.join(OUT, name + '.html'); open(src, 'w').write(BASE + html + '</body></html>')
     png = os.path.join(OUT, name + '.png')
     if os.path.exists(png): os.remove(png)
-    p = subprocess.Popen([CHROME, '--headless=new', '--disable-gpu', '--hide-scrollbars', '--allow-file-access-from-files', f'--user-data-dir={OUT}/prof',
+    p = subprocess.Popen([CHROME, '--headless=new', '--disable-gpu', '--hide-scrollbars', '--allow-file-access-from-files', f'--user-data-dir={PROF}',
                           '--window-size=1200,630', '--virtual-time-budget=3000', f'--screenshot={png}', 'file://' + src], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
     for _ in range(40):
         if os.path.exists(png) and os.path.getsize(png) > 0: time.sleep(1); break
         time.sleep(0.5)
     p.kill(); print(png)
+shutil.rmtree(PROF, ignore_errors=True)
