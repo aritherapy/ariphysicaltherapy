@@ -46,3 +46,7 @@ Length: about 300–450 words. A question must not duplicate an existing page; c
 
 ## Postpartum belly (Deepa, 2026-10-12)
 - A belly that sticks out after pregnancy is not always diastasis recti. Often it is a weak deep stabilizer (no real gap) with postural change: flared ribs and a sway back. Say both whenever we write about postpartum bellies.
+
+## After every push: IndexNow (added 2026-10-16)
+- Once the GitHub Pages build for your commit shows "built", run `python3 _tools/indexnow.py` (pages changed in the last commit) or `--since <sha>` for several commits. It tells Bing and other IndexNow engines at once; Bing feeds ChatGPT and Copilot answers.
+- The key file `506b8095d9bbe02966077e7956d742c2.txt` must stay at the site root. Don't rename or delete it.
