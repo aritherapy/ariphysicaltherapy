@@ -121,8 +121,8 @@ def build(p):
     s = re.sub(r'(<meta property="og:title" content=")[^"]*', r'\g<1>' + p['title'], s, count=1)
     for pat in (r'(<meta name="description" content=")[^"]*', r'(<meta property="og:description" content=")[^"]*'):
         s = re.sub(pat, lambda m: m.group(1) + p['desc'], s, count=1)
-    s = s.replace('<meta name="robots" content="index, follow">',
-                  '<meta name="robots" content="noindex, follow">' if DRAFT else '<meta name="robots" content="index, follow">')
+    s = re.sub(r'<meta name="robots" content="[^"]*">',   # shell (privacy page) is noindex; set our own
+               '<meta name="robots" content="noindex, follow">' if DRAFT else '<meta name="robots" content="index, follow">', s)
     ld = '<script type="application/ld+json">\n' + json.dumps(p['schema'], indent=2, ensure_ascii=False) + '\n    </script>\n'
     s = s.replace('<link rel="preload"', ld + '<link rel="preload"', 1)
     a = s.index('<section class="page-hero">'); z = s.index('<footer>')

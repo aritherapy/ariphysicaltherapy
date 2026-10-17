@@ -88,7 +88,7 @@ FOOTER_ES = f'''<footer>
     <div><div class="foot-h">Enlaces</div><div class="foot-links">
       <a href="{ES_HOME}">Inicio</a><a href="{ES_HUB}">Afecciones que tratamos</a>
       <a href="{ES_FORM}">Solicitar una cita</a><a href="{ES_HOME}#contacto">Contacto</a>
-      <a href="index.html" lang="en" hreflang="en">English website</a><a href="privacy-policy.html">Política de privacidad (en inglés)</a>
+      <a href="/" lang="en" hreflang="en">English website</a><a href="privacy-policy.html">Política de privacidad (en inglés)</a>
     </div></div>
     <div><div class="foot-h">Contacto</div><div class="foot-c">
       <a href="tel:6612828584">(661) 282-8584</a><br><a href="mailto:contactus@ariptcare.com">contactus@ariptcare.com</a><br>Fax: (661) 727-0005<br>
@@ -117,6 +117,7 @@ def es_shell(s, url, en_url=None):
     s = s.replace('<a href="appointment.html" class="btn btn-primary">Book an Appointment</a>',
                   f'<a href="{ES_FORM}" class="btn btn-primary">Solicitar una cita</a>', 1)
     s = s.replace('<a href="index.html" class="nav-logo">', f'<a href="{ES_HOME}" class="nav-logo">', 1)
+    s = s.replace('<a href="/" class="nav-logo">', f'<a href="{ES_HOME}" class="nav-logo">', 1)
     s = s.replace('aria-label="Search the site"', 'aria-label="Buscar en el sitio"').replace('aria-label="Open menu"', 'aria-label="Abrir menú"')
     s = re.sub(r'<footer>.*?</footer>', lambda m: FOOTER_ES, s, count=1, flags=re.S)
     return s
