@@ -16,29 +16,37 @@ PAGES = [
          '<ul class="plain-list"><li><strong>Your body is still recovering.</strong> In the first weeks your uterus is still shrinking and your belly can stay swollen.</li>'
          '<li><strong>Diastasis recti.</strong> The two sides of your &ldquo;six-pack&rdquo; muscle spread apart during pregnancy to make room for your baby. For many women the gap narrows over the first months, but for some it stays wide or soft.</li>'
          '<li><strong>A weak deep stabilizer, even without a gap.</strong> The deep belly muscle that wraps around your middle like a corset, along with your pelvic floor, can stay weak after pregnancy, so the belly isn&rsquo;t held in well.</li>'
-         '<li><strong>Posture changes.</strong> When that deep support is weak, the ribs often flare out at the front and the lower back sways forward, which pushes the belly out. Carrying your baby on one hip and feeding hunched over can add to it.</li></ul>'
-         '<p>Not every belly that sticks out is diastasis recti. Often it&rsquo;s weakness and posture, and that is just as treatable.</p>'),
+         '<li><strong>Posture changes.</strong> When that deep support is weak, the ribs often flare out at the front and the lower back sways forward, which pushes the belly out. Carrying your baby on one hip and feeding hunched over can add to it.</li>'
+         '<li><strong>Stretched skin.</strong> Exercise can make the muscles underneath stronger, but it can&rsquo;t tighten loose skin. That part is honest to know up front.</li></ul>'
+         '<p>Not every belly that sticks out is diastasis recti. Often it&rsquo;s weakness and posture, and that is just as treatable.</p>'
+         '<p>Losing the baby weight doesn&rsquo;t fix these on its own. Losing weight and rebuilding your belly muscles are two different things, so even at your old weight your belly can hang forward or feel weak. Crunches alone don&rsquo;t train the deep muscles well.</p>'),
         ('What usually helps',
          '<ul class="plain-list"><li><strong>Start gently.</strong> Breathing exercises that gently draw in your deep belly and pelvic floor muscles can usually start soon after birth. Check with your doctor first, especially after a C-section.</li>'
          '<li><strong>Build up step by step.</strong> Add exercises that strengthen your deep core without making the middle of your belly dome or bulge.</li>'
          '<li><strong>Work on your posture.</strong> Practice standing and sitting with your ribs stacked over your pelvis, instead of flaring out with a sway in your lower back.</li>'
          '<li><strong>Change how you get up.</strong> Roll onto your side to get out of bed instead of sitting straight up.</li>'
-         '<li><strong>Be patient with crunches.</strong> Full sit-ups and crunches may need to wait until you can do them without your belly doming.</li></ul>'
+         '<li><strong>Be patient with crunches.</strong> Full sit-ups and crunches may need to wait until you can do them without your belly doming.</li>'
+         '<li><strong>Use it in daily life.</strong> Breathe out and gently tighten your core when you lift your child, a car seat or groceries.</li>'
+         '<li><strong>Build strength over months, not weeks.</strong> Gradually add harder exercises, lifting and your usual workouts back in.</li></ul>'
          '<p>Not sure if you have a gap? Try the self-check in <a href="how-do-i-know-if-i-have-diastasis-recti.html">How do I know if I have diastasis recti?</a></p>'),
         ('Is it too late?',
          '<p>No. Women can improve their core strength months or even years after having a baby.</p>'),
+        ('Will I need surgery?',
+         '<p>Most women start with exercise, and many get stronger and feel more supported without surgery. If the gap stays very wide after a good program, or you have a hernia, a surgeon may talk with you about repair. Building your core strength first helps either way.</p>'),
     ],
     'red_flags': [
         'A painful lump or bulge, especially near your belly button, that doesn\'t go back in: see a doctor promptly, as it may be a hernia',
         'A bulge that becomes hard, very painful or discolored, with nausea or vomiting: get emergency care',
         'A C-section incision that is red, hot, draining or more painful, or a fever',
         'Heavy bleeding or severe belly pain after birth: call your doctor right away',
+        'A feeling of heaviness or a bulge in the vagina: a pelvic floor physical therapist or your doctor should check it',
     ],
     'pt': '<p>A pelvic floor physical therapist at ARI checks whether you have a belly gap, how your deep core and pelvic floor work together, and your posture, one-on-one, so the plan treats the real cause. Then they build a step-by-step program to strengthen your middle and help you get back to lifting your baby, exercising and everyday life with more support.</p>',
     'guide': ('Diastasis recti', 'diastasis-recti.html'),
 },
 {
-    'slug': 'lost-the-baby-weight-but-belly-still-weak', 'group': 'pelvic', 'reviewed': '2026-10-12', 'batch': 8, 'about': 'Diastasis recti',
+    'slug': 'lost-the-baby-weight-but-belly-still-weak', 'merged_into': 'why-is-my-belly-still-sticking-out-after-having-a-baby.html',  # merged 2026-10-17
+    'group': 'pelvic', 'reviewed': '2026-10-12', 'batch': 8, 'about': 'Diastasis recti',
     'q': 'I&rsquo;ve Lost the Baby Weight. Why Is My Belly Still Weak and Hanging?',
     'crumb': 'Belly still weak after losing the baby weight',
     'title': 'Lost the Baby Weight but Belly Still Weak? | ARI PT',

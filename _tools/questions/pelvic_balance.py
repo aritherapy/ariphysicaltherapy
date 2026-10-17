@@ -136,7 +136,8 @@ PAGES = [
     'guide': ('Balance problems and fall prevention', 'balance-fall-prevention.html'),
 },
 {
-    'slug': 'how-to-prevent-falls', 'group': 'balance', 'reviewed': '2026-09-30', 'about': 'Falls in older adults',
+    'slug': 'how-to-prevent-falls', 'merged_into': 'balance-fall-prevention.html',  # merged 2026-10-17
+    'group': 'balance', 'reviewed': '2026-09-30', 'about': 'Falls in older adults',
     'q': 'How Can I Lower My Risk of Falling?',
     'crumb': 'Lowering your risk of falling',
     'title': 'How to Lower Your Risk of Falling: 6 Steps | ARI PT',

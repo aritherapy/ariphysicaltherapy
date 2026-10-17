@@ -113,7 +113,7 @@ PAGES = [
     'short': 'It can be a helpful part of migraine care, but it isn\'t a cure. Many people with migraines also have neck and shoulder pain, and physical therapy can help with that. Regular exercise and steady daily routines may help some people have fewer or milder migraines. Your doctor should lead migraine treatment, including diagnosis and medicines.',
     'sections': [
         ('Migraine is different from a tension headache',
-         '<p>A migraine is often a throbbing headache, frequently on one side, that can come with nausea and strong sensitivity to light and sound. Some people get warning signs first, called an aura, such as flashing lights. A <a href="can-physical-therapy-help-tension-headaches.html">tension headache</a> feels more like a steady, tight band. Some people have both, and some headaches start in the neck itself. Knowing which kind you have helps guide the right care.</p>'),
+         '<p>A migraine is often a throbbing headache, frequently on one side, that can come with nausea and strong sensitivity to light and sound. Some people get warning signs first, called an aura, such as flashing lights. A <a href="headaches-migraines.html">tension headache</a> feels more like a steady, tight band. Some people have both, and some headaches start in the neck itself. Knowing which kind you have helps guide the right care.</p>'),
         ('Where physical therapy can help',
          '<ul class="plain-list"><li><strong>Neck and shoulder pain</strong> that often comes with migraines, using exercise and hands-on care.</li>'
          '<li><strong>Regular exercise.</strong> Building up aerobic exercise slowly may help some people. Hard exercise can trigger migraines in others, so start gently.</li>'

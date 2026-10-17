@@ -18,7 +18,7 @@ PAGE = {
     'why': [
         ('What spinal stenosis is',
          '<p>Spinal stenosis means the spaces the nerves travel through in your low back have narrowed. It usually comes from age-related changes like arthritis in the spine joints, thickened ligaments and disc bulges, and it is most common after age 50.</p>'
-         '<p>Standing up straight and leaning back make these spaces a little smaller, and bending forward opens them up. That is why <strong>sitting down or leaning on a shopping cart often brings quick relief</strong>, sometimes called the &ldquo;shopping cart sign.&rdquo; Narrowing also shows up on many scans of people who feel fine, so your symptoms and how far you can walk guide treatment more than the scan does. For a short answer, read <a href="can-physical-therapy-help-spinal-stenosis.html">Can physical therapy help spinal stenosis?</a></p>'),
+         '<p>Standing up straight and leaning back make these spaces a little smaller, and bending forward opens them up. That is why <strong>sitting down or leaning on a shopping cart often brings quick relief</strong>, sometimes called the &ldquo;shopping cart sign.&rdquo; Narrowing also shows up on many scans of people who feel fine, so your symptoms and how far you can walk guide treatment more than the scan does.</p>'),
         ('Is it stenosis or something else?',
          '<p>Leg pain with walking has a few possible causes, so a careful check matters:</p>'
          '<ul class="plain-list"><li><strong>Poor circulation in the legs</strong> (peripheral artery disease) can also cause calf pain with walking. It usually eases when you simply stop and stand still, while stenosis usually needs sitting or bending forward.</li>'

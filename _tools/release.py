@@ -57,7 +57,8 @@ def questions():
     for f in sorted(glob.glob(p('_tools', 'questions', '*.py'))):
         if not os.path.basename(f).startswith('_'):
             for q in load(f).PAGES:
-                out[q['slug']] = (f, q)
+                if not q.get('merged_into'):   # merged questions are forwards now (build_questions.py)
+                    out[q['slug']] = (f, q)
     return out
 
 
@@ -152,7 +153,10 @@ def sync_spanish(cs):
         s = open(f, encoding='utf-8').read()
         if '<html lang="en">' not in s or 'class="top-bar-left"' not in s:
             continue
-        s2 = spanish.add_lang_link(s, pairs.get(name, spanish.ES_HOME + '#sin-traduccion'), 'es')   # no Spanish twin: home + 'not in Spanish yet' note
+        target = pairs.get(name, spanish.ES_HOME + '#sin-traduccion')   # no Spanish twin: home + 'not in Spanish yet' note
+        if name == '404.html':
+            target = '/' + target   # the 404 page is served at any depth, so its links start from the site root
+        s2 = spanish.add_lang_link(s, target, 'es')
         if name in pairs:
             canon = re.search(r'<link rel="canonical" href="([^"]*)">', s2).group(1)
             s2 = spanish.en_alternate(s2, canon, SITE + pairs[name])

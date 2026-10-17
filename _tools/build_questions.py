@@ -12,6 +12,9 @@ index, and "Related questions" links. Google and AI assistants reach them throug
 While no page is reviewed, ask-ari.html is itself a noindex draft listing every question (Deepa's review
 index). Once any page is live, it becomes indexable and lists only the live pages.
 Release a few reviewed pages a week rather than all at once.
+  page['merged_into'] = 'guide.html'  -> MERGED: its useful content now lives on that page. The question drops out of
+                                         every list (ask-ari, library, related links, llms.txt, release.py) and its old
+                                         address becomes an instant forward. Also remove its URL from sitemap.xml.
 """
 import html, importlib.util, json, os, re, sys
 
@@ -48,8 +51,43 @@ def load_all():
         for key, label in mod.GROUPS:
             groups.setdefault(key, {'label': label, 'pages': []})
         for p in mod.PAGES:
-            groups[p['group']]['pages'].append(p)
+            if not p.get('merged_into'):
+                groups[p['group']]['pages'].append(p)
     return [(k, groups[k]) for k in ORDER if k in groups]
+
+
+def load_merged():
+    out = []
+    for f in sorted(os.listdir(CONTENT)):
+        if f.endswith('.py') and not f.startswith('_'):
+            spec = importlib.util.spec_from_file_location(f[:-3], os.path.join(CONTENT, f))
+            mod = importlib.util.module_from_spec(spec)
+            spec.loader.exec_module(mod)
+            out += [p for p in mod.PAGES if p.get('merged_into')]
+    return out
+
+
+def build_forward(p):
+    """A merged question's old address: an instant forward to the page that now holds its content."""
+    to = p['merged_into']
+    out = f'''<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>This page has moved | ARI Physical Therapy</title>
+<meta name="robots" content="noindex, follow">
+<link rel="canonical" href="{SITE}{to}">
+<meta http-equiv="refresh" content="0; url={to}">
+<script>location.replace('{to}' + location.search + location.hash)</script>
+</head>
+<body style="font-family:system-ui,sans-serif;padding:40px 20px;max-width:640px;margin:auto">
+<p>This answer is now part of a fuller guide: <a href="{to}">{SITE}{to}</a></p>
+</body>
+</html>
+'''
+    open(os.path.join(ROOT, p['slug'] + '.html'), 'w', encoding='utf-8').write(out)
+    return f"{p['slug']}.html  forwards to {to}"
 
 
 def plain(s):
@@ -192,4 +230,6 @@ if __name__ == '__main__':
         for p in g['pages']:
             sib = [q for q in g['pages'] if q is not p and (q.get('reviewed') or not p.get('reviewed'))][:4]   # live pages link only to live pages
             print(build_page(p, g['label'], sib))
-    print(build_index(groups))
+    for p in load_merged():
+        print(build_forward(p))
+    print(build_index(groups))   # last line: release.py prints it

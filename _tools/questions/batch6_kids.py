@@ -67,7 +67,8 @@ PAGES = [
     'guide': ('Pediatric physical therapy', 'pediatric-therapy.html'),
 },
 {
-    'slug': 'my-toddler-falls-a-lot-is-that-normal', 'group': 'kids', 'reviewed': '2026-10-11', 'batch': 6, 'about': 'Gross motor development',
+    'slug': 'my-toddler-falls-a-lot-is-that-normal', 'merged_into': 'coordination-problems-in-kids.html',  # merged 2026-10-17
+    'group': 'kids', 'reviewed': '2026-10-11', 'batch': 6, 'about': 'Gross motor development',
     'q': 'My Toddler Falls a Lot. Is That Normal?',
     'crumb': 'Toddler falling a lot',
     'title': 'My Toddler Falls a Lot. Is That Normal? | ARI PT',
@@ -182,7 +183,8 @@ PAGES = [
     'guide': ('Pediatric physical therapy', 'pediatric-therapy.html'),
 },
 {
-    'slug': 'my-child-seems-clumsy-should-i-worry', 'group': 'kids', 'reviewed': '2026-10-11', 'batch': 6, 'about': 'Coordination difficulties',
+    'slug': 'my-child-seems-clumsy-should-i-worry', 'merged_into': 'coordination-problems-in-kids.html',  # merged 2026-10-17
+    'group': 'kids', 'reviewed': '2026-10-11', 'batch': 6, 'about': 'Coordination difficulties',
     'q': 'My Child Seems Clumsy. Should I Worry?',
     'crumb': 'Clumsy child',
     'title': 'My Child Seems Clumsy. Should I Worry? | ARI PT',

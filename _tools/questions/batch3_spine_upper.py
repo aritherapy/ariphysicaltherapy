@@ -88,7 +88,8 @@ PAGES = [
     'guide': ('Sciatica and back pain', 'sciatica-back-pain.html'),
 },
 {
-    'slug': 'can-physical-therapy-help-spinal-stenosis', 'group': 'back', 'reviewed': '2026-10-10', 'batch': 3, 'about': 'Lumbar spinal stenosis',
+    'slug': 'can-physical-therapy-help-spinal-stenosis', 'merged_into': 'spinal-stenosis.html',  # merged 2026-10-17
+    'group': 'back', 'reviewed': '2026-10-10', 'batch': 3, 'about': 'Lumbar spinal stenosis',
     'q': 'Can Physical Therapy Help Spinal Stenosis?',
     'crumb': 'PT for spinal stenosis',
     'title': 'Can Physical Therapy Help Spinal Stenosis? | ARI PT',

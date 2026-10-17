@@ -60,7 +60,8 @@ PAGES = [
     'guide': ('Knee and hip replacement rehab', 'knee-hip-replacement-rehab.html'),
 },
 {
-    'slug': 'physical-therapy-before-surgery', 'group': 'bone-surgery', 'reviewed': '2026-09-30', 'about': 'Preoperative rehabilitation',
+    'slug': 'physical-therapy-before-surgery', 'merged_into': 'prehab-before-surgery.html',  # merged 2026-10-17
+    'group': 'bone-surgery', 'reviewed': '2026-09-30', 'about': 'Preoperative rehabilitation',
     'q': 'Is It Worth Doing Physical Therapy Before Surgery?',
     'crumb': 'Physical therapy before surgery',
     'title': 'Is Physical Therapy Before Surgery Worth It? (Prehab) | ARI PT',

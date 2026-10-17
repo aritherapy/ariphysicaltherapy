@@ -93,7 +93,8 @@ PAGES = [
     'guide': ('Sciatica and back pain', 'sciatica-back-pain.html'),
 },
 {
-    'slug': 'can-physical-therapy-help-tension-headaches', 'group': 'neck', 'reviewed': '2026-10-10', 'batch': 4, 'about': 'Tension-type headache',
+    'slug': 'can-physical-therapy-help-tension-headaches', 'merged_into': 'headaches-migraines.html',  # merged 2026-10-17
+    'group': 'neck', 'reviewed': '2026-10-10', 'batch': 4, 'about': 'Tension-type headache',
     'q': 'Can Physical Therapy Help Tension Headaches?',
     'crumb': 'PT for tension headaches',
     'title': 'Can Physical Therapy Help Tension Headaches? | ARI PT',
