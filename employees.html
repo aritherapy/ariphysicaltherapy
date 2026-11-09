@@ -164,6 +164,7 @@
     <div class="quote-card"><p>"We built this clinic on the belief that great teams come from great people. If someone you respect is looking for the right opportunity, we want to meet them."</p><cite>Deepa Konnur, Founder &middot; ARI Physical Therapy</cite></div></div>
   <div class="form-card">
     <form id="referral-form" action="https://formspree.io/f/mykleqoz" method="POST">
+      <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="display:none" aria-hidden="true">
       <input type="hidden" name="_subject" value="New Employee Referral for ARI PT">
       <input type="hidden" name="form_type" value="employee_referral">
       <div class="form-sec">Your Information</div>
@@ -322,21 +323,6 @@
       });
       if(!open){q.setAttribute('aria-expanded','true'); q.querySelector('.acc-t').textContent='\u2212';}
     });
-  });
-})();
-</script><script>
-(function(){
-  var f=document.getElementById('referral-form'), s=document.getElementById('form-success');
-  if(!f) return;
-  f.addEventListener('submit', async function(e){
-    e.preventDefault();
-    var btn=f.querySelector('.btn-submit'); var label=btn.textContent;
-    btn.textContent='Sending...'; btn.disabled=true;
-    try{
-      var r=await fetch(f.action,{method:'POST',body:new FormData(f),headers:{'Accept':'application/json'}});
-      if(r.ok){ f.style.display='none'; s.style.display='block'; }
-      else{ btn.textContent=label; btn.disabled=false; alert('Something went wrong. Please try again or email hmehta@ariptcare.com directly.'); }
-    }catch(err){ btn.textContent=label; btn.disabled=false; alert('Something went wrong. Please try again or email hmehta@ariptcare.com directly.'); }
   });
 })();
 </script>

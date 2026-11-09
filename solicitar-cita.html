@@ -168,6 +168,7 @@
     <h3>Solicitud de cita</h3><p>Llene este formulario y nuestro equipo le contactará para confirmar su cita, normalmente en un día hábil. Si prefiere español, se lo pasamos a nuestro personal que habla español.</p>
     <form id="appt-form" action="https://formspree.io/f/xaqaegkz" method="POST">
       <input type="hidden" name="language" value="Spanish (respond in Spanish)">
+      <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="display:none" aria-hidden="true">
       <div class="for-child"><label for="for-child"><input type="checkbox" id="for-child" name="booking_for_child" value="yes"> Estoy pidiendo esta cita para mi hijo o hija</label></div>
       <div class="legend" id="patient-legend" style="border-top:none;padding-top:0;margin-top:0">Información del paciente</div>
       <div class="field-row"><div class="field"><label for="first_name">Nombre *</label><input type="text" id="first_name" name="first_name" placeholder="" required></div><div class="field"><label for="last_name">Apellido *</label><input type="text" id="last_name" name="last_name" placeholder="" required></div></div>
